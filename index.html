@@ -8,6 +8,65 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background-color: #121212; color: #eeeeee; font-family: Arial, Helvetica, sans-serif; }
 
+    /* --- TOP SEARCH & FILTER BAR --- */
+    .top-bar {
+      background-color: #1a1a1a;
+      padding: 15px 5%;
+      border-bottom: 1px solid #2a2a2a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .site-logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .search-controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .search-input, .genre-select {
+      background-color: #262626;
+      color: #eeeeee;
+      border: 1px solid #3a3a3a;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 3px;
+      outline: none;
+    }
+
+    .search-input {
+      width: 240px;
+    }
+
+    .search-input:focus, .genre-select:focus {
+      border-color: #666666;
+    }
+
+    .btn-clear {
+      background-color: #333333;
+      color: #cccccc;
+      border: 1px solid #444444;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 3px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .btn-clear:hover {
+      background-color: #444444;
+      color: #ffffff;
+    }
+
     /* --- TOP BANNER --- */
     .banner { width: 100%; height: 420px; overflow: hidden; position: relative; background-color: #000; }
     .banner-list { display: flex; height: 100%; transition: transform 0.5s ease; }
@@ -31,7 +90,7 @@
       margin-bottom: 12px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px;
     }
     .row-title { font-size: 20px; }
-    .view-all { color: #aaaaaa; text-decoration: none; font-size: 14px; }
+    .view-all { color: #aaaaaa; text-decoration: none; font-size: 14px; cursor: pointer; }
     .view-all:hover { color: #ffffff; }
 
     .row-body { position: relative; }
@@ -47,6 +106,23 @@
     .arrow-left { left: 0; display: none; }
     .arrow-right { right: 0; }
 
+    /* --- SEARCH RESULTS GRID --- */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .results-grid .card {
+      width: 100%;
+    }
+
+    .no-results {
+      color: #999999;
+      font-size: 16px;
+      padding: 20px 0;
+    }
+
     /* --- 4:3 CARDS --- */
     .card { width: 240px; flex-shrink: 0; }
     .card a { text-decoration: none; color: inherit; }
@@ -55,12 +131,28 @@
       background-color: #222; border-radius: 3px;
     }
     .card p { margin-top: 8px; font-size: 15px; color: #dddddd; }
+    .card span { display: block; font-size: 12px; color: #888888; margin-top: 3px; }
   </style>
 </head>
 <body>
 
+  <!-- TOP NAVIGATION & SEARCH -->
+  <div class="top-bar">
+    <a href="index.html" class="site-logo">Game Portal</a>
+
+    <div class="search-controls">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search games..." oninput="filterGames()">
+      
+      <select id="genreFilter" class="genre-select" onchange="filterGames()">
+        <option value="all">All genres</option>
+      </select>
+
+      <button id="clearBtn" class="btn-clear" onclick="resetFilters()">Clear</button>
+    </div>
+  </div>
+
   <!-- TOP BANNER -->
-  <div class="banner">
+  <div class="banner" id="topBanner">
     <div class="banner-list" id="bannerList">
       <div class="banner-item" style="background-image: url('images/space.jpg');">
         <div class="banner-info">
@@ -80,13 +172,21 @@
     </div>
   </div>
 
-  <!-- CATALOG -->
+  <!-- CATALOG (NORMAL ROWS) -->
   <div class="container" id="catalog"></div>
+
+  <!-- SEARCH & FILTER RESULTS -->
+  <div class="container" id="searchResults" style="display: none;">
+    <div class="row-header">
+      <h2 class="row-title" id="resultsTitle">Search results</h2>
+    </div>
+    <div class="results-grid" id="resultsGrid"></div>
+  </div>
 
   <script src="jokunlistea.js"></script>
 
   <script>
-    // Auto-slide the top banner every 4 seconds
+    // 1. AUTO-SLIDE TOP BANNER
     const banner = document.getElementById('bannerList');
     const total = banner.children.length;
     let current = 0;
@@ -97,13 +197,18 @@
       banner.style.transform = 'translateX(-' + (current * 100) + '%)';
     }, 4000);
 
-    // Build rows and cards from games.js
+    // 2. POPULATE GENRE DROPDOWN & BUILD CATALOG ROWS
     const catalog = document.getElementById('catalog');
+    const genreFilter = document.getElementById('genreFilter');
     const rowNames = [...new Set(gamesList.map(g => g.row))];
 
     rowNames.forEach(rowName => {
-      let cardsHTML = '';
+      const option = document.createElement('option');
+      option.value = rowName;
+      option.textContent = rowName;
+      genreFilter.appendChild(option);
 
+      let cardsHTML = '';
       gamesList.forEach((game, index) => {
         if (game.row === rowName) {
           cardsHTML += `
@@ -121,7 +226,7 @@
         <div class="row">
           <div class="row-header">
             <h2 class="row-title">${rowName}</h2>
-            <a href="#" class="view-all">View all</a>
+            <a class="view-all" onclick="selectGenre('${rowName}')">View all</a>
           </div>
 
           <div class="row-body">
@@ -136,16 +241,71 @@
       `;
     });
 
+    // 3. SEARCH & GENRE FILTER LOGIC
+    function filterGames() {
+      const searchText = document.getElementById('searchInput').value.toLowerCase().trim();
+      const selectedGenre = genreFilter.value;
+      const topBanner = document.getElementById('topBanner');
+      const searchResults = document.getElementById('searchResults');
+      const resultsGrid = document.getElementById('resultsGrid');
+      const resultsTitle = document.getElementById('resultsTitle');
+      const clearBtn = document.getElementById('clearBtn');
+
+      if (searchText === '' && selectedGenre === 'all') {
+        topBanner.style.display = 'block';
+        catalog.style.display = 'block';
+        searchResults.style.display = 'none';
+        clearBtn.style.display = 'none';
+        return;
+      }
+
+      topBanner.style.display = 'none';
+      catalog.style.display = 'none';
+      searchResults.style.display = 'block';
+      clearBtn.style.display = 'inline-block';
+
+      let filteredHTML = '';
+      let matchCount = 0;
+
+      gamesList.forEach((game, index) => {
+        const matchesTitle = game.title.toLowerCase().includes(searchText);
+        const matchesGenre = (selectedGenre === 'all' || game.row === selectedGenre);
+
+        if (matchesTitle && matchesGenre) {
+          matchCount++;
+          filteredHTML += `
+            <div class="card">
+              <a href="jokue.html?id=${index}">
+                <img src="${game.image}" alt="${game.title}">
+                <p>${game.title}</p>
+                <span>${game.row}</span>
+              </a>
+            </div>
+          `;
+        }
+      });
+
+      resultsTitle.textContent = selectedGenre !== 'all' 
+        ? `${selectedGenre} games (${matchCount})` 
+        : `Search results (${matchCount})`;
+
+      resultsGrid.innerHTML = matchCount > 0 
+        ? filteredHTML 
+        : '<p class="no-results">No games found matching your search.</p>';
+    }
+
+    function selectGenre(genreName) {
+      genreFilter.value = genreName;
+      filterGames();
+      window.scrollTo(0, 0);
+    }
+
+    function resetFilters() {
+      document.getElementById('searchInput').value = '';
+      genreFilter.value = 'all';
+      filterGames();
+    }
+
+    // 4. ROW ARROWS
     function scrollForward(button) {
       const body = button.parentElement;
-      body.querySelector('.row-cards').scrollLeft += 500;
-      body.querySelector('.arrow-left').style.display = 'block';
-    }
-
-    function scrollBack(button) {
-      button.parentElement.querySelector('.row-cards').scrollLeft -= 500;
-    }
-  </script>
-
-</body>
-</html>
