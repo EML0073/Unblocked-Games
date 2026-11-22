@@ -23,4 +23,16 @@ const gamesList = [
     image: "argazkik/1v1.jpeg",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/1v1.lol.html"
   },
+      {
+    row: "Arcade",
+    title: "Subway Surfers",
+    image: "argazkik/subwaysurfers.jpeg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/subway-surfers-beijing.html"
+  },
+      {
+    row: "Arcade",
+    title: "Tomb of the mask",
+    image: "argazkik/tomb.png",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/tomb-of-the-mask.html"
+  },
 ];
