@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargando juego...</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #121212;
+      color: #eeeeee;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .barra-nav {
+      background-color: #1a1a1a;
+      padding: 15px 5%;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .btn-volver {
+      color: #cccccc;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .btn-volver:hover {
+      color: #ffffff;
+    }
+
+    .ficha-juego {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .juego-cabecera {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .juego-datos h1 {
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+
+    .juego-genero {
+      display: inline-block;
+      background-color: #262626;
+      color: #bbbbbb;
+      border: 1px solid #3a3a3a;
+      padding: 4px 10px;
+      font-size: 13px;
+      border-radius: 3px;
+    }
+
+    .btn-maximizar {
+      background-color: #e50914;
+      color: #ffffff;
+      border: none;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .btn-maximizar:hover {
+      background-color: #c40812;
+    }
+
+    .contenedor-iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #000000;
+      border: 1px solid #333333;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    #marcoJuego {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="barra-nav">
+    <a href="index.html" class="btn-volver">&larr; Volver al catálogo</a>
+  </div>
+
+  <div class="ficha-juego">
+    <div class="juego-cabecera">
+      <div class="juego-datos">
+        <h1 id="tituloJuego">Cargando...</h1>
+        <span class="juego-genero" id="generoJuego">Género</span>
+      </div>
+
+      <button class="btn-maximizar" onclick="maximizarJuego()">&#x26F6; Maximizar</button>
+    </div>
+
+    <div class="contenedor-iframe">
+      <iframe id="marcoJuego" allowfullscreen sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms"></iframe>
+    </div>
+  </div>
+
+  <script src="juegos.js"></script>
+
+  <script>
+    const parametros = new URLSearchParams(window.location.search);
+    const id = parseInt(parametros.get('id'));
+    const juego = listaJuegos[id];
+
+    if (juego) {
+      document.title = juego.titulo;
+      document.getElementById('tituloJuego').textContent = juego.titulo;
+      document.getElementById('generoJuego').textContent = juego.fila; // Usa la fila como género
+
+      fetch(juego.rawUrl)
+        .then(respuesta => {
+          if (!respuesta.ok) throw new Error('Error al descargar el archivo');
+          return respuesta.text();
+        })
+        .then(codigoHtml => {
+          document.getElementById('marcoJuego').srcdoc = codigoHtml;
+        })
+        .catch(error => {
+          document.getElementById('tituloJuego').textContent = 'Error al cargar el juego';
+          console.error(error);
+        });
+    } else {
+      document.getElementById('tituloJuego').textContent = 'Juego no encontrado';
+      document.getElementById('generoJuego').style.display = 'none';
+    }
+
+    function maximizarJuego() {
+      const iframe = document.getElementById('marcoJuego');
+      
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.webkitRequestFullscreen) {
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) {
+        iframe.msRequestFullscreen();
+      }
+    }
+  </script>
+
+</body>
+</html>
