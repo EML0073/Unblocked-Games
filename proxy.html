@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASKEgame - Proxy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { min-height: 100vh; display: flex; flex-direction: column; background: #121212; color: #eeeeee; font-family: Arial, Helvetica, sans-serif; }
+    .top-bar { background: #1a1a1a; padding: 15px 5%; border-bottom: 1px solid #2a2a2a; display: flex; align-items: center; gap: 22px; }
+    .site-logo { color: #fff; font-size: 20px; font-weight: bold; text-decoration: none; }
+    nav { display: flex; gap: 6px; }
+    .nav-tab { color: #aaa; text-decoration: none; padding: 9px 13px; border-radius: 4px; font-size: 14px; }
+    .nav-tab:hover, .nav-tab.active { color: #fff; background: #303030; }
+    main { flex: 1; padding: 20px 5% 30px; }
+    .proxy-heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 14px; }
+    h1 { font-size: 22px; }
+    .proxy-heading a { color: #ddd; font-size: 13px; }
+    .proxy-frame-wrap { width: 100%; height: calc(100vh - 155px); min-height: 520px; background: #080808; border: 1px solid #333; border-radius: 6px; overflow: hidden; }
+    iframe { width: 100%; height: 100%; border: 0; background: #080808; }
+    .proxy-note { color: #999; font-size: 12px; margin-top: 10px; line-height: 1.5; }
+    .proxy-note a { color: #ddd; }
+    footer { background: #1a1a1a; border-top: 1px solid #2a2a2a; padding: 18px 5%; color: #aaa; text-align: center; font-size: 13px; line-height: 1.8; }
+    footer a { color: #ddd; }
+    @media (max-width: 600px) { .top-bar { justify-content: center; flex-wrap: wrap; } .proxy-frame-wrap { height: 75vh; min-height: 450px; } }
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <a href="index.html" class="site-logo">ASKEgame</a>
+    <nav aria-label="Main menu">
+      <a class="nav-tab" href="index.html">Games</a>
+      <a class="nav-tab active" href="proxy.html">Proxy</a>
+    </nav>
+  </header>
+  <main>
+    <div class="proxy-heading">
+      <h1>GUST Browser</h1>
+      <a href="https://gust-browser.vercel.app" target="_blank" rel="noopener noreferrer">Open GUST in a new tab ↗</a>
+    </div>
+    <div class="proxy-frame-wrap">
+      <iframe src="https://cdn.jsdelivr.net/gh/nautilus-os/GUST@main/index.html" title="GUST browser" allow="fullscreen; clipboard-read; clipboard-write"></iframe>
+    </div>
+    <p class="proxy-note">GUST is developed by Nautilus Labs. It is a separate project and is not developed or maintained by ASKEgame. Source code and AGPL-3.0 license: <a href="https://github.com/nautilus-os/GUST" target="_blank" rel="noopener noreferrer">nautilus-os/GUST</a>.</p>
+  </main>
+  <footer>
+    <p><a href="https://moai2222.github.io/jokuk/index.html">ASKEgame</a> © 2026 by <a href="https://example.com">EML_0073</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+    <p>GUST is a separate project distributed under AGPL-3.0.</p>
+    <p>Contact: <a href="mailto:eml_0073@ni.eus">eml_0073@ni.eus</a> · <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
