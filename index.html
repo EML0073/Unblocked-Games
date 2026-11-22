@@ -184,64 +184,81 @@
   </div>
 
   <script src="jokunlistea.js"></script>
+  <script src="config.js"></script>
 
   <script>
-    // 1. AUTO-SLIDE TOP BANNER
     const banner = document.getElementById('bannerList');
-    const total = banner.children.length;
     let current = 0;
-
-    setInterval(function() {
-      current++;
-      if (current >= total) current = 0;
+    if (banner.children.length > 1) setInterval(function() {
+      current = (current + 1) % banner.children.length;
       banner.style.transform = 'translateX(-' + (current * 100) + '%)';
     }, 4000);
 
-    // 2. POPULATE GENRE DROPDOWN & BUILD CATALOG ROWS
     const catalog = document.getElementById('catalog');
     const genreFilter = document.getElementById('genreFilter');
-    const rowNames = [...new Set(gamesList.map(g => g.row))];
+    let popularity = {};
 
-    rowNames.forEach(rowName => {
-      const option = document.createElement('option');
-      option.value = rowName;
-      option.textContent = rowName;
-      genreFilter.appendChild(option);
+    function gameViews(game, index) {
+      return Number((popularity[String(index)] || {}).views || 0);
+    }
 
-      let cardsHTML = '';
-      gamesList.forEach((game, index) => {
-        if (game.row === rowName) {
-          cardsHTML += `
-            <div class="card">
-              <a href="jokue.html?id=${index}">
-                <img src="${game.image}" alt="${game.title}">
-                <p>${game.title}</p>
-              </a>
-            </div>
-          `;
-        }
+    function makeCard(item) {
+      const game = item.game;
+      return '<div class="card"><a href="jokue.html?id=' + item.index + '">' +
+        '<img src="' + game.image + '" alt="' + game.title + '">' +
+        '<p>' + game.title + '</p><span>' + game.row + ' · ' + gameViews(game, item.index) + ' views</span>' +
+        '</a></div>';
+    }
+
+    function makeRow(title, items) {
+      if (!items.length) return '';
+      return '<section class="row"><div class="row-header"><h2 class="row-title">' + title +
+        '</h2><a class="view-all" onclick="selectGenre(\'' + title + '\')">View all</a></div>' +
+        '<div class="row-body"><button class="arrow-btn arrow-left" onclick="scrollBack(this)">&larr;</button>' +
+        '<button class="arrow-btn arrow-right" onclick="scrollForward(this)">&rarr;</button>' +
+        '<div class="row-cards">' + items.map(makeCard).join('') + '</div></div></section>';
+    }
+
+    function renderCatalog() {
+      const genres = Array.from(new Set(gamesList.map(function(g) { return g.row || 'Other'; })))
+        .sort(function(a,b) { return a.localeCompare(b); });
+      const allItems = gamesList.map(function(game,index) { return {game:game,index:index}; });
+      const popular = allItems.slice().sort(function(a,b) {
+        return gameViews(b.game,b.index) - gameViews(a.game,a.index);
       });
+      catalog.innerHTML = makeRow('Most Popular', popular);
+      genres.forEach(function(genre) {
+        catalog.innerHTML += makeRow(genre, allItems.filter(function(item) {
+          return (item.game.row || 'Other') === genre;
+        }));
+      });
+      const selected = genreFilter.value;
+      genreFilter.innerHTML = '<option value="all">All genres</option>';
+      genres.forEach(function(genre) {
+        const option = document.createElement('option');
+        option.value = genre;
+        option.textContent = genre;
+        genreFilter.appendChild(option);
+      });
+      genreFilter.value = genres.indexOf(selected) >= 0 ? selected : 'all';
+    }
 
-      catalog.innerHTML += `
-        <div class="row">
-          <div class="row-header">
-            <h2 class="row-title">${rowName}</h2>
-            <a class="view-all" onclick="selectGenre('${rowName}')">View all</a>
-          </div>
+    function loadPopularity() {
+      if (typeof APPS_SCRIPT_URL === 'undefined' || !APPS_SCRIPT_URL) {
+        renderCatalog();
+        return;
+      }
+      window.receivePopularity = function(data) {
+        popularity = (data && data.stats) || {};
+        renderCatalog();
+      };
+      const script = document.createElement('script');
+      script.src = APPS_SCRIPT_URL + (APPS_SCRIPT_URL.indexOf('?') >= 0 ? '&' : '?') +
+        'callback=receivePopularity&_=' + Date.now();
+      script.onerror = renderCatalog;
+      document.body.appendChild(script);
+    }
 
-          <div class="row-body">
-            <button class="arrow-btn arrow-left" onclick="scrollBack(this)">&larr;</button>
-            <button class="arrow-btn arrow-right" onclick="scrollForward(this)">&rarr;</button>
-
-            <div class="row-cards">
-              ${cardsHTML}
-            </div>
-          </div>
-        </div>
-      `;
-    });
-
-    // 3. SEARCH & GENRE FILTER LOGIC
     function filterGames() {
       const searchText = document.getElementById('searchInput').value.toLowerCase().trim();
       const selectedGenre = genreFilter.value;
@@ -250,72 +267,37 @@
       const resultsGrid = document.getElementById('resultsGrid');
       const resultsTitle = document.getElementById('resultsTitle');
       const clearBtn = document.getElementById('clearBtn');
-
       if (searchText === '' && selectedGenre === 'all') {
-        topBanner.style.display = 'block';
-        catalog.style.display = 'block';
-        searchResults.style.display = 'none';
-        clearBtn.style.display = 'none';
-        return;
+        topBanner.style.display = 'block'; catalog.style.display = 'block';
+        searchResults.style.display = 'none'; clearBtn.style.display = 'none'; return;
       }
-
-      topBanner.style.display = 'none';
-      catalog.style.display = 'none';
-      searchResults.style.display = 'block';
-      clearBtn.style.display = 'inline-block';
-
-      let filteredHTML = '';
-      let matchCount = 0;
-
-      gamesList.forEach((game, index) => {
-        const matchesTitle = game.title.toLowerCase().includes(searchText);
-        const matchesGenre = (selectedGenre === 'all' || game.row === selectedGenre);
-
-        if (matchesTitle && matchesGenre) {
-          matchCount++;
-          filteredHTML += `
-            <div class="card">
-              <a href="jokue.html?id=${index}">
-                <img src="${game.image}" alt="${game.title}">
-                <p>${game.title}</p>
-                <span>${game.row}</span>
-              </a>
-            </div>
-          `;
-        }
-      });
-
-      resultsTitle.textContent = selectedGenre !== 'all' 
-        ? `${selectedGenre} games (${matchCount})` 
-        : `Search results (${matchCount})`;
-
-      resultsGrid.innerHTML = matchCount > 0 
-        ? filteredHTML 
-        : '<p class="no-results">No games found matching your search.</p>';
+      topBanner.style.display = 'none'; catalog.style.display = 'none';
+      searchResults.style.display = 'block'; clearBtn.style.display = 'inline-block';
+      const matches = gamesList.map(function(game,index) { return {game:game,index:index}; })
+        .filter(function(item) {
+          return item.game.title.toLowerCase().includes(searchText) &&
+            (selectedGenre === 'all' || item.game.row === selectedGenre);
+        }).sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
+      resultsTitle.textContent = selectedGenre !== 'all' ? selectedGenre + ' games (' + matches.length + ')' :
+        'Search results (' + matches.length + ')';
+      resultsGrid.innerHTML = matches.length ? matches.map(makeCard).join('') :
+        '<p class="no-results">No games found matching your search.</p>';
     }
 
     function selectGenre(genreName) {
-      genreFilter.value = genreName;
-      filterGames();
-      window.scrollTo(0, 0);
+      genreFilter.value = genreName === 'Most Popular' ? 'all' : genreName;
+      filterGames(); window.scrollTo(0,0);
     }
-
     function resetFilters() {
-      document.getElementById('searchInput').value = '';
-      genreFilter.value = 'all';
-      filterGames();
+      document.getElementById('searchInput').value = ''; genreFilter.value = 'all'; filterGames();
     }
-
-    // 4. ROW ARROWS
     function scrollForward(button) {
       const body = button.parentElement;
       body.querySelector('.row-cards').scrollLeft += 500;
       body.querySelector('.arrow-left').style.display = 'block';
     }
-
-    function scrollBack(button) {
-      button.parentElement.querySelector('.row-cards').scrollLeft -= 500;
-    }
+    function scrollBack(button) { button.parentElement.querySelector('.row-cards').scrollLeft -= 500; }
+    loadPopularity();
   </script>
 
 </body>
