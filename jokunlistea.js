@@ -2,19 +2,19 @@ const gamesList = [
   {
     row: "Action",
     title: "Space Adventure",
-    image: "images/space.jpg",
+    image: "argazkik/space.jpg",
     rawUrl: "https://githubusercontent.com"
   },
   {
     row: "Action",
     title: "Night Rush",
-    image: "images/racing.jpg",
+    image: "argazkik/racing.jpg",
     rawUrl: "https://githubusercontent.com"
   },
   {
     row: "Arcade",
     title: "Classic Snake",
-    image: "images/snake.jpg",
+    image: "argazkik/snake.jpg",
     rawUrl: "https://githubusercontent.com"
   }
 ];
