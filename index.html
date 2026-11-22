@@ -33,6 +33,12 @@
     .banner-info p { font-size: 15px; color: #cccccc; margin-bottom: 15px; line-height: 1.4; }
     .btn-play { display: inline-block; background-color: #e50914; color: #fff; text-decoration: none; padding: 10px 20px; font-weight: bold; border-radius: 3px; font-size: 14px; }
     .container { padding: 30px 5%; }
+    .grandv-shortcut { display: flex; align-items: center; gap: 22px; padding: 18px; background: #1b1b1b; border: 1px solid #333; border-radius: 5px; }
+    .grandv-art { width: 150px; min-width: 150px; aspect-ratio: 4 / 3; display: grid; place-items: center; background: linear-gradient(135deg, #202820, #111); color: #e7e7e7; font-size: 76px; font-weight: 900; font-style: italic; border-radius: 3px; text-shadow: 3px 3px #555; }
+    .grandv-info h2 { font-size: 20px; margin-bottom: 8px; }
+    .grandv-info p { color: #aaa; font-size: 14px; line-height: 1.5; margin-bottom: 14px; }
+    @media (max-width: 520px) { .grandv-shortcut { align-items: flex-start; flex-direction: column; } .grandv-art { width: 100%; } }
+
     .row { margin-bottom: 40px; }
     .row-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px; }
     .row-title { font-size: 20px; }
@@ -81,6 +87,19 @@
       <div class="banner-item" style="background-image: url('argazkik/images.png');"><div class="banner-info"><h1>Night Rush</h1><p>Race against the clock on urban circuits full of obstacles.</p><a href="jokue.html?id=1" class="btn-play">Play now</a></div></div>
     </div>
   </div>
+  <section class="container" aria-label="Featured project">
+    <div class="row">
+      <div class="row-header"><h2 class="row-title">Featured</h2></div>
+      <div class="grandv-shortcut">
+        <div class="grandv-art" aria-hidden="true">V</div>
+        <div class="grandv-info">
+          <h2>Grand-V · GTA V</h2>
+          <p>Proyecto para jugar a Grand Theft Auto V desde el navegador. Abre la página oficial del proyecto.</p>
+          <a href="https://github.com/SebasKitten/Grand-V" target="_blank" rel="noopener noreferrer" class="btn-play">Open Grand-V</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <div class="container" id="catalog"></div>
   <div class="container" id="searchResults" style="display: none;">
     <div class="row-header"><h2 class="row-title" id="resultsTitle">Search results</h2></div>
