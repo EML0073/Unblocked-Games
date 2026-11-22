@@ -1,7 +1,7 @@
 const gamesList = [
   {
     row: "Adventure",
-    title: "Minecraft 26.3",
+    title: "Minecraft 26.2",
     image: "argazkik/images.png",
     rawUrl: "https://raw.githubusercontent.com/MilkdromedaStudios/all-of-eaglercraft/refs/heads/main/ArchMC%20Eaglercraft%2026.3.html"
   },
