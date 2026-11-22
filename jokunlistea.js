@@ -1,9 +1,9 @@
 const gamesList = [
   {
-    row: "Action",
-    title: "Space Adventure",
+    row: "Adventure",
+    title: "Minecraft",
     image: "argazkik/images.png",
-    rawUrl: "https://githubusercontent.com"
+    rawUrl: "https://raw.githubusercontent.com/MilkdromedaStudios/all-of-eaglercraft/refs/heads/main/ArchMC%20Eaglercraft%2026.3.html"
   },
   {
     row: "Action",
