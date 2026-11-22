@@ -67,7 +67,7 @@
         <div class="banner-info">
           <h1>Aventura Espacial</h1>
           <p>Pilota tu nave a través de campos de asteroides y descubre nuevos planetas.</p>
-          <a href="jugar.html?titulo=Aventura%20Espacial&url=https://githubusercontent.com" class="btn-ver">Jugar ahora</a>
+          <a href="jokue.html?titulo=Aventura%20Espacial&url=https://githubusercontent.com" class="btn-ver">jokue ahora</a>
         </div>
       </div>
 
@@ -75,7 +75,7 @@
         <div class="banner-info">
           <h1>Carrera Nocturna</h1>
           <p>Compite contra el reloj en circuitos urbanos llenos de obstáculos.</p>
-          <a href="jugar.html?titulo=Carrera%20Nocturna&url=https://githubusercontent.com" class="btn-ver">Jugar ahora</a>
+          <a href="jokue.html?titulo=Carrera%20Nocturna&url=https://githubusercontent.com" class="btn-ver">jokue ahora</a>
         </div>
       </div>
     </div>
@@ -107,12 +107,12 @@
       let tarjetasHTML = '';
 
       juegosFila.forEach(juego => {
-        // Preparamos el enlace hacia jugar.html pasando la URL del Gist/repo y el título
-        const enlaceJugar = `jugar.html?titulo=${encodeURIComponent(juego.titulo)}&url=${encodeURIComponent(juego.rawUrl)}`;
+        // Preparamos el enlace hacia jokue.html pasando la URL del Gist/repo y el título
+        const enlacejokue = `jokue.html?titulo=${encodeURIComponent(juego.titulo)}&url=${encodeURIComponent(juego.rawUrl)}`;
 
         tarjetasHTML += `
           <div class="tarjeta">
-            <a href="${enlaceJugar}">
+            <a href="${enlacejokue}">
               <img src="${juego.imagen}" alt="${juego.titulo}">
               <p>${juego.titulo}</p>
             </a>
