@@ -8,7 +8,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { min-height: 100vh; display: flex; flex-direction: column; background: #121212; color: #eeeeee; font-family: Arial, Helvetica, sans-serif; }
     .top-bar { position: relative; background: #1a1a1a; padding: 15px 5%; border-bottom: 1px solid #2a2a2a; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; min-height: 55px; }
-    .site-logo { color: #fff; font-size: 20px; font-weight: bold; text-decoration: none; }
+    .site-logo { display: inline-flex; align-items: center; text-decoration: none; }\n    .site-logo img { display: block; width: 112px; height: 46px; object-fit: contain; filter: brightness(0) invert(1); }
     .main-nav { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; gap: 6px; }
     .nav-tab { color: #aaa; text-decoration: none; padding: 9px 13px; border-radius: 4px; font-size: 14px; }
     .nav-tab:hover, .nav-tab.active { color: #fff; background: #303030; }
@@ -31,7 +31,7 @@
 </head>
 <body>
   <header class="top-bar">
-    <a href="index.html" class="site-logo">ASKEgame</a>
+    <a href="index.html" class="site-logo" aria-label="ASKEgame home"><img src="argazkik/ASKEgame_logo.svg" alt="ASKEgame"></a>
     <nav class="main-nav" aria-label="Main menu">
       <a class="nav-tab" href="index.html">Games</a>
       <a class="nav-tab active" href="proxy.html"> GUST Proxy</a>
