@@ -82,10 +82,7 @@
   </div>
   <main id="gamesPage">
   <div class="banner" id="topBanner">
-    <div class="banner-list" id="bannerList">
-      <div class="banner-item" style="background-image: url('argazkik/images.png');"><div class="banner-info"><h1>Space Adventure</h1><p>Pilot your ship through asteroid fields and discover new planets.</p><a href="jokue.html?id=0" class="btn-play">Play now</a></div></div>
-      <div class="banner-item" style="background-image: url('argazkik/images.png');"><div class="banner-info"><h1>Night Rush</h1><p>Race against the clock on urban circuits full of obstacles.</p><a href="jokue.html?id=1" class="btn-play">Play now</a></div></div>
-    </div>
+    <div class="banner-list" id="bannerList"></div>
   </div>
   <div class="container" id="catalog"></div>
   <div class="container" id="searchResults" style="display: none;">
@@ -102,6 +99,22 @@
   <script src="config.js"></script>
   <script>
     const banner = document.getElementById('bannerList');
+    const defaultBanners = [
+      {title:"Space Adventure",description:"Pilot your ship through asteroid fields and discover new planets.",image:"argazkik/images.png",link:"jokue.html?id=0",button:"Play now"},
+      {title:"Night Rush",description:"Race against the clock on urban circuits full of obstacles.",image:"argazkik/images.png",link:"jokue.html?id=1",button:"Play now"}
+    ];
+    function renderBanners() {
+      let items = defaultBanners;
+      try {
+        const saved = JSON.parse(localStorage.getItem("askegameBanners") || "null");
+        if (Array.isArray(saved) && saved.length) items = saved;
+      } catch (e) {}
+      banner.innerHTML = items.map(function(item) {
+        const safe = function(value) { return String(value || "").replace(/[&<>"']/g, function(c) { return ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]); }); };
+        return '<div class="banner-item" style="background-image:url(&quot;' + safe(item.image) + '&quot;)"><div class="banner-info"><h1>' + safe(item.title) + '</h1><p>' + safe(item.description) + '</p><a href="' + safe(item.link) + '" class="btn-play">' + safe(item.button || "Open") + '</a></div></div>';
+      }).join("");
+    }
+    renderBanners();
     let current = 0;
     if (banner.children.length > 1) setInterval(function() {
       current = (current + 1) % banner.children.length;
