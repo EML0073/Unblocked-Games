@@ -5,175 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal de Juegos</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: #121212;
-      color: #eeeeee;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #121212; color: #eeeeee; font-family: Arial, Helvetica, sans-serif; }
 
     /* --- BANNER SUPERIOR --- */
-    .banner {
-      width: 100%;
-      height: 420px;
-      overflow: hidden;
-      position: relative;
-      background-color: #000;
-    }
-
-    .banner-lista {
-      display: flex;
-      height: 100%;
-      transition: transform 0.5s ease;
-    }
-
+    .banner { width: 100%; height: 420px; overflow: hidden; position: relative; background-color: #000; }
+    .banner-lista { display: flex; height: 100%; transition: transform 0.5s ease; }
     .banner-item {
-      min-width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: flex-end;
-      padding: 30px 5%;
+      min-width: 100%; height: 100%; background-size: cover; background-position: center;
+      display: flex; align-items: flex-end; padding: 30px 5%;
     }
-
-    .banner-info {
-      background: rgba(0, 0, 0, 0.75);
-      padding: 20px;
-      max-width: 500px;
-      border-radius: 4px;
-    }
-
-    .banner-info h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .banner-info p {
-      font-size: 15px;
-      color: #cccccc;
-      margin-bottom: 15px;
-      line-height: 1.4;
-    }
-
+    .banner-info { background: rgba(0, 0, 0, 0.75); padding: 20px; max-width: 500px; border-radius: 4px; }
+    .banner-info h1 { font-size: 28px; margin-bottom: 10px; }
+    .banner-info p { font-size: 15px; color: #cccccc; margin-bottom: 15px; line-height: 1.4; }
     .btn-ver {
-      display: inline-block;
-      background-color: #e50914;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      font-weight: bold;
-      border-radius: 3px;
-      font-size: 14px;
+      display: inline-block; background-color: #e50914; color: #fff; text-decoration: none;
+      padding: 10px 20px; font-weight: bold; border-radius: 3px; font-size: 14px;
     }
 
-    /* --- SECCIÓN DE FILAS --- */
-    .contenedor {
-      padding: 30px 5%;
-    }
-
-    .fila {
-      margin-bottom: 40px;
-    }
-
+    /* --- FILAS --- */
+    .contenedor { padding: 30px 5%; }
+    .fila { margin-bottom: 40px; }
     .fila-cabecera {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      border-bottom: 1px solid #2a2a2a;
-      padding-bottom: 8px;
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 12px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px;
     }
+    .fila-titulo { font-size: 20px; }
+    .ver-todos { color: #aaaaaa; text-decoration: none; font-size: 14px; }
+    .ver-todos:hover { color: #ffffff; }
 
-    .fila-titulo {
-      font-size: 20px;
-    }
-
-    .ver-todos {
-      color: #aaaaaa;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .ver-todos:hover {
-      color: #ffffff;
-    }
-
-    /* --- CONTENEDOR DE FILA + FLECHAS --- */
-    .fila-cuerpo {
-      position: relative;
-    }
-
-    .fila-tarjetas {
-      display: flex;
-      gap: 15px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      scrollbar-width: none;
-    }
-
-    .fila-tarjetas::-webkit-scrollbar {
-      display: none;
-    }
+    .fila-cuerpo { position: relative; }
+    .fila-tarjetas { display: flex; gap: 15px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; }
+    .fila-tarjetas::-webkit-scrollbar { display: none; }
 
     .btn-flecha {
-      position: absolute;
-      top: 90px;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.8);
-      color: #ffffff;
-      border: 1px solid #444;
-      width: 36px;
-      height: 50px;
-      cursor: pointer;
-      font-size: 18px;
-      z-index: 2;
+      position: absolute; top: 90px; transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.8); color: #ffffff; border: 1px solid #444;
+      width: 36px; height: 50px; cursor: pointer; font-size: 18px; z-index: 2;
     }
-
-    .btn-flecha:hover {
-      background-color: #000;
-      border-color: #fff;
-    }
-
-    .flecha-izq {
-      left: 0;
-      display: none;
-    }
-
-    .flecha-der {
-      right: 0;
-    }
+    .btn-flecha:hover { background-color: #000; border-color: #fff; }
+    .flecha-izq { left: 0; display: none; }
+    .flecha-der { right: 0; }
 
     /* --- TARJETAS 4:3 --- */
-    .tarjeta {
-      width: 240px;
-      flex-shrink: 0;
-    }
-
-    .tarjeta a {
-      text-decoration: none;
-      color: inherit;
-    }
-
+    .tarjeta { width: 240px; flex-shrink: 0; }
+    .tarjeta a { text-decoration: none; color: inherit; }
     .tarjeta img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      display: block;
-      background-color: #222;
-      border-radius: 3px;
+      width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;
+      background-color: #222; border-radius: 3px;
     }
-
-    .tarjeta p {
-      margin-top: 8px;
-      font-size: 15px;
-      color: #dddddd;
-    }
+    .tarjeta p { margin-top: 8px; font-size: 15px; color: #dddddd; }
   </style>
 </head>
 <body>
@@ -181,34 +62,32 @@
   <!-- PANEL SUPERIOR -->
   <div class="banner">
     <div class="banner-lista" id="bannerLista">
-      
-      <div class="banner-item" style="background-image: url('https://picsum.photos');">
+      <!-- Puedes poner imágenes de tu carpeta imagenes/ también aquí -->
+      <div class="banner-item" style="background-image: url('imagenes/espacial.jpg');">
         <div class="banner-info">
           <h1>Aventura Espacial</h1>
           <p>Pilota tu nave a través de campos de asteroides y descubre nuevos planetas.</p>
-          <a href="juegos/espacial.html" class="btn-ver">Jugar ahora</a>
+          <a href="jugar.html?titulo=Aventura%20Espacial&url=https://githubusercontent.com" class="btn-ver">Jugar ahora</a>
         </div>
       </div>
 
-      <div class="banner-item" style="background-image: url('https://picsum.photos');">
+      <div class="banner-item" style="background-image: url('imagenes/carrera.jpg');">
         <div class="banner-info">
           <h1>Carrera Nocturna</h1>
           <p>Compite contra el reloj en circuitos urbanos llenos de obstáculos.</p>
-          <a href="juegos/carrera.html" class="btn-ver">Jugar ahora</a>
+          <a href="jugar.html?titulo=Carrera%20Nocturna&url=https://githubusercontent.com" class="btn-ver">Jugar ahora</a>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- AQUÍ SE GENERAN LAS FILAS AUTOMÁTICAMENTE DESDE juegos.js -->
+  <!-- CATÁLOGO -->
   <div class="contenedor" id="catalogo"></div>
 
-  <!-- IMPORTAMOS EL ARCHIVO CON LOS DATOS DE LOS JUEGOS -->
   <script src="jokunlistea.js"></script>
 
   <script>
-    // 1. MOVER EL BANNER SUPERIOR
+    // Mover el banner principal
     const banner = document.getElementById('bannerLista');
     const total = banner.children.length;
     let actual = 0;
@@ -219,22 +98,21 @@
       banner.style.transform = 'translateX(-' + (actual * 100) + '%)';
     }, 4000);
 
-    // 2. LEER juegos.js Y CREAR LAS FILAS Y TARJETAS
+    // Generar filas y tarjetas desde juegos.js
     const catalogo = document.getElementById('catalogo');
-
-    // Obtener los nombres únicos de cada fila ("Populares", "Arcade", etc.)
-    const nombresFilas = [...new Set(listaJuegos.map(juego => juego.fila))];
+    const nombresFilas = [...new Set(listaJuegos.map(j => j.fila))];
 
     nombresFilas.forEach(nombreFila => {
-      // Filtrar los juegos que pertenecen a esta fila
-      const juegosDeEstaFila = listaJuegos.filter(juego => juego.fila === nombreFila);
-
-      // Crear el HTML de todas las tarjetas de esta fila
+      const juegosFila = listaJuegos.filter(j => j.fila === nombreFila);
       let tarjetasHTML = '';
-      juegosDeEstaFila.forEach(juego => {
+
+      juegosFila.forEach(juego => {
+        // Preparamos el enlace hacia jugar.html pasando la URL del Gist/repo y el título
+        const enlaceJugar = `jugar.html?titulo=${encodeURIComponent(juego.titulo)}&url=${encodeURIComponent(juego.rawUrl)}`;
+
         tarjetasHTML += `
           <div class="tarjeta">
-            <a href="${juego.juegoUrl}">
+            <a href="${enlaceJugar}">
               <img src="${juego.imagen}" alt="${juego.titulo}">
               <p>${juego.titulo}</p>
             </a>
@@ -242,7 +120,6 @@
         `;
       });
 
-      // Insertar la fila completa en la página
       catalogo.innerHTML += `
         <div class="fila">
           <div class="fila-cabecera">
@@ -262,21 +139,14 @@
       `;
     });
 
-    // 3. FUNCIONES DE LAS FLECHAS
     function moverAdelante(boton) {
       const cuerpo = boton.parentElement;
-      const lista = cuerpo.querySelector('.fila-tarjetas');
-      const flechaIzquierda = cuerpo.querySelector('.flecha-izq');
-
-      lista.scrollLeft += 500;
-      flechaIzquierda.style.display = 'block';
+      cuerpo.querySelector('.fila-tarjetas').scrollLeft += 500;
+      cuerpo.querySelector('.flecha-izq').style.display = 'block';
     }
 
     function moverAtras(boton) {
-      const cuerpo = boton.parentElement;
-      const lista = cuerpo.querySelector('.fila-tarjetas');
-
-      lista.scrollLeft -= 500;
+      boton.parentElement.querySelector('.fila-tarjetas').scrollLeft -= 500;
     }
   </script>
 
