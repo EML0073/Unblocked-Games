@@ -112,6 +112,7 @@
   </div>
 
   <script src="jokunlistea.js"></script>
+  <script src="config.js"></script>
 
   <script>
     const params = new URLSearchParams(window.location.search);
@@ -122,6 +123,15 @@
       document.title = game.title;
       document.getElementById('gameTitle').textContent = game.title;
       document.getElementById('gameGenre').textContent = game.row;
+
+      if (typeof APPS_SCRIPT_URL !== 'undefined' && APPS_SCRIPT_URL) {
+        fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({action:'view', id:String(id), title:game.title, genre:game.row})
+        }).catch(function(error) { console.error('Could not record game visit:', error); });
+      }
 
       fetch(game.rawUrl)
         .then(response => {
