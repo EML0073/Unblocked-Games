@@ -35,4 +35,28 @@ const gamesList = [
     image: "argazkik/tomb.png",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/tomb-of-the-mask.html"
   },
+        {
+    row: "Horror",
+    title: "FNAF",
+    image: "argazkik/fnaf.jpeg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/fnaf.html"
+  },
+        {
+    row: "Horror",
+    title: "FNAF 2",
+    image: "argazkik/faf2.jpeg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/fnaf-2.html"
+  },
+        {
+    row: "Horror",
+    title: "FNAF 3",
+    image: "argazkik/fnaf3.jpeg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/fnaf-3.html"
+  },
+        {
+    row: "Horror",
+    title: "FNAF 4",
+    image: "argazkik/fnaf4.jpeg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/fnaf-4.html"
+  },
 ];
