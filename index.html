@@ -1,200 +1,284 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>UGS Files</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #2e3244 0%, #36224b 100%);
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Juegos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 80px;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            padding: 20px 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            overflow-y: auto;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-        }
+    body {
+      background-color: #121212;
+      color: #eeeeee;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-        .sidebar::-webkit-scrollbar {
-            width: 6px;
-        }
+    /* --- BANNER SUPERIOR --- */
+    .banner {
+      width: 100%;
+      height: 420px;
+      overflow: hidden;
+      position: relative;
+      background-color: #000;
+    }
 
-        .sidebar::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.1);
-        }
+    .banner-lista {
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
 
-        .sidebar::-webkit-scrollbar-thumb {
-            background: rgba(255,255,255,0.3);
-            border-radius: 3px;
-        }
+    .banner-item {
+      min-width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 30px 5%;
+    }
 
-        .sidebar-btn {
-            background: rgb(89, 134, 218);
-            border: none;
-            padding: 12px;
-            font-size: 18px;
-            font-weight: 700;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            color: white;
-            text-align: center;
-            min-height: 45px;
-        }
+    .banner-info {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 4px;
+    }
 
-        .sidebar-btn:hover {
-            background: #79aadb;
-            transform: scale(1.05);
-        }
+    .banner-info h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
 
-        .sidebar-btn.empty {
-            opacity: 0.4;
-            cursor: default;
-        }
+    .banner-info p {
+      font-size: 15px;
+      color: #cccccc;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
 
-        .sidebar-btn.empty:hover {
-            transform: none;
-            background: rgb(89, 134, 218);
-        }
+    .btn-ver {
+      display: inline-block;
+      background-color: #e50914;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 3px;
+      font-size: 14px;
+    }
 
-        .main-content {
-            margin-left: 100px;
-            flex: 1;
-            padding: 20px;
-        }
+    /* --- SECCIÓN DE FILAS --- */
+    .contenedor {
+      padding: 30px 5%;
+    }
 
-        h1 {
-            color: white;
-            text-align: center;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+    .fila {
+      margin-bottom: 40px;
+    }
 
-        .letter-section {
-            margin-bottom: 40px;
-            padding: 0 20px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            min-height: 100px;
-        }
+    .fila-cabecera {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #2a2a2a;
+      padding-bottom: 8px;
+    }
 
-        .letter-section.empty {
-            opacity: 0.5;
-        }
+    .fila-titulo {
+      font-size: 20px;
+    }
 
-        .letter-header {
-            color: white;
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid rgba(255,255,255,0.3);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+    .ver-todos {
+      color: #aaaaaa;
+      text-decoration: none;
+      font-size: 14px;
+    }
 
-        .buttons-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
+    .ver-todos:hover {
+      color: #ffffff;
+    }
 
-        .empty-message {
-            color: rgba(255,255,255,0.6);
-            font-style: italic;
-            text-align: center;
-            padding: 20px;
-        }
+    /* --- CONTENEDOR DE FILA + FLECHAS --- */
+    .fila-cuerpo {
+      position: relative;
+    }
 
-        input[type="button"] {
-            background: rgb(89, 134, 218);
-            border: none;
-            padding: 15px 30px;
-            font-size: 16px;
-            font-weight: 500;
-            border-radius: 8px;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            width: 100%;
-            max-width: 600px;
-            color: white;
-            text-align: left;
-        }
+    .fila-tarjetas {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
 
-        input[type="button"]:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-            background: #79aadb;
-        }
+    .fila-tarjetas::-webkit-scrollbar {
+      display: none;
+    }
 
-        input[type="button"]:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+    .btn-flecha {
+      position: absolute;
+      top: 90px;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #ffffff;
+      border: 1px solid #444;
+      width: 36px;
+      height: 50px;
+      cursor: pointer;
+      font-size: 18px;
+      z-index: 2;
+    }
 
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 60px;
-                padding: 15px 5px;
-            }
-            .sidebar-btn {
-                padding: 8px;
-                font-size: 16px;
-            }
-            .main-content {
-                margin-left: 70px;
-            }
-        }
-    </style>
+    .btn-flecha:hover {
+      background-color: #000;
+      border-color: #fff;
+    }
+
+    .flecha-izq {
+      left: 0;
+      display: none;
+    }
+
+    .flecha-der {
+      right: 0;
+    }
+
+    /* --- TARJETAS 4:3 --- */
+    .tarjeta {
+      width: 240px;
+      flex-shrink: 0;
+    }
+
+    .tarjeta a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .tarjeta img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      background-color: #222;
+      border-radius: 3px;
+    }
+
+    .tarjeta p {
+      margin-top: 8px;
+      font-size: 15px;
+      color: #dddddd;
+    }
+  </style>
 </head>
 <body>
-    <div class="sidebar" id="sidebar">
-    </div>
 
-    <div class="main-content">
-        <h1>UGS Files</h1>
-    <h2 style="color: white; text-align: center; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); font-weight: normal; font-size: 18px;">
-    Files from 
-    <a href="https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/" 
-        target="_blank" 
-        style="display: inline; color: #79aadb; text-decoration: none; font-size: 18px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
-        Ultimate Game Stash Google Doc
-    </a>
-    </h2>
-    <h2 style="color: white; text-align: center; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); font-weight: normal; font-size: 18px;">
-    Discord Server:
-    <a href="https://discord.gg/rmVsAqkpkA" 
-        target="_blank" 
-        style="display: inline; color: #79aadb; text-decoration: none; font-size: 18px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
-        https://discord.gg/rmVsAqkpkA
-    </a>
-    <h2 style="color: white; text-align: center; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); font-weight: normal; font-size: 18px;">
-        <input type="text" placeholder="Search..." id="searchInput" style="padding: 13px; width: 100%; max-width: 420px; border-radius: 8px; border: none; box-shadow: 0 2px 4px rgba(7, 105, 218, 0.1);">
-        <script src="https://cdn.jsdelivr.net/gh/mcgee1717/994894838923761723@main/searchbut.js"></script>
-    <button id="lolbutton" onclick="const script = document.createElement('script');script.src = 'https://cdn.jsdelivr.net/gh/mcgee1717/994894838923761723@latest/games.js';document.body.appendChild(script);">Click to load if it isnt loading</button>
-    </h2>
-
-        
-        <div id="sections-container"> 
+  <!-- PANEL SUPERIOR -->
+  <div class="banner">
+    <div class="banner-lista" id="bannerLista">
+      
+      <div class="banner-item" style="background-image: url('https://picsum.photos');">
+        <div class="banner-info">
+          <h1>Aventura Espacial</h1>
+          <p>Pilota tu nave a través de campos de asteroides y descubre nuevos planetas.</p>
+          <a href="juegos/espacial.html" class="btn-ver">Jugar ahora</a>
         </div>
+      </div>
+
+      <div class="banner-item" style="background-image: url('https://picsum.photos');">
+        <div class="banner-info">
+          <h1>Carrera Nocturna</h1>
+          <p>Compite contra el reloj en circuitos urbanos llenos de obstáculos.</p>
+          <a href="juegos/carrera.html" class="btn-ver">Jugar ahora</a>
+        </div>
+      </div>
+
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/mcgee1717/994894838923761723@
-49119bc/games.js"></script>
-   </body>
-   </html> 
+  </div>
+
+  <!-- AQUÍ SE GENERAN LAS FILAS AUTOMÁTICAMENTE DESDE juegos.js -->
+  <div class="contenedor" id="catalogo"></div>
+
+  <!-- IMPORTAMOS EL ARCHIVO CON LOS DATOS DE LOS JUEGOS -->
+  <script src="juegos.js"></script>
+
+  <script>
+    // 1. MOVER EL BANNER SUPERIOR
+    const banner = document.getElementById('bannerLista');
+    const total = banner.children.length;
+    let actual = 0;
+
+    setInterval(function() {
+      actual++;
+      if (actual >= total) actual = 0;
+      banner.style.transform = 'translateX(-' + (actual * 100) + '%)';
+    }, 4000);
+
+    // 2. LEER juegos.js Y CREAR LAS FILAS Y TARJETAS
+    const catalogo = document.getElementById('catalogo');
+
+    // Obtener los nombres únicos de cada fila ("Populares", "Arcade", etc.)
+    const nombresFilas = [...new Set(listaJuegos.map(juego => juego.fila))];
+
+    nombresFilas.forEach(nombreFila => {
+      // Filtrar los juegos que pertenecen a esta fila
+      const juegosDeEstaFila = listaJuegos.filter(juego => juego.fila === nombreFila);
+
+      // Crear el HTML de todas las tarjetas de esta fila
+      let tarjetasHTML = '';
+      juegosDeEstaFila.forEach(juego => {
+        tarjetasHTML += `
+          <div class="tarjeta">
+            <a href="${juego.juegoUrl}">
+              <img src="${juego.imagen}" alt="${juego.titulo}">
+              <p>${juego.titulo}</p>
+            </a>
+          </div>
+        `;
+      });
+
+      // Insertar la fila completa en la página
+      catalogo.innerHTML += `
+        <div class="fila">
+          <div class="fila-cabecera">
+            <h2 class="fila-titulo">${nombreFila}</h2>
+            <a href="#" class="ver-todos">Ver todos</a>
+          </div>
+
+          <div class="fila-cuerpo">
+            <button class="btn-flecha flecha-izq" onclick="moverAtras(this)">&larr;</button>
+            <button class="btn-flecha flecha-der" onclick="moverAdelante(this)">&rarr;</button>
+
+            <div class="fila-tarjetas">
+              ${tarjetasHTML}
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    // 3. FUNCIONES DE LAS FLECHAS
+    function moverAdelante(boton) {
+      const cuerpo = boton.parentElement;
+      const lista = cuerpo.querySelector('.fila-tarjetas');
+      const flechaIzquierda = cuerpo.querySelector('.flecha-izq');
+
+      lista.scrollLeft += 500;
+      flechaIzquierda.style.display = 'block';
+    }
+
+    function moverAtras(boton) {
+      const cuerpo = boton.parentElement;
+      const lista = cuerpo.querySelector('.fila-tarjetas');
+
+      lista.scrollLeft -= 500;
+    }
+  </script>
+
+</body>
+</html>
