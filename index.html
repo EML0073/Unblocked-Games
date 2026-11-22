@@ -13,13 +13,6 @@
     .nav-tab { background: transparent; color: #aaaaaa; border: 1px solid transparent; padding: 9px 13px; border-radius: 4px; font-size: 14px; cursor: pointer; }
     .nav-tab:hover { color: #ffffff; background: #262626; }
     .nav-tab.active { color: #ffffff; background: #303030; border-color: #484848; }
-    #proxyPage { display: none; padding: 20px 5% 30px; }
-    .proxy-heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 14px; }
-    .proxy-heading h1 { font-size: 22px; }
-    .proxy-heading a { color: #dddddd; font-size: 13px; }
-    .proxy-frame-wrap { width: 100%; height: min(78vh, 900px); min-height: 520px; background: #080808; border: 1px solid #333333; border-radius: 6px; overflow: hidden; }
-    .proxy-frame { width: 100%; height: 100%; border: 0; background: #080808; }
-    .proxy-note { color: #999999; font-size: 12px; margin-top: 10px; line-height: 1.5; }
     @media (max-width: 700px) {
       .top-bar { justify-content: center; }
       .main-nav { order: 3; width: 100%; justify-content: center; }
@@ -71,8 +64,8 @@
   <div class="top-bar">
     <a href="index.html" class="site-logo">ASKEgame</a>
     <nav class="main-nav" aria-label="Main menu">
-      <button class="nav-tab active" id="gamesTab" type="button" onclick="showSection('games')">Games</button>
-      <button class="nav-tab" id="proxyTab" type="button" onclick="showSection('proxy')">Proxy</button>
+      <a class="nav-tab active" href="index.html">Games</a>
+      <a class="nav-tab" href="proxy.html">Proxy</a>
     </nav>
     <div class="search-controls" id="gameSearchControls">
       <input type="text" id="searchInput" class="search-input" placeholder="Search games..." oninput="filterGames()">
@@ -93,16 +86,6 @@
     <div class="results-grid" id="resultsGrid"></div>
   </div>
   </main>
-  <section id="proxyPage" aria-label="GUST browser">
-    <div class="proxy-heading">
-      <h1>GUST Browser</h1>
-      <a href="https://gust-browser.vercel.app" target="_blank" rel="noopener noreferrer">Open GUST browser in a new tab ↗</a>
-    </div>
-    <div class="proxy-frame-wrap">
-      <iframe class="proxy-frame" src="https://cdn.jsdelivr.net/gh/nautilus-os/GUST@main/index.html" title="GUST browser" allow="fullscreen; clipboard-read; clipboard-write"></iframe>
-    </div>
-    <p class="proxy-note">GUST is developed by Nautilus Labs. It is a separate project and is not developed or maintained by ASKEgame. If it does not load here, use “Open GUST in a new tab”. Source code and AGPL-3.0 license: <a href="https://github.com/nautilus-os/GUST" target="_blank" rel="noopener noreferrer">nautilus-os/GUST</a>.</p>
-  </section>
   <footer class="site-footer">
     <p class="license-icons"><a href="https://moai2222.github.io/jokuk/index.html">ASKEgame</a> © 2026 by <a href="https://example.com">EML_0073</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></p>
     <p>Games and their respective assets belong to their original creators and are not covered by this website's license.</p>
@@ -120,15 +103,6 @@
     const catalog = document.getElementById('catalog');
     const genreFilter = document.getElementById('genreFilter');
     let popularity = {};
-    function showSection(section) {
-      const showGames = section === 'games';
-      document.getElementById('gamesPage').style.display = showGames ? 'block' : 'none';
-      document.getElementById('proxyPage').style.display = showGames ? 'none' : 'block';
-      document.getElementById('gameSearchControls').style.display = showGames ? 'flex' : 'none';
-      document.getElementById('gamesTab').classList.toggle('active', showGames);
-      document.getElementById('proxyTab').classList.toggle('active', !showGames);
-      window.scrollTo(0, 0);
-    }
     function gameViews(game, index) { return Number((popularity[String(index)] || {}).views || 0); }
     function makeCard(item) {
       const game = item.game;
