@@ -6,118 +6,28 @@
   <title>Loading game...</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background-color: #121212;
-      color: #eeeeee;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .nav-bar {
-      background-color: #1a1a1a;
-      padding: 15px 5%;
-      border-bottom: 1px solid #2a2a2a;
-    }
-
-    .btn-back {
-      color: #cccccc;
-      text-decoration: none;
-      font-size: 15px;
-    }
-
-    .btn-back:hover {
-      color: #ffffff;
-    }
-
-    .game-container {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .game-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 15px;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .game-info h1 {
-      font-size: 28px;
-      margin-bottom: 6px;
-    }
-
-    .game-views {
-      display: inline-block;
-      margin-left: 8px;
-      color: #aaaaaa;
-      font-size: 13px;
-    }
-
-    .game-genre {
-      display: inline-block;
-      background-color: #262626;
-      color: #bbbbbb;
-      border: 1px solid #3a3a3a;
-      padding: 4px 10px;
-      font-size: 13px;
-      border-radius: 3px;
-    }
-
-    .btn-maximize {
-      background-color: #e50914;
-      color: #ffffff;
-      border: none;
-      padding: 10px 18px;
-      font-size: 14px;
-      font-weight: bold;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-
-    .btn-maximize:hover {
-      background-color: #c40812;
-    }
-
-    .iframe-wrapper {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background-color: #000000;
-      border: 1px solid #333333;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    #gameFrame {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-  
-    /* --- SITE FOOTER --- */
-    .site-footer {
-      background: #1a1a1a;
-      border-top: 1px solid #2a2a2a;
-      padding: 24px 5%;
-      margin-top: 35px;
-      color: #aaaaaa;
-      text-align: center;
-      font-size: 13px;
-      line-height: 1.8;
-    }
+    body { background-color: #121212; color: #eeeeee; font-family: Arial, Helvetica, sans-serif; }
+    .nav-bar { background-color: #1a1a1a; padding: 15px 5%; border-bottom: 1px solid #2a2a2a; }
+    .btn-back { color: #cccccc; text-decoration: none; font-size: 15px; }
+    .btn-back:hover { color: #ffffff; }
+    .game-container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+    .game-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 15px; flex-wrap: wrap; gap: 15px; }
+    .game-info h1 { font-size: 28px; margin-bottom: 6px; }
+    .game-views { display: inline-block; margin-left: 8px; color: #aaaaaa; font-size: 13px; }
+    .game-genre { display: inline-block; background-color: #262626; color: #bbbbbb; border: 1px solid #3a3a3a; padding: 4px 10px; font-size: 13px; border-radius: 3px; }
+    .btn-maximize { background-color: #e50914; color: #ffffff; border: none; padding: 10px 18px; font-size: 14px; font-weight: bold; border-radius: 3px; cursor: pointer; }
+    .btn-maximize:hover { background-color: #c40812; }
+    .iframe-wrapper { width: 100%; aspect-ratio: 16 / 9; background-color: #000000; border: 1px solid #333333; border-radius: 4px; overflow: hidden; }
+    #gameFrame { width: 100%; height: 100%; border: none; display: block; }
+    .site-footer { background: #1a1a1a; border-top: 1px solid #2a2a2a; padding: 24px 5%; margin-top: 35px; color: #aaaaaa; text-align: center; font-size: 13px; line-height: 1.8; }
     .site-footer a { color: #dddddd; text-decoration: underline; }
     .site-footer a:hover { color: #ffffff; }
     .site-footer p + p { margin-top: 5px; }
+    .license-icons img { max-width: 1em; max-height: 1em; margin-left: .2em; vertical-align: middle; }
   </style>
 </head>
 <body>
-
-  <div class="nav-bar">
-    <a href="index.html" class="btn-back">&larr; Back to catalog</a>
-  </div>
-
+  <div class="nav-bar"><a href="index.html" class="btn-back">&larr; Back to catalog</a></div>
   <div class="game-container">
     <div class="game-header">
       <div class="game-info">
@@ -125,104 +35,58 @@
         <span class="game-genre" id="gameGenre">Genre</span>
         <span class="game-views" id="gameViews">Views: loading...</span>
       </div>
-
       <button class="btn-maximize" onclick="maximizeGame()">&#x26F6; Maximize</button>
     </div>
-
-    <div class="iframe-wrapper">
-      <iframe id="gameFrame" allowfullscreen sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms"></iframe>
-    </div>
+    <div class="iframe-wrapper"><iframe id="gameFrame" allowfullscreen sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms"></iframe></div>
   </div>
-
-
   <footer class="site-footer">
-    <p>Original website content by the site author is licensed under
-      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>.
-    </p>
+    <p class="license-icons"><a href="https://moai2222.github.io/jokuk/index.html">ASKEgame</a> © 2026 by <a href="https://example.com">EML_0073</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></p>
     <p>Games and their respective assets belong to their original creators and are not covered by this website's license.</p>
     <p>Contact: <a href="mailto:eml_0073@ni.eus">eml_0073@ni.eus</a> · <a href="privacy.html">Privacy Policy</a></p>
   </footer>
-
   <script src="jokunlistea.js"></script>
   <script src="config.js"></script>
-
   <script>
     const params = new URLSearchParams(window.location.search);
     const id = parseInt(params.get('id'));
     const game = gamesList[id];
-
     if (game) {
       document.title = game.title;
       document.getElementById('gameTitle').textContent = game.title;
       document.getElementById('gameGenre').textContent = game.row;
-
       const viewsElement = document.getElementById('gameViews');
-
       if (typeof APPS_SCRIPT_URL !== 'undefined' && APPS_SCRIPT_URL) {
-        // Record this visit, then retrieve the updated total from Google Sheets.
-        fetch(APPS_SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({action:'view', id:String(id), title:game.title, genre:game.row})
-        }).then(function() {
-          setTimeout(loadGameViews, 700);
-        }).catch(function(error) {
-          console.error('Could not record game visit:', error);
-          loadGameViews();
-        });
-
+        fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({action:'view', id:String(id), title:game.title, genre:game.row}) })
+          .then(function() { setTimeout(loadGameViews, 700); })
+          .catch(function(error) { console.error('Could not record game visit:', error); loadGameViews(); });
         function loadGameViews() {
           const callbackName = 'jokukViewsCallback';
           window[callbackName] = function(data) {
             const gameStats = data && data.stats && data.stats[String(id)];
             viewsElement.textContent = 'Views: ' + (gameStats ? gameStats.views : 0);
-            delete window[callbackName];
-            script.remove();
+            delete window[callbackName]; script.remove();
           };
-
           const script = document.createElement('script');
           script.src = APPS_SCRIPT_URL + '?callback=' + callbackName + '&t=' + Date.now();
-          script.onerror = function() {
-            viewsElement.textContent = 'Views unavailable';
-            delete window[callbackName];
-            script.remove();
-          };
+          script.onerror = function() { viewsElement.textContent = 'Views unavailable'; delete window[callbackName]; script.remove(); };
           document.head.appendChild(script);
         }
-      } else {
-        viewsElement.textContent = 'Views unavailable';
-      }
-
-      fetch(game.rawUrl)
-        .then(response => {
-          if (!response.ok) throw new Error('Failed to fetch game file');
-          return response.text();
-        })
-        .then(htmlCode => {
-          document.getElementById('gameFrame').srcdoc = htmlCode;
-        })
-        .catch(error => {
-          document.getElementById('gameTitle').textContent = 'Error loading game';
-          console.error(error);
-        });
+      } else { viewsElement.textContent = 'Views unavailable'; }
+      fetch(game.rawUrl).then(response => {
+        if (!response.ok) throw new Error('Failed to fetch game file');
+        return response.text();
+      }).then(htmlCode => { document.getElementById('gameFrame').srcdoc = htmlCode; })
+        .catch(error => { document.getElementById('gameTitle').textContent = 'Error loading game'; console.error(error); });
     } else {
       document.getElementById('gameTitle').textContent = 'Game not found';
       document.getElementById('gameGenre').style.display = 'none';
     }
-
     function maximizeGame() {
       const iframe = document.getElementById('gameFrame');
-      
-      if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-      } else if (iframe.webkitRequestFullscreen) {
-        iframe.webkitRequestFullscreen();
-      } else if (iframe.msRequestFullscreen) {
-        iframe.msRequestFullscreen();
-      }
+      if (iframe.requestFullscreen) iframe.requestFullscreen();
+      else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+      else if (iframe.msRequestFullscreen) iframe.msRequestFullscreen();
     }
   </script>
-
 </body>
 </html>
