@@ -21,6 +21,6 @@ const gamesList = [
     row: "Shooter",
     title: "1v1 LOL",
     image: "argazkik/1v1.jpeg",
-    rawUrl: "https://github.com/CoolDude2349/Offline-HTML-Games-Pack/raw/refs/heads/master/offline/level-devil.html"
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/1v1.lol.html"
   },
 ];
