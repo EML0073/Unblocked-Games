@@ -7,209 +7,76 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background-color: #121212; color: #eeeeee; font-family: Arial, Helvetica, sans-serif; }
-
-    /* --- TOP SEARCH & FILTER BAR --- */
-    .top-bar {
-      background-color: #1a1a1a;
-      padding: 15px 5%;
-      border-bottom: 1px solid #2a2a2a;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .site-logo {
-      font-size: 20px;
-      font-weight: bold;
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    .search-controls {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .search-input, .genre-select {
-      background-color: #262626;
-      color: #eeeeee;
-      border: 1px solid #3a3a3a;
-      padding: 8px 12px;
-      font-size: 14px;
-      border-radius: 3px;
-      outline: none;
-    }
-
-    .search-input {
-      width: 240px;
-    }
-
-    .search-input:focus, .genre-select:focus {
-      border-color: #666666;
-    }
-
-    .btn-clear {
-      background-color: #333333;
-      color: #cccccc;
-      border: 1px solid #444444;
-      padding: 8px 12px;
-      font-size: 14px;
-      border-radius: 3px;
-      cursor: pointer;
-      display: none;
-    }
-
-    .btn-clear:hover {
-      background-color: #444444;
-      color: #ffffff;
-    }
-
-    /* --- TOP BANNER --- */
+    .top-bar { background-color: #1a1a1a; padding: 15px 5%; border-bottom: 1px solid #2a2a2a; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+    .site-logo { font-size: 20px; font-weight: bold; color: #ffffff; text-decoration: none; }
+    .search-controls { display: flex; gap: 10px; flex-wrap: wrap; }
+    .search-input, .genre-select { background-color: #262626; color: #eeeeee; border: 1px solid #3a3a3a; padding: 8px 12px; font-size: 14px; border-radius: 3px; outline: none; }
+    .search-input { width: 240px; }
+    .search-input:focus, .genre-select:focus { border-color: #666666; }
+    .btn-clear { background-color: #333333; color: #cccccc; border: 1px solid #444444; padding: 8px 12px; font-size: 14px; border-radius: 3px; cursor: pointer; display: none; }
+    .btn-clear:hover { background-color: #444444; color: #ffffff; }
     .banner { width: 100%; height: 420px; overflow: hidden; position: relative; background-color: #000; }
     .banner-list { display: flex; height: 100%; transition: transform 0.5s ease; }
-    .banner-item {
-      min-width: 100%; height: 100%; background-size: cover; background-position: center;
-      display: flex; align-items: flex-end; padding: 30px 5%;
-    }
+    .banner-item { min-width: 100%; height: 100%; background-size: cover; background-position: center; display: flex; align-items: flex-end; padding: 30px 5%; }
     .banner-info { background: rgba(0, 0, 0, 0.75); padding: 20px; max-width: 500px; border-radius: 4px; }
     .banner-info h1 { font-size: 28px; margin-bottom: 10px; }
     .banner-info p { font-size: 15px; color: #cccccc; margin-bottom: 15px; line-height: 1.4; }
-    .btn-play {
-      display: inline-block; background-color: #e50914; color: #fff; text-decoration: none;
-      padding: 10px 20px; font-weight: bold; border-radius: 3px; font-size: 14px;
-    }
-
-    /* --- ROWS SECTION --- */
+    .btn-play { display: inline-block; background-color: #e50914; color: #fff; text-decoration: none; padding: 10px 20px; font-weight: bold; border-radius: 3px; font-size: 14px; }
     .container { padding: 30px 5%; }
     .row { margin-bottom: 40px; }
-    .row-header {
-      display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 12px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px;
-    }
+    .row-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px; }
     .row-title { font-size: 20px; }
     .view-all { color: #aaaaaa; text-decoration: none; font-size: 14px; cursor: pointer; }
     .view-all:hover { color: #ffffff; }
-
     .row-body { position: relative; }
     .row-cards { display: flex; gap: 15px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; }
     .row-cards::-webkit-scrollbar { display: none; }
-
-    .arrow-btn {
-      position: absolute; top: 90px; transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.8); color: #ffffff; border: 1px solid #444;
-      width: 36px; height: 50px; cursor: pointer; font-size: 18px; z-index: 2;
-    }
+    .arrow-btn { position: absolute; top: 90px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.8); color: #ffffff; border: 1px solid #444; width: 36px; height: 50px; cursor: pointer; font-size: 18px; z-index: 2; }
     .arrow-btn:hover { background-color: #000; border-color: #fff; }
     .arrow-left { left: 0; display: none; }
     .arrow-right { right: 0; }
-
-    /* --- SEARCH RESULTS GRID --- */
-    .results-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 20px;
-    }
-
-    .results-grid .card {
-      width: 100%;
-    }
-
-    .no-results {
-      color: #999999;
-      font-size: 16px;
-      padding: 20px 0;
-    }
-
-    /* --- 4:3 CARDS --- */
+    .results-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .results-grid .card { width: 100%; }
+    .no-results { color: #999999; font-size: 16px; padding: 20px 0; }
     .card { width: 240px; flex-shrink: 0; }
     .card a { text-decoration: none; color: inherit; }
-    .card img {
-      width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;
-      background-color: #222; border-radius: 3px;
-    }
+    .card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background-color: #222; border-radius: 3px; }
     .card p { margin-top: 8px; font-size: 15px; color: #dddddd; }
     .card span { display: block; font-size: 12px; color: #888888; margin-top: 3px; }
-  
-    /* --- SITE FOOTER --- */
-    .site-footer {
-      background: #1a1a1a;
-      border-top: 1px solid #2a2a2a;
-      padding: 24px 5%;
-      margin-top: 35px;
-      color: #aaaaaa;
-      text-align: center;
-      font-size: 13px;
-      line-height: 1.8;
-    }
+    .site-footer { background: #1a1a1a; border-top: 1px solid #2a2a2a; padding: 24px 5%; margin-top: 35px; color: #aaaaaa; text-align: center; font-size: 13px; line-height: 1.8; }
     .site-footer a { color: #dddddd; text-decoration: underline; }
     .site-footer a:hover { color: #ffffff; }
     .site-footer p + p { margin-top: 5px; }
+    .license-icons img { max-width: 1em; max-height: 1em; margin-left: .2em; vertical-align: middle; }
   </style>
 </head>
 <body>
-
-  <!-- TOP SEARCH & FILTER BAR -->
   <div class="top-bar">
     <a href="index.html" class="site-logo">Game Portal</a>
-
     <div class="search-controls">
       <input type="text" id="searchInput" class="search-input" placeholder="Search games..." oninput="filterGames()">
-      
-      <select id="genreFilter" class="genre-select" onchange="filterGames()">
-        <option value="all">All genres</option>
-      </select>
-
+      <select id="genreFilter" class="genre-select" onchange="filterGames()"><option value="all">All genres</option></select>
       <button id="clearBtn" class="btn-clear" onclick="resetFilters()">Clear</button>
     </div>
   </div>
-
-  <!-- TOP BANNER -->
   <div class="banner" id="topBanner">
     <div class="banner-list" id="bannerList">
-      <div class="banner-item" style="background-image: url('argazkik/images.png');">
-        <div class="banner-info">
-          <h1>Space Adventure</h1>
-          <p>Pilot your ship through asteroid fields and discover new planets.</p>
-          <a href="jokue.html?id=0" class="btn-play">Play now</a>
-        </div>
-      </div>
-
-      <div class="banner-item" style="background-image: url('argazkik/images.png');">
-        <div class="banner-info">
-          <h1>Night Rush</h1>
-          <p>Race against the clock on urban circuits full of obstacles.</p>
-          <a href="jokue.html?id=1" class="btn-play">Play now</a>
-        </div>
-      </div>
+      <div class="banner-item" style="background-image: url('argazkik/images.png');"><div class="banner-info"><h1>Space Adventure</h1><p>Pilot your ship through asteroid fields and discover new planets.</p><a href="jokue.html?id=0" class="btn-play">Play now</a></div></div>
+      <div class="banner-item" style="background-image: url('argazkik/images.png');"><div class="banner-info"><h1>Night Rush</h1><p>Race against the clock on urban circuits full of obstacles.</p><a href="jokue.html?id=1" class="btn-play">Play now</a></div></div>
     </div>
   </div>
-
-  <!-- CATALOG (NORMAL ROWS) -->
   <div class="container" id="catalog"></div>
-
-  <!-- SEARCH & FILTER RESULTS -->
   <div class="container" id="searchResults" style="display: none;">
-    <div class="row-header">
-      <h2 class="row-title" id="resultsTitle">Search results</h2>
-    </div>
+    <div class="row-header"><h2 class="row-title" id="resultsTitle">Search results</h2></div>
     <div class="results-grid" id="resultsGrid"></div>
   </div>
-
-
   <footer class="site-footer">
-    <p>Original website content by the site author is licensed under
-      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>.
-    </p>
+    <p class="license-icons"><a href="https://moai2222.github.io/jokuk/index.html">ASKEgame</a> © 2026 by <a href="https://example.com">EML_0073</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></p>
     <p>Games and their respective assets belong to their original creators and are not covered by this website's license.</p>
     <p>Contact: <a href="mailto:eml_0073@ni.eus">eml_0073@ni.eus</a> · <a href="privacy.html">Privacy Policy</a></p>
   </footer>
-
   <script src="jokunlistea.js"></script>
   <script src="config.js"></script>
-
   <script>
     const banner = document.getElementById('bannerList');
     let current = 0;
@@ -217,23 +84,16 @@
       current = (current + 1) % banner.children.length;
       banner.style.transform = 'translateX(-' + (current * 100) + '%)';
     }, 4000);
-
     const catalog = document.getElementById('catalog');
     const genreFilter = document.getElementById('genreFilter');
     let popularity = {};
-
-    function gameViews(game, index) {
-      return Number((popularity[String(index)] || {}).views || 0);
-    }
-
+    function gameViews(game, index) { return Number((popularity[String(index)] || {}).views || 0); }
     function makeCard(item) {
       const game = item.game;
       return '<div class="card"><a href="jokue.html?id=' + item.index + '">' +
         '<img src="' + game.image + '" alt="' + game.title + '">' +
-        '<p>' + game.title + '</p><span>' + game.row + ' · ' + gameViews(game, item.index) + ' views</span>' +
-        '</a></div>';
+        '<p>' + game.title + '</p><span>' + game.row + ' · ' + gameViews(game, item.index) + ' views</span></a></div>';
     }
-
     function makeRow(title, items) {
       if (!items.length) return '';
       return '<section class="row"><div class="row-header"><h2 class="row-title">' + title +
@@ -242,47 +102,25 @@
         '<button class="arrow-btn arrow-right" onclick="scrollForward(this)">&rarr;</button>' +
         '<div class="row-cards">' + items.map(makeCard).join('') + '</div></div></section>';
     }
-
     function renderCatalog() {
-      const genres = Array.from(new Set(gamesList.map(function(g) { return g.row || 'Other'; })))
-        .sort(function(a,b) { return a.localeCompare(b); });
+      const genres = Array.from(new Set(gamesList.map(function(g) { return g.row || 'Other'; }))).sort(function(a,b) { return a.localeCompare(b); });
       const allItems = gamesList.map(function(game,index) { return {game:game,index:index}; });
-      const popular = allItems.slice().sort(function(a,b) {
-        return gameViews(b.game,b.index) - gameViews(a.game,a.index);
-      });
+      const popular = allItems.slice().sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
       catalog.innerHTML = makeRow('Most Popular', popular);
-      genres.forEach(function(genre) {
-        catalog.innerHTML += makeRow(genre, allItems.filter(function(item) {
-          return (item.game.row || 'Other') === genre;
-        }));
-      });
+      genres.forEach(function(genre) { catalog.innerHTML += makeRow(genre, allItems.filter(function(item) { return (item.game.row || 'Other') === genre; })); });
       const selected = genreFilter.value;
       genreFilter.innerHTML = '<option value="all">All genres</option>';
-      genres.forEach(function(genre) {
-        const option = document.createElement('option');
-        option.value = genre;
-        option.textContent = genre;
-        genreFilter.appendChild(option);
-      });
+      genres.forEach(function(genre) { const option = document.createElement('option'); option.value = genre; option.textContent = genre; genreFilter.appendChild(option); });
       genreFilter.value = genres.indexOf(selected) >= 0 ? selected : 'all';
     }
-
     function loadPopularity() {
-      if (typeof APPS_SCRIPT_URL === 'undefined' || !APPS_SCRIPT_URL) {
-        renderCatalog();
-        return;
-      }
-      window.receivePopularity = function(data) {
-        popularity = (data && data.stats) || {};
-        renderCatalog();
-      };
+      if (typeof APPS_SCRIPT_URL === 'undefined' || !APPS_SCRIPT_URL) { renderCatalog(); return; }
+      window.receivePopularity = function(data) { popularity = (data && data.stats) || {}; renderCatalog(); };
       const script = document.createElement('script');
-      script.src = APPS_SCRIPT_URL + (APPS_SCRIPT_URL.indexOf('?') >= 0 ? '&' : '?') +
-        'callback=receivePopularity&_=' + Date.now();
+      script.src = APPS_SCRIPT_URL + (APPS_SCRIPT_URL.indexOf('?') >= 0 ? '&' : '?') + 'callback=receivePopularity&_=' + Date.now();
       script.onerror = renderCatalog;
       document.body.appendChild(script);
     }
-
     function filterGames() {
       const searchText = document.getElementById('searchInput').value.toLowerCase().trim();
       const selectedGenre = genreFilter.value;
@@ -291,38 +129,19 @@
       const resultsGrid = document.getElementById('resultsGrid');
       const resultsTitle = document.getElementById('resultsTitle');
       const clearBtn = document.getElementById('clearBtn');
-      if (searchText === '' && selectedGenre === 'all') {
-        topBanner.style.display = 'block'; catalog.style.display = 'block';
-        searchResults.style.display = 'none'; clearBtn.style.display = 'none'; return;
-      }
-      topBanner.style.display = 'none'; catalog.style.display = 'none';
-      searchResults.style.display = 'block'; clearBtn.style.display = 'inline-block';
-      const matches = gamesList.map(function(game,index) { return {game:game,index:index}; })
-        .filter(function(item) {
-          return item.game.title.toLowerCase().includes(searchText) &&
-            (selectedGenre === 'all' || item.game.row === selectedGenre);
-        }).sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
-      resultsTitle.textContent = selectedGenre !== 'all' ? selectedGenre + ' games (' + matches.length + ')' :
-        'Search results (' + matches.length + ')';
-      resultsGrid.innerHTML = matches.length ? matches.map(makeCard).join('') :
-        '<p class="no-results">No games found matching your search.</p>';
+      if (searchText === '' && selectedGenre === 'all') { topBanner.style.display = 'block'; catalog.style.display = 'block'; searchResults.style.display = 'none'; clearBtn.style.display = 'none'; return; }
+      topBanner.style.display = 'none'; catalog.style.display = 'none'; searchResults.style.display = 'block'; clearBtn.style.display = 'inline-block';
+      const matches = gamesList.map(function(game,index) { return {game:game,index:index}; }).filter(function(item) {
+        return item.game.title.toLowerCase().includes(searchText) && (selectedGenre === 'all' || item.game.row === selectedGenre);
+      }).sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
+      resultsTitle.textContent = selectedGenre !== 'all' ? selectedGenre + ' games (' + matches.length + ')' : 'Search results (' + matches.length + ')';
+      resultsGrid.innerHTML = matches.length ? matches.map(makeCard).join('') : '<p class="no-results">No games found matching your search.</p>';
     }
-
-    function selectGenre(genreName) {
-      genreFilter.value = genreName === 'Most Popular' ? 'all' : genreName;
-      filterGames(); window.scrollTo(0,0);
-    }
-    function resetFilters() {
-      document.getElementById('searchInput').value = ''; genreFilter.value = 'all'; filterGames();
-    }
-    function scrollForward(button) {
-      const body = button.parentElement;
-      body.querySelector('.row-cards').scrollLeft += 500;
-      body.querySelector('.arrow-left').style.display = 'block';
-    }
+    function selectGenre(genreName) { genreFilter.value = genreName === 'Most Popular' ? 'all' : genreName; filterGames(); window.scrollTo(0,0); }
+    function resetFilters() { document.getElementById('searchInput').value = ''; genreFilter.value = 'all'; filterGames(); }
+    function scrollForward(button) { const body = button.parentElement; body.querySelector('.row-cards').scrollLeft += 500; body.querySelector('.arrow-left').style.display = 'block'; }
     function scrollBack(button) { button.parentElement.querySelector('.row-cards').scrollLeft -= 500; }
     loadPopularity();
   </script>
-
 </body>
 </html>
