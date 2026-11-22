@@ -48,6 +48,13 @@
       margin-bottom: 6px;
     }
 
+    .game-views {
+      display: inline-block;
+      margin-left: 8px;
+      color: #aaaaaa;
+      font-size: 13px;
+    }
+
     .game-genre {
       display: inline-block;
       background-color: #262626;
@@ -101,6 +108,7 @@
       <div class="game-info">
         <h1 id="gameTitle">Loading...</h1>
         <span class="game-genre" id="gameGenre">Genre</span>
+        <span class="game-views" id="gameViews">Views: loading...</span>
       </div>
 
       <button class="btn-maximize" onclick="maximizeGame()">&#x26F6; Maximize</button>
@@ -124,13 +132,42 @@
       document.getElementById('gameTitle').textContent = game.title;
       document.getElementById('gameGenre').textContent = game.row;
 
+      const viewsElement = document.getElementById('gameViews');
+
       if (typeof APPS_SCRIPT_URL !== 'undefined' && APPS_SCRIPT_URL) {
+        // Record this visit, then retrieve the updated total from Google Sheets.
         fetch(APPS_SCRIPT_URL, {
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
           body: JSON.stringify({action:'view', id:String(id), title:game.title, genre:game.row})
-        }).catch(function(error) { console.error('Could not record game visit:', error); });
+        }).then(function() {
+          setTimeout(loadGameViews, 700);
+        }).catch(function(error) {
+          console.error('Could not record game visit:', error);
+          loadGameViews();
+        });
+
+        function loadGameViews() {
+          const callbackName = 'jokukViewsCallback';
+          window[callbackName] = function(data) {
+            const gameStats = data && data.stats && data.stats[String(id)];
+            viewsElement.textContent = 'Views: ' + (gameStats ? gameStats.views : 0);
+            delete window[callbackName];
+            script.remove();
+          };
+
+          const script = document.createElement('script');
+          script.src = APPS_SCRIPT_URL + '?callback=' + callbackName + '&t=' + Date.now();
+          script.onerror = function() {
+            viewsElement.textContent = 'Views unavailable';
+            delete window[callbackName];
+            script.remove();
+          };
+          document.head.appendChild(script);
+        }
+      } else {
+        viewsElement.textContent = 'Views unavailable';
       }
 
       fetch(game.rawUrl)
