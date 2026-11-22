@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal de Juegos</title>
+  <title>Game Portal</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background-color: #121212; color: #eeeeee; font-family: Arial, Helvetica, sans-serif; }
 
-    /* --- BANNER SUPERIOR --- */
+    /* --- TOP BANNER --- */
     .banner { width: 100%; height: 420px; overflow: hidden; position: relative; background-color: #000; }
-    .banner-lista { display: flex; height: 100%; transition: transform 0.5s ease; }
+    .banner-list { display: flex; height: 100%; transition: transform 0.5s ease; }
     .banner-item {
       min-width: 100%; height: 100%; background-size: cover; background-position: center;
       display: flex; align-items: flex-end; padding: 30px 5%;
@@ -18,135 +18,132 @@
     .banner-info { background: rgba(0, 0, 0, 0.75); padding: 20px; max-width: 500px; border-radius: 4px; }
     .banner-info h1 { font-size: 28px; margin-bottom: 10px; }
     .banner-info p { font-size: 15px; color: #cccccc; margin-bottom: 15px; line-height: 1.4; }
-    .btn-ver {
+    .btn-play {
       display: inline-block; background-color: #e50914; color: #fff; text-decoration: none;
       padding: 10px 20px; font-weight: bold; border-radius: 3px; font-size: 14px;
     }
 
-    /* --- FILAS --- */
-    .contenedor { padding: 30px 5%; }
-    .fila { margin-bottom: 40px; }
-    .fila-cabecera {
+    /* --- ROWS SECTION --- */
+    .container { padding: 30px 5%; }
+    .row { margin-bottom: 40px; }
+    .row-header {
       display: flex; justify-content: space-between; align-items: center;
       margin-bottom: 12px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px;
     }
-    .fila-titulo { font-size: 20px; }
-    .ver-todos { color: #aaaaaa; text-decoration: none; font-size: 14px; }
-    .ver-todos:hover { color: #ffffff; }
+    .row-title { font-size: 20px; }
+    .view-all { color: #aaaaaa; text-decoration: none; font-size: 14px; }
+    .view-all:hover { color: #ffffff; }
 
-    .fila-cuerpo { position: relative; }
-    .fila-tarjetas { display: flex; gap: 15px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; }
-    .fila-tarjetas::-webkit-scrollbar { display: none; }
+    .row-body { position: relative; }
+    .row-cards { display: flex; gap: 15px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; }
+    .row-cards::-webkit-scrollbar { display: none; }
 
-    .btn-flecha {
+    .arrow-btn {
       position: absolute; top: 90px; transform: translateY(-50%);
       background-color: rgba(0, 0, 0, 0.8); color: #ffffff; border: 1px solid #444;
       width: 36px; height: 50px; cursor: pointer; font-size: 18px; z-index: 2;
     }
-    .btn-flecha:hover { background-color: #000; border-color: #fff; }
-    .flecha-izq { left: 0; display: none; }
-    .flecha-der { right: 0; }
+    .arrow-btn:hover { background-color: #000; border-color: #fff; }
+    .arrow-left { left: 0; display: none; }
+    .arrow-right { right: 0; }
 
-    /* --- TARJETAS 4:3 --- */
-    .tarjeta { width: 240px; flex-shrink: 0; }
-    .tarjeta a { text-decoration: none; color: inherit; }
-    .tarjeta img {
+    /* --- 4:3 CARDS --- */
+    .card { width: 240px; flex-shrink: 0; }
+    .card a { text-decoration: none; color: inherit; }
+    .card img {
       width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block;
       background-color: #222; border-radius: 3px;
     }
-    .tarjeta p { margin-top: 8px; font-size: 15px; color: #dddddd; }
+    .card p { margin-top: 8px; font-size: 15px; color: #dddddd; }
   </style>
 </head>
 <body>
 
-  <!-- PANEL SUPERIOR -->
+  <!-- TOP BANNER -->
   <div class="banner">
-    <div class="banner-lista" id="bannerLista">
-      <!-- Puedes poner imágenes de tu carpeta imagenes/ también aquí -->
-      <div class="banner-item" style="background-image: url('imagenes/espacial.jpg');">
+    <div class="banner-list" id="bannerList">
+      <div class="banner-item" style="background-image: url('images/space.jpg');">
         <div class="banner-info">
-          <h1>Aventura Espacial</h1>
-          <p>Pilota tu nave a través de campos de asteroides y descubre nuevos planetas.</p>
-          <a href="jokue.html?titulo=Aventura%20Espacial&url=https://githubusercontent.com" class="btn-ver">jokue ahora</a>
+          <h1>Space Adventure</h1>
+          <p>Pilot your ship through asteroid fields and discover new planets.</p>
+          <a href="jokue.html?id=0" class="btn-play">Play now</a>
         </div>
       </div>
 
-      <div class="banner-item" style="background-image: url('imagenes/carrera.jpg');">
+      <div class="banner-item" style="background-image: url('images/racing.jpg');">
         <div class="banner-info">
-          <h1>Carrera Nocturna</h1>
-          <p>Compite contra el reloj en circuitos urbanos llenos de obstáculos.</p>
-          <a href="jokue.html?titulo=Carrera%20Nocturna&url=https://githubusercontent.com" class="btn-ver">jokue ahora</a>
+          <h1>Night Rush</h1>
+          <p>Race against the clock on urban circuits full of obstacles.</p>
+          <a href="jokue.html?id=1" class="btn-play">Play now</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- CATÁLOGO -->
-  <div class="contenedor" id="catalogo"></div>
+  <!-- CATALOG -->
+  <div class="container" id="catalog"></div>
 
   <script src="jokunlistea.js"></script>
 
   <script>
-    // Mover el banner principal
-    const banner = document.getElementById('bannerLista');
+    // Auto-slide the top banner every 4 seconds
+    const banner = document.getElementById('bannerList');
     const total = banner.children.length;
-    let actual = 0;
+    let current = 0;
 
     setInterval(function() {
-      actual++;
-      if (actual >= total) actual = 0;
-      banner.style.transform = 'translateX(-' + (actual * 100) + '%)';
+      current++;
+      if (current >= total) current = 0;
+      banner.style.transform = 'translateX(-' + (current * 100) + '%)';
     }, 4000);
 
-    // Generar filas y tarjetas desde juegos.js
-    const catalogo = document.getElementById('catalogo');
-    const nombresFilas = [...new Set(listaJuegos.map(j => j.fila))];
+    // Build rows and cards from games.js
+    const catalog = document.getElementById('catalog');
+    const rowNames = [...new Set(gamesList.map(g => g.row))];
 
-    nombresFilas.forEach(nombreFila => {
-      const juegosFila = listaJuegos.filter(j => j.fila === nombreFila);
-      let tarjetasHTML = '';
+    rowNames.forEach(rowName => {
+      let cardsHTML = '';
 
-      juegosFila.forEach(juego => {
-        // Preparamos el enlace hacia jokue.html pasando la URL del Gist/repo y el título
-        const enlacejokue = `jokue.html?titulo=${encodeURIComponent(juego.titulo)}&url=${encodeURIComponent(juego.rawUrl)}`;
-
-        tarjetasHTML += `
-          <div class="tarjeta">
-            <a href="${enlacejokue}">
-              <img src="${juego.imagen}" alt="${juego.titulo}">
-              <p>${juego.titulo}</p>
-            </a>
-          </div>
-        `;
+      gamesList.forEach((game, index) => {
+        if (game.row === rowName) {
+          cardsHTML += `
+            <div class="card">
+              <a href="jokue.html?id=${index}">
+                <img src="${game.image}" alt="${game.title}">
+                <p>${game.title}</p>
+              </a>
+            </div>
+          `;
+        }
       });
 
-      catalogo.innerHTML += `
-        <div class="fila">
-          <div class="fila-cabecera">
-            <h2 class="fila-titulo">${nombreFila}</h2>
-            <a href="#" class="ver-todos">Ver todos</a>
+      catalog.innerHTML += `
+        <div class="row">
+          <div class="row-header">
+            <h2 class="row-title">${rowName}</h2>
+            <a href="#" class="view-all">View all</a>
           </div>
 
-          <div class="fila-cuerpo">
-            <button class="btn-flecha flecha-izq" onclick="moverAtras(this)">&larr;</button>
-            <button class="btn-flecha flecha-der" onclick="moverAdelante(this)">&rarr;</button>
+          <div class="row-body">
+            <button class="arrow-btn arrow-left" onclick="scrollBack(this)">&larr;</button>
+            <button class="arrow-btn arrow-right" onclick="scrollForward(this)">&rarr;</button>
 
-            <div class="fila-tarjetas">
-              ${tarjetasHTML}
+            <div class="row-cards">
+              ${cardsHTML}
             </div>
           </div>
         </div>
       `;
     });
 
-    function moverAdelante(boton) {
-      const cuerpo = boton.parentElement;
-      cuerpo.querySelector('.fila-tarjetas').scrollLeft += 500;
-      cuerpo.querySelector('.flecha-izq').style.display = 'block';
+    function scrollForward(button) {
+      const body = button.parentElement;
+      body.querySelector('.row-cards').scrollLeft += 500;
+      body.querySelector('.arrow-left').style.display = 'block';
     }
 
-    function moverAtras(boton) {
-      boton.parentElement.querySelector('.fila-tarjetas').scrollLeft -= 500;
+    function scrollBack(button) {
+      button.parentElement.querySelector('.row-cards').scrollLeft -= 500;
     }
   </script>
 
