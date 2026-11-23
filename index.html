@@ -30,6 +30,11 @@
     .btn-clear:hover { background-color: #444444; color: #ffffff; }
     .banner { width: 100%; height: 420px; overflow: hidden; position: relative; background-color: #000; }
     .banner-list { display: flex; height: 100%; transition: transform 0.5s ease; }
+    .banner-indicators { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; gap: 9px; z-index: 5; padding: 7px 11px; border-radius: 20px; background: rgba(0,0,0,.38); }
+    .banner-dot { width: 10px; height: 10px; padding: 0; border: 1.5px solid #fff; border-radius: 50%; background: transparent; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+    .banner-dot.active { background: #fff; transform: scale(1.12); }
+    .banner-dot:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+    @media (prefers-reduced-motion: reduce) { .banner-list { transition: none; } .banner-dot { transition: none; } }
     .banner-item { min-width: 100%; height: 100%; background-size: cover; background-position: center; display: flex; align-items: flex-end; padding: 30px 5%; }
     .banner-info { background: rgba(0, 0, 0, 0.75); padding: 20px; max-width: 500px; border-radius: 4px; }
     .banner-info h1 { font-size: 28px; margin-bottom: 10px; }
@@ -90,7 +95,7 @@
   </div>
   <main id="gamesPage">
   <div class="banner" id="topBanner">
-    <div class="banner-list" id="bannerList"></div>
+    <div class="banner-list" id="bannerList"></div>\n    <div class="banner-indicators" id="bannerIndicators" aria-label="Seleccionar banner"></div>
   </div>
   <div class="container" id="catalog"></div>
   <div class="container" id="searchResults" style="display: none;">
@@ -119,10 +124,29 @@
         const gamesCount = gamesList.length;
         banner.querySelectorAll('[data-games-count]').forEach(function(node) { node.textContent = gamesCount + ' games'; });
         if (banner.children.length > 1) {
+          const indicators = document.getElementById('bannerIndicators');
           let current = 0;
-          setInterval(function() {
-            current = (current + 1) % banner.children.length;
+          const dots = Array.from(banner.children).map(function(_, index) {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'banner-dot' + (index === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Ir al banner ' + (index + 1));
+            dot.setAttribute('aria-pressed', index === 0 ? 'true' : 'false');
+            dot.addEventListener('click', function() { showBanner(index); });
+            indicators.appendChild(dot);
+            return dot;
+          });
+          function showBanner(index) {
+            current = (index + banner.children.length) % banner.children.length;
             banner.style.transform = 'translateX(-' + (current * 100) + '%)';
+            dots.forEach(function(dot, dotIndex) {
+              const selected = dotIndex === current;
+              dot.classList.toggle('active', selected);
+              dot.setAttribute('aria-pressed', selected ? 'true' : 'false');
+            });
+          }
+          setInterval(function() {
+            showBanner(current + 1);
           }, 4000);
         }
       })
