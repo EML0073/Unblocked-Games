@@ -283,6 +283,13 @@ const gamesList = [
   },
   {
     row: "Other Apps & Services",
+    title: "WebURL Test (Example.com)",
+    addedAt: "2026-11-23",
+    image: "https://www.google.com/s2/favicons?domain=example.com&sz=128",
+    webUrl: "https://example.com"
+  },
+  {
+    row: "Other Apps & Services",
     title: "HORIZON Proxy",
     addedAt: "2026-11-23",
     image: "argazkik/UNBLOCKEDgames_favicon.svg",
