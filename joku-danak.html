@@ -14,8 +14,7 @@
 .results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px}
 .card{position:relative;border:1px solid transparent;border-radius:9px;padding:7px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.008));transition:transform .22s,border-color .22s,box-shadow .22s}
 .card a{display:block;text-decoration:none;color:inherit}.card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#222;border-radius:5px}
-.card p{margin-top:8px;font-size:15px;color:#ddd}.card span{display:block;font-size:12px;color:#888;margin-top:3px}
-.card:hover{z-index:2;transform:translateY(-5px) scale(1.025);border-color:rgba(var(--game-color,110,180,230),.9);box-shadow:0 8px 24px rgba(var(--game-color,110,180,230),.25)}
+.card p{margin-top:8px;font-size:15px;color:#ddd}.card span{display:block;font-size:12px;color:#888;margin-top:3px}\n.card:hover{z-index:2;transform:translateY(-5px) scale(1.025);border-color:rgba(var(--game-color,110,180,230),.9);background:linear-gradient(145deg,rgba(var(--game-color,110,180,230),.34),rgba(22,22,22,.97) 78%);box-shadow:0 8px 24px rgba(var(--game-color,110,180,230),.25),0 0 0 1px rgba(var(--game-color,110,180,230),.2)}
 .site-footer{background:#1a1a1a;border-top:1px solid #2a2a2a;padding:24px 5%;margin-top:35px;color:#aaa;text-align:center;font-size:13px;line-height:1.8}
 .site-footer a{color:#ddd}@media(max-width:900px){.top-bar{display:flex;justify-content:center}.brand-logo{width:255px;height:50px}.main-nav{order:3;width:100%;justify-content:center}}
 </style>
@@ -34,10 +33,44 @@
 <script>
 let popularity={};
 function views(index){return Number((popularity[String(index)]||{}).views||0)}
+function applyThumbnailColors(container){
+ container.querySelectorAll('.card img').forEach(function(original){
+  if(original.dataset.colorChecked)return;
+  original.dataset.colorChecked='1';
+  const sampler=new Image();
+  sampler.crossOrigin='anonymous';
+  sampler.onload=function(){
+   try{
+    const canvas=document.createElement('canvas');canvas.width=32;canvas.height=32;
+    const ctx=canvas.getContext('2d',{willReadFrequently:true});
+    ctx.drawImage(sampler,0,0,32,32);
+    const pixels=ctx.getImageData(0,0,32,32).data;const buckets={};
+    for(let i=0;i<pixels.length;i+=4){
+     const alpha=pixels[i+3],red=pixels[i],green=pixels[i+1],blue=pixels[i+2];
+     if(alpha<150)continue;
+     const max=Math.max(red,green,blue),min=Math.min(red,green,blue);
+     const saturation=max===0?0:(max-min)/max;
+     if(max<35||(max>242&&saturation<.12))continue;
+     const key=[red,green,blue].map(function(v){return Math.round(v/32)*32}).join(',');
+     const score=1+saturation*1.8;
+     if(!buckets[key])buckets[key]={score:0,rgb:[red,green,blue]};
+     buckets[key].score+=score;
+    }
+    const winner=Object.keys(buckets).sort(function(a,b){return buckets[b].score-buckets[a].score})[0];
+    if(winner){
+     const rgb=buckets[winner].rgb.map(function(v){return Math.round(v)}).join(', ');
+     original.closest('.card').style.setProperty('--game-color',rgb);
+    }
+   }catch(error){console.debug('No se pudo extraer el color de la miniatura:',original.src)}
+  };
+  sampler.src=original.currentSrc||original.src;
+ });
+}
 function render(){
  const items=gamesList.map((game,index)=>({game,index})).sort((a,b)=>views(b.index)-views(a.index));
  document.getElementById('gameCount').textContent=gamesList.length+' games';
  document.getElementById('allGames').innerHTML=items.map(({game,index})=>'<div class="card"><a href="jokue.html?id='+index+'"><img src="'+game.image+'" alt="'+game.title+'"><p>'+game.title+'</p><span>'+game.row+' · '+views(index)+' views</span></a></div>').join('');
+ applyThumbnailColors(document.getElementById('allGames'));
 }
 if(typeof APPS_SCRIPT_URL==='undefined'||!APPS_SCRIPT_URL){render();}
 else{
