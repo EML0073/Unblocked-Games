@@ -25,6 +25,10 @@
     iframe { width: 100%; height: 100%; border: 0; background: #080808; display: block; }
     footer { background: #1a1a1a; border-top: 1px solid #2a2a2a; padding: 18px 5%; color: #aaa; text-align: center; font-size: 13px; line-height: 1.8; }
     footer a { color: #ddd; }
+    body.weburl-mode { min-height: 100vh; height: 100vh; overflow: hidden; }
+    body.weburl-mode .top-bar, body.weburl-mode footer, body.weburl-mode .proxy-heading { display: none !important; }
+    body.weburl-mode main { padding: 0 !important; margin: 0 !important; flex: 1; min-height: 0; }
+    body.weburl-mode .proxy-frame-wrap { width: 100%; height: 100vh; min-height: 0; border: 0; border-radius: 0; }
     @media (max-width: 900px) { .top-bar { justify-content: center; } .top-bar > a { margin: 0 auto; } .brand-logo { width: 255px; height: 50px; } .main-nav { position: static; transform: none; order: 3; width: 100%; justify-content: center; } }
     @media (max-width: 600px) { .proxy-frame-wrap { height: 70vh; min-height: 420px; } }
   </style>
@@ -76,6 +80,7 @@
       const params = new URLSearchParams(window.location.search);
       const target = params.get('url');
       if (!target) return;
+      document.body.classList.add('weburl-mode');
       let attempts = 0;
       const frame = document.getElementById('horizonFrame');
       function openTarget() {
@@ -85,6 +90,21 @@
           const address = doc && doc.getElementById('url');
           const go = doc && doc.getElementById('go');
           if (address && go) {
+            // Turn HORIZON into a clean content viewer for webUrl games:
+            // keep its proxy engine, but remove the browser chrome and let
+            // the proxied page occupy the whole embedded viewport.
+            if (!doc.getElementById('unblockedgames-clean-view')) {
+              const style = doc.createElement('style');
+              style.id = 'unblockedgames-clean-view';
+              style.textContent = [
+                'html, body { width:100% !important; height:100% !important; min-height:0 !important; margin:0 !important; overflow:hidden !important; }',
+                '.titlebar, .navbar, .bookmarks-bar-wrap { display:none !important; }',
+                '.app { width:100% !important; height:100% !important; min-height:0 !important; }',
+                'main { flex:1 1 auto !important; min-height:0 !important; padding:0 !important; margin:0 !important; }',
+                '.view { flex:1 1 auto !important; min-height:0 !important; border:0 !important; border-radius:0 !important; box-shadow:none !important; }'
+              ].join('\\n');
+              (doc.head || doc.documentElement).appendChild(style);
+            }
             address.value = target;
             go.click();
             return;
