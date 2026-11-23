@@ -62,7 +62,7 @@
     .card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background-color: #222; border-radius: 5px; transition: filter .22s ease; }
     .card p { margin-top: 8px; font-size: 15px; color: #dddddd; transition: color .22s ease; }
     .card span { display: block; font-size: 12px; color: #888888; margin-top: 3px; }
-    .card:hover, .card:focus-within { z-index: 3; transform: translateY(-5px) scale(1.035); border-color: hsla(var(--game-hue, 205), 90%, 68%, .85); background: linear-gradient(145deg, hsla(var(--game-hue, 205), 85%, 55%, .28), rgba(22,22,22,.96) 78%); box-shadow: 0 8px 24px hsla(var(--game-hue, 205), 90%, 55%, .22), 0 0 0 1px hsla(var(--game-hue, 205), 90%, 68%, .18); }
+    .card:hover, .card:focus-within { z-index: 3; transform: translateY(-5px) scale(1.035); border-color: rgba(var(--game-color, 110, 180, 230), .9); background: linear-gradient(145deg, rgba(var(--game-color, 110, 180, 230), .34), rgba(22,22,22,.97) 78%); box-shadow: 0 8px 24px rgba(var(--game-color, 110, 180, 230), .25), 0 0 0 1px rgba(var(--game-color, 110, 180, 230), .2); }
     .card:hover img, .card:focus-within img { filter: saturate(1.12) brightness(1.04); }
     .card:hover p, .card:focus-within p { color: #fff; }
     @media (prefers-reduced-motion: reduce) { .card, .card img, .card p { transition: none; } .card:hover, .card:focus-within { transform: none; } }
@@ -132,10 +132,47 @@
     function gameViews(game, index) { return Number((popularity[String(index)] || {}).views || 0); }
     function makeCard(item) {
       const game = item.game;
-      const hue = Array.from(game.title).reduce(function(value, char) { return (value * 31 + char.charCodeAt(0)) % 360; }, 7);
-      return '<div class="card" style="--game-hue:' + hue + '"><a href="jokue.html?id=' + item.index + '">' +
+      return '<div class="card"><a href="jokue.html?id=' + item.index + '">' +
         '<img src="' + game.image + '" alt="' + game.title + '">' +
         '<p>' + game.title + '</p><span>' + game.row + ' · ' + gameViews(game, item.index) + ' views</span></a></div>';
+    }
+    function applyThumbnailColors(container) {
+      container.querySelectorAll('.card img').forEach(function(original) {
+        if (original.dataset.colorChecked) return;
+        original.dataset.colorChecked = '1';
+        const sampler = new Image();
+        sampler.crossOrigin = 'anonymous';
+        sampler.onload = function() {
+          try {
+            const canvas = document.createElement('canvas');
+            canvas.width = 32; canvas.height = 32;
+            const ctx = canvas.getContext('2d', { willReadFrequently: true });
+            ctx.drawImage(sampler, 0, 0, 32, 32);
+            const pixels = ctx.getImageData(0, 0, 32, 32).data;
+            const buckets = {};
+            for (let i = 0; i < pixels.length; i += 4) {
+              const alpha = pixels[i + 3];
+              const red = pixels[i], green = pixels[i + 1], blue = pixels[i + 2];
+              if (alpha < 150) continue;
+              const max = Math.max(red, green, blue), min = Math.min(red, green, blue);
+              const saturation = max === 0 ? 0 : (max - min) / max;
+              if (max < 35 || (max > 242 && saturation < .12)) continue;
+              const key = [red, green, blue].map(function(v) { return Math.round(v / 32) * 32; }).join(',');
+              const score = 1 + saturation * 1.8;
+              if (!buckets[key]) buckets[key] = { score: 0, rgb: [red, green, blue] };
+              buckets[key].score += score;
+            }
+            const winner = Object.keys(buckets).sort(function(a, b) { return buckets[b].score - buckets[a].score; })[0];
+            if (winner) {
+              const rgb = buckets[winner].rgb.map(function(v) { return Math.round(v); }).join(', ');
+              original.closest('.card').style.setProperty('--game-color', rgb);
+            }
+          } catch (error) {
+            console.debug('No se pudo extraer el color de la miniatura:', original.src);
+          }
+        };
+        sampler.src = original.currentSrc || original.src;
+      });
     }
     function makeRow(title, items) {
       if (!items.length) return '';
@@ -151,6 +188,7 @@
       const popular = allItems.slice().sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
       catalog.innerHTML = makeRow('Most Popular', popular);
       genres.forEach(function(genre) { catalog.innerHTML += makeRow(genre, allItems.filter(function(item) { return (item.game.row || 'Other') === genre; })); });
+      applyThumbnailColors(catalog);
       const selected = genreFilter.value;
       genreFilter.innerHTML = '<option value="all">All genres</option>';
       genres.forEach(function(genre) { const option = document.createElement('option'); option.value = genre; option.textContent = genre; genreFilter.appendChild(option); });
@@ -179,6 +217,7 @@
       }).sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
       resultsTitle.textContent = selectedGenre !== 'all' ? selectedGenre + ' games (' + matches.length + ')' : 'Search results (' + matches.length + ')';
       resultsGrid.innerHTML = matches.length ? matches.map(makeCard).join('') : '<p class="no-results">No games found matching your search.</p>';
+      applyThumbnailColors(resultsGrid);
     }
     function selectGenre(genreName) { genreFilter.value = genreName === 'Most Popular' ? 'all' : genreName; filterGames(); window.scrollTo(0,0); }
     function resetFilters() { document.getElementById('searchInput').value = ''; genreFilter.value = 'all'; filterGames(); }
