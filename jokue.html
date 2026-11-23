@@ -27,10 +27,6 @@
     .game-loading { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; padding: 24px; color: #cccccc; background: #080808; text-align: center; font-size: 15px; }
     .game-loading[hidden] { display: none; }
     #gameFrame { width: 100%; height: 100%; border: none; display: block; }
-    .external-app-launch { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; text-align: center; color: #eeeeee; background: #080808; }
-    .external-app-launch p { max-width: 520px; color: #aaaaaa; line-height: 1.5; font-size: 14px; }
-    .external-app-launch a { display: inline-block; padding: 13px 24px; border-radius: 4px; background: #e50914; color: white; text-decoration: none; font-weight: bold; }
-    .external-app-launch a:hover { background: #c40812; }
     .site-footer { background: #1a1a1a; border-top: 1px solid #2a2a2a; padding: 24px 5%; margin-top: 35px; color: #aaaaaa; text-align: center; font-size: 13px; line-height: 1.8; }
     .site-footer a { color: #dddddd; text-decoration: underline; }
     .site-footer a:hover { color: #ffffff; }
@@ -124,20 +120,7 @@
         }
       } else { viewsElement.textContent = 'Views unavailable'; }
       const gameFrame = document.getElementById('gameFrame');
-      if (game.title === "YouTube") {
-        gameFrame.style.display = "none";
-        document.querySelector(".btn-maximize").style.display = "none";
-        const launch = document.createElement("div");
-        launch.className = "external-app-launch";
-        launch.innerHTML = '<p>YouTube does not allow its full website to be displayed inside this embedded player. Open it in a new tab to use the complete service.</p><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Open YouTube</a>';
-        document.querySelector(".iframe-wrapper").appendChild(launch);
-      } else if (game.webUrl) {
-        if (typeof IFRAME_PROXY_URL === 'undefined' || !IFRAME_PROXY_URL) {
-          document.getElementById('gameTitle').textContent = 'Proxy not configured yet';
-        } else {
-          gameFrame.src = IFRAME_PROXY_URL.replace(/\\/$/, '') + '/proxy?url=' + encodeURIComponent(game.webUrl);
-        }
-      } else if (game.rawUrl) {
+      if (game.rawUrl) {
         fetch(game.rawUrl).then(response => {
           if (!response.ok) throw new Error('Failed to fetch game file');
           return response.text();
