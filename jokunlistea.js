@@ -283,7 +283,7 @@ const gamesList = [
   },
     {
     row: "Other Apps & Services",
-    title: "YouTube",
+    title: "Euskaltzaindia",
     addedAt: "2026-11-23",
     image: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original",
     webUrl: "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&task=hasiera&Itemid=1693&lang=eu-ES"
