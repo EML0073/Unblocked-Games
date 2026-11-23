@@ -69,7 +69,6 @@ const gamesList = [
     image: "argazkik/fnaf4.jpeg",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/fnaf-4.html"
   },
-,
   {
     row: "Arcade",
     title: "Slope",
