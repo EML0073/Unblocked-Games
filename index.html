@@ -43,6 +43,7 @@
     @media (max-width: 520px) { .grandv-shortcut { align-items: flex-start; flex-direction: column; } .grandv-art { width: 100%; } }
 
     .row { margin-bottom: 40px; }
+    .catalog-separator { height: 1px; background: #303030; margin: -10px 0 30px; }
     .row-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px; }
     .row-title { font-size: 20px; }
     .view-all { color: #aaaaaa; text-decoration: none; font-size: 14px; cursor: pointer; }
@@ -193,9 +194,12 @@
       const allItems = gamesList.map(function(game,index) { return {game:game,index:index}; });
       const popular = allItems.slice().sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
       const recent = allItems.filter(function(item) { return item.game.addedAt && (Date.now() - new Date(item.game.addedAt + 'T00:00:00').getTime()) < 10 * 24 * 60 * 60 * 1000; }).sort(function(a,b) { return new Date(b.game.addedAt) - new Date(a.game.addedAt) || b.index - a.index; });
-      catalog.innerHTML = makeRow('Most Popular', popular);
+      const appServices = allItems.filter(function(item) { return (item.game.row || 'Other') === 'Apps & Services'; });
+      catalog.innerHTML = makeRow('Apps & Services', appServices);
+      if (appServices.length) catalog.innerHTML += '<div class="catalog-separator" aria-hidden="true"></div>';
+      catalog.innerHTML += makeRow('Most Popular', popular);
       catalog.innerHTML += makeRow('Recently Added', recent);
-      genres.forEach(function(genre) { catalog.innerHTML += makeRow(genre, allItems.filter(function(item) { return (item.game.row || 'Other') === genre; })); });
+      genres.filter(function(genre) { return genre !== 'Apps & Services'; }).forEach(function(genre) { catalog.innerHTML += makeRow(genre, allItems.filter(function(item) { return (item.game.row || 'Other') === genre; })); });
       applyThumbnailColors(catalog);
       const selected = genreFilter.value;
       genreFilter.innerHTML = '<option value="">Choose genre</option><option value="all-games">All games</option>';
