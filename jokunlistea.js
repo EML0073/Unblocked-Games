@@ -214,7 +214,7 @@ const gamesList = [
     row: "Arcade",
     title: "Geometry Dash",
     addedAt: "2026-11-23",
-    image: "https://www.vhv.rs/dpng/d/35-353540_geometry-dash-logo-hd-png-download.png",
+    image: "https://cxl-web-prod-uploads.s3.amazonaws.com/public/11a6762e8d7ac05e93963afe9f97306daab422fd.png",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/geometry-dash.html"
   },
   {
