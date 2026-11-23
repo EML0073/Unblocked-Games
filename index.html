@@ -116,7 +116,7 @@
         banner.innerHTML = Array.from(parsed.body.querySelectorAll('.banner-item'))
           .map(function(item) { return item.outerHTML; }).join('');
         const gamesCount = gamesList.length;
-        banner.querySelectorAll('[data-games-count]').forEach(function(node) { node.textContent = '+' + gamesCount + ' games'; });
+        banner.querySelectorAll('[data-games-count]').forEach(function(node) { node.textContent = gamesCount + ' games'; });
         if (banner.children.length > 1) {
           let current = 0;
           setInterval(function() {
