@@ -9,14 +9,14 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background-color: #121212; color: #eeeeee; font-family: Arial, Helvetica, sans-serif; }
     .top-bar { background-color: #1a1a1a; padding: 10px 4%; border-bottom: 1px solid #2a2a2a; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-    .brand-logo { display: block; width: 250px; height: 48px; object-fit: contain; object-position: left center; }
+    .brand-logo { display: block; width: 280px; height: 56px; object-fit: contain; object-position: left center; filter: brightness(0) invert(1); }
     .main-nav { display: flex; align-items: center; gap: 6px; }
     .nav-tab { background: transparent; color: #aaaaaa; border: 1px solid transparent; padding: 9px 13px; border-radius: 4px; font-size: 14px; cursor: pointer; }
     .nav-tab:hover { color: #ffffff; background: #262626; }
     .nav-tab.active { color: #ffffff; background: #303030; border-color: #484848; }
     @media (max-width: 900px) {
       .top-bar { justify-content: center; }
-      .brand-logo { width: 230px; height: 44px; }
+      .brand-logo { width: 255px; height: 50px; }
       .top-bar > a { margin: 0 auto; }
       .main-nav { order: 3; width: 100%; justify-content: center; }
       .search-controls { order: 4; width: 100%; justify-content: center; }
