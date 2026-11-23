@@ -223,7 +223,27 @@
       resultsGrid.innerHTML = matches.length ? matches.map(makeCard).join('') : '<p class="no-results">No games found matching your search.</p>';
       applyThumbnailColors(resultsGrid);
     }
-    function selectGenre(genreName) { genreFilter.value = genreName === 'Most Popular' ? 'all-games' : genreName; document.getElementById('searchInput').value = ''; filterGames(); window.scrollTo(0,0); }
+    function selectGenre(genreName) {
+      const filter = document.getElementById('genreFilter');
+      const targetValue = genreName === 'Most Popular' ? 'all-games' : genreName;
+      const matchingOption = Array.from(filter.options).find(function(option) {
+        return option.value === targetValue || option.textContent.trim() === targetValue;
+      });
+      if (matchingOption) {
+        filter.value = matchingOption.value;
+      } else if (targetValue !== 'all-games') {
+        const option = document.createElement('option');
+        option.value = targetValue;
+        option.textContent = targetValue;
+        filter.appendChild(option);
+        filter.value = targetValue;
+      } else {
+        filter.value = 'all-games';
+      }
+      document.getElementById('searchInput').value = '';
+      filterGames();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
     function resetFilters() { document.getElementById('searchInput').value = ''; genreFilter.value = ''; filterGames(); }
     function applyInitialFilter() { if (new URLSearchParams(window.location.search).get('genre') === 'all-games') { genreFilter.value = 'all-games'; filterGames(); } }
     function scrollForward(button) { const body = button.parentElement; body.querySelector('.row-cards').scrollLeft += 500; body.querySelector('.arrow-left').style.display = 'block'; }
