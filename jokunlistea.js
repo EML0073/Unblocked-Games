@@ -214,7 +214,7 @@ const gamesList = [
   {
     row: "Arcade",
     title: "Pac-Man",
-    image: "https://toppng.com/uploads/preview/acman-logo-download-logo-pac-man-11563051093mknbbe3ezl.png",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pac-Man.svg",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/pac-man.html"
   },
   {
