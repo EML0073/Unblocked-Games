@@ -120,15 +120,32 @@
     function closeReport() {
       document.getElementById('reportOverlay').classList.remove('open');
     }
-    function sendReport(event) {
+    const REPORT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyFGqYXjtI_Y5YWV0RFX0zmpvBdoUbldOMO9ULWb3wcKLpgfng8UdEuiBCc1jcqSelFtA/exec';
+    async function sendReport(event) {
       event.preventDefault();
       const message = document.getElementById('reportMessage').value.trim();
       if (!message) return;
+      const sendButton = event.submitter || document.querySelector('.btn-report-send');
       const gameName = game ? game.title : 'Unknown game';
-      const subject = 'Error report: ' + gameName;
-      const body = 'Game: ' + gameName + '\nGame ID: ' + id + '\n\nProblem description:\n' + message;
-      window.location.href = 'mailto:eml_0073@ni.eus?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      closeReport();
+      sendButton.disabled = true;
+      sendButton.textContent = 'Sending...';
+      try {
+        await fetch(REPORT_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'report', id: String(id), title: gameName, message: message })
+        });
+        alert('Your report has been submitted. Thank you!');
+        document.getElementById('reportMessage').value = '';
+        closeReport();
+      } catch (error) {
+        console.error('Could not submit error report:', error);
+        alert('Could not submit the report. Please try again later.');
+      } finally {
+        sendButton.disabled = false;
+        sendButton.textContent = 'Send';
+      }
     }
     function maximizeGame() {
       const iframe = document.getElementById('gameFrame');
