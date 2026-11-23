@@ -138,51 +138,11 @@
           gameFrame.src = IFRAME_PROXY_URL.replace(/\\/$/, '') + '/proxy?url=' + encodeURIComponent(game.webUrl);
         }
       } else if (game.rawUrl) {
-        const gameLoading = document.createElement('div');
-        gameLoading.className = 'game-loading';
-        gameLoading.textContent = 'Loading game...';
-        document.querySelector('.iframe-wrapper').appendChild(gameLoading);
-        gameFrame.addEventListener('load', function() { gameLoading.hidden = true; }, { once: true });
-
-        function getCdnUrl(rawUrl) {
-          return rawUrl.replace(
-            /^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/refs\/heads\/([^/]+)\//,
-            'https://cdn.jsdelivr.net/gh/$1/$2@$3/'
-          );
-        }
-        function fetchGameSource(sourceUrl) {
-          const controller = new AbortController();
-          const timeout = setTimeout(function() { controller.abort(); }, 15000);
-          return fetch(sourceUrl, { signal: controller.signal, cache: 'force-cache' })
-            .then(function(response) {
-              if (!response.ok) throw new Error('HTTP ' + response.status);
-              return response.text();
-            })
-            .finally(function() { clearTimeout(timeout); });
-        }
-        function addGameBase(htmlCode, sourceUrl) {
-          const baseUrl = sourceUrl.slice(0, sourceUrl.lastIndexOf('/') + 1).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
-          const baseTag = '<base href="' + baseUrl + '">';
-          if (/<base\b[^>]*>/i.test(htmlCode)) {
-            return htmlCode.replace(/<base\b[^>]*>/i, baseTag);
-          }
-          if (/<head\b[^>]*>/i.test(htmlCode)) {
-            return htmlCode.replace(/<head\b[^>]*>/i, function(head) { return head + baseTag; });
-          }
-          return baseTag + htmlCode;
-        }
-        const cdnUrl = getCdnUrl(game.rawUrl);
-        fetchGameSource(cdnUrl).then(function(htmlCode) {
-          gameFrame.srcdoc = addGameBase(htmlCode, cdnUrl);
-        }).catch(function(cdnError) {
-          console.warn('CDN game load failed; trying GitHub Raw:', cdnError);
-          return fetchGameSource(game.rawUrl).then(function(htmlCode) {
-            gameFrame.srcdoc = addGameBase(htmlCode, game.rawUrl);
-          });
-        }).catch(function(error) {
-          gameLoading.textContent = 'Could not load this game. Please try again later.';
-          console.error('Could not load game from CDN or GitHub Raw:', error);
-        });
+        fetch(game.rawUrl).then(response => {
+          if (!response.ok) throw new Error('Failed to fetch game file');
+          return response.text();
+        }).then(htmlCode => { gameFrame.srcdoc = htmlCode; })
+          .catch(error => { document.getElementById('gameTitle').textContent = 'Error loading game'; console.error(error); });
       } else {
         document.getElementById('gameTitle').textContent = 'Game URL missing';
       }
