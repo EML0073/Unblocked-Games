@@ -33,7 +33,7 @@ const gamesList = [
     row: "Arcade",
     title: "Tomb of the mask",
     image: "argazkik/tomb.png",
-    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/tomb-of-the-mask.html"
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/tomb-of-the-mask.htm"
   },
         {
     row: "Horror",
