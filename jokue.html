@@ -8,9 +8,9 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background-color: #121212; color: #eeeeee; font-family: Arial, Helvetica, sans-serif; }
-    .nav-bar { background-color: #1a1a1a; padding: 9px 5%; border-bottom: 1px solid #2a2a2a; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .top-bar { position: relative; background: #1a1a1a; padding: 10px 4%; border-bottom: 1px solid #2a2a2a; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; min-height: 55px; }\n    .main-nav { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; gap: 6px; }\n    .nav-tab { color: #aaa; text-decoration: none; padding: 9px 13px; border-radius: 4px; font-size: 14px; }\n    .nav-tab:hover, .nav-tab.active { color: #fff; background: #303030; }
     .brand-logo { display: block; width: 280px; height: 56px; object-fit: contain; object-position: left center; filter: brightness(0) invert(1); }
-    .btn-back { color: #cccccc; text-decoration: none; font-size: 15px; }
+    .btn-back { color: #cccccc; text-decoration: none; font-size: 13px; white-space: nowrap; }
     .btn-back:hover { color: #ffffff; }
     .game-container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
     .game-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 15px; flex-wrap: wrap; gap: 15px; }
@@ -41,11 +41,11 @@
     .btn-report-send { background: #e50914; color: white; border: 0; padding: 10px 17px; border-radius: 3px; font-weight: bold; cursor: pointer; }
     .btn-report-send:hover { background: #c40812; }
     .btn-report-cancel { background: #333333; color: #eeeeee; border: 1px solid #555555; padding: 10px 14px; border-radius: 3px; cursor: pointer; }
-    @media (max-width: 480px) { .game-actions { width: 100%; } .game-actions button { flex: 1; } }
+    @media (max-width: 900px) { .top-bar { justify-content: center; } .top-bar > a:first-child { margin: 0 auto; } .brand-logo { width: 255px; height: 50px; } .main-nav { position: static; transform: none; order: 3; width: 100%; justify-content: center; } .btn-back { order: 4; margin: 0 auto; } }\n    @media (max-width: 480px) { .game-actions { width: 100%; } .game-actions button { flex: 1; } }
   </style>
 </head>
 <body>
-  <div class="nav-bar"><a href="index.html" aria-label="UNBLOCKEDgames"><img class="brand-logo" src="argazkik/UNBLOCKEDgames_logo.svg?v=3" alt="UNBLOCKEDgames"></a><a href="index.html" class="btn-back">&larr; Back to catalog</a></div>
+  <header class="top-bar">\n    <a href="index.html" aria-label="UNBLOCKEDgames"><img class="brand-logo" src="argazkik/UNBLOCKEDgames_logo.svg?v=3" alt="UNBLOCKEDgames"></a>\n    <nav class="main-nav" aria-label="Main menu">\n      <a class="nav-tab" href="index.html">Games</a>\n      <a class="nav-tab" href="proxy.html">GUST Proxy</a>\n      <a class="nav-tab" href="https://sites.google.com/view/search-internet/google" target="_blank" rel="noopener noreferrer">Launcher</a>\n    </nav>\n    <a href="index.html" class="btn-back">&larr; Back to catalog</a>\n  </header>
   <div class="game-container">
     <div class="game-header">
       <div class="game-info">
