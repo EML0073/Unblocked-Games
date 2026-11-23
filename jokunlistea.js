@@ -63,13 +63,13 @@ const gamesList = [
   {
     row: "Arcade",
     title: "Slope",
-    image: "https://geometrydash-online.io/data/image/game/slope-game.png",
+    image: "https://raw.githubusercontent.com/KeysCreator/slope/main/img/slope-logo.png",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/slope.html"
   },
   {
     row: "Arcade",
     title: "Stickman Hook",
-    image: "https://leveldevilnotatrollgame.io/data/image/game/stickman-hook.jpg",
+    image: "https://media.indiedb.com/cache/images/games/1/92/91234/thumb_620x2000/stickman-hook.1.jpg",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/stickman-hook.html"
   },
   {
@@ -214,7 +214,7 @@ const gamesList = [
   {
     row: "Arcade",
     title: "Pac-Man",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Pac-Man.svg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/7d/PAC-MAN_logo.png",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/pac-man.html"
   },
   {
