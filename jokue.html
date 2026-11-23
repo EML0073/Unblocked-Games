@@ -117,11 +117,22 @@
           document.head.appendChild(script);
         }
       } else { viewsElement.textContent = 'Views unavailable'; }
-      fetch(game.rawUrl).then(response => {
-        if (!response.ok) throw new Error('Failed to fetch game file');
-        return response.text();
-      }).then(htmlCode => { document.getElementById('gameFrame').srcdoc = htmlCode; })
-        .catch(error => { document.getElementById('gameTitle').textContent = 'Error loading game'; console.error(error); });
+      const gameFrame = document.getElementById('gameFrame');
+      if (game.webUrl) {
+        if (typeof IFRAME_PROXY_URL === 'undefined' || !IFRAME_PROXY_URL) {
+          document.getElementById('gameTitle').textContent = 'Proxy not configured yet';
+        } else {
+          gameFrame.src = IFRAME_PROXY_URL.replace(/\\/$/, '') + '/proxy?url=' + encodeURIComponent(game.webUrl);
+        }
+      } else if (game.rawUrl) {
+        fetch(game.rawUrl).then(response => {
+          if (!response.ok) throw new Error('Failed to fetch game file');
+          return response.text();
+        }).then(htmlCode => { gameFrame.srcdoc = htmlCode; })
+          .catch(error => { document.getElementById('gameTitle').textContent = 'Error loading game'; console.error(error); });
+      } else {
+        document.getElementById('gameTitle').textContent = 'Game URL missing';
+      }
     } else {
       document.getElementById('gameTitle').textContent = 'Game not found';
       document.getElementById('gameGenre').style.display = 'none';
