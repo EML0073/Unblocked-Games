@@ -1,0 +1,15 @@
+{
+  "name": "askegame-iframe-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Iframe proxy service for UNBLOCKEDgames",
+  "main": "server.js",
+  "scripts": {"start":"node server.js"},
+  "engines": {"node": ">=18"},
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "cookie": "^0.7.0",
+    "express": "^4.21.0",
+    "node-fetch": "^2.7.0"
+  }
+}
