@@ -290,7 +290,7 @@ const gamesList = [
   },
   {
     row: "Other Apps & Services",
-    title: "HORIZON Proxy",
+    title: "Horizon",
     addedAt: "2026-11-23",
     image: "argazkik/UNBLOCKEDgames_favicon.svg",
     proxyApp: true
