@@ -281,5 +281,12 @@ const gamesList = [
     image: "https://static.historyminds.com/uploads/OG-Images/RUN-3---OG-FB_72YTvw.png",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/run.html"
   },
+  {
+    row: "Other Apps & Services",
+    title: "HORIZON Proxy",
+    addedAt: "2026-11-23",
+    image: "argazkik/UNBLOCKEDgames_favicon.svg",
+    proxyApp: true
+  },
   ,
 ];
