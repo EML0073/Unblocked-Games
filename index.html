@@ -43,15 +43,15 @@
     @media (max-width: 520px) { .grandv-shortcut { align-items: flex-start; flex-direction: column; } .grandv-art { width: 100%; } }
 
     .row { margin-bottom: 40px; }
-    .catalog-separator { height: 1px; background: #303030; margin: -10px 0 30px; }
-    .row-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px; }
+    .catalog-separator { height: 3px; background: #3a3a3a; margin: 0 0 36px; border-radius: 2px; }
+    .row-header { position: relative; z-index: 4; display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px; }
     .row-title { font-size: 20px; }
     .view-all { color: #aaaaaa; text-decoration: none; font-size: 14px; cursor: pointer; }
     .view-all:hover { color: #ffffff; }
     .row-body { position: relative; }
-    .row-cards { display: flex; gap: 15px; padding: 12px 8px 16px; margin: -12px -8px -4px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; }
+    .row-cards { position: relative; z-index: 1; display: flex; gap: 15px; padding: 12px 8px 16px; margin: -12px -8px -4px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; }
     .row-cards::-webkit-scrollbar { display: none; }
-    .arrow-btn { position: absolute; top: 90px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.8); color: #ffffff; border: 1px solid #444; width: 36px; height: 50px; cursor: pointer; font-size: 18px; z-index: 2; }
+    .arrow-btn { position: absolute; top: 90px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.88); color: #ffffff; border: 1px solid #555; width: 36px; height: 50px; cursor: pointer; font-size: 18px; z-index: 6; }
     .arrow-btn:hover { background-color: #000; border-color: #fff; }
     .arrow-left { left: 0; display: none; }
     .arrow-right { right: 0; }
