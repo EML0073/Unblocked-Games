@@ -286,7 +286,7 @@ const gamesList = [
     title: "WebURL Test (Example.com)",
     addedAt: "2026-11-23",
     image: "https://www.google.com/s2/favicons?domain=example.com&sz=128",
-    webUrl: "https://example.com"
+    webUrl: "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&task=hasiera&Itemid=1693&lang=eu-ES"
   },
   {
     row: "Other Apps & Services",
