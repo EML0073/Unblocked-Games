@@ -1,3 +1,4 @@
+// Add games here using the same object format. Use rawUrl for HTML files or webUrl for normal website URLs.
 const gamesList = [
   {
     row: "Adventure",
