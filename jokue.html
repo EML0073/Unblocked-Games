@@ -163,11 +163,11 @@
         function addGameBase(htmlCode, sourceUrl) {
           const baseUrl = sourceUrl.slice(0, sourceUrl.lastIndexOf('/') + 1).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
           const baseTag = '<base href="' + baseUrl + '">';
-          if (/<base\\b[^>]*>/i.test(htmlCode)) {
-            return htmlCode.replace(/<base\\b[^>]*>/i, baseTag);
+          if (/<base\b[^>]*>/i.test(htmlCode)) {
+            return htmlCode.replace(/<base\b[^>]*>/i, baseTag);
           }
-          if (/<head\\b[^>]*>/i.test(htmlCode)) {
-            return htmlCode.replace(/<head\\b[^>]*>/i, function(head) { return head + baseTag; });
+          if (/<head\b[^>]*>/i.test(htmlCode)) {
+            return htmlCode.replace(/<head\b[^>]*>/i, function(head) { return head + baseTag; });
           }
           return baseTag + htmlCode;
         }
