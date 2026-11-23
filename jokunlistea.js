@@ -282,7 +282,7 @@ const gamesList = [
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/run.html"
   },
     {
-    row: "Adventure",
+    row: "Other apps",
     title: "YouTube",
     addedAt: "2026-11-23",
     image: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original",
