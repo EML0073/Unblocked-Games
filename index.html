@@ -83,7 +83,7 @@
     </nav>
     <div class="search-controls" id="gameSearchControls">
       <input type="text" id="searchInput" class="search-input" placeholder="Search games..." oninput="filterGames()">
-      <select id="genreFilter" class="genre-select" onchange="filterGames()"><option value="all">All genres</option></select>
+      <select id="genreFilter" class="genre-select" onchange="filterGames()"><option value="">Choose genre</option><option value="all-games">All games</option></select>
       <button id="clearBtn" class="btn-clear" onclick="resetFilters()">Clear</button>
     </div>
   </div>
@@ -179,7 +179,7 @@
     function makeRow(title, items) {
       if (!items.length) return '';
       return '<section class="row"><div class="row-header"><h2 class="row-title">' + title +
-        '</h2>' + (title === 'Most Popular' ? '<a class="view-all" href="joku-danak.html">View all</a>' : (title !== 'Recently Added' ? '<a class="view-all" href="#" onclick="selectGenre(' + JSON.stringify(title) + '); return false;">View all</a>' : '')) + '</div>' +
+        '</h2>' + (title === 'Most Popular' ? '<a class="view-all" href="#" onclick="selectGenre(\'Most Popular\'); return false;">View all</a>' : (title !== 'Recently Added' ? '<a class="view-all" href="#" onclick="selectGenre(' + JSON.stringify(title) + '); return false;">View all</a>' : '')) + '</div>' +
         '<div class="row-body"><button class="arrow-btn arrow-left" onclick="scrollBack(this)">&larr;</button>' +
         '<button class="arrow-btn arrow-right" onclick="scrollForward(this)">&rarr;</button>' +
         '<div class="row-cards">' + items.map(makeCard).join('') + '</div></div></section>';
@@ -194,16 +194,16 @@
       genres.forEach(function(genre) { catalog.innerHTML += makeRow(genre, allItems.filter(function(item) { return (item.game.row || 'Other') === genre; })); });
       applyThumbnailColors(catalog);
       const selected = genreFilter.value;
-      genreFilter.innerHTML = '<option value="all">All genres</option>';
+      genreFilter.innerHTML = '<option value="">Choose genre</option><option value="all-games">All games</option>';
       genres.forEach(function(genre) { const option = document.createElement('option'); option.value = genre; option.textContent = genre; genreFilter.appendChild(option); });
-      genreFilter.value = genres.indexOf(selected) >= 0 ? selected : 'all';
+      genreFilter.value = selected === 'all-games' || genres.indexOf(selected) >= 0 ? selected : '';
     }
     function loadPopularity() {
-      if (typeof APPS_SCRIPT_URL === 'undefined' || !APPS_SCRIPT_URL) { renderCatalog(); return; }
-      window.receivePopularity = function(data) { popularity = (data && data.stats) || {}; renderCatalog(); };
+      if (typeof APPS_SCRIPT_URL === 'undefined' || !APPS_SCRIPT_URL) { renderCatalog(); applyInitialFilter(); return; }
+      window.receivePopularity = function(data) { popularity = (data && data.stats) || {}; renderCatalog(); applyInitialFilter(); };
       const script = document.createElement('script');
       script.src = APPS_SCRIPT_URL + (APPS_SCRIPT_URL.indexOf('?') >= 0 ? '&' : '?') + 'callback=receivePopularity&_=' + Date.now();
-      script.onerror = renderCatalog;
+      script.onerror = function() { renderCatalog(); applyInitialFilter(); };
       document.body.appendChild(script);
     }
     function filterGames() {
@@ -214,17 +214,18 @@
       const resultsGrid = document.getElementById('resultsGrid');
       const resultsTitle = document.getElementById('resultsTitle');
       const clearBtn = document.getElementById('clearBtn');
-      if (searchText === '' && selectedGenre === 'all') { topBanner.style.display = 'block'; catalog.style.display = 'block'; searchResults.style.display = 'none'; clearBtn.style.display = 'none'; return; }
+      if (searchText === '' && selectedGenre === '') { topBanner.style.display = 'block'; catalog.style.display = 'block'; searchResults.style.display = 'none'; clearBtn.style.display = 'none'; return; }
       topBanner.style.display = 'none'; catalog.style.display = 'none'; searchResults.style.display = 'block'; clearBtn.style.display = 'inline-block';
       const matches = gamesList.map(function(game,index) { return {game:game,index:index}; }).filter(function(item) {
-        return item.game.title.toLowerCase().includes(searchText) && (selectedGenre === 'all' || item.game.row === selectedGenre);
+        return item.game.title.toLowerCase().includes(searchText) && (selectedGenre === '' || selectedGenre === 'all-games' || (item.game.row || 'Other') === selectedGenre);
       }).sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
-      resultsTitle.textContent = selectedGenre !== 'all' ? selectedGenre + ' games (' + matches.length + ')' : 'Search results (' + matches.length + ')';
+      resultsTitle.textContent = selectedGenre === 'all-games' ? 'All games (' + matches.length + ')' : (selectedGenre ? selectedGenre + ' games (' + matches.length + ')' : 'Search results (' + matches.length + ')');
       resultsGrid.innerHTML = matches.length ? matches.map(makeCard).join('') : '<p class="no-results">No games found matching your search.</p>';
       applyThumbnailColors(resultsGrid);
     }
-    function selectGenre(genreName) { genreFilter.value = genreName === 'Most Popular' ? 'all' : genreName; filterGames(); window.scrollTo(0,0); }
-    function resetFilters() { document.getElementById('searchInput').value = ''; genreFilter.value = 'all'; filterGames(); }
+    function selectGenre(genreName) { genreFilter.value = genreName === 'Most Popular' ? 'all-games' : genreName; document.getElementById('searchInput').value = ''; filterGames(); window.scrollTo(0,0); }
+    function resetFilters() { document.getElementById('searchInput').value = ''; genreFilter.value = ''; filterGames(); }
+    function applyInitialFilter() { if (new URLSearchParams(window.location.search).get('genre') === 'all-games') { genreFilter.value = 'all-games'; filterGames(); } }
     function scrollForward(button) { const body = button.parentElement; body.querySelector('.row-cards').scrollLeft += 500; body.querySelector('.arrow-left').style.display = 'block'; }
     function scrollBack(button) { button.parentElement.querySelector('.row-cards').scrollLeft -= 500; }
     loadPopularity();
