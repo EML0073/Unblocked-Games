@@ -23,7 +23,9 @@
     .game-genre { display: inline-block; background-color: #262626; color: #bbbbbb; border: 1px solid #3a3a3a; padding: 4px 10px; font-size: 13px; border-radius: 3px; }
     .btn-maximize { background-color: #e50914; color: #ffffff; border: none; padding: 10px 18px; font-size: 14px; font-weight: bold; border-radius: 3px; cursor: pointer; }
     .btn-maximize:hover { background-color: #c40812; }
-    .iframe-wrapper { width: 100%; aspect-ratio: 16 / 9; background-color: #000000; border: 1px solid #333333; border-radius: 4px; overflow: hidden; }
+    .iframe-wrapper { position: relative; width: 100%; aspect-ratio: 16 / 9; background-color: #000000; border: 1px solid #333333; border-radius: 4px; overflow: hidden; }
+    .game-loading { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; padding: 24px; color: #cccccc; background: #080808; text-align: center; font-size: 15px; }
+    .game-loading[hidden] { display: none; }
     #gameFrame { width: 100%; height: 100%; border: none; display: block; }
     .external-app-launch { min-height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 24px; text-align: center; color: #eeeeee; background: #080808; }
     .external-app-launch p { max-width: 520px; color: #aaaaaa; line-height: 1.5; font-size: 14px; }
@@ -136,11 +138,51 @@
           gameFrame.src = IFRAME_PROXY_URL.replace(/\\/$/, '') + '/proxy?url=' + encodeURIComponent(game.webUrl);
         }
       } else if (game.rawUrl) {
-        fetch(game.rawUrl).then(response => {
-          if (!response.ok) throw new Error('Failed to fetch game file');
-          return response.text();
-        }).then(htmlCode => { gameFrame.srcdoc = htmlCode; })
-          .catch(error => { document.getElementById('gameTitle').textContent = 'Error loading game'; console.error(error); });
+        const gameLoading = document.createElement('div');
+        gameLoading.className = 'game-loading';
+        gameLoading.textContent = 'Loading game...';
+        document.querySelector('.iframe-wrapper').appendChild(gameLoading);
+        gameFrame.addEventListener('load', function() { gameLoading.hidden = true; }, { once: true });
+
+        function getCdnUrl(rawUrl) {
+          return rawUrl.replace(
+            /^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/refs\/heads\/([^/]+)\//,
+            'https://cdn.jsdelivr.net/gh/$1/$2@$3/'
+          );
+        }
+        function fetchGameSource(sourceUrl) {
+          const controller = new AbortController();
+          const timeout = setTimeout(function() { controller.abort(); }, 15000);
+          return fetch(sourceUrl, { signal: controller.signal, cache: 'force-cache' })
+            .then(function(response) {
+              if (!response.ok) throw new Error('HTTP ' + response.status);
+              return response.text();
+            })
+            .finally(function() { clearTimeout(timeout); });
+        }
+        function addGameBase(htmlCode, sourceUrl) {
+          const baseUrl = sourceUrl.slice(0, sourceUrl.lastIndexOf('/') + 1).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+          const baseTag = '<base href="' + baseUrl + '">';
+          if (/<base\\b[^>]*>/i.test(htmlCode)) {
+            return htmlCode.replace(/<base\\b[^>]*>/i, baseTag);
+          }
+          if (/<head\\b[^>]*>/i.test(htmlCode)) {
+            return htmlCode.replace(/<head\\b[^>]*>/i, function(head) { return head + baseTag; });
+          }
+          return baseTag + htmlCode;
+        }
+        const cdnUrl = getCdnUrl(game.rawUrl);
+        fetchGameSource(cdnUrl).then(function(htmlCode) {
+          gameFrame.srcdoc = addGameBase(htmlCode, cdnUrl);
+        }).catch(function(cdnError) {
+          console.warn('CDN game load failed; trying GitHub Raw:', cdnError);
+          return fetchGameSource(game.rawUrl).then(function(htmlCode) {
+            gameFrame.srcdoc = addGameBase(htmlCode, game.rawUrl);
+          });
+        }).catch(function(error) {
+          gameLoading.textContent = 'Could not load this game. Please try again later.';
+          console.error('Could not load game from CDN or GitHub Raw:', error);
+        });
       } else {
         document.getElementById('gameTitle').textContent = 'Game URL missing';
       }
