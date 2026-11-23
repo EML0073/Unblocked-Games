@@ -126,6 +126,10 @@
           return response.text();
         }).then(htmlCode => { gameFrame.srcdoc = htmlCode; })
           .catch(error => { document.getElementById('gameTitle').textContent = 'Error loading game'; console.error(error); });
+      } else if (game.proxyApp) {
+        gameFrame.src = 'webproxy.html';
+      } else if (game.webUrl) {
+        gameFrame.src = 'webproxy.html?url=' + encodeURIComponent(game.webUrl);
       } else {
         document.getElementById('gameTitle').textContent = 'Game URL missing';
       }
