@@ -26,6 +26,22 @@
     .site-footer a:hover { color: #ffffff; }
     .site-footer p + p { margin-top: 5px; }
     .license-icons img { max-width: 1em; max-height: 1em; margin-left: .2em; vertical-align: middle; }
+
+    .game-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-report { background: #292929; color: #eeeeee; border: 1px solid #555555; padding: 10px 14px; font-size: 14px; border-radius: 3px; cursor: pointer; }
+    .btn-report:hover { background: #383838; }
+    .report-overlay { position: fixed; inset: 0; z-index: 1000; display: none; align-items: center; justify-content: center; padding: 20px; background: rgba(0,0,0,.78); }
+    .report-overlay.open { display: flex; }
+    .report-dialog { width: 100%; max-width: 430px; padding: 22px; background: #1d1d1d; border: 1px solid #444444; border-radius: 7px; box-shadow: 0 12px 40px rgba(0,0,0,.5); }
+    .report-dialog h2 { margin-bottom: 8px; font-size: 20px; }
+    .report-dialog p { margin-bottom: 14px; color: #bbbbbb; font-size: 13px; line-height: 1.5; }
+    .report-dialog textarea { display: block; width: 100%; min-height: 130px; resize: vertical; padding: 11px; background: #111111; color: #eeeeee; border: 1px solid #555555; border-radius: 4px; font: inherit; font-size: 14px; }
+    .report-dialog textarea:focus { outline: 2px solid #e50914; outline-offset: 1px; }
+    .report-dialog-actions { display: flex; justify-content: flex-end; gap: 9px; margin-top: 14px; }
+    .btn-report-send { background: #e50914; color: white; border: 0; padding: 10px 17px; border-radius: 3px; font-weight: bold; cursor: pointer; }
+    .btn-report-send:hover { background: #c40812; }
+    .btn-report-cancel { background: #333333; color: #eeeeee; border: 1px solid #555555; padding: 10px 14px; border-radius: 3px; cursor: pointer; }
+    @media (max-width: 480px) { .game-actions { width: 100%; } .game-actions button { flex: 1; } }
   </style>
 </head>
 <body>
@@ -37,9 +53,23 @@
         <span class="game-genre" id="gameGenre">Genre</span>
         <span class="game-views" id="gameViews">Views: loading...</span>
       </div>
-      <button class="btn-maximize" onclick="maximizeGame()">&#x26F6; Maximize</button>
+      <div class="game-actions">
+        <button class="btn-report" type="button" onclick="openReport()">Report a problem</button>
+        <button class="btn-maximize" onclick="maximizeGame()">&#x26F6; Maximize</button>
+      </div>
     </div>
     <div class="iframe-wrapper"><iframe id="gameFrame" allowfullscreen sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms"></iframe></div>
+  </div>
+  <div class="report-overlay" id="reportOverlay" role="dialog" aria-modal="true" aria-labelledby="reportTitle" onclick="if (event.target === this) closeReport()">
+    <form class="report-dialog" onsubmit="sendReport(event)">
+      <h2 id="reportTitle">Report a problem</h2>
+      <p>Describe the error you found in this game. The game name will be included automatically.</p>
+      <textarea id="reportMessage" placeholder="Describe the problem..." required maxlength="3000"></textarea>
+      <div class="report-dialog-actions">
+        <button class="btn-report-cancel" type="button" onclick="closeReport()">Cancel</button>
+        <button class="btn-report-send" type="submit">Send</button>
+      </div>
+    </form>
   </div>
   <footer class="site-footer">
     <p class="license-icons"><a href="https://moai2222.github.io/jokuk/index.html">ASKEgame</a> © 2026 by <a href="https://example.com">EML_0073</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></p>
@@ -82,6 +112,23 @@
     } else {
       document.getElementById('gameTitle').textContent = 'Game not found';
       document.getElementById('gameGenre').style.display = 'none';
+    }
+    function openReport() {
+      document.getElementById('reportOverlay').classList.add('open');
+      document.getElementById('reportMessage').focus();
+    }
+    function closeReport() {
+      document.getElementById('reportOverlay').classList.remove('open');
+    }
+    function sendReport(event) {
+      event.preventDefault();
+      const message = document.getElementById('reportMessage').value.trim();
+      if (!message) return;
+      const gameName = game ? game.title : 'Unknown game';
+      const subject = 'ASKEgame error report: ' + gameName;
+      const body = 'Game: ' + gameName + '\nGame ID: ' + id + '\n\nProblem description:\n' + message;
+      window.location.href = 'mailto:eml_0073@ni.eus?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      closeReport();
     }
     function maximizeGame() {
       const iframe = document.getElementById('gameFrame');
