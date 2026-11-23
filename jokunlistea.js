@@ -120,4 +120,125 @@ const gamesList = [
     image: "argazkik/games/doodle-jump.svg",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/doodle-jump.html"
   }
+,
+  {
+    row: "Multiplayer",
+    title: "Among Us",
+    image: "argazkik/games/among-us.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/among-us.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Angry Birds",
+    image: "argazkik/games/angry-birds.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/angry-birds.html"
+  },
+  {
+    row: "Horror",
+    title: "Baldi's Basics",
+    image: "argazkik/games/baldis-basics.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/baldis-basics.html"
+  },
+  {
+    row: "Sports",
+    title: "Basketball Stars",
+    image: "argazkik/games/basketball-stars.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/basketball-stars.html"
+  },
+  {
+    row: "Simulation",
+    title: "BitLife",
+    image: "argazkik/games/bitlife.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/bitlife.html"
+  },
+  {
+    row: "Idle",
+    title: "Cookie Clicker",
+    image: "argazkik/games/cookie-clicker.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/cookie-clicker.htm"
+  },
+  {
+    row: "Arcade",
+    title: "Crossy Road",
+    image: "argazkik/games/crossy-road.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/crossy-road.htm"
+  },
+  {
+    row: "Racing",
+    title: "Drive Mad",
+    image: "argazkik/games/drive-mad.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/drive-mad.htm"
+  },
+  {
+    row: "Puzzle",
+    title: "Fireboy and Watergirl",
+    image: "argazkik/games/fireboy-watergirl.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/fireboy-and-watergirl.html"
+  },
+  {
+    row: "Rhythm",
+    title: "Friday Night Funkin'",
+    image: "argazkik/games/friday-night-funkin.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/friday-night-funkin.html"
+  },
+  {
+    row: "Arcade",
+    title: "Geometry Dash",
+    image: "argazkik/games/geometry-dash.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/geometry-dash.html"
+  },
+  {
+    row: "Horror",
+    title: "Granny",
+    image: "argazkik/games/granny.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/granny.html"
+  },
+  {
+    row: "Arcade",
+    title: "Happy Wheels",
+    image: "argazkik/games/happy-wheels.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/happy-wheels.html"
+  },
+  {
+    row: "Action",
+    title: "Jetpack Joyride",
+    image: "argazkik/games/jetpack-joyride.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/jetpack-joyride.html"
+  },
+  {
+    row: "Racing",
+    title: "Moto X3M",
+    image: "argazkik/games/moto-x3m.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/moto-x3m.htm"
+  },
+  {
+    row: "Arcade",
+    title: "Pac-Man",
+    image: "argazkik/games/pac-man.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/pac-man.html"
+  },
+  {
+    row: "Arcade",
+    title: "Paper.io 2",
+    image: "argazkik/games/paper-io-2.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/paper-io-2.htm"
+  },
+  {
+    row: "Strategy",
+    title: "Plants vs. Zombies",
+    image: "argazkik/games/plants-vs-zombies.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/plants-vs-zombies.html"
+  },
+  {
+    row: "Sports",
+    title: "Retro Bowl",
+    image: "argazkik/games/retro-bowl.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/retro-bowl.html"
+  },
+  {
+    row: "Platformer",
+    title: "Run 3",
+    image: "argazkik/games/run-3.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/run.html"
+  }
 ];
