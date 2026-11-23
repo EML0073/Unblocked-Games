@@ -8,8 +8,6 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background-color: #121212; color: #eeeeee; font-family: Arial, Helvetica, sans-serif; }
     .nav-bar { background-color: #1a1a1a; padding: 9px 5%; border-bottom: 1px solid #2a2a2a; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .nav-logo img { display: block; width: 150px; height: 55px; object-fit: contain; filter: brightness(0) invert(1); }
-    @media (max-width: 480px) { .nav-logo img { width: 125px; height: 46px; } }
     .btn-back { color: #cccccc; text-decoration: none; font-size: 15px; }
     .btn-back:hover { color: #ffffff; }
     .game-container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
@@ -45,7 +43,7 @@
   </style>
 </head>
 <body>
-  <div class="nav-bar"><a href="index.html" class="nav-logo" aria-label="ASKEgame home"><img src="argazkik/ASKEgame_logo.svg" alt="ASKEgame"></a><a href="index.html" class="btn-back">&larr; Back to catalog</a></div>
+  <div class="nav-bar"><a href="index.html" class="btn-back">&larr; Back to catalog</a></div>
   <div class="game-container">
     <div class="game-header">
       <div class="game-info">
@@ -72,7 +70,7 @@
     </form>
   </div>
   <footer class="site-footer">
-    <p class="license-icons"><a href="https://moai2222.github.io/jokuk/index.html">ASKEgame</a> © 2026 by <a href="https://example.com">EML_0073</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></p>
+    <p class="license-icons">© 2026 by <a href="https://example.com">EML_0073</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></p>
     <p>Games and their respective assets belong to their original creators and are not covered by this website's license.</p>
     <p>Contact/Feedback: <a href="mailto:eml_0073@ni.eus">eml_0073@ni.eus</a> · <a href="privacy.html">Privacy Policy</a></p>
   </footer>
@@ -125,7 +123,7 @@
       const message = document.getElementById('reportMessage').value.trim();
       if (!message) return;
       const gameName = game ? game.title : 'Unknown game';
-      const subject = 'ASKEgame error report: ' + gameName;
+      const subject = 'Error report: ' + gameName;
       const body = 'Game: ' + gameName + '\nGame ID: ' + id + '\n\nProblem description:\n' + message;
       window.location.href = 'mailto:eml_0073@ni.eus?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       closeReport();
