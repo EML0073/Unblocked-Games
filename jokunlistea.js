@@ -124,7 +124,7 @@ const gamesList = [
   {
     row: "Multiplayer",
     title: "Among Us",
-    image: "https://www.citypng.com/public/uploads/preview/hd-black-among-us-outline-word-text-logo-png-701751694789330agq2fejhfc.png?v=2024070211",
+    image: "https://res09.bignox.com/moniqi-blog/jp-bignox-blog/2022/09/83ee6035704323a86b8ed5c3179734a6.png?x-oss-process=image%2Fquality%2Cq_50%2Fresize%2Cm_fill%2Cw_300%2Ch_300",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/among-us.html"
   },
   {
@@ -226,7 +226,7 @@ const gamesList = [
   {
     row: "Strategy",
     title: "Plants vs. Zombies",
-    image: "https://www.pinclipart.com/picdir/middle/523-5237868_plants-vs-zombies-title-clipart.png",
+    image: "https://cdn2.steamgriddb.com/icon/d43f633d079beb098669f97f7301d3fb/32/512x512.png",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/plants-vs-zombies.html"
   },
   {
