@@ -212,14 +212,14 @@
     }
     function filterGames() {
       const searchText = document.getElementById('searchInput').value.toLowerCase().trim();
-      const selectedGenre = genreFilter.value;
+      const selectedGenre = document.getElementById('genreFilter').value;
       const topBanner = document.getElementById('topBanner');
       const searchResults = document.getElementById('searchResults');
       const resultsGrid = document.getElementById('resultsGrid');
       const resultsTitle = document.getElementById('resultsTitle');
       const clearBtn = document.getElementById('clearBtn');
-      if (searchText === '' && selectedGenre === '') { topBanner.style.display = 'block'; catalog.style.display = 'block'; searchResults.style.display = 'none'; clearBtn.style.display = 'none'; return; }
-      topBanner.style.display = 'none'; catalog.style.display = 'none'; searchResults.style.display = 'block'; clearBtn.style.display = 'inline-block';
+      if (searchText === '' && selectedGenre === '') { topBanner.style.display = 'block'; document.getElementById('catalog').style.display = 'block'; searchResults.style.display = 'none'; clearBtn.style.display = 'none'; return; }
+      topBanner.style.display = 'none'; document.getElementById('catalog').style.display = 'none'; searchResults.style.display = 'block'; clearBtn.style.display = 'inline-block';
       const matches = gamesList.map(function(game,index) { return {game:game,index:index}; }).filter(function(item) {
         return item.game.title.toLowerCase().includes(searchText) && (selectedGenre === '' || selectedGenre === 'all-games' || (item.game.row || 'Other') === selectedGenre);
       }).sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
