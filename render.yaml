@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: askegame-iframe-proxy
+    name: unblockedgames-iframe-proxy
     runtime: node
     plan: free
     rootDir: proxy-server
