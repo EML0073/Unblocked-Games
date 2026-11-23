@@ -59,4 +59,65 @@ const gamesList = [
     image: "argazkik/fnaf4.jpeg",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/fnaf-4.html"
   },
+,
+  {
+    row: "Arcade",
+    title: "Slope",
+    image: "argazkik/games/slope.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/slope.html"
+  },
+  {
+    row: "Arcade",
+    title: "Stickman Hook",
+    image: "argazkik/games/stickman-hook.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/stickman-hook.html"
+  },
+  {
+    row: "Shooter",
+    title: "SUPERHOT",
+    image: "argazkik/games/superhot.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/superhot.html"
+  },
+  {
+    row: "Runner",
+    title: "Temple Run 2",
+    image: "argazkik/games/temple-run-2.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/temple-run-2.htm"
+  },
+  {
+    row: "Platformer",
+    title: "Vex 6",
+    image: "argazkik/games/vex-6.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/vex-6.htm"
+  },
+  {
+    row: "Puzzle",
+    title: "World's Hardest Game",
+    image: "argazkik/games/worlds-hardest-game.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/worlds-hardest-game.html"
+  },
+  {
+    row: "Sports",
+    title: "Basket Bros",
+    image: "argazkik/games/basket-bros.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/basket-bros.html"
+  },
+  {
+    row: "Shooter",
+    title: "Rooftop Snipers",
+    image: "argazkik/games/rooftop-snipers.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/rooftop-snipers.htm"
+  },
+  {
+    row: "Adventure",
+    title: "Duck Life",
+    image: "argazkik/games/duck-life.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/duck-life.html"
+  },
+  {
+    row: "Arcade",
+    title: "Doodle Jump",
+    image: "argazkik/games/doodle-jump.svg",
+    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/doodle-jump.html"
+  }
 ];
