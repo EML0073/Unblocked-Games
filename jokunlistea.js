@@ -280,5 +280,12 @@ const gamesList = [
     addedAt: "2026-11-23",
     image: "https://static.historyminds.com/uploads/OG-Images/RUN-3---OG-FB_72YTvw.png",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/run.html"
-  }
+  },
+    {
+    row: "Adventure",
+    title: "YouTube",
+    addedAt: "2026-11-23",
+    image: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original",
+    webUrl: "https://www.youtube.com/"
+  },
 ];
