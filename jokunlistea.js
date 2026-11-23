@@ -160,7 +160,7 @@ const gamesList = [
   {
     row: "Arcade",
     title: "Crossy Road",
-    image: "https://tm.ibxk.com.br/2015/01/09/09131511315427.jpg?ims=1200x1200",
+    image: "https://img1.wikia.nocookie.net/__cb20141215200414/logopedia/images/c/c9/CrossyRoadAppIcon.png",
     rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/crossy-road.htm"
   },
   {
