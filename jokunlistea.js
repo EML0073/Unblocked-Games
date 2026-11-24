@@ -445,14 +445,14 @@ const gamesList = [
     row: "Racing",
     title: "Aquapark.io",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=aquapark.io&sz=128",
+    image: "https://wave-rider.io/data/image/Aquaparkio.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/claquaparkio.html"
   },
   {
     row: "Horror",
     title: "The Backrooms",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=backrooms-game.com&sz=128",
+    image: "https://cdn-1.webcatalog.io/catalog/the-backrooms-game/the-backrooms-game-icon-unplated.png?v=1721611842965",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbackrooms.html"
   },
   {
@@ -466,7 +466,7 @@ const gamesList = [
     row: "Puzzle",
     title: "Bob the Robber",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=bobtherobber.com&sz=128",
+    image: "https://img.gamedistribution.com/18d28481ea514f3c838f9a5a355fb0f7-512x512.jpeg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbobtherobber.html"
   },
   {
@@ -522,7 +522,7 @@ const gamesList = [
     row: "Arcade",
     title: "Helix Jump",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=helixjump.io&sz=128",
+    image: "https://1games.io/data/image/game/helix-jump/helix-jump.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clhelixjump.html"
   },
   {
@@ -536,7 +536,7 @@ const gamesList = [
     row: "Arcade",
     title: "Learn to Fly",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=learntoflygame.com&sz=128",
+    image: "https://www.xpmonkey.com/resources/game-img/learn-to-fly.webp",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cllearntofly.html"
   },
   {
@@ -550,7 +550,7 @@ const gamesList = [
     row: "Racing",
     title: "Moto X3M 2",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=motox3m.com&sz=128",
+    image: "https://drivemadgame.cc/uploads/games/main/img_69cc7fb7863ce.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clmotox3m2.html"
   },
   {
@@ -564,21 +564,21 @@ const gamesList = [
     row: "Simulation",
     title: "Papa's Cheeseria",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=flipline.com&sz=128",
+    image: "https://img.poki-cdn.com/cdn-cgi/image/quality%3D78%2Cwidth%3D1200%2Cheight%3D1200%2Cfit%3Dcover%2Cf%3Dpng/dba66f3ebbf814e758579987d62c1b35.jpeg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clpapascheeseria.html"
   },
   {
     row: "Simulation",
     title: "Papa's Cupcakeria",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=flipline.com&sz=128",
+    image: "https://img.poki-cdn.com/cdn-cgi/image/q%3D78%2Cscq%3D50%2Cwidth%3D1200%2Cheight%3D1200%2Cfit%3Dcover%2Cf%3Dpng/94373042e426d38ffec1bccdd1c06be4/papas-cupcakeria.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clpapascupcakeria.html"
   },
   {
     row: "Simulation",
     title: "Papa's Freezeria",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=flipline.com&sz=128",
+    image: "https://cdn.reludi.com/media/games/x99pl6zfjdfv.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clpapasfreezeria.html"
   },
   {
@@ -592,14 +592,14 @@ const gamesList = [
     row: "Strategy",
     title: "Raft Wars 2",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=raftwars2.com&sz=128",
+    image: "https://img.poki-cdn.com/cdn-cgi/image/quality%3D78%2Cwidth%3D1200%2Cheight%3D1200%2Cfit%3Dcover%2Cf%3Dpng/8ce3d09339bcb18c63bf9f1780795944/raft-wars-2.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clraftwars2.html"
   },
   {
     row: "Platformer",
     title: "Rooftop Run",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=rooftoprun.com&sz=128",
+    image: "https://crossy-road.io/data/image/rooftop-run.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clrooftoprun.html"
   },
   {
@@ -620,7 +620,7 @@ const gamesList = [
     row: "Racing",
     title: "Snow Rider 3D",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=snowrider3d.com&sz=128",
+    image: "https://snow-rider3d.co/data/image/game/snow-rider.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsnowrider.html"
   },
   {
