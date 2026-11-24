@@ -606,7 +606,7 @@ const gamesList = [
     row: "Runner",
     title: "Extreme Run 3D",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=extremerun3d.com&sz=128",
+    image: "https://static.keygames.com/4/117414/103437/1200x630/extreme-run-3d.webp",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clextremerun3d.html"
   },
   {
@@ -763,7 +763,7 @@ const gamesList = [
     row: "Sports",
     title: "3D Pinball Space Cadet",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=windows.com&sz=128",
+    image: "https://www.downloaden.nl/spelletjes-games/3d-pinball-space-cadet/images/Pinball_3D.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cl3dpinballspacecadet.html"
   },
   {
@@ -973,7 +973,7 @@ const gamesList = [
     row: "Sports",
     title: "Arcade Volley",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=arcadevolley.com&sz=128",
+    image: "https://doodle-jump.co/data/image/game/arcade-volley/arcade-volley.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clarcadevolley.html"
   },
   {
@@ -1015,7 +1015,7 @@ const gamesList = [
     row: "Arcade",
     title: "As Duty Demands",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=asdutydemands.com&sz=128",
+    image: "https://cdn.akamai.steamstatic.com/steam/apps/4274860/header.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clasdutydemands.html"
   },
   {
@@ -1596,7 +1596,7 @@ const gamesList = [
     row: "Arcade",
     title: "Candy Box 1",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=candybox1.com&sz=128",
+    image: "https://images.sftcdn.net/images/t_app-cover-l%2Cf_auto/p/4bc3f729-185b-4d75-a7f4-f5a2d055ee9d/1211072779/candy-box-screenshot.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clcandybox1.html"
   },
   {
@@ -1617,7 +1617,7 @@ const gamesList = [
     row: "Arcade",
     title: "CaptchaWare",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=captchaware.com&sz=128",
+    image: "https://assets.games.gg/Captcha_Ware_Turns_Captchas_Into_Fast_Paced_Microgames_00bc17e6c6.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clcaptchaware.html"
   },
   {
@@ -2002,7 +2002,7 @@ const gamesList = [
     row: "Multiplayer",
     title: "Dash Party",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=dashparty.com&sz=128",
+    image: "https://crazy-cattle3d.com/data/image/dash-party-ingame.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cldashio.html"
   },
   {
@@ -2240,7 +2240,7 @@ const gamesList = [
     row: "Racing",
     title: "Drift Simulator",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=driftsimulator.com&sz=128",
+    image: "https://drifthunt.com/banner.webp",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cldriftsimulator.html"
   },
   {
@@ -2464,7 +2464,7 @@ const gamesList = [
     row: "Arcade",
     title: "Euroaural Song Contest 2D",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=euroauralsongcontest2d.com&sz=128",
+    image: "https://project-screenshots.websim.com/019e3199-aa93-70fd-b351-df2317643652",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cleurovisionsim.html"
   },
   {
@@ -2499,7 +2499,7 @@ const gamesList = [
     row: "Arcade",
     title: "Home Alone",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=homealone.com&sz=128",
+    image: "https://bestdosgames.com/uploads/2025/11/7209758-home-alone-dos-marv-sets-off-a-doorway-trap-mcgavga.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfearstofathomhomealone.html"
   },
   {
@@ -3122,7 +3122,7 @@ const gamesList = [
     row: "Horror",
     title: "Haunted School",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=hauntedschool.com&sz=128",
+    image: "https://ozgames.io/data/image/game/Haunted-School.JPG",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clhauntedschool.html"
   },
   {
@@ -3157,7 +3157,7 @@ const gamesList = [
     row: "Arcade",
     title: "Flying Robot",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=flyingrobot.com&sz=128",
+    image: "https://s3.envato.com/files/510131833/03_preview3.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clhero3flyingrobot.html"
   },
   {
@@ -3227,7 +3227,7 @@ const gamesList = [
     row: "Arcade",
     title: "HoleBattle",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=holebattle.com&sz=128",
+    image: "https://imgs.crazygames.com/golf-battle/20200312100507/golf-battle-cover?metadata=none&quality=90&width=1200",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clholebattle.html"
   },
   {
@@ -3325,7 +3325,7 @@ const gamesList = [
     row: "Sports",
     title: "Idle Football Manager",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=idlefootballmanager.com&sz=128",
+    image: "https://bronzewinggames.com/images/fim/shot-4.webp",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clidlefootballmanager.html"
   },
   {
@@ -3696,14 +3696,14 @@ const gamesList = [
     row: "Platformer",
     title: "Level Up - Mario Minigames Mayhem",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=levelupmariominigamesmayhem.com&sz=128",
+    image: "https://img.itch.zone/aW1hZ2UvMjQzODYwNS8xNDQ0MTg5NS5wbmc%3D/original/zGcfpA.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cllummm.html"
   },
   {
     row: "Arcade",
     title: "Let It Consume",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=letitconsume.com&sz=128",
+    image: "https://s.puzzle-game.io/games/2025/11/let-it-consume/let-it-consume-6.webp",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clletitconsume.html"
   },
   {
@@ -4165,7 +4165,7 @@ const gamesList = [
     row: "Arcade",
     title: "Obby Cart",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=obbycart.com&sz=128",
+    image: "https://tr.rbxcdn.com/180DAY-1de2bdd68831036c55b0cc9e8d8ad236/768/432/Image/Webp/noFilter",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clobbycart.html"
   },
   {
@@ -4214,7 +4214,7 @@ const gamesList = [
     row: "Arcade",
     title: "Obby Swing",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=obbyswing.com&sz=128",
+    image: "https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/5X/c/e/5/4/ce546a0913116f70bc208f047493fa5302bfdc06.jpeg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clobbyswing.html"
   },
   {
@@ -4256,7 +4256,7 @@ const gamesList = [
     row: "Arcade",
     title: "Omega Layers",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=omegalayers.com&sz=128",
+    image: "https://imgs.crazygames.com/omega-layers/20201215125946/omega-layers-cover?height=2529&metadata=none&quality=60",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clomegalayers.html"
   },
   {
@@ -4550,7 +4550,7 @@ const gamesList = [
     row: "Arcade",
     title: "Forever!",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=forever.com&sz=128",
+    image: "https://kotaku.com/igdb/image/upload/t_720p/scoiv9.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clpokeacademylifeforever.html"
   },
   {
@@ -4613,14 +4613,14 @@ const gamesList = [
     row: "Idle",
     title: "Prank Call Tung Tung Tung Sahur Clicker",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=prankcalltungtungtungsahurclicker.com&sz=128",
+    image: "https://www.yiv.com/cdn-cgi/image/quality%3D78%2Cwidth%3D1200%2Cheight%3D630%2Cfit%3Dpad%2Cformat%3Djpeg/thumb/Prank-Call-Tung-Tung-Sahur.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clprankcalltungtungtungsahurclicker.html"
   },
   {
     row: "Arcade",
     title: "Prestige Tree",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=prestigetree.com&sz=128",
+    image: "https://cdn-ak.f.st-hatena.com/images/fotolife/z/zircoonya/20201007/20201007211804.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clprestigetree.html"
   },
   {
@@ -4634,7 +4634,7 @@ const gamesList = [
     row: "Simulation",
     title: "Processor Tycoon",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=processortycoon.com&sz=128",
+    image: "https://img.itch.zone/aW1nLzI2MTIwMTEwLnBuZw%3D%3D/original/XD8lsq.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clprocessortycoon.html"
   },
   {
@@ -5803,7 +5803,7 @@ const gamesList = [
     row: "Arcade",
     title: "Iceland",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=iceland.com&sz=128",
+    image: "https://fast.startgamer.ru/i/images/31586/origin/game_31586_675591c6d5c6a.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsubwaysurfersiceland.html"
   },
   {
@@ -5817,7 +5817,7 @@ const gamesList = [
     row: "Arcade",
     title: "Mexico",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=mexico.com&sz=128",
+    image: "https://s2.dmcdn.net/v/RXcdf1ep5iyEkUTjF/x1080",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsubwaysurfersmexico.html"
   },
   {
@@ -5831,7 +5831,7 @@ const gamesList = [
     row: "Arcade",
     title: "Monaco",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=monaco.com&sz=128",
+    image: "https://fast.startgamer.net/i/images/30453/origin/game_30453_636533422d569.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsubwaysurfersmonaco.html"
   },
   {
