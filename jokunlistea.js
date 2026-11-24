@@ -424,7 +424,7 @@ const gamesList = [
     row: "Arcade",
     title: "2048",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=2048game.com&sz=128",
+    image: "https://gabrielecirulli.github.io/2048/meta/og_image.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cl2048.html"
   },
   {
@@ -473,7 +473,7 @@ const gamesList = [
     row: "Arcade",
     title: "Bottle Flip 3D",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=bottleflip3d.com&sz=128",
+    image: "https://doondook.studio/wp-content/uploads/2022/12/1024.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbottleflip3d.html"
   },
   {
