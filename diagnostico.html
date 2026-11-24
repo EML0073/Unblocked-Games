@@ -60,18 +60,39 @@
  async function previewGame(frame,source){
   if(activeBlobUrl){URL.revokeObjectURL(activeBlobUrl);activeBlobUrl=null}
   frame.src='about:blank';
-  const response=await fetch(source,{mode:'cors',cache:'no-store'});
-  if(!response.ok)throw new Error('El servidor respondió HTTP '+response.status);
-  let html=await response.text();
-  if(!/<\\s*!doctype\\s+html|<\\s*html[\\s>]/i.test(html)){
-   throw new Error('El servidor no ha devuelto un documento HTML. Tipo recibido: '+(response.headers.get('content-type')||'desconocido'));
+  function sourceCandidates(value){
+   const cdn=value.match(/^https:\/\/(?:cdn|fastly|gcore)\.jsdelivr\.net\/gh\/([^/]+)\/([^@/]+)@([^/]+)\/(.+)$/);
+   const raw=value.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
+   if(cdn){
+    const owner=cdn[1],repo=cdn[2],branch=cdn[3],file=cdn[4];
+    return [value,'https://cdn.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://fastly.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://gcore.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file];
+   }
+   if(raw){
+    const owner=raw[1],repo=raw[2],branch=raw[3],file=raw[4];
+    return ['https://cdn.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://fastly.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://gcore.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,value];
+   }
+   return [value];
   }
-  const base='<base href="'+new URL('.',source).href.replace(/"/g,'&quot;')+'">';
-  if(/<head(?:\\s[^>]*)?>/i.test(html))html=html.replace(/<head(?:\\s[^>]*)?>/i,m=>m+base);
-  else html=base+html;
-  const blob=new Blob([html],{type:'text/html;charset=utf-8'});
-  activeBlobUrl=URL.createObjectURL(blob);
-  frame.src=activeBlobUrl;
+  let lastError=null;
+  for(const candidate of [...new Set(sourceCandidates(String(source))) ]){
+   try{
+    const response=await fetch(candidate,{mode:'cors',cache:'no-store'});
+    if(!response.ok)throw new Error('HTTP '+response.status);
+    const html=await response.text();
+    if(!/<\s*!doctype\s+html|<\s*html[\s>]|<\s*(script|canvas|body|head)[\s>]/i.test(html)){
+     throw new Error('El servidor no ha devuelto contenido HTML. Tipo recibido: '+(response.headers.get('content-type')||'desconocido'));
+    }
+    const base='<base href="'+new URL('.',candidate).href.replace(/"/g,'&quot;')+'">';
+    const documentHtml=/<head(?:\s[^>]*)?>/i.test(html)
+     ?html.replace(/<head(?:\s[^>]*)?>/i,match=>match+base)
+     :'<!doctype html><html><head>'+base+'</head><body>'+html+'</body></html>';
+    const blob=new Blob([documentHtml],{type:'text/html;charset=utf-8'});
+    activeBlobUrl=URL.createObjectURL(blob);
+    frame.src=activeBlobUrl;
+    return;
+   }catch(error){lastError=error}
+  }
+  throw lastError||new Error('No se pudo descargar el HTML del juego');
  }
  function showNext(){
   while(position<order.length&&results.has(order[position]))position++;
