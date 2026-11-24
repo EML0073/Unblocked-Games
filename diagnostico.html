@@ -71,7 +71,7 @@ input{background:#202020;color:#eee;border:1px solid #555;border-radius:4px;padd
   const KEY='unblockedGamesDiagnostics_v1';
   const TIMEOUT_MS=20000;
   const eligible=gamesList.map((g,i)=>({g,i})).filter(x=>x.g && (x.g.rawUrl || x.g.webUrl || x.g.proxyApp));
-  let results={}; let cursor=0; let running=false; let timer=null; let loadStarted=0; let loadSeen=false;
+  let results={}; let cursor=0; let running=false; let timer=null; let loadStarted=0; let loadSeen=false; const skippedThisRun=new Set();
   try{results=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){results={};}
   const $=id=>document.getElementById(id);
   const frame=$('testFrame');
@@ -89,7 +89,7 @@ input{background:#202020;color:#eee;border:1px solid #555;border-radius:4px;padd
   function clearTimer(){if(timer){clearTimeout(timer);timer=null;}}
   function current(){return eligible[cursor];}
   function nextUnreviewed(){
-    for(let n=0;n<eligible.length;n++){const p=(cursor+n)%eligible.length;const r=results[String(eligible[p].i)];if(!r || !r.result || r.result==='skip'){cursor=p;return true;}}
+    for(let n=0;n<eligible.length;n++){const p=(cursor+n)%eligible.length;const r=results[String(eligible[p].i)];if((!r || !r.result || r.result==='skip') && !skippedThisRun.has(eligible[p].i)){cursor=p;return true;}}
     return false;
   }
   function startCurrent(){
@@ -100,20 +100,23 @@ input{background:#202020;color:#eee;border:1px solid #555;border-radius:4px;padd
     $('message').textContent='Loading test page. Wait for it to appear, then try playing briefly before choosing a result.';
     setStatus('Loading…','warn');setButtons(false);$('pauseBtn').disabled=false;$('startBtn').disabled=true;
     let src=g.rawUrl || (g.proxyApp?'webproxy.html':'sandstone.html?url='+encodeURIComponent(g.webUrl));
-    loadStarted=Date.now();
-    frame.onload=function(){
-      loadSeen=true;clearTimer();
-      const seconds=((Date.now()-loadStarted)/1000).toFixed(1);
-      setStatus('Document loaded','good');
-      $('message').textContent='The iframe document loaded in '+seconds+' s. This does not prove the game works; test it visually and select a result.';
-      setButtons(true);
-    };
-    frame.onerror=function(){clearTimer();setStatus('Load error','bad');$('message').textContent='The browser reported a frame load error. You can mark Error / won’t start.';setButtons(true);};
-    frame.src='about:blank';
-    setTimeout(()=>{if(running)frame.src=src;},80);
-    timer=setTimeout(()=>{
-      if(!loadSeen && running){setStatus('Timeout','bad');$('message').textContent='No iframe load event after 20 seconds. You can mark Error / won’t start, or Skip for now.';setButtons(true);}
-    },TIMEOUT_MS);
+    frame.onload=null;frame.onerror=null;frame.src='about:blank';
+    setTimeout(()=>{
+      if(!running)return;
+      loadStarted=Date.now();
+      frame.onload=function(){
+        loadSeen=true;clearTimer();
+        const seconds=((Date.now()-loadStarted)/1000).toFixed(1);
+        setStatus('Document loaded','good');
+        $('message').textContent='The iframe document loaded in '+seconds+' s. This does not prove the game works; test it visually and select a result.';
+        setButtons(true);
+      };
+      frame.onerror=function(){clearTimer();setStatus('Load error','bad');$('message').textContent='The browser reported a frame load error. You can mark Error / won’t start.';setButtons(true);};
+      frame.src=src;
+      timer=setTimeout(()=>{
+        if(!loadSeen && running){setStatus('Timeout','bad');$('message').textContent='No iframe load event after 20 seconds. You can mark Error / won’t start, or Skip for now.';setButtons(true);}
+      },TIMEOUT_MS);
+    },80);
     updateStats();
   }
   function finish(){
@@ -131,6 +134,7 @@ input{background:#202020;color:#eee;border:1px solid #555;border-radius:4px;padd
     if(!running)return;clearTimer();
     const item=current();if(!item)return;
     results[String(item.i)]={result:result, title:item.g.title||'', url:item.g.rawUrl||item.g.webUrl||'webproxy.html', testedAt:new Date().toISOString(), loadEvent:loadSeen};
+    if(result==='skip')skippedThisRun.add(item.i);
     save();updateStats();cursor++;
     if(!nextUnreviewed()){finish();return;}
     startCurrent();
@@ -142,7 +146,7 @@ input{background:#202020;color:#eee;border:1px solid #555;border-radius:4px;padd
   $('pauseBtn').addEventListener('click',pause);
   $('resetBtn').addEventListener('click',()=>{
     if(!confirm('Delete all diagnostic results saved in this browser?'))return;
-    results={};cursor=0;save();updateStats();pause();$('gameName').textContent='Ready to test';$('gameMeta').textContent='The test queue includes all games in the catalog.';setStatus('Waiting','');$('message').textContent='Results reset.';
+    results={};cursor=0;skippedThisRun.clear();save();updateStats();pause();$('gameName').textContent='Ready to test';$('gameMeta').textContent='The test queue includes all games in the catalog.';setStatus('Waiting','');$('message').textContent='Results reset.';
   });
   document.querySelectorAll('[data-result]').forEach(b=>b.addEventListener('click',()=>record(b.dataset.result)));
   $('exportBtn').addEventListener('click',()=>{
