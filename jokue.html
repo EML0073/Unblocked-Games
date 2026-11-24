@@ -101,51 +101,32 @@
   <script src="config.js"></script>
   <script>
     async function loadRawHtmlIntoFrame(frame, url) {
-      // Carga el documento directamente en el iframe. No usar fetch()+srcdoc:
-      // srcdoc cambia el origen del juego al de UNBLOCKEDgames y rompe
-      // almacenamiento, módulos, workers y otras APIs que dependen del origen.
+      // Los juegos HTML deben servirse con MIME text/html. Algunos mirrors
+      // pueden devolver text/plain y el navegador muestra el código fuente.
       function sourceCandidates(source) {
         const raw = source.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
         const cdn = source.match(/^https:\/\/(?:cdn|fastly|gcore)\.jsdelivr\.net\/gh\/([^/]+)\/([^@/]+)@([^/]+)\/(.+)$/);
         if (raw) {
-          const path = raw[4];
           return [
-            'https://cdn.jsdelivr.net/gh/' + raw[1] + '/' + raw[2] + '@' + raw[3] + '/' + path,
-            'https://fastly.jsdelivr.net/gh/' + raw[1] + '/' + raw[2] + '@' + raw[3] + '/' + path,
-            'https://gcore.jsdelivr.net/gh/' + raw[1] + '/' + raw[2] + '@' + raw[3] + '/' + path
+            'https://raw.githack.com/' + raw[1] + '/' + raw[2] + '/' + raw[3] + '/' + raw[4],
+            'https://cdn.jsdelivr.net/gh/' + raw[1] + '/' + raw[2] + '@' + raw[3] + '/' + raw[4],
+            'https://fastly.jsdelivr.net/gh/' + raw[1] + '/' + raw[2] + '@' + raw[3] + '/' + raw[4]
           ];
         }
         if (cdn) {
-          const path = cdn[4];
           return [
-            'https://cdn.jsdelivr.net/gh/' + cdn[1] + '/' + cdn[2] + '@' + cdn[3] + '/' + path,
-            'https://fastly.jsdelivr.net/gh/' + cdn[1] + '/' + cdn[2] + '@' + cdn[3] + '/' + path,
-            'https://gcore.jsdelivr.net/gh/' + cdn[1] + '/' + cdn[2] + '@' + cdn[3] + '/' + path
+            'https://raw.githack.com/' + cdn[1] + '/' + cdn[2] + '/' + cdn[3] + '/' + cdn[4],
+            'https://cdn.jsdelivr.net/gh/' + cdn[1] + '/' + cdn[2] + '@' + cdn[3] + '/' + cdn[4],
+            'https://fastly.jsdelivr.net/gh/' + cdn[1] + '/' + cdn[2] + '@' + cdn[3] + '/' + cdn[4]
           ];
         }
         return [source];
       }
 
       const candidates = [...new Set(sourceCandidates(url))];
-      let lastError = null;
-      for (const candidate of candidates) {
-        try {
-          // Comprobar que el HTML existe, sin reescribirlo ni ejecutarlo aquí.
-          const response = await fetch(candidate, {
-            method: 'GET',
-            mode: 'cors',
-            credentials: 'omit',
-            cache: 'default'
-          });
-          if (!response.ok) throw new Error('HTTP ' + response.status);
-          if (response.body) response.body.cancel().catch(function() {});
-          frame.src = candidate;
-          return;
-        } catch (error) {
-          lastError = error;
-        }
-      }
-      throw lastError || new Error('Could not locate game HTML on a CDN mirror');
+      // Cargar directamente el documento; no descargarlo como texto ni usar srcdoc.
+      // raw.githack sirve archivos HTML como páginas HTML en lugar de texto plano.
+      frame.src = candidates[0];
     }
 
     const params = new URLSearchParams(window.location.search);
@@ -175,9 +156,7 @@
       } else { viewsElement.textContent = 'Views unavailable'; }
       const gameFrame = document.getElementById('gameFrame');
       if (game.rawUrl) {
-        // Fetch the HTML, then set its original URL as <base> before using srcdoc.
-        // This avoids raw.githubusercontent.com's iframe blocking headers while
-        // keeping relative scripts, images, stylesheets and audio on the source host.
+        // El cargador usa un mirror que sirve HTML con el tipo MIME correcto.
         loadRawHtmlIntoFrame(gameFrame, game.rawUrl).catch(function(error) {
           console.error('Could not load game HTML:', error);
           document.getElementById('gameTitle').textContent = 'Could not load game';
