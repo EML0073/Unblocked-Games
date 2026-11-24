@@ -9761,3 +9761,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/test.htm"
   }
 ];
+
+// Exponer el catálogo para páginas auxiliares como el diagnóstico.
+window.gamesList = gamesList;
