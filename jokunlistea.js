@@ -381,4 +381,42 @@ const gamesList = [
     image: "https://bouncybasketball.com/cdn/images/banners/ovo-dimensions-game-cover.webp?fit=crop&format=auto&q=75&w=1200",
     rawUrl: "https://raw.githubusercontent.com/NolanBetter/nolansproxy.github.io/main/OvO%203%20Dimensions.html"
   },
+
+  // Added 2026-11-24
+  {
+    row: "Arcade",
+    title: "Fruit Ninja",
+    addedAt: "2026-11-24",
+    image: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d6/c1/10/d6c1101f-5d78-56f8-8e17-450ebe497be2/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1024x1024wd.png",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfruitninja.html"
+  },
+  {
+    row: "Multiplayer",
+    title: "Smash Karts",
+    addedAt: "2026-11-24",
+    image: "https://img.poki-cdn.com/cdn-cgi/image/q%3D78%2Cscq%3D50%2Cwidth%3D1200%2Cheight%3D1200%2Cfit%3Dcover%2Cf%3Dpng/9c9e529b14731be871b07b89660bbc2a/smash-karts.png",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsmashkarts.html"
+  },
+  {
+    row: "Strategy",
+    title: "Bloons TD 5",
+    addedAt: "2026-11-24",
+    image: "https://cdn.mobygames.com/covers/3760852-bloons-td-5-nintendo-switch-front-cover.jpg",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbloonsTD5.html"
+  },
+  {
+    row: "Racing",
+    title: "Drift Boss",
+    addedAt: "2026-11-24",
+    image: "https://sloperider.io/data/image/game/drift-boss/drift-boss.png",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cldriftboss.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Cut the Rope",
+    addedAt: "2026-11-24",
+    image: "https://games.html5games.io/games/cuttherope/gameplay/images/logo.png",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clcuttherope.html"
+  },
+
 ];
