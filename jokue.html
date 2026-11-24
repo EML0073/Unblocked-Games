@@ -129,7 +129,7 @@
       } else if (game.proxyApp) {
         gameFrame.src = 'webproxy.html';
       } else if (game.webUrl) {
-        gameFrame.src = 'webproxy.html?url=' + encodeURIComponent(game.webUrl);
+        gameFrame.src = 'sandstone.html?url=' + encodeURIComponent(game.webUrl);
       } else {
         document.getElementById('gameTitle').textContent = 'Game URL missing';
       }
