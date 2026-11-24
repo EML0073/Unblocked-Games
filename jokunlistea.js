@@ -487,7 +487,7 @@ const gamesList = [
     row: "Arcade",
     title: "Death Run",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=deathrun.com&sz=128",
+    image: "https://raw.githubusercontent.com/smdgames/mathgames66/main/mgthumbnails/deathrun3d.jpeg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cldeathrun.html"
   },
   {
@@ -515,7 +515,7 @@ const gamesList = [
     row: "Shooter",
     title: "Gun Mayhem",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=gunmayhem.com&sz=128",
+    image: "https://raw.githubusercontent.com/smdgames/mathgames66/main/mgthumbnails/gunspin.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgunmayhem.html"
   },
   {
@@ -557,7 +557,7 @@ const gamesList = [
     row: "Arcade",
     title: "Ms. Pac-Man",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=pacman.com&sz=128",
+    image: "https://raw.githubusercontent.com/smdgames/mathgames66/main/mgthumbnails/pacman-fps.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clmspacman%20(1).html"
   },
   {
@@ -613,7 +613,7 @@ const gamesList = [
     row: "Arcade",
     title: "Blocky Snakes",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=blockysnakes.com&sz=128",
+    image: "https://raw.githubusercontent.com/smdgames/mathgames66/main/mgthumbnails/Blocky-Snakes.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clblockysnakes.html"
   },
   {
@@ -1659,7 +1659,7 @@ const gamesList = [
     row: "Platformer",
     title: "Cat Mario",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=catmario.com&sz=128",
+    image: "https://raw.githubusercontent.com/smdgames/mathgames66/main/mgthumbnails/Cat_Mario.webp",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clcatmario.html"
   },
   {
@@ -3458,7 +3458,7 @@ const gamesList = [
     row: "Racing",
     title: "Jelly Truck",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=jellytruck.com&sz=128",
+    image: "https://raw.githubusercontent.com/smdgames/mathgames66/main/mgthumbnails/jelly-truck.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cljellytruckgood.html"
   },
   {
@@ -3808,7 +3808,7 @@ const gamesList = [
     row: "Arcade",
     title: "Mari0",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=mari0.com&sz=128",
+    image: "https://raw.githubusercontent.com/smdgames/mathgames66/main/mgthumbnails/mari0.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clMari0.html"
   },
   {
