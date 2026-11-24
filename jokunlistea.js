@@ -1282,7 +1282,7 @@ const gamesList = [
     title: "BFDI Branches",
     addedAt: "2026-11-24",
     image: "https://www.google.com/s2/favicons?domain=bfdibranches.com&sz=128",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbfdibranches.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clBFDIBranches.html"
   },
   {
     row: "Arcade",
@@ -1695,7 +1695,7 @@ const gamesList = [
     title: "Cell to Singularity",
     addedAt: "2026-11-24",
     image: "https://www.google.com/s2/favicons?domain=celltosingularity.com&sz=128",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clCelltoSingularity.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clCellToSingularity.html"
   },
   {
     row: "Arcade",
@@ -1730,7 +1730,7 @@ const gamesList = [
     title: "ChickenCS",
     addedAt: "2026-11-24",
     image: "https://www.google.com/s2/favicons?domain=chickencs.com&sz=128",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clchickencs.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clChickenCS.html"
   },
   {
     row: "Arcade",
@@ -2094,7 +2094,7 @@ const gamesList = [
     title: "Dig out of Prison",
     addedAt: "2026-11-24",
     image: "https://www.google.com/s2/favicons?domain=digoutofprison.com&sz=128",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cldigoutofprison.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clDigOutofPrison.html"
   },
   {
     row: "Arcade",
@@ -2773,7 +2773,7 @@ const gamesList = [
     title: "Also Geometry Dash Wave",
     addedAt: "2026-11-24",
     image: "https://www.google.com/s2/favicons?domain=alsogeometrydashwave.com&sz=128",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgeometrydashwave.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clGeometryDashWave.html"
   },
   {
     row: "Arcade",
@@ -3144,7 +3144,7 @@ const gamesList = [
     title: "Helltaker",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/790.png",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clhelltaker.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clHelltaker.html"
   },
   {
     row: "Arcade",
@@ -3172,7 +3172,7 @@ const gamesList = [
     title: "Hi No Homo",
     addedAt: "2026-11-24",
     image: "https://www.google.com/s2/favicons?domain=hinohomo.com&sz=128",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clhinohomo.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clHiNoHomo.html"
   },
   {
     row: "Arcade",
@@ -3543,14 +3543,14 @@ const gamesList = [
     title: "Just a Platformer Editor 1",
     addedAt: "2026-11-24",
     image: "https://www.google.com/s2/favicons?domain=justaplatformereditor1.com&sz=128",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cljustaplatformere.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cljustaplatformerE.html"
   },
   {
     row: "Platformer",
     title: "Just a Platformer Editor 2",
     addedAt: "2026-11-24",
     image: "https://www.google.com/s2/favicons?domain=justaplatformereditor2.com&sz=128",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cljustaplatformere2.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cljustaplatformerE2.html"
   },
   {
     row: "Arcade",
@@ -3809,7 +3809,7 @@ const gamesList = [
     title: "Mari0",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/smdgames/mathgames66/main/mgthumbnails/mari0.png",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clMari0.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clmari0.html"
   },
   {
     row: "Platformer",
@@ -4516,7 +4516,7 @@ const gamesList = [
     title: "Plants vs Zombies Modded",
     addedAt: "2026-11-24",
     image: "https://www.google.com/s2/favicons?domain=plantsvszombiesmodded.com&sz=128",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clpvzm.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clPVZM.html"
   },
   {
     row: "Arcade",
@@ -4691,7 +4691,7 @@ const gamesList = [
     title: "Quantum Clicker",
     addedAt: "2026-11-24",
     image: "https://www.google.com/s2/favicons?domain=quantumclicker.com&sz=128",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clquantumclicker.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clQuantumClicker.html"
   },
   {
     row: "Arcade",
@@ -4768,7 +4768,7 @@ const gamesList = [
     title: "Red Ball 4",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/redball4.jpg",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clRedBall4.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clredball4.html"
   },
   {
     row: "Arcade",
@@ -6021,7 +6021,7 @@ const gamesList = [
     title: "Supreme Duelist 2019",
     addedAt: "2026-11-24",
     image: "https://www.google.com/s2/favicons?domain=supremeduelist2019.com&sz=128",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsupremeduelist2019.html"
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clSupremeDuelist2019.html"
   },
   {
     row: "Racing",
