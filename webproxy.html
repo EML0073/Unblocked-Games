@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="argazkik/UNBLOCKEDgames_favicon.svg?v=2">
-  <title>UNBLOCKEDgames - Horizon Proxy</title>
+  <title>UNBLOCKEDgames - GUST Proxy</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { min-height: 100vh; display: flex; flex-direction: column; background: #121212; color: #eeeeee; font-family: Arial, Helvetica, sans-serif; }
@@ -38,20 +38,20 @@
     <a href="index.html" aria-label="UNBLOCKEDgames"><img class="brand-logo" src="argazkik/UNBLOCKEDgames_logo.svg?v=3" alt="UNBLOCKEDgames"></a>
     <nav class="main-nav" aria-label="Main menu">
       <a class="nav-tab" href="index.html">Games</a>
-      <a class="nav-tab active" href="proxy.html">Horizon Proxy</a>
+      <a class="nav-tab active" href="proxy.html">GUST Proxy</a>
       <a class="nav-tab" href="https://sites.google.com/view/search-internet/google" target="_blank" rel="noopener noreferrer">Launcher</a>
     </nav>
   </header>
   <main>
     <div class="proxy-heading">
-      <h1>Horizon Proxy</h1>
+      <h1>GUST Proxy</h1>
       <div class="proxy-actions">
         <button class="maximize-btn" id="maximizeBtn" type="button">⛶ Maximize</button>
-        <a href="horizon.html" target="_blank" rel="noopener noreferrer">Open Horizon in a new tab ↗</a>
+        <a href="GUST.html" target="_blank" rel="noopener noreferrer">Open GUST in a new tab ↗</a>
       </div>
     </div>
     <div class="proxy-frame-wrap" id="proxyFrameWrap">
-      <iframe id="horizonFrame" src="horizon.html" title="Horizon Proxy browser" allow="fullscreen; clipboard-read; clipboard-write; autoplay; gamepad"></iframe>
+      <iframe id="gustFrame" src="GUST.html" title="GUST Proxy browser" allow="fullscreen; clipboard-read; clipboard-write; autoplay; gamepad"></iframe>
     </div>
   </main>
   <footer>
@@ -82,7 +82,7 @@
       if (!target) return;
       document.body.classList.add('weburl-mode');
       let attempts = 0;
-      const frame = document.getElementById('horizonFrame');
+      const frame = document.getElementById('gustFrame');
       function openTarget() {
         attempts++;
         try {
@@ -106,6 +106,8 @@
               (doc.head || doc.documentElement).appendChild(style);
             }
             address.value = target;
+            address.dispatchEvent(new Event('input', { bubbles: true }));
+            address.dispatchEvent(new Event('change', { bubbles: true }));
             go.click();
             return;
           }
