@@ -100,11 +100,10 @@
   <script src="config.js"></script>
   <script>
     async function loadRawHtmlIntoFrame(frame, url) {
-      // Los CDN pueden devolver algunos .html como text/plain. Descargamos
-      // el contenido y lo entregamos al iframe como un documento text/html.
+      // Convertir el HTML descargado en un documento real para el iframe.
       function sourceCandidates(source) {
-        const cdn = source.match(/^https:\\/\\/(?:cdn|fastly|gcore)\\.jsdelivr\\.net\\/gh\\/([^/]+)\\/([^@/]+)@([^/]+)\\/(.+)$/);
-        const raw = source.match(/^https:\\/\\/raw\\.githubusercontent\\.com\\/([^/]+)\\/([^/]+)\\/(?:refs\\/heads\\/)?([^/]+)\\/(.+)$/);
+        const cdn = source.match(/^https:\/\/(?:cdn|fastly|gcore)\.jsdelivr\.net\/gh\/([^/]+)\/([^@/]+)@([^/]+)\/(.+)$/);
+        const raw = source.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
         if (cdn) {
           const owner=cdn[1], repo=cdn[2], branch=cdn[3], file=cdn[4];
           return [source,'https://cdn.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://fastly.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://gcore.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file];
@@ -122,20 +121,16 @@
           const response=await fetch(candidate,{mode:'cors',cache:'no-store'});
           if(!response.ok) throw new Error('HTTP '+response.status);
           const html=await response.text();
-          if(!/<\\s*!doctype\\s+html|<\\s*html[\\s>]|<\\s*(script|canvas|body|head)[\\s>]/i.test(html)) {
+          if(!/<\s*!doctype\s+html|<\s*html[\s>]|<\s*(script|canvas|body|head)[\s>]/i.test(html)) {
             throw new Error('El servidor no ha devuelto contenido HTML');
           }
           const base='<base href="'+new URL('.',candidate).href.replace(/"/g,'&quot;')+'">';
-          const documentHtml=/<head(?:\\s[^>]*)?>/i.test(html)
-            ? html.replace(/<head(?:\\s[^>]*)?>/i,match=>match+base)
+          const documentHtml=/<head(?:\s[^>]*)?>/i.test(html)
+            ? html.replace(/<head(?:\s[^>]*)?>/i,match=>match+base)
             : '<!doctype html><html><head>'+base+'</head><body>'+html+'</body></html>';
           const blob=new Blob([documentHtml],{type:'text/html;charset=utf-8'});
           const blobUrl=URL.createObjectURL(blob);
-
-          // El documento Blob se mantiene en un origen aislado por el sandbox.
-          // Así se evita conceder al juego acceso al DOM de la página principal.
-          const sandbox=(frame.getAttribute('sandbox')||'').split(/\\s+/).filter(Boolean).filter(x=>x!=='allow-same-origin');
-          frame.setAttribute('sandbox',sandbox.join(' '));
+          // Mantener el sandbox sin same-origin para aislar el contenido externo.
           frame.src=blobUrl;
           frame.dataset.blobUrl=blobUrl;
           return;
