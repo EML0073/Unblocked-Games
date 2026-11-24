@@ -21222,7 +21222,7 @@ _VIEWER_DL_JS +
             // Background-benchmark the WISP pool at startup so round-robin picks
             // (if enabled) already have latency data for the first navigation, then
             // remember the fastest healthy relay as next launch's startup default.
-            Promise.resolve(benchmarkWispPool()).then(rememberFastestRelay, () => {});
+            // Relay benchmark is started once libcurl is ready, in init(), without blocking navigation.
 
             document.querySelectorAll('.settings-nav-item').forEach(navBtn => {
                 navBtn.addEventListener('click', () => {
