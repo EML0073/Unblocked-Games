@@ -90,7 +90,7 @@
           const address = doc && doc.getElementById('url');
           const go = doc && doc.getElementById('go');
           if (address && go) {
-            // Turn HORIZON into a clean content viewer for webUrl games:
+            // Turn GUST into a clean content viewer for webUrl games:
             // keep its proxy engine, but remove the browser chrome and let
             // the proxied page occupy the whole embedded viewport.
             if (!doc.getElementById('unblockedgames-clean-view')) {
@@ -112,7 +112,7 @@
             return;
           }
         } catch (error) {
-          console.error('Could not pass the URL to HORIZON:', error);
+          console.error('Could not pass the URL to GUST:', error);
         }
         if (attempts < 80) setTimeout(openTarget, 250);
       }
