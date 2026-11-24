@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading shortcut...</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #080808; }
+    #proxyFrame { display: block; width: 100%; height: 100%; border: 0; background: #080808; }
+    #status { position: absolute; inset: 0; display: grid; place-items: center; color: #aaa; background: #080808; font: 14px Arial, sans-serif; pointer-events: none; }
+    #status[hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <div id="status">Connecting to Sandstone...</div>
+  <iframe id="proxyFrame" title="Proxied website" allow="fullscreen; autoplay; gamepad; clipboard-read; clipboard-write"></iframe>
+  <script>
+    (function () {
+      const params = new URLSearchParams(location.search);
+      const target = params.get('url');
+      const frame = document.getElementById('proxyFrame');
+      const status = document.getElementById('status');
+
+      if (!target) {
+        status.textContent = 'No website URL was provided.';
+        return;
+      }
+
+      let parsed;
+      try {
+        parsed = new URL(target);
+      } catch (_) {
+        status.textContent = 'The website URL is invalid.';
+        return;
+      }
+
+      if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+        status.textContent = 'Only HTTP and HTTPS websites are supported.';
+        return;
+      }
+
+      document.title = parsed.hostname;
+      const sandstone = new URL('https://sandstone.pages.dev/');
+      sandstone.hash = target;
+      frame.addEventListener('load', function () {
+        status.hidden = true;
+      }, { once: true });
+      frame.src = sandstone.href;
+    })();
+  </script>
+</body>
+</html>
