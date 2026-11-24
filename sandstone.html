@@ -3,22 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loading shortcut...</title>
+  <title>Opening website...</title>
   <style>
     * { box-sizing: border-box; }
     html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #080808; }
-    #proxyFrame { display: block; width: 100%; height: 100%; border: 0; background: #080808; }
-    #status { position: absolute; inset: 0; display: grid; place-items: center; color: #aaa; background: #080808; font: 14px Arial, sans-serif; pointer-events: none; }
+    /* Sandstone's address bar is 26px tall. Crop it without accessing its cross-origin DOM. */
+    #viewport { position: absolute; inset: 0; overflow: hidden; background: #080808; }
+    #proxyFrame {
+      position: absolute;
+      left: 0;
+      top: -26px;
+      display: block;
+      width: 100%;
+      height: calc(100% + 26px);
+      border: 0;
+      background: #080808;
+    }
+    #status {
+      position: absolute; inset: 0; z-index: 2;
+      display: grid; place-items: center;
+      color: #aaa; background: #080808;
+      font: 14px Arial, sans-serif;
+      pointer-events: none;
+    }
     #status[hidden] { display: none; }
   </style>
+  <link rel="preconnect" href="https://sandstone.pages.dev" crossorigin>
+  <link rel="dns-prefetch" href="//sandstone.pages.dev">
 </head>
 <body>
-  <div id="status">Connecting to Sandstone...</div>
-  <iframe id="proxyFrame" title="Proxied website" allow="fullscreen; autoplay; gamepad; clipboard-read; clipboard-write"></iframe>
+  <div id="viewport">
+    <div id="status">Connecting...</div>
+    <iframe id="proxyFrame" title="Website" allow="fullscreen; autoplay; gamepad; clipboard-read; clipboard-write" referrerpolicy="no-referrer"></iframe>
+  </div>
   <script>
     (function () {
-      const params = new URLSearchParams(location.search);
-      const target = params.get('url');
+      const target = new URLSearchParams(location.search).get('url');
       const frame = document.getElementById('proxyFrame');
       const status = document.getElementById('status');
 
@@ -28,12 +48,8 @@
       }
 
       let parsed;
-      try {
-        parsed = new URL(target);
-      } catch (_) {
-        status.textContent = 'The website URL is invalid.';
-        return;
-      }
+      try { parsed = new URL(target); }
+      catch (_) { status.textContent = 'Invalid website URL.'; return; }
 
       if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
         status.textContent = 'Only HTTP and HTTPS websites are supported.';
@@ -41,12 +57,14 @@
       }
 
       document.title = parsed.hostname;
-      const sandstone = new URL('https://sandstone.pages.dev/');
-      sandstone.hash = target;
+      const proxy = new URL('https://sandstone.pages.dev/');
+      proxy.hash = parsed.href;
+
       frame.addEventListener('load', function () {
         status.hidden = true;
       }, { once: true });
-      frame.src = sandstone.href;
+
+      frame.src = proxy.href;
     })();
   </script>
 </body>
