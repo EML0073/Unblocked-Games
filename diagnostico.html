@@ -96,12 +96,9 @@ input{background:#202020;color:#eee;border:1px solid #555;border-radius:4px;padd
     let html=await response.text();
     const safeBase=url.replace(/&/g,'&amp;').replace(/"/g,'&quot;');
     const baseTag='<base href="'+safeBase+'">';
-    if(/<base\b[^>]*>/i.test(html))html=html.replace(/<base\b[^>]*>/i,baseTag);
-    else if(/<head\b[^>]*>/i.test(html))html=html.replace(/<head\b[^>]*>/i,head=>head+baseTag);
-    else html='<!doctype html><html><head>'+baseTag+'</head><body>'+html+'</body></html>';
-    targetFrame.srcdoc=html;
-  }
-  function current(){return eligible[cursor];}
+    if(/<base\b[^>]*>/i.test(html)) {
+      // Preserve any base URL declared by the game; it may point to its asset CDN.
+    } else if(/<head\b[^>]*>/i.test(html)) {return eligible[cursor];}
   function nextUnreviewed(){
     for(let n=0;n<eligible.length;n++){const p=(cursor+n)%eligible.length;const r=results[String(eligible[p].i)];if((!r || !r.result || r.result==='skip') && !skippedThisRun.has(eligible[p].i)){cursor=p;return true;}}
     return false;
