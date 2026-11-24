@@ -634,7 +634,7 @@ const gamesList = [
     row: "Runner",
     title: "Subway Surfers: Barcelona",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=subwaysurfers.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cadillacghost/Unblocked-Games/main/images/thumbnails/subwaysurfers.jpeg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsubwaysurfersbarcelona.html"
   },
   {
@@ -1099,7 +1099,7 @@ const gamesList = [
     row: "Arcade",
     title: "Bad Piggies (LATEST)",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=rovio.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cadillacghost/Unblocked-Games/main/images/thumbnails/badpiggies.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbadpiggieslatest.html"
   },
   {
@@ -1113,7 +1113,7 @@ const gamesList = [
     row: "Arcade",
     title: "Baldi’s Basics Remastered",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=basicallygames.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cadillacghost/Unblocked-Games/main/images/thumbnails/baldisbasics.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbaldisbasicsremaster.html"
   },
   {
@@ -1862,7 +1862,7 @@ const gamesList = [
     row: "Idle",
     title: "Cookie Clicker Mod Menu",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=cookieclickermodmenu.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cadillacghost/Unblocked-Games/main/images/thumbnails/cookieclick.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clcookieclickermodmenu.html"
   },
   {
@@ -2667,7 +2667,7 @@ const gamesList = [
     row: "Horror",
     title: "FNAF 3 Remastered",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=fnaf3remastered.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cadillacghost/Unblocked-Games/main/images/thumbnails/fnaf3.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfnaf3remastered.html"
   },
   {
@@ -4886,7 +4886,7 @@ const gamesList = [
     row: "Sports",
     title: "Rocket Soccer Derby",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=rocketsoccerderby.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cadillacghost/Unblocked-Games/main/images/thumbnails/rocketsoccer.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clrocketsoccerderby.html"
   },
   {
@@ -5278,7 +5278,7 @@ const gamesList = [
     row: "Arcade",
     title: "Slope 2 player",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=slope2player.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cadillacghost/Unblocked-Games/main/images/thumbnails/slope2.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clslope2player.html"
   },
   {
@@ -5537,7 +5537,7 @@ const gamesList = [
     row: "Multiplayer",
     title: "Stackball.io",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=stackball.io&sz=128",
+    image: "https://raw.githubusercontent.com/Cadillacghost/Unblocked-Games/main/images/thumbnails/stack.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clstackballio.html"
   },
   {
