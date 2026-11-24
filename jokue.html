@@ -106,10 +106,10 @@
       let html = await response.text();
       const safeBase = url.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
       const baseTag = '<base href="' + safeBase + '">';
-      if (/<base\\b[^>]*>/i.test(html)) {
-        html = html.replace(/<base\\b[^>]*>/i, baseTag);
-      } else if (/<head\\b[^>]*>/i.test(html)) {
-        html = html.replace(/<head\\b[^>]*>/i, function(head) { return head + baseTag; });
+      if (/<base\b[^>]*>/i.test(html)) {
+        html = html.replace(/<base\b[^>]*>/i, baseTag);
+      } else if (/<head\b[^>]*>/i.test(html)) {
+        html = html.replace(/<head\b[^>]*>/i, function(head) { return head + baseTag; });
       } else {
         html = '<!doctype html><html><head>' + baseTag + '</head><body>' + html + '</body></html>';
       }
