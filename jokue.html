@@ -126,11 +126,10 @@
       } else { viewsElement.textContent = 'Views unavailable'; }
       const gameFrame = document.getElementById('gameFrame');
       if (game.rawUrl) {
-        fetch(game.rawUrl).then(response => {
-          if (!response.ok) throw new Error('Failed to fetch game file');
-          return response.text();
-        }).then(htmlCode => { gameFrame.srcdoc = htmlCode; })
-          .catch(error => { document.getElementById('gameTitle').textContent = 'Error loading game'; console.error(error); });
+        // Load the HTML file as a real document instead of injecting it into srcdoc.
+        // This preserves the original URL as the base URL, so relative scripts,
+        // stylesheets, images, audio and other game assets resolve correctly.
+        gameFrame.src = game.rawUrl;
       } else if (game.proxyApp) {
         gameFrame.src = 'webproxy.html';
       } else if (game.webUrl) {
