@@ -350,7 +350,7 @@ const gamesList = [
     row: "Shooter",
     title: "Red vs Blue War",
     addedAt: "2026-11-24",
-    image: "https://yupgames.io/_next/image?q=100&url=https%3A%2F%2Fs3.growsolutions.tech%2Fyupgames%2Fgames%2Fimages%2F1754451996207-RBWAR+Online_+Red+vs+Blue%21.png&w=1200",
+    image: "https://s3.growsolutions.tech/yupgames/games/images/1754451996207-RBWAR%20Online_%20Red%20vs%20Blue!.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clredvsbluewar.html"
   },
   {
@@ -408,7 +408,7 @@ const gamesList = [
     row: "Racing",
     title: "Drift Boss",
     addedAt: "2026-11-24",
-    image: "https://sloperider.io/data/image/game/drift-boss/drift-boss.png",
+    image: "https://media.hotgame.io/2026/05/21233425/drift-boss-icon.webp",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cldriftboss.html"
   },
   {
