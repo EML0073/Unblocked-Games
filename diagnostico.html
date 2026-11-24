@@ -1,84 +1,92 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Diagnóstico interno · UNBLOCKEDgames</title>
 <style>
-:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#111;color:#eee;font:15px/1.5 Arial,sans-serif}.wrap{max-width:1180px;margin:32px auto;padding:0 20px}h1{font-size:27px;margin:0 0 5px}.muted{color:#aaa}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:24px 0}.stat,.panel{background:#1c1c1c;border:1px solid #333;border-radius:8px;padding:16px}.stat strong{display:block;font-size:25px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.toolbar input,.toolbar select{background:#151515;color:#eee;border:1px solid #444;border-radius:5px;padding:11px;min-width:190px}.toolbar input{flex:1}.table-wrap{overflow:auto;border:1px solid #333;border-radius:8px}table{width:100%;border-collapse:collapse;min-width:720px}th,td{text-align:left;padding:11px;border-bottom:1px solid #303030}th{background:#202020;position:sticky;top:0}tr:last-child td{border:0}.status{font-size:12px;color:#bbb}.pill{display:inline-block;padding:3px 8px;border-radius:20px;background:#303030}.bad{color:#ff8c8c}.good{color:#8de0a1}button{cursor:pointer;background:#333;color:#fff;border:1px solid #555;border-radius:4px;padding:7px 10px}button:hover{background:#444}.preview{margin-top:20px}.preview iframe{width:100%;height:min(65vh,600px);border:1px solid #444;background:#000;border-radius:6px}.preview-head{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.hidden{display:none}.small{font-size:12px;overflow-wrap:anywhere}
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#111;color:#eee;font:15px/1.5 Arial,sans-serif}.wrap{max-width:950px;margin:34px auto;padding:0 20px}h1{font-size:28px;margin:0 0 6px}.muted{color:#aaa}.panel{background:#1c1c1c;border:1px solid #383838;border-radius:9px;padding:18px;margin:18px 0}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0}button{cursor:pointer;border:1px solid #555;border-radius:5px;padding:10px 15px;background:#333;color:#fff;font-weight:600}button:hover{background:#444}button:disabled{opacity:.4;cursor:not-allowed}.primary{background:#b20d18;border-color:#d22}.primary:hover{background:#cf111e}.success{background:#174b2c;border-color:#287c49}.danger{background:#642126;border-color:#a53b43}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}.stat{background:#151515;border:1px solid #333;border-radius:7px;padding:12px}.stat strong{display:block;font-size:25px}.progress{height:9px;background:#333;border-radius:10px;overflow:hidden;margin-top:10px}.progress span{display:block;height:100%;width:0;background:#d21b27;transition:width .2s}.game-title{font-size:24px;margin:0 0 3px}.meta{font-size:13px;color:#aaa;overflow-wrap:anywhere}.frame-wrap{background:#000;border:1px solid #444;border-radius:6px;overflow:hidden;margin-top:15px}.frame-wrap iframe{display:block;width:100%;height:min(62vh,590px);border:0;background:#000}.hint{font-size:13px;color:#aaa;line-height:1.5}.status{font-weight:700}.empty{padding:28px;text-align:center;color:#aaa}.topline{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.pill{background:#303030;border-radius:20px;padding:4px 9px;font-size:12px}.report-list{max-height:220px;overflow:auto;font-size:13px;color:#bbb}.report-list div{padding:5px 0;border-bottom:1px solid #333}
 </style>
 </head>
 <body>
 <main class="wrap">
 <h1>Diagnóstico interno</h1>
-<p class="muted">Herramienta privada para revisar la estructura del catálogo y abrir juegos en una vista de prueba. No está enlazada desde la navegación pública.</p>
-<section class="stats" id="stats"><div class="stat">Cargando catálogo…</div></section>
+<p class="muted">Revisión aleatoria de los juegos del catálogo. Esta página no está enlazada desde ninguna página pública.</p>
 <section class="panel">
-<strong>Comprobaciones del catálogo</strong>
-<p class="muted" id="summary">Leyendo jokunlistea.js…</p>
-<p class="small muted">Las comprobaciones de URL detectan campos y formatos, pero no certifican que el juego funcione. La carga dentro del iframe tampoco permite confirmar siempre errores HTTP por las restricciones del navegador.</p>
+ <div class="stats">
+  <div class="stat"><strong id="total">0</strong><span class="muted">En catálogo</span></div>
+  <div class="stat"><strong id="done">0</strong><span class="muted">Revisados</span></div>
+  <div class="stat"><strong id="ok">0</strong><span class="muted">Funcionan</span></div>
+  <div class="stat"><strong id="fail">0</strong><span class="muted">Fallan</span></div>
+  <div class="stat"><strong id="skip">0</strong><span class="muted">Saltados</span></div>
+ </div>
+ <div class="progress"><span id="bar"></span></div>
+ <p class="hint" id="progressText">Pulsa «Empezar» para crear un orden aleatorio sin repetir juegos.</p>
+ <div class="actions">
+  <button class="primary" id="start">Empezar / reiniciar orden aleatorio</button>
+  <button id="download" disabled>Descargar resultados CSV</button>
+ </div>
 </section>
-<div class="toolbar">
-<input id="search" type="search" placeholder="Buscar juego…">
-<select id="filter"><option value="all">Todos los juegos</option><option value="missing">Con campos incompletos</option><option value="jsdelivr">URL jsDelivr</option><option value="raw">URL raw.githubusercontent</option><option value="other">Otras URL</option><option value="duplicate">URL duplicada</option></select>
-</div>
-<div class="table-wrap"><table><thead><tr><th>#</th><th>Juego</th><th>Género</th><th>Fuente</th><th>Imagen</th><th>Revisión</th><th></th></tr></thead><tbody id="rows"><tr><td colspan="7">Cargando…</td></tr></tbody></table></div>
-<section class="panel preview hidden" id="preview">
-<div class="preview-head"><div><strong id="previewTitle">Vista de prueba</strong><div class="small muted" id="previewUrl"></div></div><button id="closePreview">Cerrar vista</button></div>
-<p class="status" id="previewStatus">La carga se ha iniciado; el navegador puede no permitir verificar el estado HTTP del contenido.</p>
-<iframe id="frame" title="Vista de prueba" sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox allow-downloads allow-modals allow-presentation" allow="autoplay; fullscreen; gamepad; clipboard-read; clipboard-write" allowfullscreen></iframe>
+<section class="panel" id="current">
+ <div class="empty">Pulsa «Empezar» para mostrar el primer juego aleatorio.</div>
 </section>
+<section class="panel">
+ <div class="topline"><strong>Últimos resultados</strong><span class="pill" id="resultCount">0 resultados</span></div>
+ <div class="report-list" id="resultList"><p class="muted">Todavía no has revisado ningún juego.</p></div>
+</section>
+<p class="hint">Importante: el navegador no permite saber de forma fiable si un juego externo funciona o si devuelve un error HTTP dentro del iframe. Marca el resultado después de probarlo tú. El CSV descargado incluirá el nombre, la URL, la fecha y el estado que hayas indicado.</p>
 </main>
 <script src="jokunlistea.js"></script>
 <script>
 (function(){
- const games=Array.isArray(window.gamesList)?window.gamesList:[];
  const $=id=>document.getElementById(id);
- const counts={missing:0,jsdelivr:0,raw:0,other:0,duplicate:0};
- const urls=new Map();
- games.forEach(g=>{if(g&&g.rawUrl)urls.set(g.rawUrl,(urls.get(g.rawUrl)||0)+1)});
- const dupes=new Set([...urls].filter(x=>x[1]>1).map(x=>x[0]));
- const details=games.map((g,i)=>{
-  g=g||{};const issues=[];
-  if(!g.title)issues.push('Sin título');if(!g.row)issues.push('Sin género');if(!g.image)issues.push('Sin imagen');
-  if(!g.rawUrl&&!g.gustApp)issues.push('Sin fuente');
-  const u=String(g.rawUrl||'');
-  let type=!u?'especial':u.includes('jsdelivr.net')?'jsdelivr':u.includes('raw.githubusercontent.com')?'raw':'other';
-  if(issues.length)counts.missing++;if(type==='jsdelivr')counts.jsdelivr++;else if(type==='raw')counts.raw++;else if(type==='other')counts.other++;
-  if(u&&dupes.has(u)){issues.push('URL repetida');counts.duplicate++}
-  return {g,i,issues,type};
- });
- $('stats').innerHTML=[
-  ['Juegos en catálogo',games.length],['Con jsDelivr',counts.jsdelivr],['Con raw GitHub',counts.raw],['Otras fuentes',counts.other],['Campos incompletos',counts.missing],['URLs repetidas',dupes.size]
- ].map(x=>'<div class="stat"><strong>'+x[1]+'</strong><span class="muted">'+x[0]+'</span></div>').join('');
- $('summary').textContent='Revisados '+games.length+' registros. '+counts.missing+' tienen campos incompletos; '+dupes.size+' URL distintas están repetidas. Se conservan las entradas especiales sin rawUrl si tienen gustApp.';
- function render(){
-  const q=$('search').value.toLowerCase(),f=$('filter').value;
-  const list=details.filter(d=>{
-   const g=d.g,hay=(g.title+' '+g.row+' '+(g.rawUrl||'')).toLowerCase();
-   if(q&&!hay.includes(q))return false;
-   if(f==='missing'&&!d.issues.length)return false;
-   if(f==='duplicate'&&!(g.rawUrl&&dupes.has(g.rawUrl)))return false;
-   if(['jsdelivr','raw','other'].includes(f)&&d.type!==f)return false;
-   return true;
-  });
-  $('rows').innerHTML=list.map(d=>{
-   const g=d.g,src=g.rawUrl||'GUST / especial';
-   const issue=d.issues.length?'<span class="bad">'+d.issues.join(' · ')+'</span>':'<span class="good">Estructura correcta</span>';
-   return '<tr><td>'+ (d.i+1) +'</td><td><strong>'+esc(g.title||'(sin título)')+'</strong><div class="small muted">'+esc(g.addedAt||'')+'</div></td><td>'+esc(g.row||'—')+'</td><td class="small">'+esc(src)+'</td><td>'+ (g.image?'Presente':'<span class="bad">Falta</span>') +'</td><td>'+issue+'</td><td><button data-test="'+d.i+'">Probar</button></td></tr>';
-  }).join('')||'<tr><td colspan="7">No hay resultados.</td></tr>';
+ const games=Array.isArray(window.gamesList)?window.gamesList:[];
+ let order=[],position=0,results=new Map(),active=null;
+ $('total').textContent=games.length;
+ function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+ function update(){
+  const done=results.size,ok=[...results.values()].filter(x=>x.status==='Funciona').length,fail=[...results.values()].filter(x=>x.status==='No funciona').length,skip=[...results.values()].filter(x=>x.status==='Saltado').length;
+  $('done').textContent=done;$('ok').textContent=ok;$('fail').textContent=fail;$('skip').textContent=skip;
+  $('bar').style.width=(games.length?done/games.length*100:0)+'%';
+  $('progressText').textContent=done+' de '+games.length+' juegos procesados · '+Math.max(0,games.length-done)+' pendientes';
+  $('download').disabled=done===0;
+  $('resultCount').textContent=done+' resultados';
+  const recent=[...results.values()].slice(-12).reverse();
+  $('resultList').innerHTML=recent.length?recent.map(x=>'<div><b>'+esc(x.title)+'</b> — '+esc(x.status)+' <span class="muted">('+esc(x.date)+')</span></div>').join(''):'<p class="muted">Todavía no has revisado ningún juego.</p>';
  }
- function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
- $('rows').addEventListener('click',e=>{
-  const b=e.target.closest('button[data-test]');if(!b)return;
-  const d=details[Number(b.dataset.test)],g=d.g;
-  if(!g.rawUrl){$('preview').classList.remove('hidden');$('previewTitle').textContent=g.title||'Juego especial';$('previewUrl').textContent='No tiene rawUrl; no se puede abrir desde esta herramienta.';$('frame').src='about:blank';$('previewStatus').textContent='Esta entrada no tiene una URL HTML directa.';return}
-  $('preview').classList.remove('hidden');$('previewTitle').textContent=g.title||'Juego';$('previewUrl').textContent=g.rawUrl;
-  $('previewStatus').textContent='Carga iniciada. Si aparece en blanco, muestra un error o no responde, eso no permite distinguir por sí solo un 404, bloqueo de iframe o fallo interno del juego.';
-  $('frame').src=g.rawUrl;$('preview').scrollIntoView({behavior:'smooth',block:'start'});
- });
- $('closePreview').onclick=()=>{$('frame').src='about:blank';$('preview').classList.add('hidden')};
- $('search').addEventListener('input',render);$('filter').addEventListener('change',render);render();
+ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+ function showNext(){
+  while(position<order.length&&results.has(order[position]))position++;
+  if(position>=order.length){active=null;$('current').innerHTML='<div class="empty"><h2>¡Revisión terminada!</h2><p>Has recorrido todos los juegos de este orden aleatorio.</p><p>Descarga el CSV para guardar los resultados.</p></div>';update();return}
+  active=order[position];const g=games[active]||{};
+  $('current').innerHTML='<div class="topline"><span class="pill">Juego '+(position+1)+' de '+games.length+'</span><span class="meta">ID de catálogo: '+active+'</span></div>'+
+   '<h2 class="game-title">'+esc(g.title||'Sin título')+'</h2><div class="meta">'+esc(g.row||'Sin género')+' · Añadido: '+esc(g.addedAt||'No indicado')+'</div>'+
+   '<p class="meta">'+esc(g.rawUrl|| (g.gustApp?'Aplicación GUST':'Sin rawUrl'))+'</p>'+
+   '<div class="actions"><button class="success" data-result="Funciona">Funciona</button><button class="danger" data-result="No funciona">No funciona</button><button data-result="Saltado">Saltar</button><button id="openTab">Abrir en pestaña nueva ↗</button></div>'+
+   (g.rawUrl?'<div class="frame-wrap"><iframe id="testFrame" title="Prueba de '+esc(g.title||'juego')+'" sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox allow-downloads allow-modals allow-presentation" allow="autoplay; fullscreen; gamepad; clipboard-read; clipboard-write" allowfullscreen></iframe></div><p class="hint">Si el juego no aparece, espera unos segundos y prueba «Abrir en pestaña nueva». Después marca el resultado.</p>':'<p class="hint">Esta entrada no tiene rawUrl. No se puede cargar aquí como HTML directo; comprueba si es una entrada especial.</p>');
+  if(g.rawUrl){$('testFrame').src=g.rawUrl;$('openTab').onclick=()=>window.open(g.rawUrl,'_blank','noopener,noreferrer')}
+  $('current').querySelectorAll('[data-result]').forEach(b=>b.onclick=()=>record(b.dataset.result));
+  update();
+ }
+ function record(status){
+  if(active===null)return;
+  const g=games[active]||{};
+  results.set(active,{id:active,title:g.title||'',genre:g.row||'',url:g.rawUrl||'',image:g.image||'',status,date:new Date().toISOString()});
+  position++;showNext();
+ }
+ $('start').onclick=()=>{
+  if(!games.length){$('current').innerHTML='<div class="empty">No se ha podido leer gamesList desde jokunlistea.js.</div>';return}
+  order=shuffle(games.map((_,i)=>i));position=0;results=new Map();active=null;showNext();
+ };
+ $('download').onclick=()=>{
+  const headers=['ID','Juego','Género','URL','Imagen','Resultado','Fecha'];
+  const rows=[...results.values()].sort((a,b)=>a.id-b.id).map(x=>[x.id,x.title,x.genre,x.url,x.image,x.status,x.date]);
+  const csv=[headers,...rows].map(row=>row.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(';')).join('\r\n');
+  const blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8;'});
+  const url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;a.download='diagnostico-unblocked-games-'+new Date().toISOString().slice(0,10)+'.csv';
+  document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+ };
+ update();
 })();
 </script>
 </body>
