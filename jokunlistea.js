@@ -565,21 +565,21 @@ const gamesList = [
     title: "Papa's Cheeseria",
     addedAt: "2026-11-24",
     image: "https://img.poki-cdn.com/cdn-cgi/image/quality%3D78%2Cwidth%3D1200%2Cheight%3D1200%2Cfit%3Dcover%2Cf%3Dpng/dba66f3ebbf814e758579987d62c1b35.jpeg",
-    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/papas-cheeseria.html"
+    rawUrl: "https://cdn.jsdelivr.net/gh/CoolDude2349/Offline-HTML-Games-Pack@master/offline/papas-cheeseria.html"
   },
   {
     row: "Simulation",
     title: "Papa's Cupcakeria",
     addedAt: "2026-11-24",
     image: "https://img.poki-cdn.com/cdn-cgi/image/q%3D78%2Cscq%3D50%2Cwidth%3D1200%2Cheight%3D1200%2Cfit%3Dcover%2Cf%3Dpng/94373042e426d38ffec1bccdd1c06be4/papas-cupcakeria.png",
-    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/papas-cupcakeria.html"
+    rawUrl: "https://cdn.jsdelivr.net/gh/CoolDude2349/Offline-HTML-Games-Pack@master/offline/papas-cupcakeria.html"
   },
   {
     row: "Simulation",
     title: "Papa's Freezeria",
     addedAt: "2026-11-24",
     image: "https://cdn.reludi.com/media/games/x99pl6zfjdfv.jpg",
-    rawUrl: "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/refs/heads/master/offline/papas-freezeria.html"
+    rawUrl: "https://cdn.jsdelivr.net/gh/CoolDude2349/Offline-HTML-Games-Pack@master/offline/papas-freezeria.html"
   },
   {
     row: "Racing",
