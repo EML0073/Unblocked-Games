@@ -2513,7 +2513,7 @@ const gamesList = [
     row: "Arcade",
     title: "Feed The Void",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=feedthevoid.com&sz=128",
+    image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/feed-the-void/index.icon.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfeedthevoid.html"
   },
   {
@@ -4795,7 +4795,7 @@ const gamesList = [
     row: "Arcade",
     title: "R.E.P.O bad",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=repobad.com&sz=128",
+    image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/repo-bad/img/icon%20256.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clrepobad.html"
   },
   {
@@ -5292,7 +5292,7 @@ const gamesList = [
     row: "Arcade",
     title: "Slot or Not",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=slotornot.com&sz=128",
+    image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/slot%20or%20not/index.apple-touch-icon.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clslotornot.html"
   },
   {
@@ -5670,7 +5670,7 @@ const gamesList = [
     row: "Strategy",
     title: "Stickman Clash",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=stickmanclash.com&sz=128",
+    image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/Stickman%20Clash/index.icon.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clstickmanclash.html"
   },
   {
@@ -6055,7 +6055,7 @@ const gamesList = [
     row: "Arcade",
     title: "Switchblade",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=switchblade.com&sz=128",
+    image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/switchblade/index.apple-touch-icon.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clswitchblade.html"
   },
   {
@@ -6279,7 +6279,7 @@ const gamesList = [
     row: "Strategy",
     title: "Timewarriors",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=timewarriors.com&sz=128",
+    image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/time%20warriors/game_logo_en.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cltimewarriors.html"
   },
   {
