@@ -3577,7 +3577,7 @@ const gamesList = [
     row: "Arcade",
     title: "Kanye Zone",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=kanyezone.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/kanye-zone/images/title.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clkanyezone.html"
   },
   {
@@ -4039,7 +4039,7 @@ const gamesList = [
     row: "Arcade",
     title: "Mr Mine",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=mrmine.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/mr-mine/Shared/Assets/World/title4.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clmrmine.html"
   },
   {
@@ -4179,7 +4179,7 @@ const gamesList = [
     row: "Racing",
     title: "Obby But You’re On a Bike",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=obbybutyoureonabike.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/obby-bike/logo.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clobbybike.html"
   },
   {
@@ -4235,7 +4235,7 @@ const gamesList = [
     row: "Arcade",
     title: "Odd Bot Out",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=oddbotout.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/odd%20bot%20out/webapp/splash.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cloddbotout.html"
   },
   {
@@ -4802,7 +4802,7 @@ const gamesList = [
     row: "Arcade",
     title: "Resizer",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=resizer.com&sz=128",
+    image: "https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/05b65f49-3e26-4068-aea1-cfa6e5aafbdd/2777541320/photo-resizer-image-compressor-screenshot.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clresizer.html"
   },
   {
@@ -6006,7 +6006,7 @@ const gamesList = [
     row: "Arcade",
     title: "Super Santa Kicker",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=supersantakicker.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/super-santa-kicker/assets/pics/grxTitleLogo.gif",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsupersantakicker.html"
   },
   {
@@ -6048,7 +6048,7 @@ const gamesList = [
     row: "Arcade",
     title: "Switch",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=switch.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/switchblade/index.icon.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clswitch.html"
   },
   {
@@ -6104,7 +6104,7 @@ const gamesList = [
     row: "Arcade",
     title: "Tag (coolmathgames)",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=tagcoolmathgames.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/tag-cm/icon.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cltagcm.html"
   },
   {
