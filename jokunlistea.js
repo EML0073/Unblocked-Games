@@ -480,7 +480,7 @@ const gamesList = [
     row: "Puzzle",
     title: "Chess",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=chess.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/chess.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clarchesspelago.html"
   },
   {
@@ -529,7 +529,7 @@ const gamesList = [
     row: "Party",
     title: "House of Hazards",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=houseofhazards.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/houseofhazards.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clhouseofhazards.html"
   },
   {
@@ -683,14 +683,14 @@ const gamesList = [
     row: "Sports",
     title: "Football Bros",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=footballbros.io&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/footballbros.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfootballbros.html"
   },
   {
     row: "Sports",
     title: "Soccer Bros",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=soccerbros.com&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/soccerbros.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsoccerbros.html"
   },
   {
@@ -728,7 +728,7 @@ const gamesList = [
     row: "Puzzle",
     title: "2048 Cupcakes",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=2048cupcakes.com&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/2048cupcakes.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cl2048cupcakes.html"
   },
   {
@@ -896,7 +896,7 @@ const gamesList = [
     row: "Arcade",
     title: "Amazing Strange Rope Police",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=amazingstrangeropepolice.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/games/amazingropepolice/amazing-strange-rope-police-vice-spider-vegas.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clstreangeropepolice.html"
   },
   {
@@ -910,7 +910,7 @@ const gamesList = [
     row: "Arcade",
     title: "Amorphous +",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=amorphous.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/amorphous.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clamorphous.html"
   },
   {
@@ -1106,7 +1106,7 @@ const gamesList = [
     row: "Simulation",
     title: "Bad Time Simulator",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=badtimesimulator.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/badtimesimulator.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbadtimesim.html"
   },
   {
@@ -1442,7 +1442,7 @@ const gamesList = [
     row: "Arcade",
     title: "Bob the Robber 5",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=bobtherobber.com&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/bobtherobber5.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbobtherobber5.html"
   },
   {
@@ -1512,7 +1512,7 @@ const gamesList = [
     row: "Sports",
     title: "Boxing Random",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=boxingrandom.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/boxingrandom.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clboxingrandom.html"
   },
   {
@@ -1631,7 +1631,7 @@ const gamesList = [
     row: "Racing",
     title: "Survival Race",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=survivalrace.com&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/survivalrace.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clcarkingarena.html"
   },
   {
@@ -2485,7 +2485,7 @@ const gamesList = [
     row: "Arcade",
     title: "Fall Guys",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=fallguys.com&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/fallguys.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfallguys.html"
   },
   {
@@ -2541,14 +2541,14 @@ const gamesList = [
     row: "Arcade",
     title: "Fireboy and Watergirl 2",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=fireboyandwatergirl2.com&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/fireboyandwatergirl2.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfireboyandwatergirl2.html"
   },
   {
     row: "Arcade",
     title: "Fireboy and Watergirl 3",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=fireboyandwatergirl3.com&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/fireboyandwatergirl3.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfireboyandwatergirl3.html"
   },
   {
@@ -2737,7 +2737,7 @@ const gamesList = [
     row: "Racing",
     title: "Funny Mad Racing",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=funnymadracing.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/funnymadracing.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfunnymadracing.html"
   },
   {
@@ -2758,7 +2758,7 @@ const gamesList = [
     row: "Arcade",
     title: "Geometry Dash Lite",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=geometrydashlite.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/geometrydashlite.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgdlite.html"
   },
   {
@@ -2856,7 +2856,7 @@ const gamesList = [
     row: "Arcade",
     title: "Gold Digger FRVR",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=golddiggerfrvr.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/golddiggerfrvr.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgolddiggerfrvr.html"
   },
   {
@@ -3528,7 +3528,7 @@ const gamesList = [
     row: "Arcade",
     title: "Justfall.lol",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=justfall.lol&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/justfalllol.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cljustfalllol.html"
   },
   {
@@ -3647,7 +3647,7 @@ const gamesList = [
     row: "Multiplayer",
     title: "Kour.io",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=kour.io&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/kour.io.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clkourio.html"
   },
   {
@@ -4242,7 +4242,7 @@ const gamesList = [
     row: "Arcade",
     title: "Offline Paradise",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=offlineparadise.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/offlineparadise.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clofflineparadise.html"
   },
   {
@@ -4361,7 +4361,7 @@ const gamesList = [
     row: "Multiplayer",
     title: "Paper.io 3D",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=paperio3d.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/paperio3d.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clpaperio3d.html"
   },
   {
@@ -4501,7 +4501,7 @@ const gamesList = [
     row: "Arcade",
     title: "Pizza Tower",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=pizzatower.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/pizzatower.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clpizzatower.html"
   },
   {
@@ -4760,14 +4760,14 @@ const gamesList = [
     row: "Arcade",
     title: "Recoil",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=recoil.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/recoil.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clrecoil.html"
   },
   {
     row: "Arcade",
     title: "Red Ball 4",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=redball4.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/redball4.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clRedBall4.html"
   },
   {
@@ -4858,7 +4858,7 @@ const gamesList = [
     row: "Arcade",
     title: "Rise Higher",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=risehigher.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/risehigher.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clrisehigher.html"
   },
   {
@@ -5131,14 +5131,14 @@ const gamesList = [
     row: "Arcade",
     title: "Shift",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=shift.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/shift.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clshift.html"
   },
   {
     row: "Arcade",
     title: "Shift 3",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=shift3.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/shift3.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clshift2.html"
   },
   {
@@ -5369,7 +5369,7 @@ const gamesList = [
     row: "Arcade",
     title: "Solar Smash",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=solarsmash.com&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/solarsmash.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsolarsmash.html"
   },
   {
@@ -5495,7 +5495,7 @@ const gamesList = [
     row: "Arcade",
     title: "Sprinter",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=sprinter.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/sprinter.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsprinter.html"
   },
   {
@@ -5551,7 +5551,7 @@ const gamesList = [
     row: "Multiplayer",
     title: "State.io",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=state.io&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/stateio.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clstateio.html"
   },
   {
@@ -5677,7 +5677,7 @@ const gamesList = [
     row: "Action",
     title: "Stickman Duel",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=stickmanduel.com&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/stickmanduel.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clstickmanduel.html"
   },
   {
@@ -5929,7 +5929,7 @@ const gamesList = [
     row: "Sports",
     title: "Super Liquid Soccer",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=superliquidsoccer.com&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/superliquidsoccer.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsuperliquidsoccer.html"
   },
   {
@@ -5950,7 +5950,7 @@ const gamesList = [
     row: "Platformer",
     title: "Super Mario Bros",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=supermariobros.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/supermariobros.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsupermariobros.html"
   },
   {
@@ -5964,7 +5964,7 @@ const gamesList = [
     row: "Platformer",
     title: "Super Mario Construct",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=supermarioconstruct.com&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/supermarioconstruct.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsmc.html"
   },
   {
@@ -6174,7 +6174,7 @@ const gamesList = [
     row: "Multiplayer",
     title: "Territorial.io",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=territorial.io&sz=128",
+    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/territorialio.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clterritorialio.html"
   },
   {
@@ -6230,7 +6230,7 @@ const gamesList = [
     row: "Arcade",
     title: "They Are Coming",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=theyarecoming.com&sz=128",
+    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/theyarecoming.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cltheyarecoming.html"
   },
   {
