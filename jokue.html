@@ -101,16 +101,29 @@
   <script src="config.js"></script>
   <script>
     async function loadRawHtmlIntoFrame(frame, url) {
-      function jsDelivrMirror(source) {
-        const modern = source.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/refs\/heads\/([^/]+)\/(.+)$/);
-        if (modern) return 'https://cdn.jsdelivr.net/gh/' + modern[1] + '/' + modern[2] + '@' + modern[3] + '/' + modern[4];
-        const legacy = source.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/);
-        if (legacy) return 'https://cdn.jsdelivr.net/gh/' + legacy[1] + '/' + legacy[2] + '@' + legacy[3] + '/' + legacy[4];
-        return null;
+      function sourceCandidates(source) {
+        const list = [];
+        const raw = source.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
+        const cdn = source.match(/^https:\/\/(?:cdn|fastly|gcore)\.jsdelivr\.net\/gh\/([^/]+)\/([^@/]+)@([^/]+)\/(.+)$/);
+
+        if (cdn) {
+          const path = cdn[4];
+          list.push('https://cdn.jsdelivr.net/gh/' + cdn[1] + '/' + cdn[2] + '@' + cdn[3] + '/' + path);
+          list.push('https://fastly.jsdelivr.net/gh/' + cdn[1] + '/' + cdn[2] + '@' + cdn[3] + '/' + path);
+          list.push('https://gcore.jsdelivr.net/gh/' + cdn[1] + '/' + cdn[2] + '@' + cdn[3] + '/' + path);
+          list.push('https://raw.githubusercontent.com/' + cdn[1] + '/' + cdn[2] + '/' + cdn[3] + '/' + path);
+        } else if (raw) {
+          list.push('https://cdn.jsdelivr.net/gh/' + raw[1] + '/' + raw[2] + '@' + raw[3] + '/' + raw[4]);
+          list.push('https://fastly.jsdelivr.net/gh/' + raw[1] + '/' + raw[2] + '@' + raw[3] + '/' + raw[4]);
+          list.push('https://gcore.jsdelivr.net/gh/' + raw[1] + '/' + raw[2] + '@' + raw[3] + '/' + raw[4]);
+          list.push(source);
+        } else {
+          list.push(source);
+        }
+        return [...new Set(list)];
       }
 
-      const mirrorUrl = jsDelivrMirror(url);
-      const candidates = mirrorUrl && mirrorUrl !== url ? [mirrorUrl, url] : [url];
+      const candidates = sourceCandidates(url);
       let response = null;
       let sourceUrl = url;
       let lastError = null;
@@ -129,12 +142,41 @@
 
       if (!response) throw lastError || new Error('Could not fetch game HTML');
       let html = await response.text();
+
+      // Top Speed Racing 3D stores its Unity data file in three large parts.
+      // Retry each part through alternate jsDelivr mirrors before failing the whole game.
+      if (html.includes('TopSpeedRacing_n1.data.unityweb') && html.includes('partUrls.map(url => fetch(url))')) {
+        html = html.replace(
+          'partUrls.map(url => fetch(url))',
+          `partUrls.map(async url => {
+            const absolute = new URL(url, document.baseURI).href;
+            const mirrors = [
+              absolute,
+              absolute.replace('https://cdn.jsdelivr.net/gh/', 'https://fastly.jsdelivr.net/gh/'),
+              absolute.replace('https://cdn.jsdelivr.net/gh/', 'https://gcore.jsdelivr.net/gh/'),
+              absolute.replace(/^https:\\/\\/(?:cdn|fastly|gcore)\\.jsdelivr\\.net\\/gh\\/([^/]+)\\/([^@/]+)@([^/]+)\\/(.+)$/, 'https://raw.githubusercontent.com/$1/$2/$3/$4')
+            ];
+            let lastError;
+            for (const mirror of [...new Set(mirrors)]) {
+              try {
+                const result = await fetch(mirror, { cache: 'force-cache' });
+                if (result.ok) return result;
+                lastError = new Error('HTTP ' + result.status + ' for ' + mirror);
+              } catch (error) {
+                lastError = error;
+              }
+            }
+            throw lastError || new Error('Unity asset part unavailable');
+          })`
+        );
+      }
+
       const safeBase = sourceUrl.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
       const baseTag = '<base href="' + safeBase + '">';
-      if (/<base\b[^>]*>/i.test(html)) {
+      if (/<base\\b[^>]*>/i.test(html)) {
         // Keep the game's own asset CDN/base URL.
-      } else if (/<head\b[^>]*>/i.test(html)) {
-        html = html.replace(/<head\b[^>]*>/i, function(head) { return head + baseTag; });
+      } else if (/<head\\b[^>]*>/i.test(html)) {
+        html = html.replace(/<head\\b[^>]*>/i, function(head) { return head + baseTag; });
       } else {
         html = '<!doctype html><html><head>' + baseTag + '</head><body>' + html + '</body></html>';
       }
