@@ -1,4 +1,4 @@
-// Add games here using the same object format. Use rawUrl for HTML files or webUrl for normal website URLs.
+// Add games here using the same object format. Use rawUrl for HTML game files.
 const gamesList = [
   {
     row: "Adventure",
@@ -283,17 +283,10 @@ const gamesList = [
   },
   {
     row: "Other Apps & Services",
-    title: "WebURL Test (Example.com)",
-    addedAt: "2026-11-23",
-    image: "https://www.google.com/s2/favicons?domain=example.com&sz=128",
-    webUrl: "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&task=hasiera&Itemid=1693&lang=eu-ES"
-  },
-  {
-    row: "Other Apps & Services",
-    title: "GUST Proxy",
+    title: "GUST",
     addedAt: "2026-11-23",
     image: "argazkik/UNBLOCKEDgames_favicon.svg",
-    proxyApp: true
+    gustApp: true
   },
 
   // Added 2026-11-24
