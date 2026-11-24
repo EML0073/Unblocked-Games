@@ -438,7 +438,7 @@ const gamesList = [
     row: "Arcade",
     title: "Angry Birds Space",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=angrybirds.com&sz=128",
+    image: "https://imagenes.hobbyconsolas.com/files/image_1920_1080/uploads/imagenes/2023/04/25/690d2b60616dc.jpeg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clangrybirds-space.html"
   },
   {
