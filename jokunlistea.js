@@ -1239,7 +1239,7 @@ const gamesList = [
     row: "Arcade",
     title: "Battles",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=battles.com&sz=128",
+    image: "https://imgs.crazygames.com/games/janissary-battles/cover_16x9-1707829368896.png?height=2885&metadata=none&quality=60",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clbattles.html"
   },
   {
@@ -1883,7 +1883,7 @@ const gamesList = [
     row: "Arcade",
     title: "Stickman Games",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=stickmangames.com&sz=128",
+    image: "https://sgames.org/image/game/11cd6117-d7f3-49d4-948e-39a5007146b6.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clcountmastersstickmangames.html"
   },
   {
@@ -1946,7 +1946,7 @@ const gamesList = [
     row: "Arcade",
     title: "Customer Support",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=customersupport.com&sz=128",
+    image: "https://images.2games.io/cache/game/customer-support/customer-support-m200x200.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clcustomersupport.html"
   },
   {
@@ -3360,7 +3360,7 @@ const gamesList = [
     row: "Arcade",
     title: "Insomniary",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=insomniary.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/Insomniary/html5game/nightdefense_texture_0.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clinsomniary.html"
   },
   {
@@ -3654,7 +3654,7 @@ const gamesList = [
     row: "Arcade",
     title: "KS2 Teams",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=ks2teams.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/z799gs/c2@main/logo.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clks2teams.html"
   },
   {
@@ -4438,7 +4438,7 @@ const gamesList = [
     row: "Runner",
     title: "Pumpkin Run 64",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=pumpkinrun64.com&sz=128",
+    image: "https://igroutka.ru/uploads/posts/2022-10/PumpkinRun_16666021096356547db32479.60480282.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clpumpkinrun.html"
   },
   {
@@ -4739,7 +4739,7 @@ const gamesList = [
     row: "Sports",
     title: "Ravenbase",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=ravenbase.com&sz=128",
+    image: "https://gfn.am/en/games/media/images/art_image-ravenfield-b80b71e9.original.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clravenbase.html"
   },
   {
@@ -4970,7 +4970,7 @@ const gamesList = [
     row: "Arcade",
     title: "Russian Sandbox",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=russiansandbox.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/sandbox/icon.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clrussiansandbox.html"
   },
   {
@@ -5355,7 +5355,7 @@ const gamesList = [
     row: "Simulation",
     title: "Soda Simulator",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=sodasimulator.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@9156d9913093925fa2b479bb0918392b98fbc0eb/web/ggj2025.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clsodasimulator.html"
   },
   {
@@ -5432,7 +5432,7 @@ const gamesList = [
     row: "Platformer",
     title: "Soul Jumper",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=souljumper.com&sz=128",
+    image: "https://cdn2.y8.com/cloudimage/34583/file/w180h135_webp-1dd7063a5657365dd9fec300cf83c6c2.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clsouljumper.html"
   },
   {
@@ -6293,7 +6293,7 @@ const gamesList = [
     row: "Arcade",
     title: "Tomorrow And Yesterday",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=tomorrowandyesterday.com&sz=128",
+    image: "https://lh5.ggpht.com/fRIMXX2shsrcluLA9QwCRfE85cDiqYS4yUlvsN0hfc1ksWNHhjwHI6WxserbsByOZvjBmv17GwhiS5H3sm_0C7KutfMKd2lQAa2dlg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/cltommorowandyesterday.html"
   },
   {
