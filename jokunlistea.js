@@ -6289,4 +6289,47 @@ const gamesList = [
     image: "https://staticz.novelgames.com/flashgames/towerblocks/screenshot_600x400.2.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltowerblocks.html"
   }
+,
+  {
+    row: "Sports",
+    title: "1 on 1 Soccer",
+    addedAt: "2026-11-24",
+    image: "https://media.plix.gg/flash/game-thumbs/1-on-1-soccer/960.webp?v=1781866397532",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl1on1soccer.html"
+  },
+  {
+    row: "Arcade",
+    title: "3Dash",
+    addedAt: "2026-11-24",
+    image: "https://geodash.org/images/3dash-image.webp",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl3dash.html"
+  },
+  {
+    row: "Adventure",
+    title: "Bob the Robber 2",
+    addedAt: "2026-11-24",
+    image: "https://img2.ugamezone.com/201901/2019/0614/34/3/313185/original.jpg",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbobtherobber2.html"
+  },
+  {
+    row: "Adventure",
+    title: "Cactus McCoy",
+    addedAt: "2026-11-24",
+    image: "https://images.rocketgames.io/uploads/games/c/cactus-mccoy/cactus-mccoy.138c55.jpg?dpr=2&w=204",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcactusmccoy.html"
+  },
+  {
+    row: "Arcade",
+    title: "Burrito Bison",
+    addedAt: "2026-11-24",
+    image: "https://juicybeast.com/press/burrito_bison_launcha_libre/images/icon.png",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clburritobison.html"
+  },
+  {
+    row: "Sports",
+    title: "Backyard Baseball",
+    addedAt: "2026-11-24",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocc79.jpg",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbackyardbaseball.html"
+  }
 ];
