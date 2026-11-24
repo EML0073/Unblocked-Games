@@ -21580,27 +21580,12 @@ _VIEWER_DL_JS +
                     hideOverlay();
                     updateNav();
 
-                    // ── Boot gate: full WISP-pool benchmark before any page loads ──
-                    // With multi-WISP round-robin on (default), hold navigation behind
-                    // a complete pool benchmark so the first fetch already has real
-                    // latency data to pick from. Capped so a dead network can't hang
-                    // boot forever — after the cap the benchmark finishes in the
-                    // background and navigation proceeds.
-                    // ponytail: 25s cap; raise only if huge pools routinely exceed it.
+                    // Benchmark the WISP relay pool without blocking the first page.
+                    // Navigation can begin immediately; relay ranking updates in the background.
                     if (poolModeOn() && typeof curl !== 'undefined' && curl) {
-                        try {
-                            showBootBenchmark();
-                            const bench = benchmarkWispPool(setBootBenchmarkProgress).then(() => { try { rememberFastestRelay(); } catch (e) {} });
-                            // live progress even when setup started the benchmark first
-                            const tick = setInterval(() => {
-                                const pool = getWispPool();
-                                setBootBenchmarkProgress(pool.filter(u => wispHealth[u]).length, pool.length);
-                            }, 200);
-                            await Promise.race([bench, new Promise(r => setTimeout(r, 25000))]);
-                            clearInterval(tick);
-                        } catch (e) {} finally {
-                            hideBootBenchmark();
-                        }
+                        Promise.resolve(benchmarkWispPool(setBootBenchmarkProgress))
+                            .then(() => { try { rememberFastestRelay(); } catch (e) {} })
+                            .catch(() => {});
                     }
 
             // Signal that libcurl init is complete so deferred UI (tutorial, etc.) can start
