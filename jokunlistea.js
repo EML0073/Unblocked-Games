@@ -917,7 +917,7 @@ const gamesList = [
     row: "Arcade",
     title: "Ancient Sins",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=ancientsins.com&sz=128",
+    image: "https://arcadewebsite.com/thumbnails/clancientsins.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clancientsins.html"
   },
   {
@@ -1183,7 +1183,7 @@ const gamesList = [
     row: "Arcade",
     title: "BAS",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=bas.com&sz=128",
+    image: "https://raw.githubusercontent.com/yokoboko/bas-pico-8/main/readme-resources/bas.gif",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clbas.html"
   },
   {
@@ -1715,7 +1715,7 @@ const gamesList = [
     row: "Arcade",
     title: "Cheese Is The Reason",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=cheeseisthereason.com&sz=128",
+    image: "https://img.itch.zone/aW1nLzIwNjQxMDQ5LnBuZw==/original/56EQpL.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clcheeseisthereason.html"
   },
   {
@@ -1827,7 +1827,7 @@ const gamesList = [
     row: "Arcade",
     title: "Cold Pines",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=coldpines.com&sz=128",
+    image: "https://img.itch.zone/aW1nLzI1MzM3NzA3LnBuZw==/original/5pqiF7.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clcoldpines.html"
   },
   {
@@ -1995,7 +1995,7 @@ const gamesList = [
     row: "Arcade",
     title: "Dash Arena",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=dasharena.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/z-f3-f1/1@main/background.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/cldasharena.html"
   },
   {
@@ -2933,7 +2933,7 @@ const gamesList = [
     row: "Arcade",
     title: "Greener Grass Awaits",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=greenergrassawaits.com&sz=128",
+    image: "https://img.itch.zone/aW1nLzEyOTcxNTMxLmpwZw==/original/SPKm6k.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clgreenergrassawaits.html"
   },
   {
@@ -2961,7 +2961,7 @@ const gamesList = [
     row: "Arcade",
     title: "Gravity",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=gravity.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/gravity/favicon.ico",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clgravity.html"
   },
   {
@@ -3024,7 +3024,7 @@ const gamesList = [
     row: "Arcade",
     title: "GTA Mods",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=gtamods.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/centerclassroom/mc55@main/background.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clgtamods.html"
   },
   {
@@ -3087,7 +3087,7 @@ const gamesList = [
     row: "Arcade",
     title: "Handulam+",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=handulam.com&sz=128",
+    image: "https://www.coolmathgames.com/sites/cmatgame/files/styles/thumbnail_small/public/game_thumbnail/handulum-logo.png?0=itok%3Dy56_8DZ6",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clhandulum.html"
   },
   {
@@ -3220,7 +3220,7 @@ const gamesList = [
     row: "Arcade",
     title: "Horntale",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=horntale.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/shayderrr/horntaleport@main/TemplateData/favicon.ico",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clhorntale.html"
   },
   {
@@ -3234,7 +3234,7 @@ const gamesList = [
     row: "Arcade",
     title: "Hooked",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=hooked.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/Stinkalistic/UGS@main/UNITY/hooked/TemplateData/favicon.ico",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clhooked.html"
   },
   {
@@ -3297,7 +3297,7 @@ const gamesList = [
     row: "Arcade",
     title: "Ice Fishing",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=icefishing.com&sz=128",
+    image: "https://cdn2.y8.com/cloudimage/4793/file/w380h285_retina_webp-4f38879118105f6cb239663a178d9397.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clicefishing.html"
   },
   {
@@ -3612,7 +3612,7 @@ const gamesList = [
     row: "Puzzle",
     title: "Kim Jong Un Tile Puzzle",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=kimjonguntilepuzzle.com&sz=128",
+    image: "https://cdn2.y8.com/cloudimage/393075/file/w380h285_webp-31997dcef202e867c6be7d899bdd5a1e.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clkimjonguntilepuzzle.html"
   },
   {
@@ -4109,7 +4109,7 @@ const gamesList = [
     row: "Arcade",
     title: "Nightcat Survival",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=nightcatsurvival.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/bodrumkat/wahawh@main/logo.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clnightcatsurvival.html"
   },
   {
@@ -4508,7 +4508,7 @@ const gamesList = [
     row: "Simulation",
     title: "Planet Life",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=planetlife.com&sz=128",
+    image: "https://www.northplay.co/wp-content/uploads/2022/11/Super-Planet-Life.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clplanetlife.html"
   },
   {
@@ -4942,7 +4942,7 @@ const gamesList = [
     row: "Runner",
     title: "Run from Withered Fox",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=runfromwitheredfox.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/eazy-man/shHH@main/unity/wither/TemplateData/favicon.ico",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clrunfromwitheredfox.html"
   },
   {
@@ -4977,7 +4977,7 @@ const gamesList = [
     row: "Arcade",
     title: "Russian CS GO-6",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=russiancsgo6.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/sel-lers/x@main/logo.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clcs6.html"
   },
   {
@@ -5621,7 +5621,7 @@ const gamesList = [
     row: "Arcade",
     title: "Steep Descent",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=steepdescent.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/z799gs/3z3z3@main/background.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clsteepdescent.html"
   },
   {
@@ -6013,7 +6013,7 @@ const gamesList = [
     row: "Arcade",
     title: "Super Santa Kicker 2",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=supersantakicker2.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/super-santa-kicker/assets/pics/bgTitle.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clsupersantakicker2.html"
   },
   {
@@ -6188,7 +6188,7 @@ const gamesList = [
     row: "Arcade",
     title: "The Dude",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=thedude.com&sz=128",
+    image: "https://raw.githubusercontent.com/shayderrr/portsv2/main/mrdude/TemplateData/0118.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clthedude.html"
   },
   {
