@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diagnóstico interno · UNBLOCKEDgames</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#111;color:#eee;font:15px/1.5 Arial,sans-serif}.wrap{max-width:1180px;margin:32px auto;padding:0 20px}h1{font-size:27px;margin:0 0 5px}.muted{color:#aaa}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:24px 0}.stat,.panel{background:#1c1c1c;border:1px solid #333;border-radius:8px;padding:16px}.stat strong{display:block;font-size:25px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.toolbar input,.toolbar select{background:#151515;color:#eee;border:1px solid #444;border-radius:5px;padding:11px;min-width:190px}.toolbar input{flex:1}.table-wrap{overflow:auto;border:1px solid #333;border-radius:8px}table{width:100%;border-collapse:collapse;min-width:720px}th,td{text-align:left;padding:11px;border-bottom:1px solid #303030}th{background:#202020;position:sticky;top:0}tr:last-child td{border:0}.status{font-size:12px;color:#bbb}.pill{display:inline-block;padding:3px 8px;border-radius:20px;background:#303030}.bad{color:#ff8c8c}.good{color:#8de0a1}button{cursor:pointer;background:#333;color:#fff;border:1px solid #555;border-radius:4px;padding:7px 10px}button:hover{background:#444}.preview{margin-top:20px}.preview iframe{width:100%;height:min(65vh,600px);border:1px solid #444;background:#000;border-radius:6px}.preview-head{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.hidden{display:none}.small{font-size:12px;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<main class="wrap">
+<h1>Diagnóstico interno</h1>
+<p class="muted">Herramienta privada para revisar la estructura del catálogo y abrir juegos en una vista de prueba. No está enlazada desde la navegación pública.</p>
+<section class="stats" id="stats"><div class="stat">Cargando catálogo…</div></section>
+<section class="panel">
+<strong>Comprobaciones del catálogo</strong>
+<p class="muted" id="summary">Leyendo jokunlistea.js…</p>
+<p class="small muted">Las comprobaciones de URL detectan campos y formatos, pero no certifican que el juego funcione. La carga dentro del iframe tampoco permite confirmar siempre errores HTTP por las restricciones del navegador.</p>
+</section>
+<div class="toolbar">
+<input id="search" type="search" placeholder="Buscar juego…">
+<select id="filter"><option value="all">Todos los juegos</option><option value="missing">Con campos incompletos</option><option value="jsdelivr">URL jsDelivr</option><option value="raw">URL raw.githubusercontent</option><option value="other">Otras URL</option><option value="duplicate">URL duplicada</option></select>
+</div>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Juego</th><th>Género</th><th>Fuente</th><th>Imagen</th><th>Revisión</th><th></th></tr></thead><tbody id="rows"><tr><td colspan="7">Cargando…</td></tr></tbody></table></div>
+<section class="panel preview hidden" id="preview">
+<div class="preview-head"><div><strong id="previewTitle">Vista de prueba</strong><div class="small muted" id="previewUrl"></div></div><button id="closePreview">Cerrar vista</button></div>
+<p class="status" id="previewStatus">La carga se ha iniciado; el navegador puede no permitir verificar el estado HTTP del contenido.</p>
+<iframe id="frame" title="Vista de prueba" sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox allow-downloads allow-modals allow-presentation" allow="autoplay; fullscreen; gamepad; clipboard-read; clipboard-write" allowfullscreen></iframe>
+</section>
+</main>
+<script src="jokunlistea.js"></script>
+<script>
+(function(){
+ const games=Array.isArray(window.gamesList)?window.gamesList:[];
+ const $=id=>document.getElementById(id);
+ const counts={missing:0,jsdelivr:0,raw:0,other:0,duplicate:0};
+ const urls=new Map();
+ games.forEach(g=>{if(g&&g.rawUrl)urls.set(g.rawUrl,(urls.get(g.rawUrl)||0)+1)});
+ const dupes=new Set([...urls].filter(x=>x[1]>1).map(x=>x[0]));
+ const details=games.map((g,i)=>{
+  g=g||{};const issues=[];
+  if(!g.title)issues.push('Sin título');if(!g.row)issues.push('Sin género');if(!g.image)issues.push('Sin imagen');
+  if(!g.rawUrl&&!g.gustApp)issues.push('Sin fuente');
+  const u=String(g.rawUrl||'');
+  let type=!u?'especial':u.includes('jsdelivr.net')?'jsdelivr':u.includes('raw.githubusercontent.com')?'raw':'other';
+  if(issues.length)counts.missing++;if(type==='jsdelivr')counts.jsdelivr++;else if(type==='raw')counts.raw++;else if(type==='other')counts.other++;
+  if(u&&dupes.has(u)){issues.push('URL repetida');counts.duplicate++}
+  return {g,i,issues,type};
+ });
+ $('stats').innerHTML=[
+  ['Juegos en catálogo',games.length],['Con jsDelivr',counts.jsdelivr],['Con raw GitHub',counts.raw],['Otras fuentes',counts.other],['Campos incompletos',counts.missing],['URLs repetidas',dupes.size]
+ ].map(x=>'<div class="stat"><strong>'+x[1]+'</strong><span class="muted">'+x[0]+'</span></div>').join('');
+ $('summary').textContent='Revisados '+games.length+' registros. '+counts.missing+' tienen campos incompletos; '+dupes.size+' URL distintas están repetidas. Se conservan las entradas especiales sin rawUrl si tienen gustApp.';
+ function render(){
+  const q=$('search').value.toLowerCase(),f=$('filter').value;
+  const list=details.filter(d=>{
+   const g=d.g,hay=(g.title+' '+g.row+' '+(g.rawUrl||'')).toLowerCase();
+   if(q&&!hay.includes(q))return false;
+   if(f==='missing'&&!d.issues.length)return false;
+   if(f==='duplicate'&&!(g.rawUrl&&dupes.has(g.rawUrl)))return false;
+   if(['jsdelivr','raw','other'].includes(f)&&d.type!==f)return false;
+   return true;
+  });
+  $('rows').innerHTML=list.map(d=>{
+   const g=d.g,src=g.rawUrl||'GUST / especial';
+   const issue=d.issues.length?'<span class="bad">'+d.issues.join(' · ')+'</span>':'<span class="good">Estructura correcta</span>';
+   return '<tr><td>'+ (d.i+1) +'</td><td><strong>'+esc(g.title||'(sin título)')+'</strong><div class="small muted">'+esc(g.addedAt||'')+'</div></td><td>'+esc(g.row||'—')+'</td><td class="small">'+esc(src)+'</td><td>'+ (g.image?'Presente':'<span class="bad">Falta</span>') +'</td><td>'+issue+'</td><td><button data-test="'+d.i+'">Probar</button></td></tr>';
+  }).join('')||'<tr><td colspan="7">No hay resultados.</td></tr>';
+ }
+ function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+ $('rows').addEventListener('click',e=>{
+  const b=e.target.closest('button[data-test]');if(!b)return;
+  const d=details[Number(b.dataset.test)],g=d.g;
+  if(!g.rawUrl){$('preview').classList.remove('hidden');$('previewTitle').textContent=g.title||'Juego especial';$('previewUrl').textContent='No tiene rawUrl; no se puede abrir desde esta herramienta.';$('frame').src='about:blank';$('previewStatus').textContent='Esta entrada no tiene una URL HTML directa.';return}
+  $('preview').classList.remove('hidden');$('previewTitle').textContent=g.title||'Juego';$('previewUrl').textContent=g.rawUrl;
+  $('previewStatus').textContent='Carga iniciada. Si aparece en blanco, muestra un error o no responde, eso no permite distinguir por sí solo un 404, bloqueo de iframe o fallo interno del juego.';
+  $('frame').src=g.rawUrl;$('preview').scrollIntoView({behavior:'smooth',block:'start'});
+ });
+ $('closePreview').onclick=()=>{$('frame').src='about:blank';$('preview').classList.add('hidden')};
+ $('search').addEventListener('input',render);$('filter').addEventListener('change',render);render();
+})();
+</script>
+</body>
+</html>
