@@ -2114,7 +2114,7 @@ const gamesList = [
     row: "Arcade",
     title: "Dodecadragons",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=dodecadragons.com&sz=128",
+    image: "https://demonin.com/games/dodecaDragons/img/logo.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/cldodecadragons.html"
   },
   {
@@ -4207,7 +4207,7 @@ const gamesList = [
     row: "Arcade",
     title: "Obby Slide",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=obbyslide.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/shayderrr/portsv2@main/mrdude/TemplateData/0118.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clobbyslide.html"
   },
   {
