@@ -419,4 +419,285 @@ const gamesList = [
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clcuttherope.html"
   },
 
+  // Added 40 more verified UGS games on 2026-11-24
+  {
+    row: "Arcade",
+    title: "2048",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=2048game.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cl2048.html"
+  },
+  {
+    row: "Sports",
+    title: "1v1 Tennis",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=1v1tennis.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cl1v1tennis.html"
+  },
+  {
+    row: "Arcade",
+    title: "Angry Birds Space",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=angrybirds.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clangrybirds-space.html"
+  },
+  {
+    row: "Racing",
+    title: "Aquapark.io",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=aquapark.io&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/claquaparkio.html"
+  },
+  {
+    row: "Horror",
+    title: "The Backrooms",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=backrooms-game.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbackrooms.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Bloxorz",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=bloxorz.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbloxorz.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Bob the Robber",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=bobtherobber.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbobtherobber.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bottle Flip 3D",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=bottleflip3d.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbottleflip3d.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Chess",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=chess.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clarchesspelago.html"
+  },
+  {
+    row: "Arcade",
+    title: "Death Run",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=deathrun.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cldeathrun.html"
+  },
+  {
+    row: "Action",
+    title: "Doom",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=doom.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cl2doom.html"
+  },
+  {
+    row: "Racing",
+    title: "Eggy Car",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=eggycar.io&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cleggycar.html"
+  },
+  {
+    row: "Platformer",
+    title: "Getting Over It",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=gettingoveritgame.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgettingoverit.html"
+  },
+  {
+    row: "Shooter",
+    title: "Gun Mayhem",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=gunmayhem.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgunmayhem.html"
+  },
+  {
+    row: "Arcade",
+    title: "Helix Jump",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=helixjump.io&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clhelixjump.html"
+  },
+  {
+    row: "Party",
+    title: "House of Hazards",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=houseofhazards.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clhouseofhazards.html"
+  },
+  {
+    row: "Arcade",
+    title: "Learn to Fly",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=learntoflygame.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cllearntofly.html"
+  },
+  {
+    row: "Racing",
+    title: "Madalin Stunt Cars",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=madalinstuntcars.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clmadalinstuntcars.html"
+  },
+  {
+    row: "Racing",
+    title: "Moto X3M 2",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=motox3m.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clmotox3m2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ms. Pac-Man",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=pacman.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clmspacman%20(1).html"
+  },
+  {
+    row: "Simulation",
+    title: "Papa's Cheeseria",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=flipline.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clpapascheeseria.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papa's Cupcakeria",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=flipline.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clpapascupcakeria.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papa's Freezeria",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=flipline.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clpapasfreezeria.html"
+  },
+  {
+    row: "Racing",
+    title: "Polytrack",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=polytrackgame.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clpolytrackbutnotflagged(1).html"
+  },
+  {
+    row: "Strategy",
+    title: "Raft Wars 2",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=raftwars2.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clraftwars2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Rooftop Run",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=rooftoprun.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clrooftoprun.html"
+  },
+  {
+    row: "Runner",
+    title: "Extreme Run 3D",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=extremerun3d.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clextremerun3d.html"
+  },
+  {
+    row: "Arcade",
+    title: "Blocky Snakes",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=blockysnakes.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clblockysnakes.html"
+  },
+  {
+    row: "Racing",
+    title: "Snow Rider 3D",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=snowrider3d.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsnowrider.html"
+  },
+  {
+    row: "Arcade",
+    title: "Stack",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=stackgame.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgymstack.html"
+  },
+  {
+    row: "Runner",
+    title: "Subway Surfers: Barcelona",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=subwaysurfers.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsubwaysurfersbarcelona.html"
+  },
+  {
+    row: "Arcade",
+    title: "Tiny Fishing",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=tinyfishing.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cltinyfishing.html"
+  },
+  {
+    row: "Arcade",
+    title: "Tunnel Rush",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=tunnelrush.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cltunnelrush.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Wordle",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=nytimes.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clwordle.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Bad Ice-Cream",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=badicecream.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbadicecream.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Bad Ice-Cream 2",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=badicecream.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbadicecream2.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Bad Ice-Cream 3",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=badicecream.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbadicecream3.html"
+  },
+  {
+    row: "Sports",
+    title: "Football Bros",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=footballbros.io&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfootballbros.html"
+  },
+  {
+    row: "Sports",
+    title: "Soccer Bros",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=soccerbros.com&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsoccerbros.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Cut the Rope: Holiday",
+    addedAt: "2026-11-24",
+    image: "https://www.google.com/s2/favicons?domain=cuttherope.net&sz=128",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clcuttheropeholiday.html"
+  }
 ];
