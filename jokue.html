@@ -100,31 +100,35 @@
   <script src="config.js"></script>
   <script>
     async function loadRawHtmlIntoFrame(frame, url) {
-      // Los juegos HTML deben servirse con MIME text/html. Algunos mirrors
-      // pueden devolver text/plain y el navegador muestra el código fuente.
+      // Mantener primero el proveedor original del juego. jsDelivr sirve
+      // HTML directamente y evita convertirlo en texto o usar srcdoc.
       function sourceCandidates(source) {
         const raw = source.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
-        const cdn = source.match(/^https:\/\/(?:cdn|fastly|gcore)\.jsdelivr\.net\/gh\/([^/]+)\/([^@/]+)@([^/]+)\/(.+)$/);
-        if (raw) {
+        const cdn = source.match(/^https:\/\/(cdn|fastly|gcore)\.jsdelivr\.net\/gh\/([^/]+)\/([^@/]+)@([^/]+)\/(.+)$/);
+        if (cdn) {
+          const owner = cdn[2], repo = cdn[3], branch = cdn[4], file = cdn[5];
           return [
-            'https://raw.githack.com/' + raw[1] + '/' + raw[2] + '/' + raw[3] + '/' + raw[4],
-            'https://cdn.jsdelivr.net/gh/' + raw[1] + '/' + raw[2] + '@' + raw[3] + '/' + raw[4],
-            'https://fastly.jsdelivr.net/gh/' + raw[1] + '/' + raw[2] + '@' + raw[3] + '/' + raw[4]
+            source,
+            'https://cdn.jsdelivr.net/gh/' + owner + '/' + repo + '@' + branch + '/' + file,
+            'https://fastly.jsdelivr.net/gh/' + owner + '/' + repo + '@' + branch + '/' + file,
+            'https://gcore.jsdelivr.net/gh/' + owner + '/' + repo + '@' + branch + '/' + file,
+            'https://raw.githack.com/' + owner + '/' + repo + '/' + branch + '/' + file
           ];
         }
-        if (cdn) {
+        if (raw) {
+          const owner = raw[1], repo = raw[2], branch = raw[3], file = raw[4];
           return [
-            'https://raw.githack.com/' + cdn[1] + '/' + cdn[2] + '/' + cdn[3] + '/' + cdn[4],
-            'https://cdn.jsdelivr.net/gh/' + cdn[1] + '/' + cdn[2] + '@' + cdn[3] + '/' + cdn[4],
-            'https://fastly.jsdelivr.net/gh/' + cdn[1] + '/' + cdn[2] + '@' + cdn[3] + '/' + cdn[4]
+            'https://cdn.jsdelivr.net/gh/' + owner + '/' + repo + '@' + branch + '/' + file,
+            'https://fastly.jsdelivr.net/gh/' + owner + '/' + repo + '@' + branch + '/' + file,
+            'https://gcore.jsdelivr.net/gh/' + owner + '/' + repo + '@' + branch + '/' + file,
+            source,
+            'https://raw.githack.com/' + owner + '/' + repo + '/' + branch + '/' + file
           ];
         }
         return [source];
       }
 
       const candidates = [...new Set(sourceCandidates(url))];
-      // Cargar directamente el documento; no descargarlo como texto ni usar srcdoc.
-      // raw.githack sirve archivos HTML como páginas HTML en lugar de texto plano.
       frame.src = candidates[0];
     }
 
