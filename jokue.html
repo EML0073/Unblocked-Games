@@ -60,8 +60,7 @@
     <a href="index.html" aria-label="UNBLOCKEDgames"><img class="brand-logo" src="argazkik/UNBLOCKEDgames_logo.svg?v=3" alt="UNBLOCKEDgames"></a>
     <nav class="main-nav" aria-label="Main menu">
       <a class="nav-tab" href="index.html">Games</a>
-      <a class="nav-tab" href="proxy.html">GUST Proxy</a>
-      <a class="nav-tab" href="diagnostico.html">Diagnostics</a>
+      <a class="nav-tab" href="GUST.html">GUST</a>
       <a class="nav-tab" href="https://sites.google.com/view/search-internet/google" target="_blank" rel="noopener noreferrer">Launcher</a>
     </nav>
     <a href="index.html" class="btn-back">&larr; Back to catalog</a>
@@ -162,10 +161,8 @@
           document.getElementById('gameTitle').textContent = 'Could not load game';
           gameFrame.srcdoc = '<!doctype html><html><body style="margin:0;background:#111;color:#eee;font:16px Arial;padding:24px">Could not load this game file. Check your connection and try again.</body></html>';
         });
-      } else if (game.proxyApp) {
-        gameFrame.src = 'webproxy.html';
-      } else if (game.webUrl) {
-        gameFrame.src = 'sandstone.html?url=' + encodeURIComponent(game.webUrl);
+      } else if (game.gustApp) {
+        gameFrame.src = 'GUST.html';
       } else {
         document.getElementById('gameTitle').textContent = 'Game URL missing';
       }
