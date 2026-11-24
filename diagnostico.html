@@ -57,9 +57,12 @@
  }
  function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
  function previewSource(source){
-  // Los juegos del catálogo usan jsDelivr; convertir también URLs antiguas de GitHub Raw.
-  const m=String(source||'').match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
-  if(m)return 'https://cdn.jsdelivr.net/gh/'+m[1]+'/'+m[2]+'@'+m[3]+'/'+m[4];
+  // jsDelivr puede entregar ciertos HTML como texto plano en algunos casos.
+  // Para el iframe del diagnóstico usamos Raw.githack, que sirve el HTML como documento.
+  const m=String(source||'').match(/^https:\/\/cdn\.jsdelivr\.net\/gh\/([^/]+)\/([^/@]+)@([^/]+)\/(.+)$/);
+  if(m)return 'https://raw.githack.com/'+m[1]+'/'+m[2]+'/'+m[3]+'/'+m[4];
+  const raw=String(source||'').match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/);
+  if(raw)return 'https://raw.githack.com/'+raw[1]+'/'+raw[2]+'/'+raw[3]+'/'+raw[4];
   return source;
  }
  function showNext(){
