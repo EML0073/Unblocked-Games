@@ -101,13 +101,38 @@
   <script src="config.js"></script>
   <script>
     async function loadRawHtmlIntoFrame(frame, url) {
-      const response = await fetch(url, { mode: 'cors', credentials: 'omit' });
-      if (!response.ok) throw new Error('HTTP ' + response.status);
+      function jsDelivrMirror(source) {
+        const modern = source.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/refs\/heads\/([^/]+)\/(.+)$/);
+        if (modern) return 'https://cdn.jsdelivr.net/gh/' + modern[1] + '/' + modern[2] + '@' + modern[3] + '/' + modern[4];
+        const legacy = source.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/);
+        if (legacy) return 'https://cdn.jsdelivr.net/gh/' + legacy[1] + '/' + legacy[2] + '@' + legacy[3] + '/' + legacy[4];
+        return null;
+      }
+
+      const mirrorUrl = jsDelivrMirror(url);
+      const candidates = mirrorUrl && mirrorUrl !== url ? [mirrorUrl, url] : [url];
+      let response = null;
+      let sourceUrl = url;
+      let lastError = null;
+
+      for (const candidate of candidates) {
+        try {
+          const attempt = await fetch(candidate, { mode: 'cors', credentials: 'omit', cache: 'default' });
+          if (!attempt.ok) throw new Error('HTTP ' + attempt.status);
+          response = attempt;
+          sourceUrl = candidate;
+          break;
+        } catch (error) {
+          lastError = error;
+        }
+      }
+
+      if (!response) throw lastError || new Error('Could not fetch game HTML');
       let html = await response.text();
-      const safeBase = url.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+      const safeBase = sourceUrl.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
       const baseTag = '<base href="' + safeBase + '">';
       if (/<base\b[^>]*>/i.test(html)) {
-        // Preserve any base URL declared by the game; it may point to its asset CDN.
+        // Keep the game's own asset CDN/base URL.
       } else if (/<head\b[^>]*>/i.test(html)) {
         html = html.replace(/<head\b[^>]*>/i, function(head) { return head + baseTag; });
       } else {
