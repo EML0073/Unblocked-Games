@@ -833,7 +833,7 @@ const gamesList = [
     row: "Arcade",
     title: "A Day In The Office",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=adayintheoffice.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@027a7fc4b20820dc401547a74cf4f2ee875cd3e2/a%20day%20in%20the%20office/favicon.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/cladayintheoffice.html"
   },
   {
@@ -2030,7 +2030,7 @@ const gamesList = [
     row: "Horror",
     title: "Dead Seat",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=deadseat.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@ded90cd5eba24f3387a4b04c678ddf53caaa3a45/deadseat/index.icon.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/cldeadseat.html"
   },
   {
@@ -2261,7 +2261,7 @@ const gamesList = [
     row: "Arcade",
     title: "Dimensional Incident",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=dimensionalincident.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/shayderrr/portsv4@1198e4f0a43bc83d95e0383106a2a232df9e227f/15950502/TemplateData/favicon.ico",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/cldimensionalincident.html"
   },
   {
@@ -3367,7 +3367,7 @@ const gamesList = [
     row: "Arcade",
     title: "Intellisphere",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=intellisphere.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/Deformed-steve/the-chesse-stash@main/games/intellisphere/IntelliSphere.icon.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clintellisphere.html"
   },
   {
@@ -3535,21 +3535,21 @@ const gamesList = [
     row: "Platformer",
     title: "Just a Platformer",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=justaplatformer.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/TheTastyPi/just-a-platformer@main/pics/just-a-platformer.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/cljustaplatformer.html"
   },
   {
     row: "Platformer",
     title: "Just a Platformer Editor 1",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=justaplatformereditor1.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/eazy-man/shHH@main/justaplatformerstuff/pics/just-a-level-editor.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/cljustaplatformerE.html"
   },
   {
     row: "Platformer",
     title: "Just a Platformer Editor 2",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=justaplatformereditor2.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/eazy-man/shHH@main/justaplatformerstuff/pics/just-a-level-editor-2.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/cljustaplatformerE2.html"
   },
   {
@@ -5117,7 +5117,7 @@ const gamesList = [
     row: "Arcade",
     title: "Shadow Courier",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=shadowcourier.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/familiapablo/safa@main/TemplateData/favicon.ico",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clshadowcourier.html"
   },
   {
@@ -6069,7 +6069,7 @@ const gamesList = [
     row: "Arcade",
     title: "T Taco Stand",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=ttacostand.com&sz=128",
+    image: "https://cdn.jsdelivr.net/gh/netclassroom/998800@main/n/TemplateData/favicon.ico",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/cltacostand.html"
   },
   {
