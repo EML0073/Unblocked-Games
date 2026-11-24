@@ -624,13 +624,6 @@ const gamesList = [
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsnowrider.html"
   },
   {
-    row: "Arcade",
-    title: "Stack",
-    addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/stack.webp",
-    rawUrl: "https://cdn.jsdelivr.net/gh/CoolDude2349/Offline-HTML-Games-Pack@master/offline/stack.html"
-  },
-  {
     row: "Runner",
     title: "Subway Surfers: Barcelona",
     addedAt: "2026-11-24",
@@ -1908,13 +1901,6 @@ const gamesList = [
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcrazychicken3D.html"
   },
   {
-    row: "Arcade",
-    title: "Crazy Crash Landing",
-    addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/crazycrashlanding.webp",
-    rawUrl: "https://cdn.jsdelivr.net/gh/CoolDude2349/Offline-HTML-Games-Pack@master/offline/crazy-crash-landing.html"
-  },
-  {
     row: "Racing",
     title: "Crazy Motorcycle",
     addedAt: "2026-11-24",
@@ -2641,13 +2627,6 @@ const gamesList = [
     addedAt: "2026-11-24",
     image: "https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2023/07/ultimate-custom-night-fnaf-cover.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfnafucn.html"
-  },
-  {
-    row: "Horror",
-    title: "FNAF Sister Location",
-    addedAt: "2026-11-24",
-    image: "https://www.tynker.com/projects/screenshot/589260bf76f293c83a8b457c/fnaf-sister-location-full-game.png",
-    rawUrl: "https://cdn.jsdelivr.net/gh/CoolDude2349/Offline-HTML-Games-Pack@master/offline/fnaf-sister-location.html"
   },
   {
     row: "Shooter",
