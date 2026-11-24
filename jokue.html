@@ -100,6 +100,22 @@
   <script src="jokunlistea.js"></script>
   <script src="config.js"></script>
   <script>
+    async function loadRawHtmlIntoFrame(frame, url) {
+      const response = await fetch(url, { mode: 'cors', credentials: 'omit' });
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      let html = await response.text();
+      const safeBase = url.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+      const baseTag = '<base href="' + safeBase + '">';
+      if (/<base\\b[^>]*>/i.test(html)) {
+        html = html.replace(/<base\\b[^>]*>/i, baseTag);
+      } else if (/<head\\b[^>]*>/i.test(html)) {
+        html = html.replace(/<head\\b[^>]*>/i, function(head) { return head + baseTag; });
+      } else {
+        html = '<!doctype html><html><head>' + baseTag + '</head><body>' + html + '</body></html>';
+      }
+      frame.srcdoc = html;
+    }
+
     const params = new URLSearchParams(window.location.search);
     const id = parseInt(params.get('id'));
     const game = gamesList[id];
@@ -127,10 +143,14 @@
       } else { viewsElement.textContent = 'Views unavailable'; }
       const gameFrame = document.getElementById('gameFrame');
       if (game.rawUrl) {
-        // Load the HTML file as a real document instead of injecting it into srcdoc.
-        // This preserves the original URL as the base URL, so relative scripts,
-        // stylesheets, images, audio and other game assets resolve correctly.
-        gameFrame.src = game.rawUrl;
+        // Fetch the HTML, then set its original URL as <base> before using srcdoc.
+        // This avoids raw.githubusercontent.com's iframe blocking headers while
+        // keeping relative scripts, images, stylesheets and audio on the source host.
+        loadRawHtmlIntoFrame(gameFrame, game.rawUrl).catch(function(error) {
+          console.error('Could not load game HTML:', error);
+          document.getElementById('gameTitle').textContent = 'Could not load game';
+          gameFrame.srcdoc = '<!doctype html><html><body style="margin:0;background:#111;color:#eee;font:16px Arial;padding:24px">Could not load this game file. Check your connection and try again.</body></html>';
+        });
       } else if (game.proxyApp) {
         gameFrame.src = 'webproxy.html';
       } else if (game.webUrl) {
