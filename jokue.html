@@ -100,37 +100,56 @@
   <script src="config.js"></script>
   <script>
     async function loadRawHtmlIntoFrame(frame, url) {
-      // Mantener primero el proveedor original del juego. jsDelivr sirve
-      // HTML directamente y evita convertirlo en texto o usar srcdoc.
+      // Los CDN pueden devolver algunos .html como text/plain. Descargamos
+      // el contenido y lo entregamos al iframe como un documento text/html.
       function sourceCandidates(source) {
-        const raw = source.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
-        const cdn = source.match(/^https:\/\/(cdn|fastly|gcore)\.jsdelivr\.net\/gh\/([^/]+)\/([^@/]+)@([^/]+)\/(.+)$/);
+        const cdn = source.match(/^https:\\/\\/(?:cdn|fastly|gcore)\\.jsdelivr\\.net\\/gh\\/([^/]+)\\/([^@/]+)@([^/]+)\\/(.+)$/);
+        const raw = source.match(/^https:\\/\\/raw\\.githubusercontent\\.com\\/([^/]+)\\/([^/]+)\\/(?:refs\\/heads\\/)?([^/]+)\\/(.+)$/);
         if (cdn) {
-          const owner = cdn[2], repo = cdn[3], branch = cdn[4], file = cdn[5];
-          return [
-            source,
-            'https://cdn.jsdelivr.net/gh/' + owner + '/' + repo + '@' + branch + '/' + file,
-            'https://fastly.jsdelivr.net/gh/' + owner + '/' + repo + '@' + branch + '/' + file,
-            'https://gcore.jsdelivr.net/gh/' + owner + '/' + repo + '@' + branch + '/' + file,
-            'https://raw.githack.com/' + owner + '/' + repo + '/' + branch + '/' + file
-          ];
+          const owner=cdn[1], repo=cdn[2], branch=cdn[3], file=cdn[4];
+          return [source,'https://cdn.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://fastly.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://gcore.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file];
         }
         if (raw) {
-          const owner = raw[1], repo = raw[2], branch = raw[3], file = raw[4];
-          return [
-            'https://cdn.jsdelivr.net/gh/' + owner + '/' + repo + '@' + branch + '/' + file,
-            'https://fastly.jsdelivr.net/gh/' + owner + '/' + repo + '@' + branch + '/' + file,
-            'https://gcore.jsdelivr.net/gh/' + owner + '/' + repo + '@' + branch + '/' + file,
-            source,
-            'https://raw.githack.com/' + owner + '/' + repo + '/' + branch + '/' + file
-          ];
+          const owner=raw[1], repo=raw[2], branch=raw[3], file=raw[4];
+          return ['https://cdn.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://fastly.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://gcore.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,source];
         }
         return [source];
       }
 
-      const candidates = [...new Set(sourceCandidates(url))];
-      frame.src = candidates[0];
+      let lastError=null;
+      for (const candidate of [...new Set(sourceCandidates(String(url)))]) {
+        try {
+          const response=await fetch(candidate,{mode:'cors',cache:'no-store'});
+          if(!response.ok) throw new Error('HTTP '+response.status);
+          const html=await response.text();
+          if(!/<\\s*!doctype\\s+html|<\\s*html[\\s>]|<\\s*(script|canvas|body|head)[\\s>]/i.test(html)) {
+            throw new Error('El servidor no ha devuelto contenido HTML');
+          }
+          const base='<base href="'+new URL('.',candidate).href.replace(/"/g,'&quot;')+'">';
+          const documentHtml=/<head(?:\\s[^>]*)?>/i.test(html)
+            ? html.replace(/<head(?:\\s[^>]*)?>/i,match=>match+base)
+            : '<!doctype html><html><head>'+base+'</head><body>'+html+'</body></html>';
+          const blob=new Blob([documentHtml],{type:'text/html;charset=utf-8'});
+          const blobUrl=URL.createObjectURL(blob);
+
+          // El documento Blob se mantiene en un origen aislado por el sandbox.
+          // Así se evita conceder al juego acceso al DOM de la página principal.
+          const sandbox=(frame.getAttribute('sandbox')||'').split(/\\s+/).filter(Boolean).filter(x=>x!=='allow-same-origin');
+          frame.setAttribute('sandbox',sandbox.join(' '));
+          frame.src=blobUrl;
+          frame.dataset.blobUrl=blobUrl;
+          return;
+        } catch(error) {
+          lastError=error;
+        }
+      }
+      throw lastError||new Error('No se pudo descargar el HTML del juego');
     }
+
+    window.addEventListener('pagehide',function(){
+      const frame=document.getElementById('gameFrame');
+      if(frame&&frame.dataset.blobUrl) URL.revokeObjectURL(frame.dataset.blobUrl);
+    });
 
     const params = new URLSearchParams(window.location.search);
     const id = parseInt(params.get('id'));
