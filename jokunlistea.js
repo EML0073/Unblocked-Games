@@ -1666,7 +1666,7 @@ const gamesList = [
     row: "Arcade",
     title: "Cave Crawler",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=cavecrawler.com&sz=128",
+    image: "https://cdn.mobygames.com/promos/17425535-cave-crawler-screenshot.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clcavecrawler.html"
   },
   {
