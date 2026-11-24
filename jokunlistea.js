@@ -5838,14 +5838,14 @@ const gamesList = [
     row: "Arcade",
     title: "New orleans",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=neworleans.com&sz=128",
+    image: "https://subwayonline.io/data/image/subway-surfers-new-orleans.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsubwaysurfersneworeleans.html"
   },
   {
     row: "Arcade",
     title: "St. petersburg",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=stpetersburg.com&sz=128",
+    image: "https://lh3.games-cdn.com/gm/hypercasual/17410-subway-surfers-saint-petersburg-512x384.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsubwaysurfersstpetersburg.html"
   },
   {
@@ -5866,7 +5866,7 @@ const gamesList = [
     row: "Arcade",
     title: "Sugary Spire UNHAM",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=sugaryspireunham.com&sz=128",
+    image: "https://images.gamebanana.com/img/ss/wips/67bb41d640b69.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clsugaryspire.html"
   },
   {
@@ -6111,7 +6111,7 @@ const gamesList = [
     row: "Arcade",
     title: "Tail of The Dragon",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=tailofthedragon.com&sz=128",
+    image: "https://www.coolmathgames.com/sites/default/files/2021-05/tail%20of%20the%20dragon%20coins.gif",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/cltailofthedragon.html"
   },
   {
