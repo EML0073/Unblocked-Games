@@ -1345,7 +1345,7 @@ const gamesList = [
     title: "Blastronaut",
     addedAt: "2026-11-24",
     image: "https://cdn.mobygames.com/covers/10965850-blastronaut-linux-front-cover.jpg",
-    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clblastronaut.html"
+    rawUrl: "https://raw.githubusercontent.com/Stinkalistic/UGS/main/HTMLs/blastronaut.html"
   },
   {
     row: "Racing",
