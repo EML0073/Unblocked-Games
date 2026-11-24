@@ -295,5 +295,83 @@ const gamesList = [
     image: "argazkik/UNBLOCKEDgames_favicon.svg",
     proxyApp: true
   },
-  ,
+
+  // Added 2026-11-24
+  {
+    row: "Platformer",
+    title: "OvO 2",
+    addedAt: "2026-11-24",
+    image: "https://images.rocketgames.io/uploads/games/o/ovo-2/ovo-2.aedfcd.jpg",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clovo2.html"
+  },
+  {
+    row: "Action",
+    title: "Grand Theft Auto",
+    addedAt: "2026-11-24",
+    image: "https://static.wikia.nocookie.net/rockstargamescompany/images/4/46/GTA1-logo.png/revision/latest/scale-to-width-down/1200?cb=20240810233731",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgtaalt.html"
+  },
+  {
+    row: "Action",
+    title: "Grand Theft Auto 2",
+    addedAt: "2026-11-24",
+    image: "https://www.igrandtheftauto.com/content/images/xl/gta2-logo-square.png",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgta2alt.html"
+  },
+  {
+    row: "Action",
+    title: "Grand Theft Auto: Chinatown Wars",
+    addedAt: "2026-11-24",
+    image: "https://images.ctfassets.net/18izrhn535ym/7K2Lckd6oHN9oFXXGESPdy/509ed917c40b850004c71d0c3c18c3ea/GTA_CW_FOB.jpg?q=100&w=600",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgtachina.html"
+  },
+  {
+    row: "Horror",
+    title: "Granny 2",
+    addedAt: "2026-11-24",
+    image: "https://granny-1.io/data/image/game/granny-chapter-two/granny-chapter-two.jpg",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgranny2.html"
+  },
+  {
+    row: "Horror",
+    title: "Granny 3",
+    addedAt: "2026-11-24",
+    image: "https://baldigames.com/data/image/game/granny-3/granny-3.png",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgranny3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Slither.io",
+    addedAt: "2026-11-24",
+    image: "https://www.browsergames.de/uploads/public/40c4f6526114eb3eb6ee546d44eb5d80/40c4f6526114eb3eb6ee546d44eb5d80.jpg",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clslitherio.html"
+  },
+  {
+    row: "Shooter",
+    title: "Red vs Blue War",
+    addedAt: "2026-11-24",
+    image: "https://yupgames.io/_next/image?q=100&url=https%3A%2F%2Fs3.growsolutions.tech%2Fyupgames%2Fgames%2Fimages%2F1754451996207-RBWAR+Online_+Red+vs+Blue%21.png&w=1200",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clredvsbluewar.html"
+  },
+  {
+    row: "Arcade",
+    title: "Paper.io Mania",
+    addedAt: "2026-11-24",
+    image: "https://topgames.gg/data/image/game/paper-io.png",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clpaperiomania.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Fireboy and Watergirl 2: Light Temple",
+    addedAt: "2026-11-24",
+    image: "https://images.gamevgames.com/games/file_6a0d8d4c32d27.webp?v=20260702101348",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfireboyandwatergirl2.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Fireboy and Watergirl 3: Ice Temple",
+    addedAt: "2026-11-24",
+    image: "https://dinosaurgame-free.io/data/image/game/fireboy-and-watergirl-1-forest-temple/fireboy-and-watergirl.jpg",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfireboyandwatergirl3.html"
+  },
 ];
