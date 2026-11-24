@@ -515,7 +515,7 @@ const gamesList = [
     row: "Shooter",
     title: "Gun Mayhem",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/smdgames/mathgames66/main/mgthumbnails/gunspin.jpg",
+    image: "https://cpsgames.org/thumbs/gun-mayhem-new-thumb_1.webp",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clgunmayhem.html"
   },
   {
@@ -557,7 +557,7 @@ const gamesList = [
     row: "Arcade",
     title: "Ms. Pac-Man",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/smdgames/mathgames66/main/mgthumbnails/pacman-fps.png",
+    image: "https://cdn.mobygames.com/covers/4100471-ms-pac-man-front-cover.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clmspacman%20(1).html"
   },
   {
