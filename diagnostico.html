@@ -87,6 +87,17 @@ input{background:#202020;color:#eee;border:1px solid #555;border-radius:4px;padd
   function setStatus(text,kind){$('loadStatus').textContent=text;$('loadStatus').className='status '+(kind||'');}
   function setButtons(enabled){document.querySelectorAll('[data-result]').forEach(b=>b.disabled=!enabled);}
   function clearTimer(){if(timer){clearTimeout(timer);timer=null;}}
+  async function loadRawHtmlIntoFrame(targetFrame, url) {
+    const response=await fetch(url,{mode:'cors',credentials:'omit'});
+    if(!response.ok)throw new Error('HTTP '+response.status);
+    let html=await response.text();
+    const safeBase=url.replace(/&/g,'&amp;').replace(/"/g,'&quot;');
+    const baseTag='<base href="'+safeBase+'">';
+    if(/<base\\b[^>]*>/i.test(html))html=html.replace(/<base\\b[^>]*>/i,baseTag);
+    else if(/<head\\b[^>]*>/i.test(html))html=html.replace(/<head\\b[^>]*>/i,head=>head+baseTag);
+    else html='<!doctype html><html><head>'+baseTag+'</head><body>'+html+'</body></html>';
+    targetFrame.srcdoc=html;
+  }
   function current(){return eligible[cursor];}
   function nextUnreviewed(){
     for(let n=0;n<eligible.length;n++){const p=(cursor+n)%eligible.length;const r=results[String(eligible[p].i)];if((!r || !r.result || r.result==='skip') && !skippedThisRun.has(eligible[p].i)){cursor=p;return true;}}
@@ -112,7 +123,20 @@ input{background:#202020;color:#eee;border:1px solid #555;border-radius:4px;padd
         setButtons(true);
       };
       frame.onerror=function(){clearTimer();setStatus('Load error','bad');$('message').textContent='The browser reported a frame load error. You can mark Error / won’t start.';setButtons(true);};
-      frame.src=src;
+      const beginFrameLoad = () => {
+        if(!running)return;
+        if(g.rawUrl){
+          loadRawHtmlIntoFrame(frame,g.rawUrl).catch(error=>{
+            if(!running)return;
+            clearTimer();setStatus('Fetch error','bad');
+            $('message').textContent='Could not fetch the game HTML: '+error.message+'. You can mark Error / won’t start.';
+            setButtons(true);
+          });
+        } else {
+          frame.src=src;
+        }
+      };
+      beginFrameLoad();
       timer=setTimeout(()=>{
         if(!loadSeen && running){setStatus('Timeout','bad');$('message').textContent='No iframe load event after 20 seconds. You can mark Error / won’t start, or Skip for now.';setButtons(true);}
       },TIMEOUT_MS);
