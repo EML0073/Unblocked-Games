@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="argazkik/UNBLOCKEDgames_favicon.svg?v=2">
-  <title>UNBLOCKEDgames - Horizon Proxy</title>
+    <link rel="icon" type="image/svg+xml" href="argazkik/UNBLOCKEDgames_favicon.svg?v=2">
+<title>UNBLOCKEDgames - GUST Proxy</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { min-height: 100vh; display: flex; flex-direction: column; background: #121212; color: #eeeeee; font-family: Arial, Helvetica, sans-serif; }
@@ -20,13 +20,15 @@
     .proxy-heading a { color: #ddd; font-size: 13px; }
     .maximize-btn { color: #eee; background: #303030; border: 1px solid #484848; border-radius: 5px; padding: 8px 12px; font-size: 13px; cursor: pointer; }
     .maximize-btn:hover { background: #414141; }
-    .proxy-frame-wrap { width: 100%; height: calc(100vh - 220px); min-height: 480px; background: #080808; border: 1px solid #333; border-radius: 6px; overflow: hidden; }
+    .proxy-frame-wrap { width: 100%; height: calc(100vh - 155px); min-height: 520px; background: #080808; border: 1px solid #333; border-radius: 6px; overflow: hidden; }
     .proxy-frame-wrap:fullscreen { width: 100vw; height: 100vh; min-height: 0; border: 0; border-radius: 0; background: #080808; }
-    iframe { width: 100%; height: 100%; border: 0; background: #080808; display: block; }
+    iframe { width: 100%; height: 100%; border: 0; background: #080808; }
+    .proxy-note { color: #999; font-size: 12px; margin-top: 10px; line-height: 1.5; }
+    .proxy-note a { color: #ddd; }
     footer { background: #1a1a1a; border-top: 1px solid #2a2a2a; padding: 18px 5%; color: #aaa; text-align: center; font-size: 13px; line-height: 1.8; }
     footer a { color: #ddd; }
     @media (max-width: 900px) { .top-bar { justify-content: center; } .top-bar > a { margin: 0 auto; } .brand-logo { width: 255px; height: 50px; } .main-nav { position: static; transform: none; order: 3; width: 100%; justify-content: center; } }
-    @media (max-width: 600px) { .proxy-frame-wrap { height: 70vh; min-height: 420px; } }
+    @media (max-width: 600px) { .proxy-frame-wrap { height: 75vh; min-height: 450px; } }
   </style>
 </head>
 <body>
@@ -34,30 +36,31 @@
     <a href="index.html" aria-label="UNBLOCKEDgames"><img class="brand-logo" src="argazkik/UNBLOCKEDgames_logo.svg?v=3" alt="UNBLOCKEDgames"></a>
     <nav class="main-nav" aria-label="Main menu">
       <a class="nav-tab" href="index.html">Games</a>
-      <a class="nav-tab active" href="proxy.html">Horizon Proxy</a>
+      <a class="nav-tab active" href="proxy.html"> GUST Proxy</a>
       <a class="nav-tab" href="https://sites.google.com/view/search-internet/google" target="_blank" rel="noopener noreferrer">Launcher</a>
     </nav>
   </header>
   <main>
     <div class="proxy-heading">
-      <h1>Horizon Proxy</h1>
+      <h1>GUST Browser</h1>
       <div class="proxy-actions">
         <button class="maximize-btn" id="maximizeBtn" type="button">⛶ Maximize</button>
-        <a href="horizon.html" target="_blank" rel="noopener noreferrer">Open Horizon in a new tab ↗</a>
+        <a href="GUST.html" target="_blank" rel="noopener noreferrer">Open GUST in a new tab ↗</a>
       </div>
     </div>
     <div class="proxy-frame-wrap" id="proxyFrameWrap">
-      <iframe id="horizonFrame" src="horizon.html" title="Horizon Proxy browser" allow="fullscreen; clipboard-read; clipboard-write; autoplay; gamepad"></iframe>
+      <iframe src="GUST.html" title="GUST browser" allow="fullscreen; clipboard-read; clipboard-write"></iframe>
     </div>
+    <p class="proxy-note">GUST is developed by Nautilus Labs. It is a separate project and is not developed or maintained by this website. Source code and AGPL-3.0 license: <a href="https://github.com/nautilus-os/GUST" target="_blank" rel="noopener noreferrer">nautilus-os/GUST</a>.</p>
   </main>
   <footer>
-    <a href="https://github.com/EML0073/Unblocked-Games">UNBLOCKEDgames</a> © 2026 by <a href="https://github.com/EML0073">EML_0073</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
-    <p>Games and their respective assets belong to their original creators and are not covered by this website's license.</p>
+<a href="https://github.com/EML0073/Unblocked-Games">UNBLOCKEDgames</a> © 2026 by <a href="https://github.com/EML0073">EML_0073</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">    <p>GUST is a separate project distributed under AGPL-3.0.</p>
     <p>Contact/Feedback: <a href="mailto:eml_0073@ni.eus">eml_0073@ni.eus</a> · <a href="privacy.html">Privacy Policy</a></p>
   </footer>
   <script>
     const frameWrap = document.getElementById('proxyFrameWrap');
     const maximizeBtn = document.getElementById('maximizeBtn');
+
     maximizeBtn.addEventListener('click', async () => {
       try {
         if (document.fullscreenElement) {
@@ -69,10 +72,10 @@
         console.error('Unable to toggle fullscreen:', error);
       }
     });
+
     document.addEventListener('fullscreenchange', () => {
       maximizeBtn.textContent = document.fullscreenElement ? '⛶ Exit fullscreen' : '⛶ Maximize';
     });
-
   </script>
 </body>
 </html>
