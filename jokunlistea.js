@@ -374,4 +374,11 @@ const gamesList = [
     image: "https://dinosaurgame-free.io/data/image/game/fireboy-and-watergirl-1-forest-temple/fireboy-and-watergirl.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clfireboyandwatergirl3.html"
   },
+  {
+    row: "Platformer",
+    title: "OvO Dimensions",
+    addedAt: "2026-11-24",
+    image: "https://bouncybasketball.com/cdn/images/banners/ovo-dimensions-game-cover.webp?fit=crop&format=auto&q=75&w=1200",
+    rawUrl: "https://raw.githubusercontent.com/NolanBetter/nolansproxy.github.io/main/OvO%203%20Dimensions.html"
+  },
 ];
