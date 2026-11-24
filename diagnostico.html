@@ -54,6 +54,13 @@
   $('resultList').innerHTML=recent.length?recent.map(x=>'<div><b>'+esc(x.title)+'</b> — '+esc(x.status)+' <span class="muted">('+esc(x.date)+')</span></div>').join(''):'<p class="muted">Todavía no has revisado ningún juego.</p>';
  }
  function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+ function previewSource(source){
+  // raw.githubusercontent.com entrega archivos HTML como texto plano en algunos casos.
+  // Convertir esa URL a jsDelivr permite servir el documento con MIME HTML.
+  const m=String(source||'').match(/^https:\/\/raw\\.githubusercontent\\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
+  if(m)return 'https://cdn.jsdelivr.net/gh/'+m[1]+'/'+m[2]+'@'+m[3]+'/'+m[4];
+  return source;
+ }
  function showNext(){
   while(position<order.length&&results.has(order[position]))position++;
   if(position>=order.length){active=null;$('current').innerHTML='<div class="empty"><h2>¡Revisión terminada!</h2><p>Has recorrido todos los juegos de este orden aleatorio.</p><p>Descarga el CSV para guardar los resultados.</p></div>';update();return}
@@ -63,7 +70,7 @@
    '<p class="meta">'+esc(g.rawUrl|| (g.gustApp?'Aplicación GUST':'Sin rawUrl'))+'</p>'+
    '<div class="actions"><button class="success" data-result="Funciona">Funciona</button><button class="danger" data-result="No funciona">No funciona</button><button data-result="Saltado">Saltar</button><button id="openTab">Abrir en pestaña nueva ↗</button></div>'+
    (g.rawUrl?'<div class="frame-wrap"><iframe id="testFrame" title="Prueba de '+esc(g.title||'juego')+'" sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox allow-downloads allow-modals allow-presentation" allow="autoplay; fullscreen; gamepad; clipboard-read; clipboard-write" allowfullscreen></iframe></div><p class="hint">Si el juego no aparece, espera unos segundos y prueba «Abrir en pestaña nueva». Después marca el resultado.</p>':'<p class="hint">Esta entrada no tiene rawUrl. No se puede cargar aquí como HTML directo; comprueba si es una entrada especial.</p>');
-  if(g.rawUrl){$('testFrame').src=g.rawUrl;$('openTab').onclick=()=>window.open(g.rawUrl,'_blank','noopener,noreferrer')}
+  if(g.rawUrl){const previewUrl=previewSource(g.rawUrl);$('testFrame').src=previewUrl;$('openTab').onclick=()=>window.open(previewUrl,'_blank','noopener,noreferrer')}
   $('current').querySelectorAll('[data-result]').forEach(b=>b.onclick=()=>record(b.dataset.result));
   update();
  }
