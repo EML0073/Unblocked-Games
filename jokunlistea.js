@@ -1557,20 +1557,8 @@ const gamesList = [
     image: "https://img.gamepix.com/games/fireblob/cover/fireblob.png?w=1200&ar=16:10",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfireblob.html"
   },
-  {
-    row: "Arcade",
-    title: "Fireboy and Watergirl 2",
-    addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/fireboyandwatergirl2.jpg",
-    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfireboyandwatergirl2.html"
-  },
-  {
-    row: "Arcade",
-    title: "Fireboy and Watergirl 3",
-    addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/fireboyandwatergirl3.jpg",
-    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfireboyandwatergirl3.html"
-  },
+
+
   ,
   {
     row: "Arcade",
@@ -2206,20 +2194,8 @@ const gamesList = [
   },
   ,
   ,
-  {
-    row: "Racing",
-    title: "MotoX3m",
-    addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/motox3m.webp",
-    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmotox3m.html"
-  },
-  {
-    row: "Racing",
-    title: "MotoX3m2",
-    addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/motox3m2.webp",
-    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmotox3m2.html"
-  },
+
+
   {
     row: "Racing",
     title: "MotoX3m3",
@@ -2396,13 +2372,7 @@ const gamesList = [
     image: "https://hfmanor.com/image/ovo",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clovo.html"
   },
-  {
-    row: "Arcade",
-    title: "OvO 3 Dimensions",
-    addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/freebuisness/covers/main/3.png",
-    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clovodimensions.html"
-  },
+
   {
     row: "Multiplayer",
     title: "P Paper.io",
@@ -2519,13 +2489,7 @@ const gamesList = [
   ,
   ,
   ,
-  {
-    row: "Arcade",
-    title: "Poly Track",
-    addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/polytrack.webp",
-    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpolytrackalt.html"
-  },
+
   ,
   ,
   {
