@@ -6332,4 +6332,6354 @@ const gamesList = [
     image: "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/cocc79.jpg",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbackyardbaseball.html"
   }
+,
+  {
+    row: "Simulation",
+    title: "Eaglercraft Alpha 1.2.6 Offline",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/Eaglercraft-Alpha-1.2.6-Offline.html"
+  },
+  {
+    row: "Simulation",
+    title: "Eaglercraft Beta 1.3 Offline",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/Eaglercraft-Beta-1.3-Offline.html"
+  },
+  {
+    row: "Simulation",
+    title: "Eaglercraft Indev Offline (1)",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/Eaglercraft-Indev-Offline%20(1).html"
+  },
+  {
+    row: "Simulation",
+    title: "Eaglercraft Indev Offline",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/Eaglercraft-Indev-Offline.html"
+  },
+  {
+    row: "Simulation",
+    title: "Eaglercraft L 1.9 V 0 7 0 Offline Signed",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/EaglercraftL_1.9_v0_7_0_Offline_Signed.html"
+  },
+  {
+    row: "Simulation",
+    title: "Eaglercraft X 1.8.8(u 29)",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/EaglercraftX%201.8.8(u29).html"
+  },
+  {
+    row: "Simulation",
+    title: "Eaglercraft Z 1.11.2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/EaglercraftZ_1.11.2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Minceraft I Not Mine V 6",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/Minceraft-I-NotMine_V6.html"
+  },
+  {
+    row: "Arcade",
+    title: "1",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl1.html"
+  },
+  {
+    row: "Runner",
+    title: "100 Skibidistillwaterthosewhoknow",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl100skibidistillwaterthosewhoknow.html"
+  },
+  {
+    row: "Shooter",
+    title: "10 Bullets",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl10bullets.html"
+  },
+  {
+    row: "Sports",
+    title: "1 ON 1 Tennis",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl1on1tennis.html"
+  },
+  {
+    row: "Arcade",
+    title: "1 V 1 Doubleimprettysureitsexactlythesameidk",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl1v1doubleimprettysureitsexactlythesameidk.html"
+  },
+  {
+    row: "Arcade",
+    title: "1 V 1 Lolifnoaboutblank",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl1v1lolifnoaboutblank.html"
+  },
+  {
+    row: "Arcade",
+    title: "1 V 1 Lolnoaboutblank",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl1v1lolnoaboutblank.html"
+  },
+  {
+    row: "Arcade",
+    title: "1 V 1 Maybeidk",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl1v1maybeidk.html"
+  },
+  {
+    row: "Shooter",
+    title: "2 Doom",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl2doom.html"
+  },
+  {
+    row: "Arcade",
+    title: "2 Dshooting(1)",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl2dshooting(1).html"
+  },
+  {
+    row: "Arcade",
+    title: "3 Slices 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl3slices2.html"
+  },
+  {
+    row: "Puzzle",
+    title: "40 Exescape",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl40exescape.html"
+  },
+  {
+    row: "Platformer",
+    title: "60 Secondsburgerrun",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl60secondsburgerrun.html"
+  },
+  {
+    row: "Platformer",
+    title: "60 Secondssantarun",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl60secondssantarun.html"
+  },
+  {
+    row: "Platformer",
+    title: "60 Secsantarun",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl60secsantarun.html"
+  },
+  {
+    row: "Sports",
+    title: "8 Ballpool",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cl8ballpool.html"
+  },
+  {
+    row: "Arcade",
+    title: "Awesome Pirates",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clAwesomePirates.html"
+  },
+  {
+    row: "Arcade",
+    title: "B 3313",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clB3313.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bmx 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clBMX2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Btd 1",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clBTD1.html"
+  },
+  {
+    row: "Arcade",
+    title: "Big Time Butter Baron",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clBig_Time_Butter_Baron.html"
+  },
+  {
+    row: "Racing",
+    title: "Cartoon Network Table Tennis Ultimate Tournament",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clCartoonNetworkTableTennisUltimateTournament.html"
+  },
+  {
+    row: "Adventure",
+    title: "Dragon Ball Z The Legacyof Goku",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clDragonBallZTheLegacyofGoku.html"
+  },
+  {
+    row: "Platformer",
+    title: "F Fsonic 1",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFFsonic1.html"
+  },
+  {
+    row: "Platformer",
+    title: "F Fsonic 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFFsonic2.html"
+  },
+  {
+    row: "Platformer",
+    title: "F Fsonic 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFFsonic3.html"
+  },
+  {
+    row: "Platformer",
+    title: "F Fsonic 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFFsonic4.html"
+  },
+  {
+    row: "Platformer",
+    title: "F Fsonic 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFFsonic5.html"
+  },
+  {
+    row: "Platformer",
+    title: "F Fsonic 61",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFFsonic61.html"
+  },
+  {
+    row: "Platformer",
+    title: "F Fsonic 62",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFFsonic62.html"
+  },
+  {
+    row: "Sports",
+    title: "Fifa 07",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFIFA07.html"
+  },
+  {
+    row: "Sports",
+    title: "Fifa 10",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFIFA10.html"
+  },
+  {
+    row: "Sports",
+    title: "Fifa 11",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFIFA11.html"
+  },
+  {
+    row: "Sports",
+    title: "Fifa 2000(1)",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFIFA2000(1).html"
+  },
+  {
+    row: "Sports",
+    title: "Fifa 99",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFIFA99.html"
+  },
+  {
+    row: "Sports",
+    title: "Fif Ainternationalsoccer",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFIFAinternationalsoccer.html"
+  },
+  {
+    row: "Arcade",
+    title: "Fif Aroadtoworldcup 98",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFIFAroadtoworldcup98.html"
+  },
+  {
+    row: "Sports",
+    title: "Fif Asoccer 06",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFIFAsoccer06.html"
+  },
+  {
+    row: "Sports",
+    title: "Fif Asoccer 95",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFIFAsoccer95.html"
+  },
+  {
+    row: "Sports",
+    title: "Fif Asoccer 96",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFIFAsoccer96.html"
+  },
+  {
+    row: "Sports",
+    title: "Fif Asoccer 97",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFIFAsoccer97.html"
+  },
+  {
+    row: "Arcade",
+    title: "Fif Astreet 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clFIFAstreet2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Gettothetopalthoughthereisnotop",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clGettothetopalthoughthereisnotop.html"
+  },
+  {
+    row: "Platformer",
+    title: "Jump",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clJUMP.html"
+  },
+  {
+    row: "Sports",
+    title: "Ken Griffey JR Presents Major League Baseball",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clKenGriffeyJrPresentsMajorLeagueBaseball.html"
+  },
+  {
+    row: "Racing",
+    title: "Metal Sonic Hyperdrive",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clMetalSonicHyperdrive.html"
+  },
+  {
+    row: "Arcade",
+    title: "NB Ahangtime",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clNBAhangtime.html"
+  },
+  {
+    row: "Arcade",
+    title: "NB Ajam",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clNBAjam.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nicktoons Freeze Frame Frenzy",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clNicktoonsFreezeFrameFrenzy.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonemeraldrouge",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clPokemonemeraldrouge.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonrocketedition",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clPokemonrocketedition.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokémonstunningsteel",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clPok%C3%A9monstunningsteel.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonic 1 Score Rush",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clSonic1ScoreRush.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonic 2 Score Rush",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clSonic2ScoreRush.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonic Hellfire Saga",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clSonicHellfireSaga.html"
+  },
+  {
+    row: "Arcade",
+    title: "Taikono Tatsujin",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clTaikonoTatsujin.html"
+  },
+  {
+    row: "Racing",
+    title: "Ultimatecardrivingsimulator",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clUltimatecardrivingsimulator.html"
+  },
+  {
+    row: "Arcade",
+    title: "Abandoned",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clabandoned.html"
+  },
+  {
+    row: "Arcade",
+    title: "Abandoned 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clabandoned3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Aceattorernefgsdg",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/claceattorernefgsdg.html"
+  },
+  {
+    row: "Shooter",
+    title: "Acecombat 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clacecombat2.html"
+  },
+  {
+    row: "Shooter",
+    title: "Acecombat 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clacecombat3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Acegangstertaxi",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clacegangstertaxi.html"
+  },
+  {
+    row: "Arcade",
+    title: "Achievementunlocked",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clachievementunlocked.html"
+  },
+  {
+    row: "Arcade",
+    title: "Achievmentunlocked",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clachievmentunlocked.html"
+  },
+  {
+    row: "Arcade",
+    title: "Achievmentunlocked 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clachievmentunlocked2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Achievmentunlocked 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clachievmentunlocked3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Achillies 1 FR",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clachillies1fr.html"
+  },
+  {
+    row: "Arcade",
+    title: "Achillies 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clachillies2.html"
+  },
+  {
+    row: "Strategy",
+    title: "Advancewars",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cladvancewars.html"
+  },
+  {
+    row: "Strategy",
+    title: "Advancewars 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cladvancewars2.html"
+  },
+  {
+    row: "Strategy",
+    title: "Ageofwar",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clageofwar.html"
+  },
+  {
+    row: "Strategy",
+    title: "Ageofwar 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clageofwar2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Akoopasrevenge",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clakoopasrevenge.html"
+  },
+  {
+    row: "Arcade",
+    title: "Akoopasrevenge 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clakoopasrevenge2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Alienhominid",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clalienhominid.html"
+  },
+  {
+    row: "Arcade",
+    title: "Alienhominidgba",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clalienhominidgba.html"
+  },
+  {
+    row: "Sports",
+    title: "Alientransporter",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clalientransporter.html"
+  },
+  {
+    row: "Arcade",
+    title: "Alienvspredator",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clalienvspredator.html"
+  },
+  {
+    row: "Arcade",
+    title: "Amaze",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clamaze.html"
+  },
+  {
+    row: "Arcade",
+    title: "Amigopancho",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clamigopancho.html"
+  },
+  {
+    row: "Arcade",
+    title: "Amigopancho 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clamigopancho2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Amigopancho 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clamigopancho3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Amigopancho 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clamigopancho4.html"
+  },
+  {
+    row: "Arcade",
+    title: "Amigopancho 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clamigopancho5.html"
+  },
+  {
+    row: "Arcade",
+    title: "Amigopancho 6",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clamigopancho6.html"
+  },
+  {
+    row: "Arcade",
+    title: "Amigopancho 7",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clamigopancho7.html"
+  },
+  {
+    row: "Arcade",
+    title: "Animalcrossingwildworld",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clanimalcrossingwildworld.html"
+  },
+  {
+    row: "Shooter",
+    title: "Appleshooter",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clappleshooter.html"
+  },
+  {
+    row: "Arcade",
+    title: "Appleworm",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clappleworm.html"
+  },
+  {
+    row: "Arcade",
+    title: "Attackhole",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clattackhole.html"
+  },
+  {
+    row: "Arcade",
+    title: "Avalanche",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clavalanche.html"
+  },
+  {
+    row: "Simulation",
+    title: "Awesomeplanes",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clawesomeplanes.html"
+  },
+  {
+    row: "Shooter",
+    title: "Awesometanks",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clawesometanks.html"
+  },
+  {
+    row: "Shooter",
+    title: "Awesometanks 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clawesometanks2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Babykaizo",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbabykaizo.html"
+  },
+  {
+    row: "Sports",
+    title: "Backyardbaseball 09",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbackyardbaseball09.html"
+  },
+  {
+    row: "Sports",
+    title: "Backyardbaseball 10",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbackyardbaseball10.html"
+  },
+  {
+    row: "Sports",
+    title: "Backyardsoccer",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbackyardsoccer.html"
+  },
+  {
+    row: "Arcade",
+    title: "Badpiggies",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbadpiggies.html"
+  },
+  {
+    row: "Simulation",
+    title: "Badtimesim",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbadtimesim.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ballsandbricksgood",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clballsandbricksgood.html"
+  },
+  {
+    row: "Shooter",
+    title: "Banditgunslingers",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbanditgunslingers.html"
+  },
+  {
+    row: "Arcade",
+    title: "Banjokazooie",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbanjokazooie.html"
+  },
+  {
+    row: "Arcade",
+    title: "Banjotooie",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbanjotooie.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bankbreakout 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbankbreakout2.html"
+  },
+  {
+    row: "Sports",
+    title: "Basketballlegends",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbasketballlegends.html"
+  },
+  {
+    row: "Sports",
+    title: "Basketballlegendsgoodywoody",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbasketballlegendsgoodywoody.html"
+  },
+  {
+    row: "Sports",
+    title: "Basketrandomgood",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbasketrandomgood.html"
+  },
+  {
+    row: "Arcade",
+    title: "Battlezone",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbattlezone.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bazookaboy",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbazookaboy.html"
+  },
+  {
+    row: "Arcade",
+    title: "Beamrider",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbeamrider.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bearbarians",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbearbarians.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ben 10 Alienforce",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clben10alienforce.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ben 10 Omniverse",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clben10omniverse.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ben 10 Protector",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clben10protector.html"
+  },
+  {
+    row: "Racing",
+    title: "Ben 10 Racing",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clben10racing.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ben 10 Ultimatealien",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clben10ultimatealien.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bigtowertinysquare 2 Good",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbigtowertinysquare2good.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bindingofisaccsheeptime",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbindingofisaccsheeptime.html"
+  },
+  {
+    row: "Simulation",
+    title: "Bitlifeencrypted",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbitlifeencrypted.html"
+  },
+  {
+    row: "Arcade",
+    title: "Blackjackbattle",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clblackjackbattle.html"
+  },
+  {
+    row: "Arcade",
+    title: "Blacksmithlab",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clblacksmithlab.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bleachvsnaruto",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbleachvsnaruto.html"
+  },
+  {
+    row: "Adventure",
+    title: "Blobsstory 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clblobsstory2.html"
+  },
+  {
+    row: "Shooter",
+    title: "Blockcraftshooter",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clblockcraftshooter.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bloons TD 1",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbloonsTD1.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bloons TD 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbloonsTD2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bloons TD 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbloonsTD3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bloons TD 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbloonsTD4.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bntts",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbntts.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bollybeat",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbollybeat.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bomberman",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbomberman.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bomberman 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbomberman2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Bottlejump 3 D",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbottlejump3d.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bowlalt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbowlalt.html"
+  },
+  {
+    row: "Sports",
+    title: "Boxinglive 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clboxinglive2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Btts 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbtts2.html"
+  },
+  {
+    row: "Shooter",
+    title: "Bubbleshooter",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbubbleshooter.html"
+  },
+  {
+    row: "Shooter",
+    title: "Bubbleshooterpirate",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbubbleshooterpirate.html"
+  },
+  {
+    row: "Shooter",
+    title: "Bubbletanks",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbubbletanks.html"
+  },
+  {
+    row: "Shooter",
+    title: "Bubbletanks 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbubbletanks2.html"
+  },
+  {
+    row: "Shooter",
+    title: "Bubbletanks 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbubbletanks3.html"
+  },
+  {
+    row: "Shooter",
+    title: "Bubbletanksarenas",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbubbletanksarenas.html"
+  },
+  {
+    row: "Shooter",
+    title: "Bubbletankstd",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbubbletankstd.html"
+  },
+  {
+    row: "Arcade",
+    title: "Bubsy",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbubsy.html"
+  },
+  {
+    row: "Arcade",
+    title: "Buckshotroulette",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clbuckshotroulette.html"
+  },
+  {
+    row: "Arcade",
+    title: "Burritobison 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clburritobison2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Burritobisonrevenge",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clburritobisonrevenge.html"
+  },
+  {
+    row: "Arcade",
+    title: "Cactusmccoy 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcactusmccoy2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Cannonfodder",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcannonfodder.html"
+  },
+  {
+    row: "Racing",
+    title: "Cardrawing",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcardrawing.html"
+  },
+  {
+    row: "Racing",
+    title: "Careatscar 2 Deluxe",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcareatscar2deluxe.html"
+  },
+  {
+    row: "Racing",
+    title: "Carmods",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcarmods.html"
+  },
+  {
+    row: "Racing",
+    title: "Carstuntsdriving",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcarstuntsdriving.html"
+  },
+  {
+    row: "Arcade",
+    title: "Castlevania",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcastlevania.html"
+  },
+  {
+    row: "Arcade",
+    title: "Castlevania 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcastlevania2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Castlevania 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcastlevania3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Castlevaniaariaofsorrow",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcastlevaniaariaofsorrow.html"
+  },
+  {
+    row: "Arcade",
+    title: "Castlevanianes",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcastlevanianes.html"
+  },
+  {
+    row: "Simulation",
+    title: "Catslovecake 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcatslovecake2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Cellardoor",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcellardoor.html"
+  },
+  {
+    row: "Arcade",
+    title: "Checkers",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcheckers.html"
+  },
+  {
+    row: "Arcade",
+    title: "Chibiknight",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clchibiknight.html"
+  },
+  {
+    row: "Arcade",
+    title: "Chipschallenge",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clchipschallenge.html"
+  },
+  {
+    row: "Arcade",
+    title: "Chronotrigger",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clchronotrigger.html"
+  },
+  {
+    row: "Arcade",
+    title: "Clearvision",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clclearvision.html"
+  },
+  {
+    row: "Arcade",
+    title: "Clearvision 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clclearvision2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Clearvision 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clclearvision3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Clearvision 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clclearvision4.html"
+  },
+  {
+    row: "Arcade",
+    title: "Clearvision 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clclearvision5.html"
+  },
+  {
+    row: "Arcade",
+    title: "Cod 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcod4.html"
+  },
+  {
+    row: "Arcade",
+    title: "Codblackops",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcodblackops.html"
+  },
+  {
+    row: "Arcade",
+    title: "Coddefiance",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcoddefiance.html"
+  },
+  {
+    row: "Shooter",
+    title: "Codmodernwarfare",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcodmodernwarfare.html"
+  },
+  {
+    row: "Strategy",
+    title: "Codworldatwar",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcodworldatwar.html"
+  },
+  {
+    row: "Arcade",
+    title: "Colorburst 3 D",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcolorburst3d.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Colormatch",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcolormatch.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Colorwatersort 3 D",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcolorwatersort3d.html"
+  },
+  {
+    row: "Arcade",
+    title: "Conkersbadfurday",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clconkersbadfurday.html"
+  },
+  {
+    row: "Arcade",
+    title: "Contra",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcontra.html"
+  },
+  {
+    row: "Idle",
+    title: "Cookieclickercool",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcookieclickercool.html"
+  },
+  {
+    row: "Idle",
+    title: "Cookieclickergood",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcookieclickergood.html"
+  },
+  {
+    row: "Simulation",
+    title: "Cookingmama",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcookingmama.html"
+  },
+  {
+    row: "Simulation",
+    title: "Cookingmama 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcookingmama2.html"
+  },
+  {
+    row: "Simulation",
+    title: "Cookingmama 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcookingmama3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Crashbandicoot",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcrashbandicoot.html"
+  },
+  {
+    row: "Arcade",
+    title: "Crashbandicoot 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcrashbandicoot2.html"
+  },
+  {
+    row: "Racing",
+    title: "Crazycars",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcrazycars.html"
+  },
+  {
+    row: "Platformer",
+    title: "Crunchball 3000",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcrunchball3000.html"
+  },
+  {
+    row: "Arcade",
+    title: "CS 1.6",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcs1.6.html"
+  },
+  {
+    row: "Arcade",
+    title: "Curveball",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcurveball.html"
+  },
+  {
+    row: "Adventure",
+    title: "Cuttheropetimetravel",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clcuttheropetimetravel.html"
+  },
+  {
+    row: "Arcade",
+    title: "Dadnme",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldadnme.html"
+  },
+  {
+    row: "Arcade",
+    title: "Dborigins",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldborigins.html"
+  },
+  {
+    row: "Arcade",
+    title: "Dborigins 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldborigins2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Dbzattacksaiyans",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldbzattacksaiyans.html"
+  },
+  {
+    row: "Arcade",
+    title: "Dbzdevolution",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldbzdevolution.html"
+  },
+  {
+    row: "Platformer",
+    title: "Dbzsuperwarriorssonic",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldbzsuperwarriorssonic.html"
+  },
+  {
+    row: "Arcade",
+    title: "Deadzed",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldeadzed.html"
+  },
+  {
+    row: "Arcade",
+    title: "Deadzed 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldeadzed2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Deblob 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldeblob2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Deepersleep",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldeepersleep.html"
+  },
+  {
+    row: "Arcade",
+    title: "Deepsleep",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldeepsleep.html"
+  },
+  {
+    row: "Arcade",
+    title: "Defendyourcastle",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldefendyourcastle.html"
+  },
+  {
+    row: "Arcade",
+    title: "Defendyournuts",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldefendyournuts.html"
+  },
+  {
+    row: "Arcade",
+    title: "Defendyournuts 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldefendyournuts2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Dementium",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldementium.html"
+  },
+  {
+    row: "Arcade",
+    title: "Diamondhollow",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldiamondhollow.html"
+  },
+  {
+    row: "Arcade",
+    title: "Diamondhollow 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldiamondhollow2.html"
+  },
+  {
+    row: "Racing",
+    title: "Diddykongracing",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldiddykongracing.html"
+  },
+  {
+    row: "Arcade",
+    title: "Digdeep",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldigdeep.html"
+  },
+  {
+    row: "Arcade",
+    title: "Digdug",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldigdug.html"
+  },
+  {
+    row: "Arcade",
+    title: "Digdug 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldigdug2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Digdug 26",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldigdug26.html"
+  },
+  {
+    row: "Arcade",
+    title: "Digtochina",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldigtochina.html"
+  },
+  {
+    row: "Arcade",
+    title: "Dinodudes",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldinodudes.html"
+  },
+  {
+    row: "Arcade",
+    title: "Donkeykong",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldonkeykong.html"
+  },
+  {
+    row: "Arcade",
+    title: "Donkeykong 64",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldonkeykong64.html"
+  },
+  {
+    row: "Arcade",
+    title: "Donkeykongcountry",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldonkeykongcountry.html"
+  },
+  {
+    row: "Arcade",
+    title: "Donkeykongcountry 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldonkeykongcountry2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Donkeykongnes",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldonkeykongnes.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Dontescape",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldontescape.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Dontescape 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldontescape2.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Dontescape 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldontescape3.html"
+  },
+  {
+    row: "Platformer",
+    title: "Doodlejumpgoober",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldoodlejumpgoober.html"
+  },
+  {
+    row: "Shooter",
+    title: "Doom 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldoom2.html"
+  },
+  {
+    row: "Shooter",
+    title: "Doom 64",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldoom64.html"
+  },
+  {
+    row: "Shooter",
+    title: "Doompsalt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldoompsalt.html"
+  },
+  {
+    row: "Simulation",
+    title: "Douchebaglife",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldouchebaglife.html"
+  },
+  {
+    row: "Arcade",
+    title: "Douchebagworkout",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldouchebagworkout.html"
+  },
+  {
+    row: "Arcade",
+    title: "Downthemountain",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldownthemountain.html"
+  },
+  {
+    row: "Sports",
+    title: "Dragonballadvance",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldragonballadvance.html"
+  },
+  {
+    row: "Multiplayer",
+    title: "Drmario",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldrmario.html"
+  },
+  {
+    row: "Arcade",
+    title: "Dubstep",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cldubstep.html"
+  },
+  {
+    row: "Arcade",
+    title: "Duckhunt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clduckhunt.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ducklfe 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clducklfe5.html"
+  },
+  {
+    row: "Simulation",
+    title: "Ducklife 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clducklife2.html"
+  },
+  {
+    row: "Simulation",
+    title: "Ducklife 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clducklife3.html"
+  },
+  {
+    row: "Simulation",
+    title: "Ducklife 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clducklife4.html"
+  },
+  {
+    row: "Arcade",
+    title: "Earntodie",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clearntodie.html"
+  },
+  {
+    row: "Arcade",
+    title: "Earntodie 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clearntodie2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Earthbound",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clearthbound.html"
+  },
+  {
+    row: "Arcade",
+    title: "Earthbound 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clearthbound3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Earthtaken",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clearthtaken.html"
+  },
+  {
+    row: "Arcade",
+    title: "Earthtaken 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clearthtaken2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Earthtaken 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clearthtaken3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Earthwormjim",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clearthwormjim.html"
+  },
+  {
+    row: "Arcade",
+    title: "Earthwormjim 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clearthwormjim2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Effingmachines",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cleffingmachines.html"
+  },
+  {
+    row: "Arcade",
+    title: "Effingworms",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cleffingworms.html"
+  },
+  {
+    row: "Horror",
+    title: "Effingzombies",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cleffingzombies.html"
+  },
+  {
+    row: "Arcade",
+    title: "Electricman 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clelectricman2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Emulator",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clemulator.html"
+  },
+  {
+    row: "Strategy",
+    title: "Endlesswar 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clendlesswar4.html"
+  },
+  {
+    row: "Strategy",
+    title: "Endlesswar 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clendlesswar5.html"
+  },
+  {
+    row: "Strategy",
+    title: "Endlesswar 5 Wow",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clendlesswar5wow.html"
+  },
+  {
+    row: "Strategy",
+    title: "Endlesswar 7",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clendlesswar7.html"
+  },
+  {
+    row: "Arcade",
+    title: "Enduro",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clenduro.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Escaperoad 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clescaperoad2.html"
+  },
+  {
+    row: "Arcade",
+    title: "ET",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clet.html"
+  },
+  {
+    row: "Arcade",
+    title: "Etrianoddyssey",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cletrianoddyssey.html"
+  },
+  {
+    row: "Racing",
+    title: "Excitebike 64",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clexcitebike64.html"
+  },
+  {
+    row: "Arcade",
+    title: "Factoryballs",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfactoryballs.html"
+  },
+  {
+    row: "Arcade",
+    title: "Factoryballs 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfactoryballs2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Factoryballs 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfactoryballs3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Factoryballs 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfactoryballs4.html"
+  },
+  {
+    row: "Arcade",
+    title: "Fairytalevsonepiece",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfairytalevsonepiece.html"
+  },
+  {
+    row: "Runner",
+    title: "Famidash",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfamidash.html"
+  },
+  {
+    row: "Platformer",
+    title: "Fancypantsadventure",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfancypantsadventure.html"
+  },
+  {
+    row: "Platformer",
+    title: "Fancypantsadventure 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfancypantsadventure2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Fancypantsadventure 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfancypantsadventure3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Fattygenius",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfattygenius.html"
+  },
+  {
+    row: "Arcade",
+    title: "Feedus",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfeedus.html"
+  },
+  {
+    row: "Arcade",
+    title: "Feedus 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfeedus2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Feedus 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfeedus3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Feedus 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfeedus4.html"
+  },
+  {
+    row: "Arcade",
+    title: "Feedus 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfeedus5.html"
+  },
+  {
+    row: "Arcade",
+    title: "FF 6",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clff6.html"
+  },
+  {
+    row: "Platformer",
+    title: "Ffmysticquest",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clffmysticquest.html"
+  },
+  {
+    row: "Sports",
+    title: "Fifa 2000",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfifa2000.html"
+  },
+  {
+    row: "Arcade",
+    title: "Finalfantasy",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfinalfantasy.html"
+  },
+  {
+    row: "Arcade",
+    title: "Finalfantasy II",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfinalfantasyII.html"
+  },
+  {
+    row: "Arcade",
+    title: "Finalfantasy VI",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfinalfantasyVI.html"
+  },
+  {
+    row: "Arcade",
+    title: "Finalfantasy Vii",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfinalfantasyVII.html"
+  },
+  {
+    row: "Arcade",
+    title: "Finalfantasy VI ID 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfinalfantasyVIId2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Finalfantasy VI ID 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfinalfantasyVIId3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Finalfantasy VI Itheothertetrr",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfinalfantasyVIItheothertetrr.html"
+  },
+  {
+    row: "Arcade",
+    title: "Finalfantasytactics",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfinalfantasytactics.html"
+  },
+  {
+    row: "Arcade",
+    title: "Finalninja",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfinalninja.html"
+  },
+  {
+    row: "Arcade",
+    title: "Fireboyandwatergirl 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfireboyandwatergirl5.html"
+  },
+  {
+    row: "Arcade",
+    title: "Fireboyandwatergirl 6",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfireboyandwatergirl6.html"
+  },
+  {
+    row: "Arcade",
+    title: "Fireemblem",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfireemblem.html"
+  },
+  {
+    row: "Platformer",
+    title: "Floodrunner",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfloodrunner.html"
+  },
+  {
+    row: "Platformer",
+    title: "Floodrunner 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfloodrunner2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Floodrunner 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfloodrunner4.html"
+  },
+  {
+    row: "Horror",
+    title: "Fnafanimatronics",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfnafanimatronics.html"
+  },
+  {
+    row: "Arcade",
+    title: "Freerider",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfreerider.html"
+  },
+  {
+    row: "Arcade",
+    title: "Freerider 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfreerider2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Freerider 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfreerider3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Fzero",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfzero.html"
+  },
+  {
+    row: "Arcade",
+    title: "Fzerox",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clfzerox.html"
+  },
+  {
+    row: "Arcade",
+    title: "Galaga",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgalaga.html"
+  },
+  {
+    row: "Arcade",
+    title: "Gameandwatchcollection",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgameandwatchcollection.html"
+  },
+  {
+    row: "Arcade",
+    title: "Gdlite",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgdlite.html"
+  },
+  {
+    row: "Arcade",
+    title: "Generalchaos",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgeneralchaos.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ghosttrick",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clghosttrick.html"
+  },
+  {
+    row: "Arcade",
+    title: "Gimmietheairpod",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgimmietheairpod.html"
+  },
+  {
+    row: "Arcade",
+    title: "Glover",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clglover.html"
+  },
+  {
+    row: "Arcade",
+    title: "Goalsouthafrica",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgoalsouthafrica.html"
+  },
+  {
+    row: "Arcade",
+    title: "Goldeneye 007",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgoldeneye007.html"
+  },
+  {
+    row: "Arcade",
+    title: "Goldensun",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgoldensun.html"
+  },
+  {
+    row: "Sports",
+    title: "Golforbit",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgolforbit.html"
+  },
+  {
+    row: "Arcade",
+    title: "Goodbigtowertinysquare",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgoodbigtowertinysquare.html"
+  },
+  {
+    row: "Arcade",
+    title: "Goodbigtowertinysquare 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgoodbigtowertinysquare2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Goodmonkeymart",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgoodmonkeymart.html"
+  },
+  {
+    row: "Arcade",
+    title: "Grandtheftautoadvance",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgrandtheftautoadvance.html"
+  },
+  {
+    row: "Horror",
+    title: "Granny 22",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgranny22.html"
+  },
+  {
+    row: "Arcade",
+    title: "Granturismo 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgranturismo2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Gta",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgta.html"
+  },
+  {
+    row: "Arcade",
+    title: "Gta 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgta2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Gta 22",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgta22.html"
+  },
+  {
+    row: "Arcade",
+    title: "Gta 2 Alt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgta2alt.html"
+  },
+  {
+    row: "Arcade",
+    title: "Gtaalt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgtaalt.html"
+  },
+  {
+    row: "Arcade",
+    title: "Gtachina",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgtachina.html"
+  },
+  {
+    row: "Shooter",
+    title: "Gunblood",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgunblood.html"
+  },
+  {
+    row: "Shooter",
+    title: "Gunmayhem 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgunmayhem2.html"
+  },
+  {
+    row: "Shooter",
+    title: "Gunmayhem 2 Goof",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgunmayhem2goof.html"
+  },
+  {
+    row: "Shooter",
+    title: "Gunmayhemredux",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgunmayhemredux.html"
+  },
+  {
+    row: "Shooter",
+    title: "Gunsmoke",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clgunsmoke.html"
+  },
+  {
+    row: "Arcade",
+    title: "Hajimeippo",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhajimeippo.html"
+  },
+  {
+    row: "Arcade",
+    title: "Hanger 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhanger2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Harvestmoon",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clharvestmoon.html"
+  },
+  {
+    row: "Arcade",
+    title: "Harvestmoon 64",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clharvestmoon64.html"
+  },
+  {
+    row: "Horror",
+    title: "Hauntthehouse",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhauntthehouse.html"
+  },
+  {
+    row: "Arcade",
+    title: "Hidenseek",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhidenseek.html"
+  },
+  {
+    row: "Racing",
+    title: "Highwaytraffic 3 D",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhighwaytraffic3d.html"
+  },
+  {
+    row: "Arcade",
+    title: "Hipsterkickball",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhipsterkickball.html"
+  },
+  {
+    row: "Arcade",
+    title: "Hobo",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhobo.html"
+  },
+  {
+    row: "Arcade",
+    title: "Hobo 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhobo2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Hobo 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhobo3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Hobo 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhobo4.html"
+  },
+  {
+    row: "Arcade",
+    title: "Hobo 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhobo5.html"
+  },
+  {
+    row: "Arcade",
+    title: "Hobo 6",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhobo6.html"
+  },
+  {
+    row: "Arcade",
+    title: "Hobo 7",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhobo7.html"
+  },
+  {
+    row: "Horror",
+    title: "Hobovszombies",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clhobovszombies.html"
+  },
+  {
+    row: "Arcade",
+    title: "Icantbelievegoogleflaggedmeforthenameofthefilelol",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clicantbelievegoogleflaggedmeforthenameofthefilelol.html"
+  },
+  {
+    row: "Idle",
+    title: "Idleminorzamnshes 12",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clidleminorzamnshes12.html"
+  },
+  {
+    row: "Arcade",
+    title: "Impossiblequiz (1)",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/climpossiblequiz%20(1).html"
+  },
+  {
+    row: "Arcade",
+    title: "Impossiblequiz",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/climpossiblequiz.html"
+  },
+  {
+    row: "Arcade",
+    title: "Impossiblequiz 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/climpossiblequiz2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Inclementemerald",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clinclementemerald.html"
+  },
+  {
+    row: "Racing",
+    title: "Indiantrucksimiulator",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clindiantrucksimiulator.html"
+  },
+  {
+    row: "Simulation",
+    title: "Infinitecraft",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clinfinitecraft.html"
+  },
+  {
+    row: "Arcade",
+    title: "Innkeeper",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clinnkeeper.html"
+  },
+  {
+    row: "Adventure",
+    title: "Insidestory",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clinsidestory.html"
+  },
+  {
+    row: "Arcade",
+    title: "Interactivebuddy",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clinteractivebuddy.html"
+  },
+  {
+    row: "Arcade",
+    title: "Intospace",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clintospace.html"
+  },
+  {
+    row: "Arcade",
+    title: "Intospace 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clintospace2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Intospace 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clintospace3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Iqball",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cliqball.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ironsoldier",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clironsoldier.html"
+  },
+  {
+    row: "Arcade",
+    title: "Jacksmith",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cljacksmith.html"
+  },
+  {
+    row: "Arcade",
+    title: "Jacksmithencryptedorsmthn",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cljacksmithencryptedorsmthn.html"
+  },
+  {
+    row: "Racing",
+    title: "Jellytruckgood",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cljellytruckgood.html"
+  },
+  {
+    row: "Arcade",
+    title: "Jetforcegemini",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cljetforcegemini.html"
+  },
+  {
+    row: "Strategy",
+    title: "Kingdomheartsdays",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clkingdomheartsdays.html"
+  },
+  {
+    row: "Strategy",
+    title: "Kingdomheartsrecoded",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clkingdomheartsrecoded.html"
+  },
+  {
+    row: "Arcade",
+    title: "Kirby 64",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clkirby64.html"
+  },
+  {
+    row: "Arcade",
+    title: "Kirbyandtheamzingmirror",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clkirbyandtheamzingmirror.html"
+  },
+  {
+    row: "Platformer",
+    title: "Kirbysadventure",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clkirbysadventure.html"
+  },
+  {
+    row: "Arcade",
+    title: "Kirbysdreamland",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clkirbysdreamland.html"
+  },
+  {
+    row: "Arcade",
+    title: "Kirbysdreamland 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clkirbysdreamland3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Kirbysqueaksquad",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clkirbysqueaksquad.html"
+  },
+  {
+    row: "Arcade",
+    title: "Kirbysuperstar",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clkirbysuperstar.html"
+  },
+  {
+    row: "Arcade",
+    title: "Kirbysuperstarultra",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clkirbysuperstarultra.html"
+  },
+  {
+    row: "Arcade",
+    title: "Kittencannon",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clkittencannon.html"
+  },
+  {
+    row: "Arcade",
+    title: "Knifehit",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clknifehit.html"
+  },
+  {
+    row: "Horror",
+    title: "Knightmaretower",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clknightmaretower.html"
+  },
+  {
+    row: "Arcade",
+    title: "Koopasrevenge",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clkoopasrevenge.html"
+  },
+  {
+    row: "Arcade",
+    title: "Lastfirered",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllastfirered.html"
+  },
+  {
+    row: "Arcade",
+    title: "Learntofly 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllearntofly2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Learntofly 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllearntofly3.html"
+  },
+  {
+    row: "Idle",
+    title: "Learntoflyidle",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllearntoflyidle.html"
+  },
+  {
+    row: "Arcade",
+    title: "Legobatman",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllegobatman.html"
+  },
+  {
+    row: "Adventure",
+    title: "Legobatman 2 Superheroes",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllegobatman2superheroes.html"
+  },
+  {
+    row: "Arcade",
+    title: "Legoindianajones",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllegoindianajones.html"
+  },
+  {
+    row: "Arcade",
+    title: "Legoindianajones 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllegoindianajones2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Legoninjago",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllegoninjago.html"
+  },
+  {
+    row: "Strategy",
+    title: "Legostarwars",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllegostarwars.html"
+  },
+  {
+    row: "Arcade",
+    title: "Lemmings",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllemmings.html"
+  },
+  {
+    row: "Arcade",
+    title: "Lightitup",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllightitup.html"
+  },
+  {
+    row: "Arcade",
+    title: "Linerider",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllinerider.html"
+  },
+  {
+    row: "Arcade",
+    title: "Linktothepast",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllinktothepast.html"
+  },
+  {
+    row: "Platformer",
+    title: "Loderunner",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clloderunner.html"
+  },
+  {
+    row: "Arcade",
+    title: "Lonewolf",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllonewolf.html"
+  },
+  {
+    row: "Arcade",
+    title: "Losangelesshark",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllosangelesshark.html"
+  },
+  {
+    row: "Arcade",
+    title: "Loz 1",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clloz1.html"
+  },
+  {
+    row: "Arcade",
+    title: "Lozlinkawakening",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllozlinkawakening.html"
+  },
+  {
+    row: "Arcade",
+    title: "Lozminishcap",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllozminishcap.html"
+  },
+  {
+    row: "Arcade",
+    title: "Lozoracleofseasons",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllozoracleofseasons.html"
+  },
+  {
+    row: "Arcade",
+    title: "Lozspirittracks",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cllozspirittracks.html"
+  },
+  {
+    row: "Racing",
+    title: "Madalinstuntcarsgood",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmadalinstuntcarsgood.html"
+  },
+  {
+    row: "Arcade",
+    title: "Madden 93",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmadden93.html"
+  },
+  {
+    row: "Arcade",
+    title: "Madden 94",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmadden94.html"
+  },
+  {
+    row: "Arcade",
+    title: "Madden 95",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmadden95.html"
+  },
+  {
+    row: "Arcade",
+    title: "Madden 96",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmadden96.html"
+  },
+  {
+    row: "Arcade",
+    title: "Madden 98",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmadden98.html"
+  },
+  {
+    row: "Arcade",
+    title: "Madden 99",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmadden99.html"
+  },
+  {
+    row: "Sports",
+    title: "Maddenfootball",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmaddenfootball.html"
+  },
+  {
+    row: "Sports",
+    title: "Maddenfootball 64",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmaddenfootball64.html"
+  },
+  {
+    row: "Arcade",
+    title: "Maddennfl",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmaddennfl.html"
+  },
+  {
+    row: "Arcade",
+    title: "Maddennfl 2000",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmaddennfl2000.html"
+  },
+  {
+    row: "Arcade",
+    title: "Maddennfl 2001",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmaddennfl2001.html"
+  },
+  {
+    row: "Arcade",
+    title: "Maddennfl 2002",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmaddennfl2002.html"
+  },
+  {
+    row: "Arcade",
+    title: "Madnessaccelerant",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmadnessaccelerant.html"
+  },
+  {
+    row: "Shooter",
+    title: "Madnesscombatdefense",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmadnesscombatdefense.html"
+  },
+  {
+    row: "Shooter",
+    title: "Madnesscombatnexus",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmadnesscombatnexus.html"
+  },
+  {
+    row: "Arcade",
+    title: "Madnesshydraulic",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmadnesshydraulic.html"
+  },
+  {
+    row: "Arcade",
+    title: "Madnessretaliation",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmadnessretaliation.html"
+  },
+  {
+    row: "Arcade",
+    title: "Magictiles 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmagictiles3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Majorasmask",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmajorasmask.html"
+  },
+  {
+    row: "Arcade",
+    title: "Makesureitsclosed",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmakesureitsclosed.html"
+  },
+  {
+    row: "Platformer",
+    title: "Mario 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmario3.html"
+  },
+  {
+    row: "Platformer",
+    title: "Marioandluigisuperstarsaga",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmarioandluigisuperstarsaga.html"
+  },
+  {
+    row: "Sports",
+    title: "Mariogolf",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmariogolf.html"
+  },
+  {
+    row: "Racing",
+    title: "Mariokart 64",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmariokart64.html"
+  },
+  {
+    row: "Racing",
+    title: "Mariokartds",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmariokartds.html"
+  },
+  {
+    row: "Racing",
+    title: "Mariokartsupercircuit",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmariokartsupercircuit.html"
+  },
+  {
+    row: "Platformer",
+    title: "Mariopaint",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmariopaint.html"
+  },
+  {
+    row: "Multiplayer",
+    title: "Marioparty 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmarioparty2.html"
+  },
+  {
+    row: "Multiplayer",
+    title: "Marioparty 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmarioparty3.html"
+  },
+  {
+    row: "Multiplayer",
+    title: "Mariopartyds",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmariopartyds.html"
+  },
+  {
+    row: "Platformer",
+    title: "Mariosmysterymeat",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmariosmysterymeat.html"
+  },
+  {
+    row: "Sports",
+    title: "Mariotennis",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmariotennis.html"
+  },
+  {
+    row: "Arcade",
+    title: "Matrixrampage",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmatrixrampage.html"
+  },
+  {
+    row: "Racing",
+    title: "Mcraerally",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmcraerally.html"
+  },
+  {
+    row: "Arcade",
+    title: "Medievalshark",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmedievalshark.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megaman",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegaman.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megaman 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegaman2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megaman 2 Gba",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegaman2gba.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megaman 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegaman3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megaman 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegaman4.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megaman 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegaman5.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megaman 6",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegaman6.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megaman 8",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegaman8.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megamanx",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegamanx.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megamanx 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegamanx2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megamanx 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegamanx3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megamanx 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegamanx4.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megamanzero",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegamanzero.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megamanzx",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegamanzx.html"
+  },
+  {
+    row: "Arcade",
+    title: "Megaminer",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmegaminer.html"
+  },
+  {
+    row: "Arcade",
+    title: "Metalgear",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmetalgear.html"
+  },
+  {
+    row: "Arcade",
+    title: "Metalgearsolid",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmetalgearsolid.html"
+  },
+  {
+    row: "Arcade",
+    title: "Metalgearsolidps",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmetalgearsolidps.html"
+  },
+  {
+    row: "Arcade",
+    title: "Metalslugadvance",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmetalslugadvance.html"
+  },
+  {
+    row: "Arcade",
+    title: "Metalslugmission 1",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmetalslugmission1.html"
+  },
+  {
+    row: "Arcade",
+    title: "Metalslugmission 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmetalslugmission2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Metroid",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmetroid.html"
+  },
+  {
+    row: "Platformer",
+    title: "Metroid 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmetroid2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Metroidfusion",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmetroidfusion.html"
+  },
+  {
+    row: "Platformer",
+    title: "Metroidzeromission",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmetroidzeromission.html"
+  },
+  {
+    row: "Arcade",
+    title: "Miamishark",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmiamishark.html"
+  },
+  {
+    row: "Arcade",
+    title: "Mightyknight",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmightyknight.html"
+  },
+  {
+    row: "Arcade",
+    title: "Mightyknight 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmightyknight2.html"
+  },
+  {
+    row: "Adventure",
+    title: "Minhero",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clminhero.html"
+  },
+  {
+    row: "Arcade",
+    title: "Minimart",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clminimart.html"
+  },
+  {
+    row: "Strategy",
+    title: "Miraginewar",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmiraginewar.html"
+  },
+  {
+    row: "Arcade",
+    title: "Misslecommand",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmisslecommand.html"
+  },
+  {
+    row: "Arcade",
+    title: "Mobcontrolhtml 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmobcontrolhtml5.html"
+  },
+  {
+    row: "Arcade",
+    title: "Mobiusrevolution",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmobiusrevolution.html"
+  },
+  {
+    row: "Arcade",
+    title: "Monkeymartenc",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmonkeymartenc.html"
+  },
+  {
+    row: "Arcade",
+    title: "Mortalkombat",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmortalkombat.html"
+  },
+  {
+    row: "Arcade",
+    title: "Mortalkombat 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmortalkombat2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Mortalkombat 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmortalkombat3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Mortalkombatadvance",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmortalkombatadvance.html"
+  },
+  {
+    row: "Arcade",
+    title: "Motherload",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmotherload.html"
+  },
+  {
+    row: "Arcade",
+    title: "Multitask",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmultitask.html"
+  },
+  {
+    row: "Arcade",
+    title: "Mutilate A Doll",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmutilate-a-doll.html"
+  },
+  {
+    row: "Arcade",
+    title: "Myfriendpedro",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmyfriendpedro.html"
+  },
+  {
+    row: "Arcade",
+    title: "Myfriendpedroarena",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clmyfriendpedroarena.html"
+  },
+  {
+    row: "Arcade",
+    title: "N",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cln.html"
+  },
+  {
+    row: "Sports",
+    title: "Nbajam TE",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnbajamTE.html"
+  },
+  {
+    row: "Arcade",
+    title: "Newgroundsrumble",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnewgroundsrumble.html"
+  },
+  {
+    row: "Platformer",
+    title: "Newsupermariobros",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnewsupermariobros.html"
+  },
+  {
+    row: "Arcade",
+    title: "Newyorkshark",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnewyorkshark.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nflblitz",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnflblitz.html"
+  },
+  {
+    row: "Racing",
+    title: "Nfscarbonowncity",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnfscarbonowncity.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nfsmostwanted",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnfsmostwanted.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nfsporcheunleashed",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnfsporcheunleashed.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nfsunderground",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnfsunderground.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nfsunderground 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnfsunderground2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nhl 2002",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnhl2002.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nhlhitz 2003",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnhlhitz2003.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nightfire",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnightfire.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nintendogslab",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnintendogslab.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nintendoworldcup",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnintendoworldcup.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nitromemustdie",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnitromemustdie.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nomoregameasdsadfagfggdfs",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnomoregameasdsadfagfggdfs.html"
+  },
+  {
+    row: "Arcade",
+    title: "Nplus",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clnplus.html"
+  },
+  {
+    row: "Arcade",
+    title: "Obeythegame",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clobeythegame.html"
+  },
+  {
+    row: "Racing",
+    title: "Ocarinaoftime",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clocarinaoftime.html"
+  },
+  {
+    row: "Arcade",
+    title: "Onepiece",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clonepiece.html"
+  },
+  {
+    row: "Arcade",
+    title: "Onepiecefighting",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clonepiecefighting.html"
+  },
+  {
+    row: "Platformer",
+    title: "Ordinarysonicromhack",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clordinarysonicromhack.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ormmimastickwithclsoitcanberememberedoyeahclalienhominid",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clormmimastickwithclsoitcanberememberedoyeahclalienhominid.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ovofixed",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clovofixed.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papabakeria",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapabakeria.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papadonut",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapadonut.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papalouienighthunt 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapalouienighthunt2.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papalouiewhenburgersattack",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapalouiewhenburgersattack.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papalouiewhenpizzasattack",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapalouiewhenpizzasattack.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papalouiewhensundaesattack",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapalouiewhensundaesattack.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papapizzagood",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapapizzagood.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papapizzagoody",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapapizzagoody.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papapizzamamamia",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapapizzamamamia.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papasburger Iiiaaaaa",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapasburgerIIIAAAAA.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papashotdoggeria",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapashotdoggeria.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papaspancakeria",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapaspancakeria.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papaspastaria",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapaspastaria.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papasscooperia",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapasscooperia.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papassushiria",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapassushiria.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papastacomia",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapastacomia.html"
+  },
+  {
+    row: "Simulation",
+    title: "Papaswingeria",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapaswingeria.html"
+  },
+  {
+    row: "Multiplayer",
+    title: "Papermario",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapermario.html"
+  },
+  {
+    row: "Platformer",
+    title: "Papermariopromode",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapermariopromode.html"
+  },
+  {
+    row: "Platformer",
+    title: "Papermariottyd",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpapermariottyd.html"
+  },
+  {
+    row: "Arcade",
+    title: "Parappatherapper",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clparappatherapper.html"
+  },
+  {
+    row: "Arcade",
+    title: "Parappatherapperalt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clparappatherapperalt.html"
+  },
+  {
+    row: "Arcade",
+    title: "Partnersintime",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpartnersintime.html"
+  },
+  {
+    row: "Arcade",
+    title: "Penaltykicks",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpenaltykicks.html"
+  },
+  {
+    row: "Arcade",
+    title: "Penguinpass",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpenguinpass.html"
+  },
+  {
+    row: "Simulation",
+    title: "Pepsiman",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpepsiman.html"
+  },
+  {
+    row: "Simulation",
+    title: "Pepsimanalt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpepsimanalt.html"
+  },
+  {
+    row: "Arcade",
+    title: "Perfectdark",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clperfectdark.html"
+  },
+  {
+    row: "Arcade",
+    title: "Persona",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpersona.html"
+  },
+  {
+    row: "Arcade",
+    title: "Persona 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpersona2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Persona 2 Alt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpersona2alt.html"
+  },
+  {
+    row: "Arcade",
+    title: "Personaalt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpersonaalt.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pheonixjusticeforall",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpheonixjusticeforall.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pheonixtrialsandyeartrhfasd",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpheonixtrialsandyeartrhfasd.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pico 8",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpico8.html"
+  },
+  {
+    row: "Simulation",
+    title: "Picosschool",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpicosschool.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pitfall",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpitfall.html"
+  },
+  {
+    row: "Platformer",
+    title: "Pixelquestlostidols",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpixelquestlostidols.html"
+  },
+  {
+    row: "Racing",
+    title: "Pixelspeedrun",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpixelspeedrun.html"
+  },
+  {
+    row: "Simulation",
+    title: "Pizzapapa",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpizzapapa.html"
+  },
+  {
+    row: "Arcade",
+    title: "Plazmaburst",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clplazmaburst.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokeblack",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokeblack.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokeblack 2.html",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokeblack2.html.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokeblazeblack 2 Redux",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokeblazeblack2redux.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokeblue",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokeblue.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokediamond",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokediamond.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokeemeraldrandom",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokeemeraldrandom.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokegaia",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokegaia.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokeheartgold",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokeheartgold.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokelightplatinum",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokelightplatinum.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonclover",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonclover.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemoncrystal",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemoncrystal.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonemerald",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonemerald.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonemeraldcrest",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonemeraldcrest.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonemeraldimperium",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonemeraldimperium.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonemeraldkaizo",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonemeraldkaizo.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonemeraldmini",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonemeraldmini.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonemeraldseaglass",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonemeraldseaglass.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonenergizedemerald",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonenergizedemerald.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonevolvedsfdgsdfs",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonevolvedsfdgsdfs.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonfirered",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonfirered.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonfireredandleafgreenplusedition",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonfireredandleafgreenplusedition.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonfireredrandomized",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonfireredrandomized.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemongold",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemongold.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonleafgreen",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonleafgreen.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonmysterydungeon",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonmysterydungeon.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonquetzal",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonquetzal.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonruby",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonruby.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonsapphire",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonsapphire.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonsilver",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonsilver.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonsnap",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonsnap.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonstadium",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonstadium.html"
+  },
+  {
+    row: "Strategy",
+    title: "Pokemontowerdefense",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemontowerdefense.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonultimatefusion",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonultimatefusion.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonunbound",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonunbound.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemonvega",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemonvega.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokemysteryexplorersofsky",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokemysteryexplorersofsky.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokepearl",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokepearl.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokeplatinum",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokeplatinum.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokeplatinumrandomized",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokeplatinumrandomized.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokered",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokered.html"
+  },
+  {
+    row: "Platformer",
+    title: "Pokerunandbun",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokerunandbun.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokevoltwhite 2 Redux",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokevoltwhite2redux.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokevoyager",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokevoyager.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokewhite",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokewhite.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokewhite 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokewhite2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pokeyellow",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpokeyellow.html"
+  },
+  {
+    row: "Arcade",
+    title: "Polytrackgood",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpolytrackgood.html"
+  },
+  {
+    row: "Arcade",
+    title: "Polytrackworksnow",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpolytrackworksnow.html"
+  },
+  {
+    row: "Arcade",
+    title: "Portalflash",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clportalflash.html"
+  },
+  {
+    row: "Arcade",
+    title: "Potatomanseeksthetroof",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpotatomanseeksthetroof.html"
+  },
+  {
+    row: "Arcade",
+    title: "Prebronzeage",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clprebronzeage.html"
+  },
+  {
+    row: "Arcade",
+    title: "Precivilationbronzeage",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clprecivilationbronzeage.html"
+  },
+  {
+    row: "Arcade",
+    title: "Prehistoricshark",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clprehistoricshark.html"
+  },
+  {
+    row: "Arcade",
+    title: "Primary",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clprimary.html"
+  },
+  {
+    row: "Arcade",
+    title: "Punchout",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpunchout.html"
+  },
+  {
+    row: "Arcade",
+    title: "Punchthedrump",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpunchthedrump.html"
+  },
+  {
+    row: "Arcade",
+    title: "Puyopuyofever",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpuyopuyofever.html"
+  },
+  {
+    row: "Arcade",
+    title: "Pvz",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clpvz.html"
+  },
+  {
+    row: "Arcade",
+    title: "Qbert",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clqbert.html"
+  },
+  {
+    row: "Arcade",
+    title: "Quickieworld",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clquickieworld.html"
+  },
+  {
+    row: "Arcade",
+    title: "Qwop",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clqwop.html"
+  },
+  {
+    row: "Racing",
+    title: "Racingarena",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clracingarena.html"
+  },
+  {
+    row: "Arcade",
+    title: "Radicalred",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clradicalred.html"
+  },
+  {
+    row: "Racing",
+    title: "Radracer",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clradracer.html"
+  },
+  {
+    row: "Strategy",
+    title: "Raftwars",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clraftwars.html"
+  },
+  {
+    row: "Multiplayer",
+    title: "Ragdollio",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clragdollio.html"
+  },
+  {
+    row: "Arcade",
+    title: "Rainbowsix",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clrainbowsix.html"
+  },
+  {
+    row: "Arcade",
+    title: "Rainbowsixalt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clrainbowsixalt.html"
+  },
+  {
+    row: "Platformer",
+    title: "Rayman",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clrayman.html"
+  },
+  {
+    row: "Arcade",
+    title: "Raze",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clraze.html"
+  },
+  {
+    row: "Arcade",
+    title: "Reachthecore",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clreachthecore.html"
+  },
+  {
+    row: "Arcade",
+    title: "Redball",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clredball.html"
+  },
+  {
+    row: "Arcade",
+    title: "Redball 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clredball2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Redball 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clredball3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Redball 4 Vol 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clredball4vol2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Redball 4 Vol 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clredball4vol3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Reignofcentipede",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clreignofcentipede.html"
+  },
+  {
+    row: "Arcade",
+    title: "Renegades",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clrenegades.html"
+  },
+  {
+    row: "Horror",
+    title: "Residentevil 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clresidentevil2.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Resortempire",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clresortempire.html"
+  },
+  {
+    row: "Arcade",
+    title: "Retrobowlfixed",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clretrobowlfixed.html"
+  },
+  {
+    row: "Arcade",
+    title: "Returnman",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clreturnman.html"
+  },
+  {
+    row: "Arcade",
+    title: "Returnman 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clreturnman2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Rhythymymheaven",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clrhythymymheaven.html"
+  },
+  {
+    row: "Simulation",
+    title: "Riddleschool",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clriddleschool.html"
+  },
+  {
+    row: "Simulation",
+    title: "Riddleschool 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clriddleschool2.html"
+  },
+  {
+    row: "Simulation",
+    title: "Riddleschool 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clriddleschool3.html"
+  },
+  {
+    row: "Simulation",
+    title: "Riddleschool 445544444$444$444",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clriddleschool445544444%24%24444%24444.html"
+  },
+  {
+    row: "Arcade",
+    title: "Riddletransfer",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clriddletransfer.html"
+  },
+  {
+    row: "Arcade",
+    title: "Riddletransfer 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clriddletransfer2.html"
+  },
+  {
+    row: "Racing",
+    title: "Ridgeracer",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clridgeracer.html"
+  },
+  {
+    row: "Arcade",
+    title: "Roadoffury",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clroadoffury.html"
+  },
+  {
+    row: "Arcade",
+    title: "Roadofthedead",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clroadofthedead.html"
+  },
+  {
+    row: "Platformer",
+    title: "Rocketknightadventures",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clrocketknightadventures.html"
+  },
+  {
+    row: "Arcade",
+    title: "Rocketpult",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clrocketpult.html"
+  },
+  {
+    row: "Arcade",
+    title: "Roguesoul",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clroguesoul.html"
+  },
+  {
+    row: "Arcade",
+    title: "Roguesoul 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clroguesoul2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Rotate",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clrotate.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ruffle",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clruffle.html"
+  },
+  {
+    row: "Platformer",
+    title: "Run",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clrun.html"
+  },
+  {
+    row: "Platformer",
+    title: "Run 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clrun2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Sandsofthecoliseum",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsandsofthecoliseum.html"
+  },
+  {
+    row: "Arcade",
+    title: "Scribblenauts",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clscribblenauts.html"
+  },
+  {
+    row: "Arcade",
+    title: "Secretofmana",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsecretofmana.html"
+  },
+  {
+    row: "Arcade",
+    title: "Shc 1",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clshc1.html"
+  },
+  {
+    row: "Arcade",
+    title: "Shc 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clshc2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Shc 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clshc3.html"
+  },
+  {
+    row: "Horror",
+    title: "Shinmegamitenseidevilsurvivor",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clshinmegamitenseidevilsurvivor.html"
+  },
+  {
+    row: "Arcade",
+    title: "Shrek 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clshrek2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Shwultimatem",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clshwultimatem.html"
+  },
+  {
+    row: "Arcade",
+    title: "Sidepocket",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsidepocket.html"
+  },
+  {
+    row: "Arcade",
+    title: "Silenthill",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsilenthill.html"
+  },
+  {
+    row: "Arcade",
+    title: "Silenthillalt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsilenthillalt.html"
+  },
+  {
+    row: "Sports",
+    title: "Skateit",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clskateit.html"
+  },
+  {
+    row: "Runner",
+    title: "Skibididibidygyattohiorizzingallovertheplacestillwatermangotheoryfemboydrool",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clskibididibidygyattohiorizzingallovertheplacestillwatermangotheoryfemboydrool.html"
+  },
+  {
+    row: "Arcade",
+    title: "Slimelabratory",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clslimelabratory.html"
+  },
+  {
+    row: "Arcade",
+    title: "Smadvance 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsmadvance2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Smadvance 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsmadvance3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Smashremix",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsmashremix.html"
+  },
+  {
+    row: "Arcade",
+    title: "Smbcrossover",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsmbcrossover.html"
+  },
+  {
+    row: "Arcade",
+    title: "Snailbob",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsnailbob.html"
+  },
+  {
+    row: "Arcade",
+    title: "Snakeis",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsnakeis.html"
+  },
+  {
+    row: "Arcade",
+    title: "Snowridergoodygumdrops",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsnowridergoodygumdrops.html"
+  },
+  {
+    row: "Sports",
+    title: "Soccerrandomgood",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsoccerrandomgood.html"
+  },
+  {
+    row: "Arcade",
+    title: "Solitaire",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsolitaire.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonic 1 Contemporary",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonic1contemporary.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonic 3 Andknuckles",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonic3andknuckles.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonic 3 Complete",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonic3complete.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonic 3 Dblastdx",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonic3dblastdx.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicadvance",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicadvance.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicadvance 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicadvance2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicadvance 2 SP",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicadvance2sp.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicadvance 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicadvance3.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicandknuckles",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicandknuckles.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicbattle",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicbattle.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicclassiccollection",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicclassiccollection.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicclassicheroes",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicclassicheroes.html"
+  },
+  {
+    row: "Platformer",
+    title: "Soniccolors",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsoniccolors.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicdeltaorigins",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicdeltaorigins.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicjam",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicjam.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicmegamix",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicmegamix.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicr",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicr.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicralt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicralt.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicrush",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicrush.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicrushadventure",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicrushadventure.html"
+  },
+  {
+    row: "Sports",
+    title: "Sonicspinball",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicspinball.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicthehedgehog",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicthehedgehog.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicthehedgehog 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicthehedgehog2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Sonicthehedgehog 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsonicthehedgehog3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Spaceinvaders",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clspaceinvaders.html"
+  },
+  {
+    row: "Arcade",
+    title: "Spaceiskey",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clspaceiskey.html"
+  },
+  {
+    row: "Arcade",
+    title: "Spaceiskey 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clspaceiskey2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Spaceiskeyxmas",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clspaceiskeyxmas.html"
+  },
+  {
+    row: "Runner",
+    title: "Stackydash",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstackydash.html"
+  },
+  {
+    row: "Arcade",
+    title: "Starfox",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstarfox.html"
+  },
+  {
+    row: "Arcade",
+    title: "Starfox 64",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstarfox64.html"
+  },
+  {
+    row: "Arcade",
+    title: "Starraiders",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstarraiders.html"
+  },
+  {
+    row: "Arcade",
+    title: "Stealthassassin",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstealthassassin.html"
+  },
+  {
+    row: "Strategy",
+    title: "Steelempire",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsteelempire.html"
+  },
+  {
+    row: "Platformer",
+    title: "Stickmanstealingdiamond",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstickmanstealingdiamond.html"
+  },
+  {
+    row: "Arcade",
+    title: "Stickminairship",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstickminairship.html"
+  },
+  {
+    row: "Arcade",
+    title: "Stickminbreakingbank",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstickminbreakingbank.html"
+  },
+  {
+    row: "Arcade",
+    title: "Stickminescapingprison",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstickminescapingprison.html"
+  },
+  {
+    row: "Arcade",
+    title: "Stickminfleecomplex",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstickminfleecomplex.html"
+  },
+  {
+    row: "Arcade",
+    title: "Stickrpgcomplete",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstickrpgcomplete.html"
+  },
+  {
+    row: "Strategy",
+    title: "Stickwar",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstickwar.html"
+  },
+  {
+    row: "Simulation",
+    title: "Stormthehouse",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstormthehouse.html"
+  },
+  {
+    row: "Simulation",
+    title: "Stormthehouse 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstormthehouse3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Streetfighter 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstreetfighter2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Streetfighter 2 Turbo",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstreetfighter2turbo.html"
+  },
+  {
+    row: "Arcade",
+    title: "Streetfighteralpha 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstreetfighteralpha3.html"
+  },
+  {
+    row: "Shooter",
+    title: "Strikeforceheroes",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstrikeforceheroes.html"
+  },
+  {
+    row: "Shooter",
+    title: "Strikeforceheroes 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstrikeforceheroes2.html"
+  },
+  {
+    row: "Shooter",
+    title: "Strikeforceheroes 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clstrikeforceheroes3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Sugarsugar",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsugarsugar.html"
+  },
+  {
+    row: "Arcade",
+    title: "Superbomberman",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsuperbomberman.html"
+  },
+  {
+    row: "Arcade",
+    title: "Supercastlevania VI",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupercastlevaniaVI.html"
+  },
+  {
+    row: "Arcade",
+    title: "Superchibiknight",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsuperchibiknight.html"
+  },
+  {
+    row: "Platformer",
+    title: "Superdiagonalmario 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsuperdiagonalmario2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Superfighters",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsuperfighters.html"
+  },
+  {
+    row: "Simulation",
+    title: "Superhouseofdeadninjas",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsuperhouseofdeadninjas.html"
+  },
+  {
+    row: "Multiplayer",
+    title: "Supermario",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermario.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermario 63",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermario63.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermario 64",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermario64.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermario 64 DS",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermario64ds.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermarioallstars",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermarioallstars.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermariobros 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermariobros2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermariobros 2 US",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermariobros2us.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermariobros 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermariobros3.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermariobros 3 Real",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermariobros3real.html"
+  },
+  {
+    row: "Racing",
+    title: "Supermariokart",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermariokart.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermarioland",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermarioland.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermarioland 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermarioland2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermariomon",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermariomon.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermariorpg",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermariorpg.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermarioworld",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermarioworld.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermarioworld 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermarioworld2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Supermetroid",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermetroid.html"
+  },
+  {
+    row: "Arcade",
+    title: "Supermonkeyballjr",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupermonkeyballjr.html"
+  },
+  {
+    row: "Arcade",
+    title: "Superpunchout",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsuperpunchout.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Superpuzzlefighter 2 Turbo",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsuperpuzzlefighter2turbo.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Superpuzzlefighter 2 Turboalt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsuperpuzzlefighter2turboalt.html"
+  },
+  {
+    row: "Arcade",
+    title: "Superscribblenauts",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsuperscribblenauts.html"
+  },
+  {
+    row: "Arcade",
+    title: "Supersmashbros",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupersmashbros.html"
+  },
+  {
+    row: "Arcade",
+    title: "Supersmashflash",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupersmashflash.html"
+  },
+  {
+    row: "Arcade",
+    title: "Supersmashflash 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupersmashflash2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Supersmashflash 2 Butdifversion",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupersmashflash2butdifversion.html"
+  },
+  {
+    row: "Arcade",
+    title: "Supremeduelist",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsupremeduelist.html"
+  },
+  {
+    row: "Multiplayer",
+    title: "Survevio",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsurvevio.html"
+  },
+  {
+    row: "Arcade",
+    title: "Sushicat",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsushicat.html"
+  },
+  {
+    row: "Arcade",
+    title: "Sushicat 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsushicat2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Swerve",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clswerve.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Swordandshieldultimateplus",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clswordandshieldultimateplus.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Swordplay",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clswordplay.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Swordsandsandals",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clswordsandsandals.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Swordsandsandals 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clswordsandsandals2.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Swordsandsouls",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clswordsandsouls.html"
+  },
+  {
+    row: "Arcade",
+    title: "Sydneyshark",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clsydneyshark.html"
+  },
+  {
+    row: "Arcade",
+    title: "Takeover",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltakeover.html"
+  },
+  {
+    row: "Platformer",
+    title: "Tallmanrun",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltallmanrun.html"
+  },
+  {
+    row: "Shooter",
+    title: "Tankmayhem",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltankmayhem.html"
+  },
+  {
+    row: "Arcade",
+    title: "Tanukisunsetuhhhhhhhh",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltanukisunsetuhhhhhhhh.html"
+  },
+  {
+    row: "Arcade",
+    title: "Tapper",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltapper.html"
+  },
+  {
+    row: "Simulation",
+    title: "Tastyplanet",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltastyplanet.html"
+  },
+  {
+    row: "Arcade",
+    title: "Tboilambeternal",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltboilambeternal.html"
+  },
+  {
+    row: "Arcade",
+    title: "Tecmobowl",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltecmobowl.html"
+  },
+  {
+    row: "Arcade",
+    title: "Tempest 2000",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltempest2000.html"
+  },
+  {
+    row: "Strategy",
+    title: "Territorywar",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clterritorywar.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Tetris",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltetris.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Tetrisattack",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltetrisattack.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Tetrisgba",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltetrisgba.html"
+  },
+  {
+    row: "Arcade",
+    title: "Theclassroom",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltheclassroom.html"
+  },
+  {
+    row: "Arcade",
+    title: "Theclassroom 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltheclassroom2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Theclassroom 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltheclassroom3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Thedeepestsleep",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clthedeepestsleep.html"
+  },
+  {
+    row: "Adventure",
+    title: "Theenchantedcave 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltheenchantedcave2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Theimpossiblegame",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltheimpossiblegame.html"
+  },
+  {
+    row: "Arcade",
+    title: "Thelaststand",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clthelaststand.html"
+  },
+  {
+    row: "Simulation",
+    title: "Thelaststandunioncity (1)",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clthelaststandunioncity%20(1).html"
+  },
+  {
+    row: "Simulation",
+    title: "Thelaststandunioncity",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clthelaststandunioncity.html"
+  },
+  {
+    row: "Arcade",
+    title: "Themepark",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clthemepark.html"
+  },
+  {
+    row: "Arcade",
+    title: "Thisistheonlylevel",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clthisistheonlylevel.html"
+  },
+  {
+    row: "Arcade",
+    title: "Thisistheonlylevel 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clthisistheonlylevel2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Thisistheonlyleveltoo",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clthisistheonlyleveltoo.html"
+  },
+  {
+    row: "Sports",
+    title: "Tonyhawkproskater",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltonyhawkproskater.html"
+  },
+  {
+    row: "Sports",
+    title: "Tonyhawkskater 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltonyhawkskater2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Tonyhawksunderground",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltonyhawksunderground.html"
+  },
+  {
+    row: "Arcade",
+    title: "Toomanytypes",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltoomanytypes.html"
+  },
+  {
+    row: "Arcade",
+    title: "Tosstheturtle",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltosstheturtle.html"
+  },
+  {
+    row: "Arcade",
+    title: "Trace",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrace.html"
+  },
+  {
+    row: "Racing",
+    title: "Trafficjam 3 D",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrafficjam3d.html"
+  },
+  {
+    row: "Arcade",
+    title: "Tripleplay 2000",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltripleplay2000.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 1",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest1.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 10",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest10.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 11",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest11.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 12",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest12.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 13",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest13.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest3.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest4.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest5.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 6",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest6.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 7",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest7.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 8",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest8.html"
+  },
+  {
+    row: "Platformer",
+    title: "Trollfacequest 9",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltrollfacequest9.html"
+  },
+  {
+    row: "Platformer",
+    title: "Tubejumpers",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltubejumpers.html"
+  },
+  {
+    row: "Arcade",
+    title: "Tunnelrushbetter",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltunnelrushbetter.html"
+  },
+  {
+    row: "Arcade",
+    title: "Turbostars",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clturbostars.html"
+  },
+  {
+    row: "Arcade",
+    title: "Twistedmetal",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltwistedmetal.html"
+  },
+  {
+    row: "Arcade",
+    title: "Twistedmetal 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltwistedmetal2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Twoball 3 D",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cltwoball3d.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ucds",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clucds.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ufoswampoddysey",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clufoswampoddysey.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ultimateassassian 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clultimateassassian2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ultimateassassian 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clultimateassassian3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ultimatemortalkombat",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clultimatemortalkombat.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ultimatemortalkombat 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clultimatemortalkombat3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Ultrakill",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clultrakill.html"
+  },
+  {
+    row: "Platformer",
+    title: "Umstickmangameidkiforgor",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clumstickmangameidkiforgor.html"
+  },
+  {
+    row: "Arcade",
+    title: "Underneath",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clunderneath.html"
+  },
+  {
+    row: "Multiplayer",
+    title: "Unfairmario",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clunfairmario.html"
+  },
+  {
+    row: "Platformer",
+    title: "Unfairmarioworkquestionmark",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clunfairmarioworkquestionmark.html"
+  },
+  {
+    row: "Adventure",
+    title: "Unicyclehero",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clunicyclehero.html"
+  },
+  {
+    row: "Arcade",
+    title: "Uno",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/cluno.html"
+  },
+  {
+    row: "Arcade",
+    title: "Upgradecomplete",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clupgradecomplete.html"
+  },
+  {
+    row: "Arcade",
+    title: "Upgradecomplete 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clupgradecomplete2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Vanguard",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvanguard.html"
+  },
+  {
+    row: "Platformer",
+    title: "Vex",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvex.html"
+  },
+  {
+    row: "Platformer",
+    title: "Vex 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvex2.html"
+  },
+  {
+    row: "Platformer",
+    title: "Vex 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvex3.html"
+  },
+  {
+    row: "Platformer",
+    title: "Vex 3 Xmas",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvex3xmas.html"
+  },
+  {
+    row: "Platformer",
+    title: "Vex 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvex4.html"
+  },
+  {
+    row: "Platformer",
+    title: "Vex 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvex5.html"
+  },
+  {
+    row: "Platformer",
+    title: "Vex 7",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvex7.html"
+  },
+  {
+    row: "Platformer",
+    title: "Vex 8",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvex8.html"
+  },
+  {
+    row: "Platformer",
+    title: "Vexx 3 M",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvexx3m.html"
+  },
+  {
+    row: "Platformer",
+    title: "Vexx 3 M 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvexx3m2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Villager",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvillager.html"
+  },
+  {
+    row: "Sports",
+    title: "Volleyrandom",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clvolleyrandom.html"
+  },
+  {
+    row: "Shooter",
+    title: "Warfare 1944",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwarfare1944.html"
+  },
+  {
+    row: "Strategy",
+    title: "Warioland 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwarioland4.html"
+  },
+  {
+    row: "Strategy",
+    title: "Wariowarediy",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwariowarediy.html"
+  },
+  {
+    row: "Strategy",
+    title: "Wariowareinc",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwariowareinc.html"
+  },
+  {
+    row: "Strategy",
+    title: "Wartheknight",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwartheknight.html"
+  },
+  {
+    row: "Sports",
+    title: "Waterpoolio",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwaterpoolio.html"
+  },
+  {
+    row: "Runner",
+    title: "Wavedash",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwavedash.html"
+  },
+  {
+    row: "Arcade",
+    title: "Waverace 64",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwaverace64.html"
+  },
+  {
+    row: "Platformer",
+    title: "Waverun",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwaverun.html"
+  },
+  {
+    row: "Arcade",
+    title: "Whackthetheif",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwhackthetheif.html"
+  },
+  {
+    row: "Arcade",
+    title: "Whackyourboss",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwhackyourboss.html"
+  },
+  {
+    row: "Arcade",
+    title: "Whackyourcomputer",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwhackyourcomputer.html"
+  },
+  {
+    row: "Racing",
+    title: "Wheely",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwheely.html"
+  },
+  {
+    row: "Racing",
+    title: "Wheely 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwheely2.html"
+  },
+  {
+    row: "Racing",
+    title: "Wheely 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwheely3.html"
+  },
+  {
+    row: "Racing",
+    title: "Wheely 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwheely4.html"
+  },
+  {
+    row: "Racing",
+    title: "Wheely 5",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwheely5.html"
+  },
+  {
+    row: "Racing",
+    title: "Wheely 6",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwheely6.html"
+  },
+  {
+    row: "Racing",
+    title: "Wheely 7",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwheely7.html"
+  },
+  {
+    row: "Racing",
+    title: "Wheely 8",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwheely8.html"
+  },
+  {
+    row: "Arcade",
+    title: "Windowsdoors",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwindowsdoors.html"
+  },
+  {
+    row: "Arcade",
+    title: "Winterfalling",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwinterfalling.html"
+  },
+  {
+    row: "Arcade",
+    title: "Wipeout 2097",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwipeout2097.html"
+  },
+  {
+    row: "Arcade",
+    title: "Wipeout 2097 Alt",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwipeout2097alt.html"
+  },
+  {
+    row: "Simulation",
+    title: "Witchcrafttd",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwitchcrafttd.html"
+  },
+  {
+    row: "Shooter",
+    title: "Wolfenstein 3 D",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwolfenstein3d.html"
+  },
+  {
+    row: "Arcade",
+    title: "Woodworm",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwoodworm.html"
+  },
+  {
+    row: "Arcade",
+    title: "Worldcup 98",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clworldcup98.html"
+  },
+  {
+    row: "Arcade",
+    title: "Worldshardestgame 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clworldshardestgame2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Worldshardestgame 3",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clworldshardestgame3.html"
+  },
+  {
+    row: "Arcade",
+    title: "Worldshardestgame 4",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clworldshardestgame4.html"
+  },
+  {
+    row: "Sports",
+    title: "Wrestlebros",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clwrestlebros.html"
+  },
+  {
+    row: "Arcade",
+    title: "Yarsrevenge",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clyarsrevenge.html"
+  },
+  {
+    row: "Arcade",
+    title: "Yellow",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clyellow.html"
+  },
+  {
+    row: "Arcade",
+    title: "Youarelucky",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clyouarelucky.html"
+  },
+  {
+    row: "Runner",
+    title: "Youvs 100 Skibidi",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clyouvs100skibidi.html"
+  },
+  {
+    row: "Platformer",
+    title: "Zelda 2 Thelegendoflink",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clzelda2thelegendoflink.html"
+  },
+  {
+    row: "Platformer",
+    title: "Zeldaminishcap",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clzeldaminishcap.html"
+  },
+  {
+    row: "Puzzle",
+    title: "Zenword",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clzenword.html"
+  },
+  {
+    row: "Horror",
+    title: "Zombieexploder",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clzombieexploder.html"
+  },
+  {
+    row: "Horror",
+    title: "Zombieroad",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clzombieroad.html"
+  },
+  {
+    row: "Horror",
+    title: "Zombiesatemyneighboors",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clzombiesatemyneighboors.html"
+  },
+  {
+    row: "Arcade",
+    title: "Zombopaclypse 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clzombopaclypse2.html"
+  },
+  {
+    row: "Shooter",
+    title: "Zombotron",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clzombotron.html"
+  },
+  {
+    row: "Shooter",
+    title: "Zombotron 2",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clzombotron2.html"
+  },
+  {
+    row: "Arcade",
+    title: "Zrist",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clzrist.html"
+  },
+  {
+    row: "Arcade",
+    title: "Zuma",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clzuma.html"
+  },
+  {
+    row: "Shooter",
+    title: "Zumashooter",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/clzumashooter.html"
+  },
+  {
+    row: "Arcade",
+    title: "Orb",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/orb.html"
+  },
+  {
+    row: "Arcade",
+    title: "Tesdf",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/tesdf.html"
+  },
+  {
+    row: "Arcade",
+    title: "Test",
+    addedAt: "2026-11-24",
+    image: "",
+    rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-files/main/test.htm"
+  }
 ];
