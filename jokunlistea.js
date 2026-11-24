@@ -952,7 +952,7 @@ const gamesList = [
     row: "Arcade",
     title: "Antimatter Dimensions",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=ivark.github.io&sz=128",
+    image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/Antimatter%20Dimensions/icon.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clantimatterdimensions.html"
   },
   {
@@ -1477,7 +1477,7 @@ const gamesList = [
     row: "Arcade",
     title: "Bounce Back",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=bounceback.com&sz=128",
+    image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/bounce%20back/tiles.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbounceback.html"
   },
   {
@@ -1491,7 +1491,7 @@ const gamesList = [
     row: "Racing",
     title: "Bouncy Motors",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=bouncymotors.com&sz=128",
+    image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/bouncy%20motors/icon.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clbouncymotors.html"
   },
   {
@@ -1603,7 +1603,7 @@ const gamesList = [
     row: "Idle",
     title: "Capybara Clicker",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=capybaraclicker.com&sz=128",
+    image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/capybara%20clicker/logo-capybara-licker.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clcapybaraclicker.html"
   },
   {
@@ -1932,7 +1932,7 @@ const gamesList = [
     row: "Idle",
     title: "Creature Card Idle",
     addedAt: "2026-11-24",
-    image: "https://www.google.com/s2/favicons?domain=creaturecardidle.com&sz=128",
+    image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/creature-card-idle/Button_Default_Default.6dde8d78d3211614c30b.png",
     rawUrl: "https://raw.githubusercontent.com/bubbls/ugs-singlefile/main/UGS-Files/clcreaturecardidle.html"
   },
   {
