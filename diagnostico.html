@@ -56,14 +56,22 @@
   $('resultList').innerHTML=recent.length?recent.map(x=>'<div><b>'+esc(x.title)+'</b> — '+esc(x.status)+' <span class="muted">('+esc(x.date)+')</span></div>').join(''):'<p class="muted">Todavía no has revisado ningún juego.</p>';
  }
  function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
- function previewSource(source){
-  // jsDelivr puede entregar ciertos HTML como texto plano en algunos casos.
-  // Para el iframe del diagnóstico usamos Raw.githack, que sirve el HTML como documento.
-  const m=String(source||'').match(/^https:\/\/cdn\.jsdelivr\.net\/gh\/([^/]+)\/([^/@]+)@([^/]+)\/(.+)$/);
-  if(m)return 'https://raw.githack.com/'+m[1]+'/'+m[2]+'/'+m[3]+'/'+m[4];
-  const raw=String(source||'').match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/);
-  if(raw)return 'https://raw.githack.com/'+raw[1]+'/'+raw[2]+'/'+raw[3]+'/'+raw[4];
-  return source;
+ let activeBlobUrl=null;
+ async function previewGame(frame,source){
+  if(activeBlobUrl){URL.revokeObjectURL(activeBlobUrl);activeBlobUrl=null}
+  frame.src='about:blank';
+  const response=await fetch(source,{mode:'cors',cache:'no-store'});
+  if(!response.ok)throw new Error('El servidor respondió HTTP '+response.status);
+  let html=await response.text();
+  if(!/<\\s*!doctype\\s+html|<\\s*html[\\s>]/i.test(html)){
+   throw new Error('El servidor no ha devuelto un documento HTML. Tipo recibido: '+(response.headers.get('content-type')||'desconocido'));
+  }
+  const base='<base href="'+new URL('.',source).href.replace(/"/g,'&quot;')+'">';
+  if(/<head(?:\\s[^>]*)?>/i.test(html))html=html.replace(/<head(?:\\s[^>]*)?>/i,m=>m+base);
+  else html=base+html;
+  const blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  activeBlobUrl=URL.createObjectURL(blob);
+  frame.src=activeBlobUrl;
  }
  function showNext(){
   while(position<order.length&&results.has(order[position]))position++;
@@ -74,9 +82,14 @@
    '<p class="meta">'+esc(g.rawUrl|| (g.gustApp?'Aplicación GUST':'Sin rawUrl'))+'</p>'+
    '<div class="actions"><button class="success" data-result="Funciona">Funciona</button><button class="danger" data-result="No funciona">No funciona</button><button data-result="Saltado">Saltar</button><button id="openTab">Abrir en pestaña nueva ↗</button></div>'+
    (g.rawUrl?'<div class="frame-wrap"><iframe id="testFrame" title="Prueba de '+esc(g.title||'juego')+'" sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox allow-downloads allow-modals allow-presentation" allow="autoplay; fullscreen; gamepad; clipboard-read; clipboard-write" allowfullscreen></iframe></div><p class="hint">Si el juego no aparece, espera unos segundos y prueba «Abrir en pestaña nueva». Después marca el resultado.</p>':'<p class="hint">Esta entrada no tiene rawUrl. No se puede cargar aquí como HTML directo; comprueba si es una entrada especial.</p>');
-  if(g.rawUrl){const previewUrl=previewSource(g.rawUrl.trim());
-  $('testFrame').src='about:blank';
-  requestAnimationFrame(()=>{$('testFrame').src=previewUrl;});$('openTab').onclick=()=>window.open(previewUrl,'_blank','noopener,noreferrer')}
+  if(g.rawUrl){
+   const frame=$('testFrame'),source=g.rawUrl.trim();
+   $('openTab').onclick=()=>window.open(source,'_blank','noopener,noreferrer');
+   previewGame(frame,source).catch(error=>{
+    console.error('Error al preparar la vista previa:',error);
+    frame.srcdoc='<!doctype html><html><body style="margin:0;background:#111;color:#eee;font:15px Arial;padding:22px"><h3>No se pudo mostrar este juego</h3><p>'+esc(error.message)+'</p><p>Prueba a abrirlo en una pestaña nueva.</p></body></html>';
+   });
+  }
   $('current').querySelectorAll('[data-result]').forEach(b=>b.onclick=()=>record(b.dataset.result));
   update();
  }
