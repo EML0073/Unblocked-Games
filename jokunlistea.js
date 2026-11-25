@@ -1,6 +1,12 @@
 // Add games here using the same object format. Use rawUrl for HTML game files.
 const gamesList = [
-  ,
+  {
+      row: "Adventure",
+      title: "Minecraft 26.2",
+      addedAt: "2026-11-23",
+      image: "argazkik/images.png",
+      rawUrl: "https://cdn.jsdelivr.net/gh/MilkdromedaStudios/all-of-eaglercraft@main/ArchMC%20Eaglercraft%2026.3.html"
+    },
   {
       row: "Adventure",
       title: "Minecraft 1.8.8",
@@ -246,6 +252,13 @@ const gamesList = [
       image: "https://upload.wikimedia.org/wikipedia/commons/7/7d/PAC-MAN_logo.png",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpacman.html"
     },
+  {
+      row: "Arcade",
+      title: "Paper.io 2",
+      addedAt: "2026-11-23",
+      image: "https://paper-2.io/paper-io.jpeg",
+      rawUrl: "https://cdn.jsdelivr.net/gh/CoolDude2349/Offline-HTML-Games-Pack@master/offline/paper-io-2.htm"
+    },
   ,
   {
       row: "Strategy",
@@ -340,6 +353,20 @@ const gamesList = [
     addedAt: "2026-11-24",
     image: "https://static.wikia.nocookie.net/rockstargamescompany/images/4/46/GTA1-logo.png/revision/latest/scale-to-width-down/1200?cb=20240810233731",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clgtaalt.html"
+  },
+  {
+    row: "Action",
+    title: "Grand Theft Auto 2",
+    addedAt: "2026-11-24",
+    image: "https://www.igrandtheftauto.com/content/images/xl/gta2-logo-square.png",
+    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clgta2alt.html"
+  },
+  {
+    row: "Action",
+    title: "Grand Theft Auto: Chinatown Wars",
+    addedAt: "2026-11-24",
+    image: "https://images.ctfassets.net/18izrhn535ym/7K2Lckd6oHN9oFXXGESPdy/509ed917c40b850004c71d0c3c18c3ea/GTA_CW_FOB.jpg?q=100&w=600",
+    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-singlefile@main/UGS-Files/clgtachina.html"
   },
   ,
   ,
