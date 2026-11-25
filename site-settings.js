@@ -129,7 +129,7 @@
       const trimmed = original.trim();
       if (!trimmed) continue;
       const translated = dict[trimmed] ?? trimmed;
-      node.nodeValue = original.replace(trimmed, translated);
+      const nextValue = original.replace(trimmed, translated);\n      if (node.nodeValue !== nextValue) node.nodeValue = nextValue;
     }
     document.querySelectorAll('input[placeholder],textarea[placeholder]').forEach(el => {
       if (!el.dataset.ugOriginalPlaceholder) el.dataset.ugOriginalPlaceholder = el.getAttribute('placeholder');
