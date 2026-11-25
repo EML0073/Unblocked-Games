@@ -157,10 +157,10 @@
     const catalog = document.getElementById('catalog');
     const genreFilter = document.getElementById('genreFilter');
     let popularity = {};
-    function gameViews(game, index) { return Number((popularity[String(index)] || {}).views || 0); }
+    function gameViews(game, index) { const stableId = game.id ?? index; return Number((popularity[String(stableId)] || {}).views || 0); }
     function makeCard(item) {
       const game = item.game;
-      return '<div class="card"><a href="jokue.html?id=' + item.index + '">' +
+      return '<div class="card"><a href="jokue.html?id=' + item.game.id + '">' +
         '<img src="' + game.image + '" alt="' + game.title + '" loading="lazy" decoding="async">' +
         '<p>' + game.title + '</p><span>' + game.row + ' · ' + gameViews(game, item.index) + ' views</span></a></div>';
     }
