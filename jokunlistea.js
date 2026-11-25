@@ -2362,7 +2362,7 @@ const gamesList = [
     title: "Pou",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pou.webp",
-    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clPou.html"
+    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpou.html"
   },
   {
     id: 294,
@@ -2450,7 +2450,7 @@ const gamesList = [
     title: "Red Ball 4",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/redball4.jpg",
-    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clRedBall4.html"
+    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clredball4.html"
   },
   {
     id: 305,
