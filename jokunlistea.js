@@ -3418,7 +3418,7 @@ const gamesList = [
   },
   {
     row: "Runner",
-    title: "100 Skibidistillwaterthosewhoknow",
+    title: "100 Skibidi: Still Water Those Who Know",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl100skibidistillwaterthosewhoknow.html"
@@ -3446,21 +3446,21 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "1 V 1 Lolifnoaboutblank",
+    title: "1v1.LOL (About:Blank)",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl1v1lolifnoaboutblank.html"
   },
   {
     row: "Arcade",
-    title: "1 V 1 Lolnoaboutblank",
+    title: "1v1.LOL (About:Blank)",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl1v1lolnoaboutblank.html"
   },
   {
     row: "Arcade",
-    title: "1 V 1 Maybeidk",
+    title: "1v1.LOL (Maybe)",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl1v1maybeidk.html"
@@ -3495,14 +3495,14 @@ const gamesList = [
   },
   {
     row: "Platformer",
-    title: "60 Secondsburgerrun",
+    title: "60 Seconds Burger Run",
     addedAt: "2026-11-24",
     image: "https://www.touchtapplay.com/wp-content/uploads/2023/02/image-23-e1675504117354.png?resize=640%2C427&w=650",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl60secondsburgerrun.html"
   },
   {
     row: "Platformer",
-    title: "60 Secondssantarun",
+    title: "60 Seconds Santa Run",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/60ssantarun.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl60secondssantarun.html"
@@ -3537,7 +3537,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Bmx 2",
+    title: "BMX 2",
     addedAt: "2026-11-24",
     image: "https://image.yaksgames.com/v2/game/0/9/1/09186c9f9bc92c43c844fb65fe604a75.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clBMX2.html"
@@ -3579,28 +3579,28 @@ const gamesList = [
   },
   {
     row: "Platformer",
-    title: "F Fsonic 2",
+    title: "Final Fight: Sonic 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/sonic2.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFFsonic2.html"
   },
   {
     row: "Platformer",
-    title: "F Fsonic 3",
+    title: "Final Fight: Sonic 3",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/sonic3.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFFsonic3.html"
   },
   {
     row: "Platformer",
-    title: "F Fsonic 4",
+    title: "Final Fight: Sonic 4",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/sonic.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFFsonic4.html"
   },
   {
     row: "Platformer",
-    title: "F Fsonic 5",
+    title: "Final Fight: Sonic 5",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/sonic.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFFsonic5.html"
@@ -3656,14 +3656,14 @@ const gamesList = [
   },
   {
     row: "Sports",
-    title: "Fif Ainternationalsoccer",
+    title: "FIFA International Soccer",
     addedAt: "2026-11-24",
     image: "https://cdn.mobygames.com/covers/4689934-fifa-international-soccer-snes-front-cover.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFAinternationalsoccer.html"
   },
   {
     row: "Arcade",
-    title: "Fif Aroadtoworldcup 98",
+    title: "FIFA: Road to World Cup 98",
     addedAt: "2026-11-24",
     image: "https://image.jeuxvideo.com/images-sm/pc/f/i/fi98pc0f.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFAroadtoworldcup98.html"
@@ -3698,7 +3698,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Fif Astreet 2",
+    title: "FIFA Street 2",
     addedAt: "2026-11-24",
     image: "https://www.goohoo.nl/images/thumbnails/737/737/detailed/1/fifa-street-2-playstation-2.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFAstreet2.html"
@@ -3860,14 +3860,14 @@ const gamesList = [
   ,
   {
     row: "Arcade",
-    title: "Achievmentunlocked 2",
+    title: "Achievement Unlocked 2",
     addedAt: "2026-11-24",
     image: "https://images.igdb.com/igdb/image/upload/t_720p/sccrrm.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clachievmentunlocked2.html"
   },
   {
     row: "Arcade",
-    title: "Achievmentunlocked 3",
+    title: "Achievement Unlocked 3",
     addedAt: "2026-11-24",
     image: "https://kotaku.com/igdb/image/upload/t_720p/sceiwp.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clachievmentunlocked3.html"
@@ -3881,7 +3881,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Achillies 2",
+    title: "Achilles 2",
     addedAt: "2026-11-24",
     image: "https://static.woxikon.com/games/images/achilles-2-origin-of-a-legend.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clachillies2.html"
@@ -3895,7 +3895,7 @@ const gamesList = [
   },
   {
     row: "Strategy",
-    title: "Advancewars 2",
+    title: "Advance Wars 2",
     addedAt: "2026-11-24",
     image: "https://cdn.wikimg.net/en/warswiki/images/c/cf/AW2_NACover.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cladvancewars2.html"
@@ -3909,7 +3909,7 @@ const gamesList = [
   },
   {
     row: "Strategy",
-    title: "Ageofwar 2",
+    title: "Age of War 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/ageofwar2.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clageofwar2.html"
@@ -3923,7 +3923,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Akoopasrevenge 2",
+    title: "A Koopa's Revenge 2",
     addedAt: "2026-11-24",
     image: "https://images.igdb.com/igdb/image/upload/t_1080p/scyc7j.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clakoopasrevenge2.html"
@@ -3972,42 +3972,42 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Amigopancho 2",
+    title: "Amigo Pancho 2",
     addedAt: "2026-11-24",
     image: "https://simple.game/assets/thumbs/x294v2z2/amigo-pancho-2.jpeg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clamigopancho2.html"
   },
   {
     row: "Arcade",
-    title: "Amigopancho 3",
+    title: "Amigo Pancho 3",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clamigopancho3.html"
   },
   {
     row: "Arcade",
-    title: "Amigopancho 4",
+    title: "Amigo Pancho 4",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clamigopancho4.html"
   },
   {
     row: "Arcade",
-    title: "Amigopancho 5",
+    title: "Amigo Pancho 5",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clamigopancho5.html"
   },
   {
     row: "Arcade",
-    title: "Amigopancho 6",
+    title: "Amigo Pancho 6",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clamigopancho6.html"
   },
   {
     row: "Arcade",
-    title: "Amigopancho 7",
+    title: "Amigo Pancho 7",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clamigopancho7.html"
@@ -4063,7 +4063,7 @@ const gamesList = [
   },
   {
     row: "Shooter",
-    title: "Awesometanks 2",
+    title: "Awesome Tanks 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/awesometanks.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clawesometanks2.html"
@@ -4077,14 +4077,14 @@ const gamesList = [
   },
   {
     row: "Sports",
-    title: "Backyardbaseball 09",
+    title: "Backyard Baseball '09",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbackyardbaseball09.html"
   },
   {
     row: "Sports",
-    title: "Backyardbaseball 10",
+    title: "Backyard Baseball '10",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbackyardbaseball10.html"
@@ -4134,7 +4134,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Bankbreakout 2",
+    title: "Bank Breakout 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbankbreakout2.html"
@@ -4213,7 +4213,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Bigtowertinysquare 2 Good",
+    title: "Big Tower Tiny Square 2: Good",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pizzatower.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbigtowertinysquare2good.html"
@@ -4249,7 +4249,7 @@ const gamesList = [
   },
   {
     row: "Adventure",
-    title: "Blobsstory 2",
+    title: "Blob's Story 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clblobsstory2.html"
@@ -4326,21 +4326,21 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Bowlalt",
+    title: "Bowl Alt",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbowlalt.html"
   },
   {
     row: "Sports",
-    title: "Boxinglive 2",
+    title: "Boxing Live 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clboxinglive2.html"
   },
   {
     row: "Arcade",
-    title: "Btts 2",
+    title: "BTTS 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbtts2.html"
@@ -4368,14 +4368,14 @@ const gamesList = [
   },
   {
     row: "Shooter",
-    title: "Bubbletanks 2",
+    title: "Bubble Tanks 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbubbletanks2.html"
   },
   {
     row: "Shooter",
-    title: "Bubbletanks 3",
+    title: "Bubble Tanks 3",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbubbletanks3.html"
@@ -4410,7 +4410,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Burritobison 2",
+    title: "Burrito Bison 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/burritobison.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clburritobison2.html"
@@ -4424,7 +4424,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Cactusmccoy 2",
+    title: "Cactus McCoy 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcactusmccoy2.html"
@@ -4438,7 +4438,7 @@ const gamesList = [
   },
   {
     row: "Racing",
-    title: "Cardrawing",
+    title: "Car Drawing",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcardrawing.html"
@@ -4452,7 +4452,7 @@ const gamesList = [
   },
   {
     row: "Racing",
-    title: "Carmods",
+    title: "Car Mods",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcarmods.html"
@@ -4473,14 +4473,14 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Castlevania 2",
+    title: "Castlevania II",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcastlevania2.html"
   },
   {
     row: "Arcade",
-    title: "Castlevania 3",
+    title: "Castlevania III",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcastlevania3.html"
@@ -4501,7 +4501,7 @@ const gamesList = [
   },
   {
     row: "Simulation",
-    title: "Catslovecake 2",
+    title: "Cats Love Cake 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcatslovecake2.html"
@@ -4550,35 +4550,35 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Clearvision 2",
+    title: "Clear Vision 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clclearvision2.html"
   },
   {
     row: "Arcade",
-    title: "Clearvision 3",
+    title: "Clear Vision 3",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clclearvision3.html"
   },
   {
     row: "Arcade",
-    title: "Clearvision 4",
+    title: "Clear Vision 4",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clclearvision4.html"
   },
   {
     row: "Arcade",
-    title: "Clearvision 5",
+    title: "Clear Vision 5",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clclearvision5.html"
   },
   {
     row: "Arcade",
-    title: "Cod 4",
+    title: "Call of Duty 4",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/cod.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcod4.html"
@@ -4627,7 +4627,7 @@ const gamesList = [
   },
   {
     row: "Puzzle",
-    title: "Colorwatersort 3 D",
+    title: "Color Water Sort 3D",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcolorwatersort3d.html"
@@ -4657,14 +4657,14 @@ const gamesList = [
   },
   {
     row: "Simulation",
-    title: "Cookingmama 2",
+    title: "Cooking Mama 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcookingmama2.html"
   },
   {
     row: "Simulation",
-    title: "Cookingmama 3",
+    title: "Cooking Mama 3",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcookingmama3.html"
@@ -4678,14 +4678,14 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Crashbandicoot 2",
+    title: "Crash Bandicoot 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcrashbandicoot2.html"
   },
   {
     row: "Racing",
-    title: "Crazycars",
+    title: "Crazy Cars",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcrazycars.html"
@@ -4720,7 +4720,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Dadnme",
+    title: "Dad 'n Me",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldadnme.html"
@@ -4734,7 +4734,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Dborigins 2",
+    title: "DBZ: Origins 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/dragonballdevolution.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldborigins2.html"
@@ -4762,21 +4762,21 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Deadzed",
+    title: "Dead Zed",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldeadzed.html"
   },
   {
     row: "Arcade",
-    title: "Deadzed 2",
+    title: "Dead Zed 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldeadzed2.html"
   },
   {
     row: "Arcade",
-    title: "Deblob 2",
+    title: "de Blob 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldeblob2.html"
@@ -4790,7 +4790,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Deepsleep",
+    title: "Deep Sleep",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldeepsleep.html"
@@ -4811,7 +4811,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Defendyournuts 2",
+    title: "Defend Your Nuts 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldefendyournuts2.html"
@@ -4832,7 +4832,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Diamondhollow 2",
+    title: "Diamond Hollow 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldiamondhollow2.html"
@@ -4846,28 +4846,28 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Digdeep",
+    title: "Dig Deep",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldigdeep.html"
   },
   {
     row: "Arcade",
-    title: "Digdug",
+    title: "Dig Dug",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldigdug.html"
   },
   {
     row: "Arcade",
-    title: "Digdug 2",
+    title: "Dig Dug 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldigdug2.html"
   },
   {
     row: "Arcade",
-    title: "Digdug 26",
+    title: "Dig Dug 26",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldigdug26.html"
@@ -4909,7 +4909,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Donkeykongcountry 2",
+    title: "Donkey Kong Country 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/donkeykong.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldonkeykongcountry2.html"
@@ -4923,21 +4923,21 @@ const gamesList = [
   },
   {
     row: "Puzzle",
-    title: "Dontescape",
+    title: "Don't Escape",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldontescape.html"
   },
   {
     row: "Puzzle",
-    title: "Dontescape 2",
+    title: "Don't Escape 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldontescape2.html"
   },
   {
     row: "Puzzle",
-    title: "Dontescape 3",
+    title: "Don't Escape 3",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldontescape3.html"
@@ -4951,7 +4951,7 @@ const gamesList = [
   },
   {
     row: "Shooter",
-    title: "Doom 2",
+    title: "Doom II",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/doom2.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldoom2.html"
@@ -5021,28 +5021,28 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Ducklfe 5",
+    title: "Duck Life 5",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/ducklife5.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clducklfe5.html"
   },
   {
     row: "Simulation",
-    title: "Ducklife 2",
+    title: "Duck Life 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/ducklife2.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clducklife2.html"
   },
   {
     row: "Simulation",
-    title: "Ducklife 3",
+    title: "Duck Life 3",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/ducklife3.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clducklife3.html"
   },
   {
     row: "Simulation",
-    title: "Ducklife 4",
+    title: "Duck Life 4",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/ducklife4.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clducklife4.html"
@@ -5056,7 +5056,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Earntodie 2",
+    title: "Earn to Die 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/earntodie.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clearntodie2.html"
@@ -5070,28 +5070,28 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Earthbound 3",
+    title: "EarthBound 3",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clearthbound3.html"
   },
   {
     row: "Arcade",
-    title: "Earthtaken",
+    title: "Earth Taken",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clearthtaken.html"
   },
   {
     row: "Arcade",
-    title: "Earthtaken 2",
+    title: "Earth Taken 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clearthtaken2.html"
   },
   {
     row: "Arcade",
-    title: "Earthtaken 3",
+    title: "Earth Taken 3",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clearthtaken3.html"
@@ -5105,7 +5105,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Earthwormjim 2",
+    title: "Earthworm Jim 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clearthwormjim2.html"
@@ -5133,7 +5133,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Electricman 2",
+    title: "Electric Man 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clelectricman2.html"
@@ -5147,28 +5147,28 @@ const gamesList = [
   },
   {
     row: "Strategy",
-    title: "Endlesswar 4",
+    title: "Endless War 4",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clendlesswar4.html"
   },
   {
     row: "Strategy",
-    title: "Endlesswar 5",
+    title: "Endless War 5",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clendlesswar5.html"
   },
   {
     row: "Strategy",
-    title: "Endlesswar 5 Wow",
+    title: "Endless War 5: Wow",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clendlesswar5wow.html"
   },
   {
     row: "Strategy",
-    title: "Endlesswar 7",
+    title: "Endless War 7",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clendlesswar7.html"
@@ -5182,7 +5182,7 @@ const gamesList = [
   },
   {
     row: "Puzzle",
-    title: "Escaperoad 2",
+    title: "Escape Road 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/escaperoad.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clescaperoad2.html"
@@ -5217,21 +5217,21 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Factoryballs 2",
+    title: "Factory Balls 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/factoryballs.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfactoryballs2.html"
   },
   {
     row: "Arcade",
-    title: "Factoryballs 3",
+    title: "Factory Balls 3",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/factoryballs.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfactoryballs3.html"
   },
   {
     row: "Arcade",
-    title: "Factoryballs 4",
+    title: "Factory Balls 4",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/factoryballs.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfactoryballs4.html"
@@ -5259,56 +5259,56 @@ const gamesList = [
   },
   {
     row: "Platformer",
-    title: "Fancypantsadventure 2",
+    title: "Fancy Pants Adventure 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/fancypantsadventures.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfancypantsadventure2.html"
   },
   {
     row: "Platformer",
-    title: "Fancypantsadventure 3",
+    title: "Fancy Pants Adventure 3",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/fancypantsadventures.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfancypantsadventure3.html"
   },
   {
     row: "Arcade",
-    title: "Fattygenius",
+    title: "Fatty Genius",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfattygenius.html"
   },
   {
     row: "Arcade",
-    title: "Feedus",
+    title: "Feed Us",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pleasedontfeedme.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfeedus.html"
   },
   {
     row: "Arcade",
-    title: "Feedus 2",
+    title: "Feed Us 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pleasedontfeedme.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfeedus2.html"
   },
   {
     row: "Arcade",
-    title: "Feedus 3",
+    title: "Feed Us 3",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pleasedontfeedme.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfeedus3.html"
   },
   {
     row: "Arcade",
-    title: "Feedus 4",
+    title: "Feed Us 4",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfeedus4.html"
   },
   {
     row: "Arcade",
-    title: "Feedus 5",
+    title: "Feed Us 5",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfeedus5.html"
@@ -5343,28 +5343,28 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Finalfantasy II",
+    title: "Final Fantasy II",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfinalfantasyII.html"
   },
   {
     row: "Arcade",
-    title: "Finalfantasy VI",
+    title: "Final Fantasy VI",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfinalfantasyVI.html"
   },
   {
     row: "Arcade",
-    title: "Finalfantasy Vii",
+    title: "Final Fantasy VII",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfinalfantasyVII.html"
   },
   {
     row: "Arcade",
-    title: "Finalfantasy VI ID 2",
+    title: "Final Fantasy VII: The Other Tet",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfinalfantasyVIId2.html"
@@ -5399,14 +5399,14 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Fireboyandwatergirl 5",
+    title: "Fireboy and Watergirl 5",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/fireboywatergirl4.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfireboyandwatergirl5.html"
   },
   {
     row: "Arcade",
-    title: "Fireboyandwatergirl 6",
+    title: "Fireboy and Watergirl 6",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/fireboywatergirl4.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfireboyandwatergirl6.html"
@@ -5427,14 +5427,14 @@ const gamesList = [
   },
   {
     row: "Platformer",
-    title: "Floodrunner 2",
+    title: "Flood Runner 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfloodrunner2.html"
   },
   {
     row: "Platformer",
-    title: "Floodrunner 4",
+    title: "Flood Runner 4",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfloodrunner4.html"
@@ -5455,14 +5455,14 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Freerider 2",
+    title: "Free Rider 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfreerider2.html"
   },
   {
     row: "Arcade",
-    title: "Freerider 3",
+    title: "Free Rider 3",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfreerider3.html"
@@ -5583,7 +5583,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Granturismo 2",
+    title: "Gran Turismo 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgranturismo2.html"
@@ -6330,30 +6330,30 @@ const gamesList = [
   },
   {
     row: "Platformer",
-    title: "Mariopaint",
+    title: "Mario Paint",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/mariopaint.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmariopaint.html"
   },
   {
     row: "Multiplayer",
-    title: "Marioparty 2",
+    title: "Mario Party 2",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/marioparty2.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmarioparty2.html"
   },
   {
     row: "Multiplayer",
-    title: "Marioparty 3",
+    title: "Mario Party 3",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/marioparty3.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmarioparty3.html"
   },
   {
     row: "Multiplayer",
     title: "Mario Party DS",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/mariopartyds.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmariopartyds.html"
   },
   {
@@ -6563,7 +6563,7 @@ const gamesList = [
     row: "Platformer",
     title: "Metroid: Zero Mission",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/metroidzeromission.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmetroidzeromission.html"
   },
   {
@@ -6809,7 +6809,7 @@ const gamesList = [
     row: "Arcade",
     title: "Nitrome Must Die",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/nitromemustdie.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clnitromemustdie.html"
   },
   {
@@ -6937,56 +6937,56 @@ const gamesList = [
     row: "Simulation",
     title: "Papa's Hot Doggeria",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papashotdoggeria.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapashotdoggeria.html"
   },
   {
     row: "Simulation",
     title: "Papa's Pancakeria",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papaspancakeria.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapaspancakeria.html"
   },
   {
     row: "Simulation",
     title: "Papa's Pastaria",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papaspastaria.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapaspastaria.html"
   },
   {
     row: "Simulation",
     title: "Papa's Scooperia",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papasscooperia.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapasscooperia.html"
   },
   {
     row: "Simulation",
     title: "Papa's Sushiria",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papassushiria.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapassushiria.html"
   },
   {
     row: "Simulation",
     title: "Papa's Taco Mia",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papastacomia.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapastacomia.html"
   },
   {
     row: "Simulation",
     title: "Papa's Wingeria",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papaswingeria.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapaswingeria.html"
   },
   {
     row: "Multiplayer",
     title: "Paper Mario",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papermario.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapermario.html"
   },
   {
@@ -7582,9 +7582,9 @@ const gamesList = [
   },
   {
     row: "Strategy",
-    title: "Raftwars",
+    title: "Raft Wars",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/raftwars.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clraftwars.html"
   },
   {
@@ -7625,9 +7625,9 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Redball",
+    title: "Red Ball",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/redball.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clredball.html"
   },
   {
@@ -7641,7 +7641,7 @@ const gamesList = [
     row: "Arcade",
     title: "Redball 3",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/redball3.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clredball3.html"
   },
   {
@@ -8133,14 +8133,14 @@ const gamesList = [
   },
   {
     row: "Platformer",
-    title: "Sonicthehedgehog 2",
+    title: "Sonic the Hedgehog 2",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/sonic2.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsonicthehedgehog2.html"
   },
   {
     row: "Platformer",
-    title: "Sonicthehedgehog 3",
+    title: "Sonic the Hedgehog 3",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/sonic3.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsonicthehedgehog3.html"
@@ -9192,7 +9192,7 @@ const gamesList = [
   },
   {
     row: "Strategy",
-    title: "Warioland 4",
+    title: "Wario Land 4",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clwarioland4.html"
@@ -9234,7 +9234,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Waverace 64",
+    title: "Wave Race 64",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clwaverace64.html"
@@ -9381,21 +9381,21 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Worldshardestgame 2",
+    title: "The World's Hardest Game 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clworldshardestgame2.html"
   },
   {
     row: "Arcade",
-    title: "Worldshardestgame 3",
+    title: "The World's Hardest Game 3",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clworldshardestgame3.html"
   },
   {
     row: "Arcade",
-    title: "Worldshardestgame 4",
+    title: "The World's Hardest Game 4",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clworldshardestgame4.html"
@@ -9437,7 +9437,7 @@ const gamesList = [
   },
   {
     row: "Platformer",
-    title: "Zelda 2 Thelegendoflink",
+    title: "Zelda II: The Adventure of Link",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/link.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clzelda2thelegendoflink.html"
@@ -9459,7 +9459,7 @@ const gamesList = [
   },
   {
     row: "Horror",
-    title: "Zombieroad",
+    title: "Zombie Road",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clzombieroad.html"
