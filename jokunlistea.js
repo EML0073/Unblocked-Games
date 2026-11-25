@@ -3379,7 +3379,7 @@ const gamesList = [
     row: "Simulation",
     title: "Eaglercraft Alpha 1.2.6 Offline",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://eaglercraftx.org/data/image/game/eaglercraft-alpha-1.2.6.jpeg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/Eaglercraft-Alpha-1.2.6-Offline.html"
   },
   {
@@ -3393,7 +3393,7 @@ const gamesList = [
     row: "Simulation",
     title: "Eaglercraft Indev Offline (1)",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://eaglecraft.com.co/uploads/eaglercraft-indev-image.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/Eaglercraft-Indev-Offline%20(1).html"
   },
   {
@@ -3407,14 +3407,14 @@ const gamesList = [
     row: "Simulation",
     title: "Eaglercraft L 1.9 V 0 7 0 Offline Signed",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://user-images.githubusercontent.com/67106394/210432989-0d541ef1-bd39-4b90-9bb1-c0ffae1b9c3e.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/EaglercraftL_1.9_v0_7_0_Offline_Signed.html"
   },
   {
     row: "Simulation",
     title: "Eaglercraft X 1.8.8(u 29)",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://gamingshitposting.github.io/SalaMuseoGames/assets/media/games/minecraft/Screenshot%20from%202024-04-20%2000-03-23.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/EaglercraftX%201.8.8(u29).html"
   },
   {
@@ -3449,14 +3449,14 @@ const gamesList = [
     row: "Shooter",
     title: "10 Bullets",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://imgs.crazygames.com/10-bullets-html-5.png?fit=crop&height=630&metadata=none&quality=100&width=1200",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl10bullets.html"
   },
   {
     row: "Sports",
     title: "1 ON 1 Tennis",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkuh0Fwz-9jVLyOnk2faOKwNRiDNw5_COocg&usqp=CAU",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl1on1tennis.html"
   },
   {
@@ -3505,21 +3505,21 @@ const gamesList = [
     row: "Arcade",
     title: "3 Slices 2",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://jayisgames.com/images/lvl17.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl3slices2.html"
   },
   {
     row: "Puzzle",
     title: "40 Exescape",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://a.silvergames.com/screenshots/40xescape/1_menu.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl40exescape.html"
   },
   {
     row: "Platformer",
     title: "60 Secondsburgerrun",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://www.touchtapplay.com/wp-content/uploads/2023/02/image-23-e1675504117354.png?resize=640%2C427&w=650",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl60secondsburgerrun.html"
   },
   {
@@ -3540,7 +3540,7 @@ const gamesList = [
     row: "Sports",
     title: "8 Ballpool",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://imgs.crazygames.com/8-ball-pool-wyr_1x1/20251027031134/8-ball-pool-wyr_1x1-cover?format=auto&metadata=none&quality=100&width=1200",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl8ballpool.html"
   },
   {
@@ -3561,14 +3561,14 @@ const gamesList = [
     row: "Arcade",
     title: "Bmx 2",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://image.yaksgames.com/v2/game/0/9/1/09186c9f9bc92c43c844fb65fe604a75.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clBMX2.html"
   },
   {
     row: "Arcade",
     title: "Btd 1",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://imgs.crazygames.com/auto-covers/bloons-tower-defense_1x1.jpg?format=auto&metadata=none&quality=100&width=1200",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clBTD1.html"
   },
   {
@@ -3582,14 +3582,14 @@ const gamesList = [
     row: "Racing",
     title: "Cartoon Network Table Tennis Ultimate Tournament",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://googlebaseball.io/data/image/game/table-tennis-ultimate-tournament/table-tennis-ultimate-tournament.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clCartoonNetworkTableTennisUltimateTournament.html"
   },
   {
     row: "Adventure",
     title: "Dragon Ball Z The Legacyof Goku",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://cdn.wikimg.net/en/strategywiki/images/thumb/8/84/Dragon_Ball_Z-_The_Legacy_of_Goku_%28us%29_cover.jpg/800px-Dragon_Ball_Z-_The_Legacy_of_Goku_%28us%29_cover.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clDragonBallZTheLegacyofGoku.html"
   },
   {
@@ -3645,84 +3645,84 @@ const gamesList = [
     row: "Sports",
     title: "Fifa 07",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://uk.static.webuy.com/product_images/Gaming/Xbox%20360%20Software/5030930054120_l.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFA07.html"
   },
   {
     row: "Sports",
     title: "Fifa 10",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://retrospillkongen.no/cdn/shop/files/MG_9204_600x.jpg?v=1692188789",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFA10.html"
   },
   {
     row: "Sports",
     title: "Fifa 11",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://retrospillkongen.no/cdn/shop/files/MG_2636.jpg?v=1702207504",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFA11.html"
   },
   {
     row: "Sports",
     title: "Fifa 2000(1)",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://media.s-bol.com/NR1Am1rG9WND/568KmA/1171x1200.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFA2000(1).html"
   },
   {
     row: "Sports",
     title: "Fifa 99",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://www.pjsgames.com/cdn/shop/products/game-fifa-99-4_1024x.jpg?v=1452800659",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFA99.html"
   },
   {
     row: "Sports",
     title: "Fif Ainternationalsoccer",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://cdn.mobygames.com/covers/4689934-fifa-international-soccer-snes-front-cover.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFAinternationalsoccer.html"
   },
   {
     row: "Arcade",
     title: "Fif Aroadtoworldcup 98",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://image.jeuxvideo.com/images-sm/pc/f/i/fi98pc0f.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFAroadtoworldcup98.html"
   },
   {
     row: "Sports",
     title: "Fif Asoccer 06",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://storage.googleapis.com/images.pricecharting.com/mk63h2smhyko72rf/1600.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFAsoccer06.html"
   },
   {
     row: "Sports",
     title: "Fif Asoccer 95",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/coccjx.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFAsoccer95.html"
   },
   {
     row: "Sports",
     title: "Fif Asoccer 96",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://www.vgchartz.com/games/boxart/full_fifa-soccer-96_6AmericaFront.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFAsoccer96.html"
   },
   {
     row: "Sports",
     title: "Fif Asoccer 97",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://cdn.mobygames.com/covers/5837098-fifa-soccer-97-playstation-front-cover.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFAsoccer97.html"
   },
   {
     row: "Arcade",
     title: "Fif Astreet 2",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://www.goohoo.nl/images/thumbnails/737/737/detailed/1/fifa-street-2-playstation-2.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFIFAstreet2.html"
   },
   {
@@ -3743,49 +3743,49 @@ const gamesList = [
     row: "Sports",
     title: "Ken Griffey JR Presents Major League Baseball",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://cdn11.bigcommerce.com/s-ymgqt/images/stencil/1280w/products/26375/27763/griffey_mlb__36919.1712852163.jpg?c=2",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clKenGriffeyJrPresentsMajorLeagueBaseball.html"
   },
   {
     row: "Racing",
     title: "Metal Sonic Hyperdrive",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://images.steamusercontent.com/ugc/501399955308388179/D1689A8A373BF415D3E8EB5C4ABDF356223E9313/?ima=fit&imcolor=%23000000&impolicy=Letterbox&imw=512&letterbox=false",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clMetalSonicHyperdrive.html"
   },
   {
     row: "Arcade",
     title: "NB Ahangtime",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://cdn2.steamgriddb.com/grid/872ddb5bcc4dff4db42fd5be7a1e3b65.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clNBAhangtime.html"
   },
   {
     row: "Arcade",
     title: "NB Ajam",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://i5.walmartimages.com/seo/Acclaim-NBA-Jam-PlayStation-2-Sports-Video-Game_1b7571b8-7a5f-4896-9539-39d228496999.42fed9609ded86db6b9a6d428db78b92.jpeg?odnBg=FFFFFF&odnHeight=768&odnWidth=768",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clNBAjam.html"
   },
   {
     row: "Arcade",
     title: "Nicktoons Freeze Frame Frenzy",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://images.stopgame.ru/games/logos/29166/c1120x1120/l0gwUG7iHFSUKbY8orErhg/nicktoons_freeze_frame_frenzy-square.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clNicktoonsFreezeFrameFrenzy.html"
   },
   {
     row: "Arcade",
     title: "Pokemonemeraldrouge",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://images.igdb.com/igdb/image/upload/t_1080p_2x/co6i7g.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clPokemonemeraldrouge.html"
   },
   {
     row: "Arcade",
     title: "Pokemonrocketedition",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://retrogamesnexus.com/images/games/cover/gba/pokemon-edicion-team-rocket.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clPokemonrocketedition.html"
   },
   {
@@ -3799,7 +3799,7 @@ const gamesList = [
     row: "Platformer",
     title: "Sonic 1 Score Rush",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://shc-dist.lostsig.co/images/contest2022/3243.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clSonic1ScoreRush.html"
   },
   {
@@ -3813,21 +3813,21 @@ const gamesList = [
     row: "Platformer",
     title: "Sonic Hellfire Saga",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://shc-dist.lostsig.co/images/contest2023/5626.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clSonicHellfireSaga.html"
   },
   {
     row: "Arcade",
     title: "Taikono Tatsujin",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://down-my.img.susercontent.com/file/sg-11134201-22100-qvulj7k326iv87",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clTaikonoTatsujin.html"
   },
   {
     row: "Racing",
     title: "Ultimatecardrivingsimulator",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://wheeliegames.com/thumb/ultimate-car-driving-simulator.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clUltimatecardrivingsimulator.html"
   },
   {
@@ -3869,7 +3869,7 @@ const gamesList = [
     row: "Arcade",
     title: "Acegangstertaxi",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://assets.bgames.com/7/109087/88639/1200x600/ace-gangster-taxi.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clacegangstertaxi.html"
   },
   {
@@ -3890,42 +3890,42 @@ const gamesList = [
     row: "Arcade",
     title: "Achievmentunlocked 2",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://images.igdb.com/igdb/image/upload/t_720p/sccrrm.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clachievmentunlocked2.html"
   },
   {
     row: "Arcade",
     title: "Achievmentunlocked 3",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://kotaku.com/igdb/image/upload/t_720p/sceiwp.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clachievmentunlocked3.html"
   },
   {
     row: "Arcade",
     title: "Achillies 1 FR",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://cdn.gamingonl.com/images/webp/achilles-1512x1077.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clachillies1fr.html"
   },
   {
     row: "Arcade",
     title: "Achillies 2",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://static.woxikon.com/games/images/achilles-2-origin-of-a-legend.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clachillies2.html"
   },
   {
     row: "Strategy",
     title: "Advancewars",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://cavegamers.com/cdn/shop/files/7777_1.jpg?v=1775225735&width=1530",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cladvancewars.html"
   },
   {
     row: "Strategy",
     title: "Advancewars 2",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://cdn.wikimg.net/en/warswiki/images/c/cf/AW2_NACover.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cladvancewars2.html"
   },
   {
@@ -3946,21 +3946,21 @@ const gamesList = [
     row: "Arcade",
     title: "Akoopasrevenge",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://kotaku.com/igdb/image/upload/t_720p/scnym6.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clakoopasrevenge.html"
   },
   {
     row: "Arcade",
     title: "Akoopasrevenge 2",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://images.igdb.com/igdb/image/upload/t_1080p/scyc7j.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clakoopasrevenge2.html"
   },
   {
     row: "Arcade",
     title: "Alienhominid",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://cdn.kanobu.ru/games/e5f4de4e-a3e0-44b6-93d6-2b205548ba02.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clalienhominid.html"
   },
   {
@@ -3988,21 +3988,21 @@ const gamesList = [
     row: "Arcade",
     title: "Amaze",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://cdn-ext.fanatical.com/production/product/1280x720/6f50ba89-0eae-4087-8d2f-c62f84813357.jpeg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clamaze.html"
   },
   {
     row: "Arcade",
     title: "Amigopancho",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://assets.funnygames.org/5/13905/66904/672x448/amigo-pancho-1.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clamigopancho.html"
   },
   {
     row: "Arcade",
     title: "Amigopancho 2",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://simple.game/assets/thumbs/x294v2z2/amigo-pancho-2.jpeg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clamigopancho2.html"
   },
   {
