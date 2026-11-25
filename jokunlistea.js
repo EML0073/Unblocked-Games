@@ -7838,7 +7838,7 @@ const gamesList = [
     row: "Arcade",
     title: "Retrobowlfixed",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/retrobowl.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clretrobowlfixed.html"
   },
   {
@@ -7866,7 +7866,7 @@ const gamesList = [
     row: "Simulation",
     title: "Riddleschool",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/riddleschool.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clriddleschool.html"
   },
   {
