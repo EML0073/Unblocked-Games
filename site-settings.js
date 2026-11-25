@@ -129,9 +129,15 @@
       const trimmed = original.trim();
       if (!trimmed) continue;
       const translated = dict[trimmed] ?? trimmed;
-      const nextValue = original.replace(trimmed, translated);\n      if (node.nodeValue !== nextValue) node.nodeValue = nextValue;
+      const nextValue = original.replace(trimmed, translated);
+      if (node.nodeValue !== nextValue) node.nodeValue = nextValue;
     }
-    document.querySelectorAll('option').forEach(el => {\n      if (!el.dataset.ugOriginalText) el.dataset.ugOriginalText = el.textContent;\n      const key = el.dataset.ugOriginalText;\n      el.textContent = dict[key] ?? key;\n    });\n    document.querySelectorAll('input[placeholder],textarea[placeholder]').forEach(el => {
+    document.querySelectorAll('option').forEach(el => {
+      if (!el.dataset.ugOriginalText) el.dataset.ugOriginalText = el.textContent;
+      const key = el.dataset.ugOriginalText;
+      el.textContent = dict[key] ?? key;
+    });
+    document.querySelectorAll('input[placeholder],textarea[placeholder]').forEach(el => {
       if (!el.dataset.ugOriginalPlaceholder) el.dataset.ugOriginalPlaceholder = el.getAttribute('placeholder');
       const key = el.dataset.ugOriginalPlaceholder;
       el.setAttribute('placeholder', dict[key] ?? key);
