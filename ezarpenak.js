@@ -9,6 +9,7 @@
   let theme = get('unblockedgames-theme', 'dark');
   let accent = get('unblockedgames-accent', '#e50914');
   let language = get('unblockedgames-language', 'en');
+  const originalTextNodes = new WeakMap();
   if (!/^#[0-9a-f]{6}$/i.test(accent)) accent = '#e50914';
   if (!flags[language]) language = 'en';
 
@@ -68,7 +69,7 @@
     }
     function applyLanguage() {
       const dictionary = (window.UNBLOCKED_TRANSLATIONS && window.UNBLOCKED_TRANSLATIONS[language]) || {};
-      const originals = new WeakMap();
+      const originals = originalTextNodes;
       function translateTextNode(node) {
         if (!node || !node.parentElement || node.parentElement.closest('script,style,noscript,textarea,code,pre,[contenteditable="true"]')) return;
         if (!originals.has(node)) originals.set(node,node.nodeValue);
