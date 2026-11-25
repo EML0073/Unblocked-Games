@@ -8649,13 +8649,7 @@ const gamesList = [
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltankmayhem.html"
   },
-  {
-    row: "Arcade",
-    title: "Tanuki Sunset",
-    addedAt: "2026-11-24",
-    image: "",
-    rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltanukisunsetuhhhhhhhh.html"
-  },
+  ,
   {
     row: "Arcade",
     title: "Tapper",
