@@ -128,7 +128,7 @@
       const original = originalText.get(node);
       const trimmed = original.trim();
       if (!trimmed) continue;
-      const translated = dict[trimmed] ?? trimmed;
+      const translated = dict[trimmed] ?? trimmed.replace(/\\bviews\\b/g, dict.views || 'views').replace(/\\bview\\b/g, dict.view || 'view');
       const nextValue = original.replace(trimmed, translated);
       if (node.nodeValue !== nextValue) node.nodeValue = nextValue;
     }
