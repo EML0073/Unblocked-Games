@@ -165,41 +165,8 @@
         '<p>' + game.title + '</p><span>' + game.row + ' · ' + gameViews(game, item.index) + ' views</span></a></div>';
     }
     function applyThumbnailColors(container) {
-      container.querySelectorAll('.card img').forEach(function(original) {
-        if (original.dataset.colorChecked) return;
-        original.dataset.colorChecked = '1';
-        const sampler = new Image();
-        sampler.crossOrigin = 'anonymous';
-        sampler.onload = function() {
-          try {
-            const canvas = document.createElement('canvas');
-            canvas.width = 32; canvas.height = 32;
-            const ctx = canvas.getContext('2d', { willReadFrequently: true });
-            ctx.drawImage(sampler, 0, 0, 32, 32);
-            const pixels = ctx.getImageData(0, 0, 32, 32).data;
-            const buckets = {};
-            for (let i = 0; i < pixels.length; i += 4) {
-              const alpha = pixels[i + 3];
-              const red = pixels[i], green = pixels[i + 1], blue = pixels[i + 2];
-              if (alpha < 150) continue;
-              const max = Math.max(red, green, blue), min = Math.min(red, green, blue);
-              const saturation = max === 0 ? 0 : (max - min) / max;
-              if (max < 35 || (max > 242 && saturation < .12)) continue;
-              const key = [red, green, blue].map(function(v) { return Math.round(v / 32) * 32; }).join(',');
-              const score = 1 + saturation * 1.8;
-              if (!buckets[key]) buckets[key] = { score: 0, rgb: [red, green, blue] };
-              buckets[key].score += score;
-            }
-            const winner = Object.keys(buckets).sort(function(a, b) { return buckets[b].score - buckets[a].score; })[0];
-            if (winner) {
-              const rgb = buckets[winner].rgb.map(function(v) { return Math.round(v); }).join(', ');
-              original.closest('.card').style.setProperty('--game-color', rgb);
-            }
-          } catch (error) {
-            console.debug('No se pudo extraer el color de la miniatura:', original.src);
-          }
-        };
-        sampler.src = original.currentSrc || original.src;
+      container.querySelectorAll('.card').forEach(function(card) {
+        card.style.setProperty('--game-color', '229, 9, 20');
       });
     }
     function makeRow(title, items) {
