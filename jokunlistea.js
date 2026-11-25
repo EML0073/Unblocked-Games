@@ -2176,28 +2176,28 @@ const gamesList = [
 
   {
     row: "Racing",
-    title: "MotoX3m3",
+    title: "Moto X3M 3",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/98.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmotox3m3.html"
   },
   {
     row: "Sports",
-    title: "MotoX3m Pool Party",
+    title: "Moto X3M: Pool Party",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/motox3m-pool.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmotox3mpoolparty.html"
   },
   {
     row: "Racing",
-    title: "MotoX3m Spooky Land",
+    title: "Moto X3M: Spooky Land",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/moto-spook.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmotox3mspookyland.html"
   },
   {
     row: "Racing",
-    title: "MotoX3m Winter",
+    title: "Moto X3M: Winter",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/motox3m-winter.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmotox3mwinter.html"
@@ -3042,7 +3042,7 @@ const gamesList = [
   },
   {
     row: "Shooter",
-    title: "Strikeforce Kitty 2",
+    title: "StrikeForce Kitty 2",
     addedAt: "2026-11-24",
     image: "https://cdn.mobygames.com/covers/9702593-strikeforce-kitty-2-browser-front-cover.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsfk2.html"
@@ -5371,14 +5371,14 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Finalfantasy VI ID 3",
+    title: "Final Fantasy VII: The Other Tet 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfinalfantasyVIId3.html"
   },
   {
     row: "Arcade",
-    title: "Finalfantasy VI Itheothertetrr",
+    title: "Final Fantasy VII: The Other Tet",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfinalfantasyVIItheothertetrr.html"
@@ -6837,7 +6837,7 @@ const gamesList = [
     row: "Racing",
     title: "The Legend of Zelda: Ocarina of Time",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/ocarinaoftime.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clocarinaoftime.html"
   },
   {
@@ -7224,14 +7224,14 @@ const gamesList = [
     row: "Arcade",
     title: "Pokémon Crystal",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pokemoncrystal.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokemoncrystal.html"
   },
   {
     row: "Arcade",
     title: "Pokémon Emerald",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pokemonemerald.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokemonemerald.html"
   },
   {
@@ -7287,7 +7287,7 @@ const gamesList = [
     row: "Arcade",
     title: "Pokémon FireRed",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pokemonfirered.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokemonfirered.html"
   },
   {
@@ -7308,14 +7308,14 @@ const gamesList = [
     row: "Arcade",
     title: "Pokémon Gold",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pokemongold.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokemongold.html"
   },
   {
     row: "Arcade",
     title: "Pokémon LeafGreen",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pokemonleafgreen.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokemonleafgreen.html"
   },
   {
@@ -7336,21 +7336,21 @@ const gamesList = [
     row: "Arcade",
     title: "Pokémon Ruby",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pokemonruby.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokemonruby.html"
   },
   {
     row: "Arcade",
     title: "Pokémon Sapphire",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pokemonsapphire.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokemonsapphire.html"
   },
   {
     row: "Arcade",
     title: "Pokémon Silver",
     addedAt: "2026-11-24",
-    image: "",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pokemonsilver.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokemonsilver.html"
   },
   {
@@ -8427,7 +8427,7 @@ const gamesList = [
   },
   {
     row: "Platformer",
-    title: "Supermariobros 3 Real",
+    title: "Super Mario Bros. 3 (Real)",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/mario.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsupermariobros3real.html"
@@ -8476,7 +8476,7 @@ const gamesList = [
   },
   {
     row: "Platformer",
-    title: "Supermarioworld 2",
+    title: "Super Mario World 2: Yoshi's Island",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/mario.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsupermarioworld2.html"
@@ -9087,7 +9087,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Upgradecomplete 2",
+    title: "Upgrade Complete 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clupgradecomplete2.html"
