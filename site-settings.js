@@ -126,10 +126,10 @@
     }
     let result = value;
     const replacements = [
-      [/\\bviews\\b/gi, dict.views || 'views'],
-      [/\\bview\\b/gi, dict.view || 'view'],
-      [/\\bgames\\b/gi, dict.games || 'games'],
-      [/\\bgame\\b/gi, dict.game || 'game']
+      [/\bviews\b/gi, dict.views || 'views'],
+      [/\bview\b/gi, dict.view || 'view'],
+      [/\bgames\b/gi, dict.games || 'games'],
+      [/\bgame\b/gi, dict.game || 'game']
     ];
     replacements.forEach(([pattern, replacement]) => { result = result.replace(pattern, replacement); });
     return result;
@@ -220,7 +220,7 @@
     trigger.setAttribute('aria-label', t('Open settings'));
     trigger.setAttribute('aria-expanded', 'false');
     trigger.setAttribute('aria-controls', 'ug-settings-panel');
-    trigger.textContent = '\\u2699';
+    trigger.textContent = '⚙';
 
     const panel = document.createElement('section');
     panel.id = 'ug-settings-panel';
