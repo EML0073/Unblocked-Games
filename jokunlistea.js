@@ -3282,7 +3282,7 @@ const gamesList = [
   },
   {
     row: "Strategy",
-    title: "Timewarriors",
+    title: "Time Warriors",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/time%20warriors/game_logo_en.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltimewarriors.html"
@@ -6632,7 +6632,7 @@ const gamesList = [
   ,
   {
     row: "Arcade",
-    title: "Mortalkombat",
+    title: "Mortal Kombat",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmortalkombat.html"
@@ -6709,21 +6709,21 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Newgroundsrumble",
+    title: "Newgrounds Rumble",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clnewgroundsrumble.html"
   },
   {
     row: "Platformer",
-    title: "Newsupermariobros",
+    title: "New Super Mario Bros.",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/mario.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clnewsupermariobros.html"
   },
   {
     row: "Arcade",
-    title: "Newyorkshark",
+    title: "New York Shark",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clnewyorkshark.html"
@@ -6737,28 +6737,28 @@ const gamesList = [
   },
   {
     row: "Racing",
-    title: "Nfscarbonowncity",
+    title: "Need for Speed: Carbon – Own the City",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clnfscarbonowncity.html"
   },
   {
     row: "Arcade",
-    title: "Nfsmostwanted",
+    title: "Need for Speed: Most Wanted",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/driver.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clnfsmostwanted.html"
   },
   {
     row: "Arcade",
-    title: "Nfsporcheunleashed",
+    title: "Need for Speed: Porsche Unleashed",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/driver.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clnfsporcheunleashed.html"
   },
   {
     row: "Arcade",
-    title: "Nfsunderground",
+    title: "Need for Speed: Underground",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/driver.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clnfsunderground.html"
@@ -6800,7 +6800,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Nintendoworldcup",
+    title: "Nintendo World Cup",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/asmallworldcup.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clnintendoworldcup.html"
@@ -6856,7 +6856,7 @@ const gamesList = [
   },
   {
     row: "Platformer",
-    title: "Ordinarysonicromhack",
+    title: "Ordinary Sonic ROM Hack",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clordinarysonicromhack.html"
@@ -6898,21 +6898,21 @@ const gamesList = [
   },
   {
     row: "Simulation",
-    title: "Papalouiewhenburgersattack",
+    title: "Papa Louie: When Burgers Attack!",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papalouie.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapalouiewhenburgersattack.html"
   },
   {
     row: "Simulation",
-    title: "Papalouiewhenpizzasattack",
+    title: "Papa Louie: When Pizza Attacks!",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papalouie.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapalouiewhenpizzasattack.html"
   },
   {
     row: "Simulation",
-    title: "Papalouiewhensundaesattack",
+    title: "Papa Louie: When Sundaes Attack!",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papalouie.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapalouiewhensundaesattack.html"
@@ -7012,21 +7012,21 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Parappatherapperalt",
+    title: "PaRappa the Rapper (Alt)",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clparappatherapperalt.html"
   },
   {
     row: "Arcade",
-    title: "Partnersintime",
+    title: "Mario & Luigi: Partners in Time",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpartnersintime.html"
   },
   {
     row: "Arcade",
-    title: "Penaltykicks",
+    title: "Penalty Kicks",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpenaltykicks.html"
@@ -7124,14 +7124,14 @@ const gamesList = [
   },
   {
     row: "Platformer",
-    title: "Pixelquestlostidols",
+    title: "Pixel Quest: The Lost Idols",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpixelquestlostidols.html"
   },
   {
     row: "Racing",
-    title: "Pixelspeedrun",
+    title: "Pixel Speedrun",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpixelspeedrun.html"
@@ -7187,7 +7187,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Pokeemeraldrandom",
+    title: "Pokémon Emerald Randomizer",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pokemonemerald.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokeemeraldrandom.html"
@@ -7201,14 +7201,14 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Pokeheartgold",
+    title: "Pokémon HeartGold",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pokemonheartgold.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokeheartgold.html"
   },
   {
     row: "Arcade",
-    title: "Pokelightplatinum",
+    title: "Pokémon Light Platinum",
     addedAt: "2026-11-24",
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pokemonplatinum.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokelightplatinum.html"
@@ -7222,14 +7222,14 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Pokemoncrystal",
+    title: "Pokémon Crystal",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokemoncrystal.html"
   },
   {
     row: "Arcade",
-    title: "Pokemonemerald",
+    title: "Pokémon Emerald",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokemonemerald.html"
@@ -8651,7 +8651,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Tanukisunsetuhhhhhhhh",
+    title: "Tanuki Sunset",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltanukisunsetuhhhhhhhh.html"
@@ -9009,14 +9009,14 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Ultimateassassian 2",
+    title: "Ultimate Assassin 2",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clultimateassassian2.html"
   },
   {
     row: "Arcade",
-    title: "Ultimateassassian 3",
+    title: "Ultimate Assassin 3",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clultimateassassian3.html"
@@ -9030,7 +9030,7 @@ const gamesList = [
   },
   {
     row: "Arcade",
-    title: "Ultimatemortalkombat 3",
+    title: "Ultimate Mortal Kombat 3",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clultimatemortalkombat3.html"
@@ -9044,7 +9044,7 @@ const gamesList = [
   },
   {
     row: "Platformer",
-    title: "Umstickmangameidkiforgor",
+    title: "Stickman Game",
     addedAt: "2026-11-24",
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clumstickmangameidkiforgor.html"
