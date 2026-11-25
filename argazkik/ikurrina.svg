@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40"><path fill="#d90000" d="M0 0h60v40H0z"/><path stroke="#fff" stroke-width="9" d="M0 0 60 40M60 0 0 40"/><path stroke="#00843d" stroke-width="5" d="M0 0 60 40M60 0 0 40"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" role="img" aria-label="Ikurriña">
+  <rect width="60" height="40" fill="#d90000"/>
+  <path d="M0 0 60 40M60 0 0 40" fill="none" stroke="#fff" stroke-width="7"/>
+  <path d="M30 0v40M0 20h60" fill="none" stroke="#00843d" stroke-width="7"/>
+</svg>
