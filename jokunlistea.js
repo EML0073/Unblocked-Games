@@ -25,105 +25,105 @@ const gamesList = [
       row: "Shooter",
       title: "1v1 LOL",
       addedAt: "2026-11-23",
-      image: "argazkik/1v1.jpeg",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/1v1lol.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl1v1lol.html"
     },
   {
       row: "Arcade",
       title: "Subway Surfers",
       addedAt: "2026-11-23",
-      image: "argazkik/subwaysurfers.jpeg",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/subwaysurfers.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsubwaysurfers.html"
     },
   {
       row: "Arcade",
       title: "Tomb of the mask",
       addedAt: "2026-11-23",
-      image: "argazkik/tomb.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/tombofthemask.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltombofthemask.html"
     },
   {
       row: "Horror",
       title: "FNAF",
       addedAt: "2026-11-23",
-      image: "argazkik/fnaf.jpeg",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/fnaf.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFNAF.html"
     },
   {
       row: "Horror",
       title: "FNAF 2",
       addedAt: "2026-11-23",
-      image: "argazkik/faf2.jpeg",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/fnaf2.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFNAF2.html"
     },
   {
       row: "Horror",
       title: "FNAF 3",
       addedAt: "2026-11-23",
-      image: "argazkik/fnaf3.jpeg",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/fnaf3.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFNAF3.html"
     },
   {
       row: "Horror",
       title: "FNAF 4",
       addedAt: "2026-11-23",
-      image: "argazkik/fnaf4.jpeg",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/fnaf4.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clFNAF4.html"
     },
   {
       row: "Arcade",
       title: "Slope",
       addedAt: "2026-11-23",
-      image: "https://raw.githubusercontent.com/KeysCreator/slope/main/img/slope-logo.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/slope.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clslope.html"
     },
   {
       row: "Arcade",
       title: "Stickman Hook",
       addedAt: "2026-11-23",
-      image: "https://media.indiedb.com/cache/images/games/1/92/91234/thumb_620x2000/stickman-hook.1.jpg",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/stickmanhook.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clstickmanhook.html"
     },
   {
       row: "Shooter",
       title: "SUPERHOT",
       addedAt: "2026-11-23",
-      image: "https://fightgenossen.ch/attachments/superhot-logo-jpg.5651/",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/superhot.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsuperhot.html"
     },
   {
       row: "Runner",
       title: "Temple Run 2",
       addedAt: "2026-11-23",
-      image: "https://gamesbeat.com/wp-content/uploads/2025/05/tr2_logo.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/templerun2.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltemplerun2.html"
     },
   {
       row: "Platformer",
       title: "Vex 6",
       addedAt: "2026-11-23",
-      image: "https://media.indiedb.com/images/games/1/78/77728/1Vex62.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/vex6.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clvex6.html"
     },
   {
       row: "Puzzle",
       title: "World's Hardest Game",
       addedAt: "2026-11-23",
-      image: "https://myemulator.cc/uploads/images/games/game_the-world%E2%80%99s-hardest-game_1759532165677_large.webp",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/worldshardestgame.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clworldshardestgame.html"
     },
   {
       row: "Sports",
       title: "Basket Bros",
       addedAt: "2026-11-23",
-      image: "https://basketball-stars.io/upload/imgs/basket-bros.jpg",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/basketbros.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbasketbros.html"
     },
   {
       row: "Shooter",
       title: "Rooftop Snipers",
       addedAt: "2026-11-23",
-      image: "https://topgames.gg/data/image/game/rooftop-snipers.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/rooftopsnipers.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clrooftopsnipers.html"
     },
   {
@@ -137,63 +137,63 @@ const gamesList = [
       row: "Arcade",
       title: "Doodle Jump",
       addedAt: "2026-11-23",
-      image: "https://mult-games.com.ua/images/desc/1322770207_doodle-jump.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/doodlejump.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldoodlejump.html"
     },
   {
       row: "Multiplayer",
       title: "Among Us",
       addedAt: "2026-11-23",
-      image: "https://res09.bignox.com/moniqi-blog/jp-bignox-blog/2022/09/83ee6035704323a86b8ed5c3179734a6.png?x-oss-process=image%2Fquality%2Cq_50%2Fresize%2Cm_fill%2Cw_300%2Ch_300",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/amongus.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clamongus.html"
     },
   {
       row: "Puzzle",
       title: "Angry Birds",
       addedAt: "2026-11-23",
-      image: "https://www.pngitem.com/pimgs/m/500-5008362_angry-birds-logo-angry-birds-logo-png-transparent.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/angrybirds.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clangrybirds.html"
     },
   {
       row: "Horror",
       title: "Baldi's Basics",
       addedAt: "2026-11-23",
-      image: "https://raw.githubusercontent.com/NB-GA/games-site/main/projects/baldis-basics/baldis-basics.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/baldisbasics.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbaldisbasics.html"
     },
   {
       row: "Sports",
       title: "Basketball Stars",
       addedAt: "2026-11-23",
-      image: "https://play-lh.googleusercontent.com/SIr7VUzcJMe7fKfkDainacp1iDopSE14AXpGA92zTZICCb6Y2Fw56S6g5Z0iglYpcrquUe9YAnxGeF4sATQLSP8=w240-h480",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/basketballstars.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbasketballstars.html"
     },
   {
       row: "Simulation",
       title: "BitLife",
       addedAt: "2026-11-23",
-      image: "https://pbs.twimg.com/profile_images/2071658072938876928/CjsjY3mT_400x400.jpg",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/bitlife.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbitlife.html"
     },
   {
       row: "Idle",
       title: "Cookie Clicker",
       addedAt: "2026-11-23",
-      image: "https://cookieclicker76.io/data/image/options/cookieclicker-logo.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/cookieclicker.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcookieclicker.html"
     },
   {
       row: "Arcade",
       title: "Crossy Road",
       addedAt: "2026-11-23",
-      image: "https://img1.wikia.nocookie.net/__cb20141215200414/logopedia/images/c/c9/CrossyRoadAppIcon.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/crossyroad.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcrossyroad.html"
     },
   {
       row: "Racing",
       title: "Drive Mad",
       addedAt: "2026-11-23",
-      image: "https://play-lh.googleusercontent.com/8gfwr9Xqbk4EmK2Kh_BJtqAsB-HTQRcpWTkFs5nQRHbQ8J1N5CWPx8LEye3dowH7Yg2ex4qfNPoeDFf7j-yVtQ=w240-h480",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/drivemad.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldrivemad.html"
     },
   {
@@ -207,28 +207,28 @@ const gamesList = [
       row: "Rhythm",
       title: "Friday Night Funkin'",
       addedAt: "2026-11-23",
-      image: "https://images.seeklogo.com/logo-png/41/1/friday-night-funkin-logo-png_seeklogo-411208.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/fridaynightfunkin.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfridaynightfunkin.html"
     },
   {
       row: "Arcade",
       title: "Geometry Dash Lite",
       addedAt: "2026-11-23",
-      image: "https://cxl-web-prod-uploads.s3.amazonaws.com/public/11a6762e8d7ac05e93963afe9f97306daab422fd.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/geometrydashlite.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgeometrydashlite.html"
     },
   {
       row: "Horror",
       title: "Granny",
       addedAt: "2026-11-23",
-      image: "https://m.gjcdn.net/game-header/1200/1042155-u2hmzpbb-v4.webp",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/granny.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgranny.html"
     },
   {
       row: "Arcade",
       title: "Happy Wheels",
       addedAt: "2026-11-23",
-      image: "https://i.imgur.com/xVJh20p.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/happywheels.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clhappywheels.html"
     },
   {
@@ -242,14 +242,14 @@ const gamesList = [
       row: "Racing",
       title: "Moto X3M",
       addedAt: "2026-11-23",
-      image: "https://purepro4562.github.io/ubg9.github.io/assets/images/moto3mx/moto-x3m-bike-race-logo.webp",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/motox3m.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmotox3m.html"
     },
   {
       row: "Arcade",
       title: "Pac-Man",
       addedAt: "2026-11-23",
-      image: "https://upload.wikimedia.org/wikipedia/commons/7/7d/PAC-MAN_logo.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pacman.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpacman.html"
     },
   {
@@ -264,35 +264,35 @@ const gamesList = [
       row: "Strategy",
       title: "Plants vs. Zombies",
       addedAt: "2026-11-23",
-      image: "https://cdn2.steamgriddb.com/icon/d43f633d079beb098669f97f7301d3fb/32/512x512.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/plantsvszombies.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clplantsvszombies.html"
     },
   {
       row: "Sports",
       title: "Retro Bowl",
       addedAt: "2026-11-23",
-      image: "https://raw.githubusercontent.com/NB-GA/games-site/main/projects/retro-bowl/img/icon.jpg",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/retrobowl.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clretrobowl.html"
     },
   {
       row: "Platformer",
       title: "Run 3",
       addedAt: "2026-11-23",
-      image: "https://static.historyminds.com/uploads/OG-Images/RUN-3---OG-FB_72YTvw.png",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/run3.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clrun3.html"
     },
   {
       row: "Platformer",
       title: "OvO 2",
       addedAt: "2026-11-24",
-      image: "https://images.rocketgames.io/uploads/games/o/ovo-2/ovo-2.aedfcd.jpg",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/ovo2.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clovo2.html"
     },
   {
       row: "Horror",
       title: "Granny 2",
       addedAt: "2026-11-24",
-      image: "https://granny-1.io/data/image/game/granny-chapter-two/granny-chapter-two.jpg",
+      image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/granny2.webp",
       rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgranny2.html"
     },
 
@@ -368,14 +368,14 @@ const gamesList = [
     row: "Horror",
     title: "Granny 3",
     addedAt: "2026-11-24",
-    image: "https://baldigames.com/data/image/game/granny-3/granny-3.png",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/granny3.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgranny3.html"
   },
   {
     row: "Arcade",
     title: "Slither.io",
     addedAt: "2026-11-24",
-    image: "https://www.browsergames.de/uploads/public/40c4f6526114eb3eb6ee546d44eb5d80/40c4f6526114eb3eb6ee546d44eb5d80.jpg",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/slitherio.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clslitherio.html"
   },
   {
@@ -419,14 +419,14 @@ const gamesList = [
     row: "Arcade",
     title: "Fruit Ninja",
     addedAt: "2026-11-24",
-    image: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d6/c1/10/d6c1101f-5d78-56f8-8e17-450ebe497be2/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1024x1024wd.png",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/fruitninja.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfruitninja.html"
   },
   {
     row: "Multiplayer",
     title: "Smash Karts",
     addedAt: "2026-11-24",
-    image: "https://img.poki-cdn.com/cdn-cgi/image/q%3D78%2Cscq%3D50%2Cwidth%3D1200%2Cheight%3D1200%2Cfit%3Dcover%2Cf%3Dpng/9c9e529b14731be871b07b89660bbc2a/smash-karts.png",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/smashkarts.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsmashkarts.html"
   },
   {
@@ -440,14 +440,14 @@ const gamesList = [
     row: "Racing",
     title: "Drift Boss",
     addedAt: "2026-11-24",
-    image: "https://media.hotgame.io/2026/05/21233425/drift-boss-icon.webp",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/driftboss.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldriftboss.html"
   },
   {
     row: "Puzzle",
     title: "Cut the Rope",
     addedAt: "2026-11-24",
-    image: "https://games.html5games.io/games/cuttherope/gameplay/images/logo.png",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/cuttherope.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcuttherope.html"
   },
 
@@ -456,7 +456,7 @@ const gamesList = [
     row: "Arcade",
     title: "2048",
     addedAt: "2026-11-24",
-    image: "https://gabrielecirulli.github.io/2048/meta/og_image.png",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/2048.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl2048.html"
   },
   ,
@@ -478,7 +478,7 @@ const gamesList = [
     row: "Horror",
     title: "The Backrooms",
     addedAt: "2026-11-24",
-    image: "https://cdn-1.webcatalog.io/catalog/the-backrooms-game/the-backrooms-game-icon-unplated.png?v=1721611842965",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/backrooms.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbackrooms.html"
   },
   {
@@ -506,7 +506,7 @@ const gamesList = [
     row: "Puzzle",
     title: "Chess",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/chess.jpg",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/chess.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clchess.html"
   },
   ,
@@ -514,14 +514,14 @@ const gamesList = [
     row: "Action",
     title: "Doom",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/doom",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/doom.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldoom.html"
   },
   {
     row: "Racing",
     title: "Eggy Car",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/eggy-car.webp",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/eggycar.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cleggycar.html"
   },
   ,
@@ -529,28 +529,28 @@ const gamesList = [
     row: "Shooter",
     title: "Gun Mayhem",
     addedAt: "2026-11-24",
-    image: "https://cpsgames.org/thumbs/gun-mayhem-new-thumb_1.webp",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/gunmayhem.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgunmayhem.html"
   },
   {
     row: "Arcade",
     title: "Helix Jump",
     addedAt: "2026-11-24",
-    image: "https://1games.io/data/image/game/helix-jump/helix-jump.png",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/helixjump.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clhelixjump.html"
   },
   {
     row: "Party",
     title: "House of Hazards",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/houseofhazards.jpg",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/houseofhazards.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clhouseofhazards.html"
   },
   {
     row: "Arcade",
     title: "Learn to Fly",
     addedAt: "2026-11-24",
-    image: "https://www.xpmonkey.com/resources/game-img/learn-to-fly.webp",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/learntofly.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cllearntofly.html"
   },
   {
@@ -578,7 +578,7 @@ const gamesList = [
     row: "Simulation",
     title: "Papa's Cheeseria",
     addedAt: "2026-11-24",
-    image: "https://img.poki-cdn.com/cdn-cgi/image/quality%3D78%2Cwidth%3D1200%2Cheight%3D1200%2Cfit%3Dcover%2Cf%3Dpng/dba66f3ebbf814e758579987d62c1b35.jpeg",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papascheeseria.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapascheeseria.html"
   },
   {
@@ -592,7 +592,7 @@ const gamesList = [
     row: "Simulation",
     title: "Papa's Freezeria",
     addedAt: "2026-11-24",
-    image: "https://cdn.reludi.com/media/games/x99pl6zfjdfv.jpg",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papasfreezeria.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapasfreezeria.html"
   },
   {
@@ -606,7 +606,7 @@ const gamesList = [
     row: "Strategy",
     title: "Raft Wars 2",
     addedAt: "2026-11-24",
-    image: "https://img.poki-cdn.com/cdn-cgi/image/quality%3D78%2Cwidth%3D1200%2Cheight%3D1200%2Cfit%3Dcover%2Cf%3Dpng/8ce3d09339bcb18c63bf9f1780795944/raft-wars-2.png",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/raftwars2.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clraftwars2.html"
   },
   ,
@@ -630,28 +630,28 @@ const gamesList = [
     row: "Arcade",
     title: "Tiny Fishing",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/tiny-fishing",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/tinyfishing.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltinyfishing.html"
   },
   {
     row: "Arcade",
     title: "Tunnel Rush",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/tunnel-rush",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/tunnelrush.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltunnelrush.html"
   },
   {
     row: "Puzzle",
     title: "Wordle",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/wordle.webp",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/wordle.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clwordle.html"
   },
   {
     row: "Puzzle",
     title: "Bad Ice-Cream",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/bad-ice-cream.webp",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/badicecream.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbadicecream.html"
   },
   ,
@@ -660,7 +660,7 @@ const gamesList = [
     row: "Sports",
     title: "Football Bros",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/CalcSolver/OctoArcade/main/Icon/footballbros.jpg",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/footballbros.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfootballbros.html"
   },
   {
@@ -720,7 +720,7 @@ const gamesList = [
     row: "Arcade",
     title: "9007199254740992",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/9007199254740992",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/9007199254740992.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl9007199254740992.html"
   },
   {
@@ -742,7 +742,7 @@ const gamesList = [
     row: "Arcade",
     title: "A Dark Room",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/adarkroom.webp",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/adarkroom.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clADarkRoom.html"
   },
   ,
@@ -838,7 +838,7 @@ const gamesList = [
     row: "Arcade",
     title: "A Small World Cup",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/a-small-world-cup",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/asmallworldcup.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clasmallworldcup.html"
   },
   ,
@@ -861,14 +861,14 @@ const gamesList = [
     row: "Horror",
     title: "Backrooms 2D",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/backrooms-2d",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/backrooms2d.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbackrooms2D.html"
   },
   {
     row: "Arcade",
     title: "Bacon May Die",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/bacon-may-die",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/baconmaydie.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbaconmaydie.html"
   },
   ,
@@ -885,7 +885,7 @@ const gamesList = [
     row: "Simulation",
     title: "Bad Time Simulator",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/badtimesimulator.jpg",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/badtimesimulator.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbadtimesimulator.html"
   },
   ,
@@ -953,7 +953,7 @@ const gamesList = [
     row: "Sports",
     title: "Basket Random",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/basket-random",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/basketrandom.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbasketrandom.html"
   },
   {
@@ -1117,7 +1117,7 @@ const gamesList = [
     row: "Sports",
     title: "Boxing Random",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/boxingrandom.jpg",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/boxingrandom.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clboxingrandom.html"
   },
   ,
@@ -1143,7 +1143,7 @@ const gamesList = [
     row: "Arcade",
     title: "Burger and Frights",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/burger-and-frights",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/burgerandfrights.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clburgerandfrights.html"
   },
   {
@@ -1201,7 +1201,7 @@ const gamesList = [
     row: "Platformer",
     title: "Celeste Pico",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/freebuisness/covers/main/440.png",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/celeste.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clceleste.html"
   },
   {
@@ -1274,7 +1274,7 @@ const gamesList = [
     row: "Arcade",
     title: "Cluster Rush",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/cluster.webp",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/clusterrush.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clclusterrush.html"
   },
   ,
@@ -1300,7 +1300,7 @@ const gamesList = [
     row: "Arcade",
     title: "Core Ball",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/coreball.webp",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/coreball.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcoreball.html"
   },
   ,
@@ -1327,7 +1327,7 @@ const gamesList = [
     row: "Idle",
     title: "Csgo Clicker",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/CSGO.webp",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/csgoclicker.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcsgoclicker.html"
   },
   ,
@@ -1367,7 +1367,7 @@ const gamesList = [
     row: "Arcade",
     title: "Deepest Sword",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/deepest-sword",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/deepestsword.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldeepestsword.html"
   },
   ,
@@ -1389,7 +1389,7 @@ const gamesList = [
     row: "Arcade",
     title: "Doge Miner",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/Dogecoin.webp",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/dogeminer.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldogeminer.html"
   },
   {
@@ -1615,7 +1615,7 @@ const gamesList = [
     row: "Shooter",
     title: "Funny Shooter 2",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/funny-shooter-2",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/funnyshooter2.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfunnyshooter2.html"
   },
   ,
@@ -1667,7 +1667,7 @@ const gamesList = [
     row: "Arcade",
     title: "Gold Digger FRVR",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/golddiggerfrvr.jpg",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/golddiggerfrvr.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgolddiggerfrvr.html"
   },
   ,
@@ -1727,7 +1727,7 @@ const gamesList = [
     row: "Arcade",
     title: "Grindcraft",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/grindcraft",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/grindcraft.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgrindcraft.html"
   },
   {
@@ -1770,7 +1770,7 @@ const gamesList = [
     row: "Simulation",
     title: "H Half Life",
     addedAt: "2026-11-24",
-    image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@354e3c6939a08e472482653567d566ba3a2aa527/half%20life/xd.png",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/halflife.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clhalflife.html"
   },
   ,
@@ -1807,7 +1807,7 @@ const gamesList = [
     row: "Arcade",
     title: "Hextris",
     addedAt: "2026-11-24",
-    image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/hextrt.webp",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/hextris.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clhextris.html"
   },
   ,
@@ -1832,7 +1832,7 @@ const gamesList = [
     row: "Multiplayer",
     title: "Hole.io",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/hole.io",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/holeio.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clholeio.html"
   },
   ,
@@ -1858,7 +1858,7 @@ const gamesList = [
     row: "Arcade",
     title: "Hungry Lamu",
     addedAt: "2026-11-24",
-    image: "https://hfmanor.com/image/hungry-lamu",
+    image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/hungrylamu.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clhungrylamu.html"
   },
   ,
