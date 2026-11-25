@@ -1,0 +1,4 @@
+ - Lucide
+ - Akzeso direktok
+ - Feedback...
+ - Tradukziok
