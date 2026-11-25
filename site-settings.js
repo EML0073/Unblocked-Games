@@ -153,7 +153,7 @@
       if (event.key === 'Escape' && !panel.hidden) {
         panel.hidden = true;
         trigger.setAttribute('aria-expanded', 'false');
-        trigger.setAttribute('aria-label', 'Abrir configuración');
+        trigger.setAttribute('aria-label', 'Open settings');
         trigger.focus();
       }
     });
