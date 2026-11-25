@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>Jetpack Joyride</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/genizy/jride@475e65ec2f642cf50bb80f09f4f4188cf8c26faa/css/styles.css">
+<link id="gameStyles" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/genizy/jride@475e65ec2f642cf50bb80f09f4f4188cf8c26faa/css/styles.css">
 <style>
 html,body,#content{width:100%;height:100%;margin:0;padding:0;overflow:hidden;background:#000}
 #phaser-canvas{position:fixed;inset:0;width:100%;height:100%;overflow:hidden}
@@ -12,12 +12,23 @@ html,body,#content{width:100%;height:100%;margin:0;padding:0;overflow:hidden;bac
 .fontLoader{position:absolute;left:-9999px;visibility:hidden}
 #rotate_image,.center{display:none!important}
 </style>
-<script src="https://cdn.jsdelivr.net/gh/genizy/jride@475e65ec2f642cf50bb80f09f4f4188cf8c26faa/h5Sdk.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/genizy/jride@475e65ec2f642cf50bb80f09f4f4188cf8c26faa/engine/phaser-3.24.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/genizy/jride@475e65ec2f642cf50bb80f09f4f4188cf8c26faa/game3.js"></script>
+
 </head>
 <body>
 <div class="fontLoader" style="font-family:jetpackia">-</div>
 <div id="content"><div id="phaser-canvas"></div></div>
+<div id="load-error" style="display:none;position:fixed;inset:auto 12px 12px;padding:12px;background:#241719;color:#fff;border:1px solid #77333a;border-radius:8px;font:14px Arial,sans-serif;z-index:99">The game could not load. Check your connection and reload the page.</div>
+<script>
+(function(){
+ const base="https://cdn.jsdelivr.net/gh/genizy/jride@475e65ec2f642cf50bb80f09f4f4188cf8c26faa/";
+ const raw="https://raw.githubusercontent.com/genizy/jride/475e65ec2f642cf50bb80f09f4f4188cf8c26faa/";
+ const fast="https://fastly.jsdelivr.net/gh/genizy/jride@475e65ec2f642cf50bb80f09f4f4188cf8c26faa/";
+ const core="https://gcore.jsdelivr.net/gh/genizy/jride@475e65ec2f642cf50bb80f09f4f4188cf8c26faa/";
+ const style=document.getElementById("gameStyles");
+ style.onerror=()=>{const link=document.createElement("link");link.rel="stylesheet";link.href=fast+"css/styles.css";link.onerror=()=>{const backup=document.createElement("link");backup.rel="stylesheet";backup.href=raw+"css/styles.css";document.head.appendChild(backup)};document.head.appendChild(link)};
+ function loadScript(path,hosts){return new Promise((resolve,reject)=>{let index=0;function attempt(){if(index>=hosts.length){reject(new Error("Could not load "+path));return}const script=document.createElement("script");script.src=hosts[index++]+path;script.onload=resolve;script.onerror=()=>{script.remove();attempt()};document.head.appendChild(script)}attempt()})}
+ (async()=>{try{await loadScript("h5Sdk.js",[base,fast,core,raw]);await loadScript("engine/phaser-3.24.1.min.js",[base,fast,core,raw]);await loadScript("game3.js",[base,fast,core,raw]);}catch(error){console.error("Jetpack Joyride loading failed:",error);document.getElementById("load-error").style.display="block"}})();
+})();
+</script>
 </body>
 </html>
