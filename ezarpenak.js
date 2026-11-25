@@ -72,11 +72,16 @@
       const originals = originalTextNodes;
       function translateTextNode(node) {
         if (!node || !node.parentElement || node.parentElement.closest('script,style,noscript,textarea,code,pre,[contenteditable="true"]')) return;
-        if (!originals.has(node)) originals.set(node,node.nodeValue);
-        const original=originals.get(node);
+        let record=originals.get(node);
+        if (!record || node.nodeValue!==record.translated) {
+          record={original:node.nodeValue,translated:node.nodeValue};
+          originals.set(node,record);
+        }
+        const original=record.original;
         const trimmed=original.trim();
         if (!trimmed) return;
         const translated=language==='en' ? original : (dictionary[trimmed] || trimmed);
+        record.translated=translated;
         if (node.nodeValue!==translated) node.nodeValue=translated;
       }
       function translateElement(el) {
