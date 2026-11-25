@@ -30,7 +30,7 @@
     const button = document.createElement('button');
     button.id = 'ug-settings-trigger'; button.type = 'button'; button.title = 'Settings'; button.setAttribute('aria-label','Open settings'); button.setAttribute('aria-expanded','false');
     button.innerHTML = '<img src="argazkik/ezarpenak.png" alt="">';
-    button.addEventListener('error', function(){}, true);
+    button.querySelector('img').addEventListener('error', function(){ button.textContent='⚙'; button.style.color='#fff'; button.style.font='24px Arial,sans-serif'; });
     const panel = document.createElement('section');
     panel.id = 'ug-settings-panel'; panel.hidden = true;
     panel.innerHTML = '<strong style="display:block;font-size:16px;margin-bottom:12px">Settings</strong><label for="ug-theme-toggle">Appearance</label><button class="ug-control" id="ug-theme-toggle" type="button">Switch to light mode</button><label for="ug-accent-picker" style="display:block;margin-top:12px">Accent color</label><input id="ug-accent-picker" type="color"><label style="display:block;margin-top:12px">Language</label><div id="ug-language-options"><button class="ug-control" data-lang="en"><img class="ug-flag" src="argazkik/flag-en.svg" alt="">English</button><button class="ug-control" data-lang="es"><img class="ug-flag" src="argazkik/flag-es.svg" alt="">Español</button><button class="ug-control" data-lang="eu"><img class="ug-flag" src="argazkik/ikurrina.svg" alt="">Euskara</button></div>';
