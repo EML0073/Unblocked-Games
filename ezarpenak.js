@@ -46,22 +46,82 @@
     function applyAccent() {
       document.documentElement.style.setProperty('--ug-accent',accent);
       document.documentElement.style.setProperty('--ug-accent-soft',accent+'22');
-      document.documentElement.style.setProperty('--ug-accent-shadow',accent+'33');
+      document.documentElement.style.setProperty('--ug-accent-shadow',accent+'44');
       style.textContent = style.textContent.split('/* USER ACCENT RULES */')[0] + `
         /* USER ACCENT RULES */
-        :root{--ug-accent:${accent};--ug-accent-soft:${accent}22;--ug-accent-shadow:${accent}33}
-        .card:hover,.game-card:hover,.game:hover{background-color:var(--ug-accent-soft)!important;border-color:var(--ug-accent)!important;box-shadow:0 6px 22px var(--ug-accent-shadow)!important}
-        button:not(#ug-settings-trigger):hover,a.button:hover,.btn:hover{border-color:var(--ug-accent)!important}
-        .active, .nav-link.active, .selected{color:var(--ug-accent)!important}
-        input:focus,select:focus,textarea:focus{outline:2px solid var(--ug-accent)!important;outline-offset:1px}
+        :root{--ug-accent:${accent};--ug-accent-soft:${accent}22;--ug-accent-shadow:${accent}44;--accent-color:${accent}}
+        a:not(.brand-logo):hover{color:var(--ug-accent)!important}
+        .card:hover,.game-card:hover,.game:hover,.game-item:hover,.game-tile:hover,.game-box:hover{background:var(--ug-accent-soft)!important;border-color:var(--ug-accent)!important;box-shadow:0 7px 24px var(--ug-accent-shadow)!important;transform:translateY(-2px)}
+        .card:hover img,.game-card:hover img,.game:hover img{filter:drop-shadow(0 3px 7px var(--ug-accent-shadow))}
+        button:hover,.btn:hover,.nav-tab:hover,.nav-link:hover{border-color:var(--ug-accent)!important}
+        .active,.nav-tab.active,.nav-link.active,.selected,[aria-current="page"]{color:var(--ug-accent)!important;border-color:var(--ug-accent)!important}
+        input:focus,select:focus,textarea:focus{outline:2px solid var(--ug-accent)!important;outline-offset:1px;border-color:var(--ug-accent)!important}
+        input[type="checkbox"],input[type="radio"]{accent-color:var(--ug-accent)}
+        input[type="range"]{accent-color:var(--ug-accent)}
         ::selection{background:var(--ug-accent);color:#fff}
+        .btn-maximize,.btn-report-send,.pagination button.active,.filter-button.active{background:var(--ug-accent)!important;border-color:var(--ug-accent)!important}
+        .site-footer a:hover{color:var(--ug-accent)!important}
+        .ug-control:focus-visible,#ug-settings-trigger:focus-visible{outline:2px solid var(--ug-accent)!important;outline-offset:3px}
       `;
       save('unblockedgames-accent',accent);
       panel.querySelector('#ug-accent-picker').value = accent;
     }
     function applyLanguage() {
-      panel.querySelectorAll('[data-lang]').forEach(el => el.style.outline = el.dataset.lang === language ? '2px solid '+accent : 'none');
+      const dictionary = (window.UNBLOCKED_TRANSLATIONS && window.UNBLOCKED_TRANSLATIONS[language]) || {};
+      const originals = new WeakMap();
+      function translateTextNode(node) {
+        if (!node || !node.parentElement || node.parentElement.closest('script,style,noscript,textarea,code,pre,[contenteditable="true"]')) return;
+        if (!originals.has(node)) originals.set(node,node.nodeValue);
+        const original=originals.get(node);
+        const trimmed=original.trim();
+        if (!trimmed) return;
+        const translated=language==='en' ? original : (dictionary[trimmed] || trimmed);
+        if (node.nodeValue!==translated) node.nodeValue=translated;
+      }
+      function translateElement(el) {
+        if (!el || el.nodeType!==1) return;
+        ['placeholder','title','aria-label','alt'].forEach(attr=>{
+          if (!el.hasAttribute(attr)) return;
+          const key='data-ug-original-'+attr;
+          if (!el.hasAttribute(key)) el.setAttribute(key,el.getAttribute(attr));
+          const original=el.getAttribute(key);
+          el.setAttribute(attr,language==='en'?original:(dictionary[original]||original));
+        });
+        if (el.matches('input[type="button"],input[type="submit"]')) {
+          if (!el.hasAttribute('data-ug-original-value')) el.setAttribute('data-ug-original-value',el.value);
+          const original=el.getAttribute('data-ug-original-value');
+          el.value=language==='en'?original:(dictionary[original]||original);
+        }
+      }
+      function translateTree(root) {
+        if (!root) return;
+        if (root.nodeType===3) { translateTextNode(root); return; }
+        if (root.nodeType!==1 && root!==document) return;
+        if (root.nodeType===1) translateElement(root);
+        const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+        let node; while((node=walker.nextNode())) translateTextNode(node);
+        if (root.querySelectorAll) root.querySelectorAll('*').forEach(translateElement);
+      }
+      translateTree(document.body);
+      document.documentElement.lang=language;
+      if (document.title) {
+        if (!document.documentElement.dataset.ugOriginalTitle) document.documentElement.dataset.ugOriginalTitle=document.title;
+        const originalTitle=document.documentElement.dataset.ugOriginalTitle;
+        document.title=language==='en'?originalTitle:(dictionary[originalTitle]||originalTitle);
+      }
+      panel.querySelectorAll('[data-lang]').forEach(el=>{
+        el.style.outline=el.dataset.lang===language?'2px solid '+accent:'none';
+        el.setAttribute('aria-pressed',String(el.dataset.lang===language));
+      });
       save('unblockedgames-language',language);
+      if (window.__ugTranslationObserver) window.__ugTranslationObserver.disconnect();
+      window.__ugTranslationObserver=new MutationObserver(records=>{
+        records.forEach(record=>{
+          record.addedNodes.forEach(node=>translateTree(node));
+          if(record.type==='characterData') translateTextNode(record.target);
+        });
+      });
+      window.__ugTranslationObserver.observe(document.body,{childList:true,subtree:true,characterData:true});
     }
     button.addEventListener('click',()=>{panel.hidden=!panel.hidden;button.setAttribute('aria-expanded',String(!panel.hidden));});
     panel.querySelector('#ug-theme-toggle').addEventListener('click',()=>{theme=theme==='dark'?'light':'dark';applyTheme();});
