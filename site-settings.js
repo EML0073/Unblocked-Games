@@ -135,7 +135,8 @@
     document.querySelectorAll('option').forEach(el => {
       if (!el.dataset.ugOriginalText) el.dataset.ugOriginalText = el.textContent;
       const key = el.dataset.ugOriginalText;
-      el.textContent = dict[key] ?? key;
+      const translatedOption = dict[key] ?? key;
+      if (el.textContent !== translatedOption) el.textContent = translatedOption;
     });
     document.querySelectorAll('input[placeholder],textarea[placeholder]').forEach(el => {
       if (!el.dataset.ugOriginalPlaceholder) el.dataset.ugOriginalPlaceholder = el.getAttribute('placeholder');
