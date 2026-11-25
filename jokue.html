@@ -147,21 +147,22 @@
     });
 
     const params = new URLSearchParams(window.location.search);
-    const id = parseInt(params.get('id'));
-    const game = gamesList[id];
+    const id = params.get('id');
+    const game = gamesList.find(function(item) { return String(item.id) === String(id); });
+    const stableId = game ? String(game.id) : String(id);
     if (game) {
       document.title = game.title;
       document.getElementById('gameTitle').textContent = game.title;
       document.getElementById('gameGenre').textContent = game.row;
       const viewsElement = document.getElementById('gameViews');
       if (typeof APPS_SCRIPT_URL !== 'undefined' && APPS_SCRIPT_URL) {
-        fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({action:'view', id:String(id), title:game.title, genre:game.row}) })
+        fetch(APPS_SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({action:'view', id:stableId, title:game.title, genre:game.row}) })
           .then(function() { setTimeout(loadGameViews, 700); })
           .catch(function(error) { console.error('Could not record game visit:', error); loadGameViews(); });
         function loadGameViews() {
           const callbackName = 'jokukViewsCallback';
           window[callbackName] = function(data) {
-            const gameStats = data && data.stats && data.stats[String(id)];
+            const gameStats = data && data.stats && data.stats[stableId];
             viewsElement.textContent = 'Views: ' + (gameStats ? gameStats.views : 0);
             delete window[callbackName]; script.remove();
           };
@@ -209,7 +210,7 @@
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify({ action: 'report', id: String(id), title: gameName, message: message })
+          body: JSON.stringify({ action: 'report', id: stableId, title: gameName, message: message })
         });
         alert('Your report has been submitted. Thank you!');
         document.getElementById('reportMessage').value = '';
