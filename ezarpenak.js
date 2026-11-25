@@ -5,14 +5,18 @@
 
   const THEME_KEY = 'unblockedgames-theme';
   const LANGUAGE_KEY = 'unblockedgames-language';
+  const ACCENT_KEY = 'unblockedgames-accent';
   const dictionaries = window.UNBLOCKED_TRANSLATIONS || {};
   let theme = 'dark';
   let language = 'en';
+  let accent = '#e50914';
   try {
     const savedTheme = localStorage.getItem(THEME_KEY);
     const savedLanguage = localStorage.getItem(LANGUAGE_KEY);
+    const savedAccent = localStorage.getItem(ACCENT_KEY);
     if (savedTheme === 'light' || savedTheme === 'dark') theme = savedTheme;
     if (['en', 'es', 'eu'].includes(savedLanguage)) language = savedLanguage;
+    if (savedAccent && /^#[0-9a-f]{6}$/i.test(savedAccent)) accent = savedAccent;
   } catch (_) {}
 
   const style = document.createElement('style');
@@ -28,8 +32,8 @@
       box-shadow: 0 3px 14px rgba(0,0,0,.35);
       font: 0 Arial, sans-serif; 
     }
-    #ug-settings-trigger:hover { background: #383838; transform: rotate(8deg) scale(1.04); }\n    #ug-settings-trigger img { width:25px;height:25px;object-fit:contain;display:block; }\n    #ug-settings-trigger { transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }\n    #ug-settings-panel { animation: ug-panel-in .18s ease both; }\n    @keyframes ug-panel-in { from { opacity:0; transform:translateY(-6px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }\n    #ug-theme-toggle, #ug-language-select { transition: background .18s ease, border-color .18s ease, transform .18s ease; }\n    #ug-theme-toggle:hover, #ug-language-select:hover { border-color:#777; transform:translateY(-1px); }
-    #ug-settings-trigger:focus-visible, #ug-theme-toggle:focus-visible, #ug-language-select:focus-visible {
+    #ug-settings-trigger:hover { background: #383838; transform: rotate(8deg) scale(1.04); }\n    #ug-settings-trigger img { width:20px;height:20px;object-fit:contain;display:block;filter:brightness(0) invert(1); }\n    #ug-settings-trigger { transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }\n    #ug-settings-panel { animation: ug-panel-in .18s ease both; }\n    @keyframes ug-panel-in { from { opacity:0; transform:translateY(-6px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }\n    #ug-theme-toggle, #ug-language-select, #ug-accent-picker { transition: background .18s ease, border-color .18s ease, transform .18s ease; }\n    #ug-theme-toggle:hover, #ug-language-select:hover, #ug-accent-picker:hover { border-color:#777; transform:translateY(-1px); }
+    #ug-settings-trigger:focus-visible, #ug-theme-toggle:focus-visible, #ug-language-select:focus-visible, #ug-accent-picker:focus-visible {
       outline: 2px solid #e50914; outline-offset: 3px;
     }
     #ug-settings-panel {
@@ -51,7 +55,16 @@
     }
     #ug-theme-toggle:hover { background: #3c3c3c; }
     #ug-theme-toggle .ug-theme-state { color: #bbb; font-size: 12px; }
-    #ug-language-select { display:block; }
+    #ug-language-select { display:flex; align-items:center; justify-content:space-between; gap:9px; }
+    #ug-language-select img, .ug-language-option img { width:23px;height:15px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(128,128,128,.35); }
+    #ug-language-select .ug-language-current { display:flex;align-items:center;gap:9px; }
+    #ug-language-menu { display:grid;gap:4px;margin-top:6px;padding:5px;border:1px solid #555;border-radius:7px;background:#292929; }
+    #ug-language-menu[hidden] { display:none; }
+    .ug-language-option { display:flex;align-items:center;gap:9px;width:100%;padding:8px;border:0;border-radius:5px;background:transparent;color:inherit;text-align:left;cursor:pointer; }
+    .ug-language-option:hover,.ug-language-option[aria-selected="true"] { background:#3a3a3a; }
+    #ug-accent-picker { width:100%;height:42px;padding:5px 8px;border:1px solid #555;border-radius:6px;background:#303030;cursor:pointer; }
+    #ug-accent-picker::-webkit-color-swatch-wrapper { padding:2px; }
+    #ug-accent-picker::-webkit-color-swatch { border:0;border-radius:4px; }
     body[data-ug-theme="light"] { background: #f4f5f7 !important; color: #202124 !important; color-scheme: light; }
     body[data-ug-theme="light"] .top-bar,
     body[data-ug-theme="light"] .site-footer,
@@ -109,6 +122,8 @@
     }
     @media (prefers-reduced-motion: reduce) { body { transition: none; } }
   `;
+
+  style.textContent += '\n:root{--ug-accent:'+accent+';--ug-accent-soft:'+accent+'22}\n#ug-settings-trigger:focus-visible,#ug-theme-toggle:focus-visible,#ug-language-select:focus-visible,#ug-accent-picker:focus-visible{outline-color:var(--ug-accent)}\n#ug-theme-toggle:hover,#ug-language-select:hover,#ug-accent-picker:hover{border-color:var(--ug-accent)}\n.btn-play:hover,.nav-tab.active,.arrow-btn:hover{border-color:var(--ug-accent)!important}\n::selection{background:var(--ug-accent-soft)}';
   (document.head || document.documentElement).appendChild(style);
 
   function t(key) {
@@ -194,7 +209,14 @@
     panel.querySelector('h2').textContent = t('Settings');
     panel.querySelector('.ug-theme-label').textContent = t(theme === 'dark' ? 'Light mode' : 'Dark mode');
     panel.querySelector('.ug-theme-state').textContent = t(theme === 'dark' ? 'Dark' : 'Light');
-    panel.querySelector('.ug-setting-label').textContent = t('Language');
+    panel.querySelector('.ug-language-label').textContent = t('Language');
+    panel.querySelector('.ug-accent-label').textContent = t('Accent color');
+    const names = { en: 'English', es: 'Español', eu: 'Euskara' };
+    const flags = { en: 'argazkik/flag-en.svg', es: 'argazkik/flag-es.svg', eu: 'argazkik/ikurrina.svg' };
+    const current = panel.querySelector('.ug-language-current');
+    current.querySelector('img').src = flags[language];
+    current.querySelector('span').textContent = names[language];
+    panel.querySelectorAll('.ug-language-option').forEach(option => option.setAttribute('aria-selected', String(option.dataset.language === language)));
     const trigger = document.getElementById('ug-settings-trigger');
     trigger.setAttribute('aria-label', t(panel.hidden ? 'Open settings' : 'Close settings'));
     document.getElementById('ug-theme-toggle').setAttribute('aria-label', t(theme === 'dark' ? 'Light mode' : 'Dark mode'));
@@ -206,6 +228,16 @@
     document.documentElement.style.colorScheme = theme;
     try { localStorage.setItem(THEME_KEY, theme); } catch (_) {}
     renderPanelText();
+  }
+
+  function applyAccent(nextAccent) {
+    if (!/^#[0-9a-f]{6}$/i.test(nextAccent)) return;
+    accent = nextAccent;
+    document.documentElement.style.setProperty('--ug-accent', accent);
+    document.documentElement.style.setProperty('--ug-accent-soft', accent + '22');
+    try { localStorage.setItem(ACCENT_KEY, accent); } catch (_) {}
+    const picker = document.getElementById('ug-accent-picker');
+    if (picker) picker.value = accent;
   }
 
   function applyLanguage(nextLanguage) {
@@ -223,13 +255,13 @@
     trigger.setAttribute('aria-label', t('Open settings'));
     trigger.setAttribute('aria-expanded', 'false');
     trigger.setAttribute('aria-controls', 'ug-settings-panel');
-    trigger.innerHTML = '<img src="argazkik/ezarpenak.png" alt="" width="25" height="25">';
+    trigger.innerHTML = '<img src="argazkik/ezarpenak.png" alt="" width="20" height="20">';
 
     const panel = document.createElement('section');
     panel.id = 'ug-settings-panel';
     panel.hidden = true;
     panel.setAttribute('aria-label', 'Settings');
-    panel.innerHTML = '<h2>Settings</h2><div class="ug-setting-row"><button id="ug-theme-toggle" type="button"><span class="ug-theme-label">Light mode</span><span class="ug-theme-state">Dark mode</span></button></div><div class="ug-setting-row"><label class="ug-setting-label" for="ug-language-select">Language</label><select id="ug-language-select"><option value="en">🇬🇧 English</option><option value="es">🇪🇸 Español</option><option value="eu">🟥⬜🟩 Euskara</option></select></div>';
+    panel.innerHTML = '<h2>Settings</h2><div class="ug-setting-row"><button id="ug-theme-toggle" type="button"><span class="ug-theme-label">Light mode</span><span class="ug-theme-state">Dark mode</span></button></div><div class="ug-setting-row"><label class="ug-setting-label ug-language-label" for="ug-language-select">Language</label><button id="ug-language-select" type="button" aria-expanded="false" aria-controls="ug-language-menu"><span class="ug-language-current"><img src="argazkik/flag-en.svg" alt=""><span>English</span></span><span aria-hidden="true">⌄</span></button><div id="ug-language-menu" hidden><button class="ug-language-option" type="button" data-language="en"><img src="argazkik/flag-en.svg" alt=""><span>English</span></button><button class="ug-language-option" type="button" data-language="es"><img src="argazkik/flag-es.svg" alt=""><span>Español</span></button><button class="ug-language-option" type="button" data-language="eu"><img src="argazkik/ikurrina.svg" alt=""><span>Euskara</span></button></div></div><div class="ug-setting-row"><label class="ug-setting-label ug-accent-label" for="ug-accent-picker">Accent color</label><input id="ug-accent-picker" type="color" value="#e50914"></div>';
 
     document.body.appendChild(trigger);
     document.body.appendChild(panel);
@@ -241,10 +273,17 @@
     panel.querySelector('#ug-theme-toggle').addEventListener('click', function () {
       applyTheme(theme === 'dark' ? 'light' : 'dark');
     });
-    panel.querySelector('#ug-language-select').value = language;
-    panel.querySelector('#ug-language-select').addEventListener('change', function () {
-      applyLanguage(this.value);
+    panel.querySelector('#ug-language-select').addEventListener('click', function () {
+      const menu = panel.querySelector('#ug-language-menu');
+      menu.hidden = !menu.hidden;
+      this.setAttribute('aria-expanded', String(!menu.hidden));
     });
+    panel.querySelectorAll('.ug-language-option').forEach(option => option.addEventListener('click', function () {
+      applyLanguage(this.dataset.language);
+      panel.querySelector('#ug-language-menu').hidden = true;
+      panel.querySelector('#ug-language-select').setAttribute('aria-expanded', 'false');
+    }));
+    panel.querySelector('#ug-accent-picker').addEventListener('input', function () { applyAccent(this.value); });
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape' && !panel.hidden) {
         panel.hidden = true;
@@ -254,6 +293,7 @@
       }
     });
     applyTheme(theme);
+    applyAccent(accent);
     applyLanguage(language);
     const observer = new MutationObserver(records => {
       const dict = dictionaries[language] || dictionaries.en || {};
