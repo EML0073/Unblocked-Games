@@ -172,8 +172,8 @@
         : '';
       return '<section class="row"><div class="row-header"><h2 class="row-title">' + title +
         '</h2>' + viewAll + '</div>' +
-        '<div class="row-body"><button class="arrow-btn arrow-left" onclick="scrollBack(this)">&larr;</button>' +
-        '<button class="arrow-btn arrow-right" onclick="scrollForward(this)">&rarr;</button>' +
+        '<div class="row-body"><button class="arrow-btn arrow-left" aria-label="Scroll left" onclick="scrollBack(this)">&#x2039;</button>' +
+        '<button class="arrow-btn arrow-right" aria-label="Scroll right" onclick="scrollForward(this)">&#x203A;</button>' +
         '<div class="row-cards">' + items.map(makeCard).join('') + '</div></div></section>';
     }
     function renderCatalog() {
