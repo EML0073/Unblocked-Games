@@ -236,7 +236,7 @@ const gamesList = [
       title: "Jetpack Joyride",
       addedAt: "2026-11-23",
       image: "https://www.pngkey.com/png/detail/210-2105448_halfbrick-jetpack-joyride-logo.png",
-      rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cljetpackjoyride.html"
+      rawUrl: "https://cdn.jsdelivr.net/gh/EML0073/Unblocked-Games@main/juegos/jetpack-joyride.html"
     },
   {
       row: "Racing",
@@ -337,13 +337,6 @@ const gamesList = [
   ,
   ,
   ,
-  {
-    row: "Other Apps & Services",
-    title: "GUST",
-    addedAt: "2026-11-23",
-    image: "argazkik/UNBLOCKEDgames_favicon.svg",
-    gustApp: true
-  },
 
   // Added 2026-11-24
   ,
