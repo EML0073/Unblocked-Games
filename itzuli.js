@@ -96,7 +96,10 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Lucide is a lightweight static-site content editor. The repository includes PHP components (login and AJAX editing), so it needs a PHP-enabled web server. GitHub Pages only serves static files and cannot run its PHP backend; embedding it here as a working editor would therefore leave its editing functions unavailable.": "Lucide is a lightweight static-site content editor. The repository includes PHP components (login and AJAX editing), so it needs a PHP-enabled web server. GitHub Pages only serves static files and cannot run its PHP backend; embedding it here as a working editor would therefore leave its editing functions unavailable.",
     "Open Lucide on GitHub ↗": "Open Lucide on GitHub ↗",
     "Lucide is an independent project by Simon VDFR. This page is an informational wrapper; the CMS itself is not hosted or maintained by UNBLOCKEDgames.": "Lucide is an independent project by Simon VDFR. This page is an informational wrapper; the CMS itself is not hosted or maintained by UNBLOCKEDgames.",
-    "View the Lucide source repository ↗": "View the Lucide source repository ↗"
+    "View the Lucide source repository ↗": "View the Lucide source repository ↗",
+    "© 2026 by": "© 2026 by",
+    "is licensed under": "is licensed under",
+    "CC BY 4.0": "CC BY 4.0"
   },
   "es": {
     "Settings": "Configuración",
@@ -195,7 +198,10 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Lucide is a lightweight static-site content editor. The repository includes PHP components (login and AJAX editing), so it needs a PHP-enabled web server. GitHub Pages only serves static files and cannot run its PHP backend; embedding it here as a working editor would therefore leave its editing functions unavailable.": "Lucide es un editor ligero de contenido para sitios estáticos. El repositorio incluye componentes PHP (inicio de sesión y edición mediante AJAX), por lo que necesita un servidor compatible con PHP. GitHub Pages solo sirve archivos estáticos y no puede ejecutar su backend PHP; por tanto, integrarlo aquí como editor funcional dejaría sus funciones de edición inoperativas.",
     "Open Lucide on GitHub ↗": "Ver Lucide en GitHub ↗",
     "Lucide is an independent project by Simon VDFR. This page is an informational wrapper; the CMS itself is not hosted or maintained by UNBLOCKEDgames.": "Lucide es un proyecto independiente de Simon VDFR. Esta página es solo una presentación informativa; UNBLOCKEDgames no aloja ni mantiene el CMS.",
-    "View the Lucide source repository ↗": "Ver el repositorio de código de Lucide ↗"
+    "View the Lucide source repository ↗": "Ver el repositorio de código de Lucide ↗",
+    "© 2026 by": "© 2026 de",
+    "is licensed under": "está bajo la licencia",
+    "CC BY 4.0": "CC BY 4.0"
   },
   "eu": {
     "Settings": "Ezarpenak",
@@ -294,6 +300,9 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Lucide is a lightweight static-site content editor. The repository includes PHP components (login and AJAX editing), so it needs a PHP-enabled web server. GitHub Pages only serves static files and cannot run its PHP backend; embedding it here as a working editor would therefore leave its editing functions unavailable.": "Lucide gune estatikoetarako eduki-editore arina da. Biltegiak PHP osagaiak ditu (saio-hasiera eta AJAX bidezko edizioa); beraz, PHP gaitutako zerbitzaria behar du. GitHub Pages-ek fitxategi estatikoak soilik eskaintzen ditu eta ezin du PHP backend-a exekutatu; horregatik, hemen editore funtzional gisa txertatuz gero, edizio-funtzioak ez lirateke erabilgarri egongo.",
     "Open Lucide on GitHub ↗": "Ikusi Lucide GitHuben ↗",
     "Lucide is an independent project by Simon VDFR. This page is an informational wrapper; the CMS itself is not hosted or maintained by UNBLOCKEDgames.": "Lucide Simon VDFR-ren proiektu independentea da. Orrialde hau informazio-aurkezpen bat da; UNBLOCKEDgames-ek ez du CMSa ostatatzen edo mantentzen.",
-    "View the Lucide source repository ↗": "Ikusi Lucide-ren iturburu-biltegia ↗"
+    "View the Lucide source repository ↗": "Ikusi Lucide-ren iturburu-biltegia ↗",
+    "© 2026 by": "© 2026",
+    "is licensed under": "lizentzia honen pean dago:",
+    "CC BY 4.0": "CC BY 4.0"
   }
 };
