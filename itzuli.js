@@ -99,7 +99,8 @@ window.UNBLOCKED_TRANSLATIONS = {
     "View the Lucide source repository ↗": "View the Lucide source repository ↗",
     "© 2026 by": "© 2026 by",
     "is licensed under": "is licensed under",
-    "CC BY 4.0": "CC BY 4.0"
+    "CC BY 4.0": "CC BY 4.0",
+    "Accent color": "Accent color"
   },
   "es": {
     "Settings": "Configuración",
@@ -201,7 +202,8 @@ window.UNBLOCKED_TRANSLATIONS = {
     "View the Lucide source repository ↗": "Ver el repositorio de código de Lucide ↗",
     "© 2026 by": "© 2026 de",
     "is licensed under": "está bajo la licencia",
-    "CC BY 4.0": "CC BY 4.0"
+    "CC BY 4.0": "CC BY 4.0",
+    "Accent color": "Color de acento"
   },
   "eu": {
     "Settings": "Ezarpenak",
@@ -303,6 +305,7 @@ window.UNBLOCKED_TRANSLATIONS = {
     "View the Lucide source repository ↗": "Ikusi Lucide-ren iturburu-biltegia ↗",
     "© 2026 by": "© 2026",
     "is licensed under": "lizentzia honen pean dago:",
-    "CC BY 4.0": "CC BY 4.0"
+    "CC BY 4.0": "CC BY 4.0",
+    "Accent color": "Nabarmentze-kolorea"
   }
 };
