@@ -106,7 +106,8 @@
         const raw = source.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
         if (cdn) {
           const owner=cdn[1], repo=cdn[2], branch=cdn[3], file=cdn[4];
-          return [source,'https://cdn.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://fastly.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://gcore.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file];
+          const rawUrl='https://raw.githubusercontent.com/'+owner+'/'+repo+'/'+branch+'/'+file;
+          return [source,'https://cdn.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://fastly.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://gcore.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,rawUrl];
         }
         if (raw) {
           const owner=raw[1], repo=raw[2], branch=raw[3], file=raw[4];
