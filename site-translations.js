@@ -66,7 +66,16 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Educational": "Educational",
     "Music": "Music",
     "Fighting": "Fighting",
-    "view": "view"
+    "view": "view",
+    "GUST Proxy": "GUST Proxy",
+    "An integrated proxy to browse websites through GUST.": "An integrated proxy to browse websites through GUST.",
+    "Open proxy": "Open proxy",
+    "Explore the full collection of browser games, from arcade classics to action, racing and multiplayer games.": "Explore the full collection of browser games, from arcade classics to action, racing and multiplayer games.",
+    "Open Launcher": "Open Launcher",
+    "Launch the site from the launcher in a tab with a custom title and favicon.": "Launch the site from the launcher in a tab with a custom title and favicon.",
+    "Open game": "Open game",
+    "Play the most recent Minecraft version online.": "Play the most recent Minecraft version online.",
+    "See all": "See all"
   },
   "es": {
     "Settings": "Configuración",
@@ -142,7 +151,16 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Educational": "Educativos",
     "Music": "Música",
     "Fighting": "Lucha",
-    "view": "visita"
+    "view": "visita",
+    "GUST Proxy": "Proxy GUST",
+    "An integrated proxy to browse websites through GUST.": "Un proxy integrado para navegar por sitios web a través de GUST.",
+    "Open proxy": "Abrir proxy",
+    "Explore the full collection of browser games, from arcade classics to action, racing and multiplayer games.": "Explora la colección completa de juegos de navegador, desde clásicos arcade hasta juegos de acción, carreras y multijugador.",
+    "Open Launcher": "Abrir buscador",
+    "Launch the site from the launcher in a tab with a custom title and favicon.": "Abre la web desde el lanzador en una pestaña con un título y un favicon personalizados.",
+    "Open game": "Abrir juego",
+    "Play the most recent Minecraft version online.": "Juega en línea a la versión más reciente de Minecraft.",
+    "See all": "Ver todos"
   },
   "eu": {
     "Settings": "Ezarpenak",
@@ -218,6 +236,15 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Educational": "Hezitzaileak",
     "Music": "Musika",
     "Fighting": "Borroka",
-    "view": "bisita"
+    "view": "bisita",
+    "GUST Proxy": "GUST Proxy-a",
+    "An integrated proxy to browse websites through GUST.": "GUST bidez webguneetan nabigatzeko proxy integratua.",
+    "Open proxy": "Ireki proxya",
+    "Explore the full collection of browser games, from arcade classics to action, racing and multiplayer games.": "Arakatu nabigatzaileko jokoen bilduma osoa: arcade klasikoak, akzioa, lasterketak eta jokalari anitzeko jokoak.",
+    "Open Launcher": "Ireki bilatzailea",
+    "Launch the site from the launcher in a tab with a custom title and favicon.": "Ireki webgunea abiarazletik izenburu eta favicon pertsonalizatuak dituen fitxa batean.",
+    "Open game": "Ireki jokoa",
+    "Play the most recent Minecraft version online.": "Jokatu Minecraft-en azken bertsioan linean.",
+    "See all": "Ikusi guztiak"
   }
 };
