@@ -19,7 +19,7 @@
   style.id = 'unblocked-settings-styles';
   style.textContent = `
     :root { color-scheme: dark; }
-    body { transition: background-color .18s ease, color .18s ease; }
+    body { transition: background-color .18s ease, color .18s ease; }\n    a, button, input, select, textarea { -webkit-tap-highlight-color: transparent; }\n    a, button { transition: color .18s ease, background-color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease; }\n    a:hover { text-decoration-thickness: 2px; }\n    button:hover { box-shadow: 0 4px 13px rgba(0,0,0,.2); }\n    img { transition: filter .2s ease; }\n    .nav-tab:hover { transform: translateY(-1px); }\n    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
     #ug-settings-trigger {
       position: fixed; z-index: 2147483000; top: 16px; right: 16px;
       width: 48px; height: 48px; display: grid; place-items: center;
@@ -229,7 +229,7 @@
     panel.id = 'ug-settings-panel';
     panel.hidden = true;
     panel.setAttribute('aria-label', 'Settings');
-    panel.innerHTML = '<h2>Settings</h2><div class="ug-setting-row"><button id="ug-theme-toggle" type="button"><span class="ug-theme-label">Light mode</span><span class="ug-theme-state">Dark mode</span></button></div><div class="ug-setting-row"><label class="ug-setting-label" for="ug-language-select">Language</label><select id="ug-language-select"><option value="en">🇬🇧 English</option><option value="es">🇪🇸 Español</option><option value="eu">🟩 Euskara</option></select></div>';
+    panel.innerHTML = '<h2>Settings</h2><div class="ug-setting-row"><button id="ug-theme-toggle" type="button"><span class="ug-theme-label">Light mode</span><span class="ug-theme-state">Dark mode</span></button></div><div class="ug-setting-row"><label class="ug-setting-label" for="ug-language-select">Language</label><select id="ug-language-select"><option value="en">🇬🇧 English</option><option value="es">🇪🇸 Español</option><option value="eu">🟥⬜🟩 Euskara</option></select></div>';
 
     document.body.appendChild(trigger);
     document.body.appendChild(panel);
