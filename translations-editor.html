@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Internal translation editor · UNBLOCKEDgames</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#121212;color:#eee;font:14px/1.5 Arial,sans-serif}main{max-width:1500px;margin:32px auto;padding:0 20px}
+h1{font-size:26px;margin:0 0 8px}.note{color:#aaa;margin:0 0 18px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+input,button{font:inherit;border:1px solid #555;border-radius:5px;padding:9px 12px;background:#242424;color:#eee}#filter{min-width:260px;flex:1}
+button{cursor:pointer;background:#303030}button:hover{background:#444}.table-wrap{overflow:auto;border:1px solid #393939;border-radius:8px}
+table{width:100%;border-collapse:collapse;min-width:900px}th,td{padding:8px;border-bottom:1px solid #333;text-align:left;vertical-align:top}
+th{position:sticky;top:0;background:#242424;z-index:1}td:first-child{width:25%;color:#bbb;overflow-wrap:anywhere}td input{width:100%;min-width:180px;background:#1c1c1c}#count{align-self:center;color:#aaa}
+</style></head>
+<body><main>
+<h1>Translation editor</h1>
+<p class="note">Internal page · Not linked from the public website. Edit the English, Spanish and Basque columns, then download the updated <code>site-translations.js</code> file and replace the existing repository file with it. Changes in this table are not published automatically.</p>
+<div class="toolbar"><input id="filter" type="search" placeholder="Filter translations..."><button id="download" type="button">Download site-translations.js</button><button id="reset" type="button">Reset table</button><span id="count"></span></div>
+<div class="table-wrap"><table><thead><tr><th>Original text (key)</th><th>English</th><th>Español</th><th>Euskara</th></tr></thead><tbody id="rows"></tbody></table></div>
+</main>
+<script src="site-translations.js"></script>
+<script>
+(function(){
+ const original=JSON.parse(JSON.stringify(window.UNBLOCKED_TRANSLATIONS||{}));let data=JSON.parse(JSON.stringify(original));
+ const rows=document.getElementById('rows'),filter=document.getElementById('filter'),count=document.getElementById('count'),languages=[['en','English'],['es','Español'],['eu','Euskara']];
+ function render(){const q=filter.value.trim().toLocaleLowerCase();rows.innerHTML='';const keys=[...new Set(languages.flatMap(([lang])=>Object.keys(data[lang]||{})))].sort((a,b)=>a.localeCompare(b));let shown=0;
+ keys.forEach(key=>{if(q&&!key.toLocaleLowerCase().includes(q)&&!languages.some(([lang])=>String(data[lang]?.[key]||'').toLocaleLowerCase().includes(q)))return;
+ const tr=document.createElement('tr'),source=document.createElement('td');source.textContent=key;tr.appendChild(source);
+ languages.forEach(([lang])=>{const td=document.createElement('td'),input=document.createElement('input');input.type='text';input.value=data[lang]?.[key]??key;input.setAttribute('aria-label',lang+' translation for '+key);input.addEventListener('input',()=>{data[lang][key]=input.value;});td.appendChild(input);tr.appendChild(td);});rows.appendChild(tr);shown++;});
+ count.textContent=shown+' / '+keys.length+' translations';}
+ filter.addEventListener('input',render);document.getElementById('reset').addEventListener('click',()=>{data=JSON.parse(JSON.stringify(original));render();});
+ document.getElementById('download').addEventListener('click',()=>{const source='window.UNBLOCKED_TRANSLATIONS = '+JSON.stringify(data,null,2)+';\n';const blob=new Blob([source],{type:'text/javascript;charset=utf-8'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='site-translations.js';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);});
+ render();
+})();
+</script>
+<script src="site-settings.js"></script></body></html>
