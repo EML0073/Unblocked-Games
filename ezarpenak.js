@@ -47,7 +47,15 @@
       document.documentElement.style.setProperty('--ug-accent',accent);
       document.documentElement.style.setProperty('--ug-accent-soft',accent+'22');
       document.documentElement.style.setProperty('--ug-accent-shadow',accent+'33');
-      style.textContent += '';
+      style.textContent = style.textContent.split('/* USER ACCENT RULES */')[0] + `
+        /* USER ACCENT RULES */
+        :root{--ug-accent:${accent};--ug-accent-soft:${accent}22;--ug-accent-shadow:${accent}33}
+        .card:hover,.game-card:hover,.game:hover{background-color:var(--ug-accent-soft)!important;border-color:var(--ug-accent)!important;box-shadow:0 6px 22px var(--ug-accent-shadow)!important}
+        button:not(#ug-settings-trigger):hover,a.button:hover,.btn:hover{border-color:var(--ug-accent)!important}
+        .active, .nav-link.active, .selected{color:var(--ug-accent)!important}
+        input:focus,select:focus,textarea:focus{outline:2px solid var(--ug-accent)!important;outline-offset:1px}
+        ::selection{background:var(--ug-accent);color:#fff}
+      `;
       save('unblockedgames-accent',accent);
       panel.querySelector('#ug-accent-picker').value = accent;
     }
@@ -57,7 +65,7 @@
     }
     button.addEventListener('click',()=>{panel.hidden=!panel.hidden;button.setAttribute('aria-expanded',String(!panel.hidden));});
     panel.querySelector('#ug-theme-toggle').addEventListener('click',()=>{theme=theme==='dark'?'light':'dark';applyTheme();});
-    panel.querySelector('#ug-accent-picker').addEventListener('input',e=>{accent=e.target.value;applyAccent();applyLanguage();});
+    panel.querySelector('#ug-accent-picker').addEventListener('input',e=>{accent=e.target.value;applyAccent();applyLanguage();});\n    panel.querySelector('#ug-accent-picker').addEventListener('change',e=>{accent=e.target.value;applyAccent();applyLanguage();});
     panel.querySelectorAll('[data-lang]').forEach(el=>el.addEventListener('click',()=>{language=el.dataset.lang;applyLanguage();}));
     document.addEventListener('keydown',e=>{if(e.key==='Escape'){panel.hidden=true;button.setAttribute('aria-expanded','false');}});
     applyTheme();applyAccent();applyLanguage();
