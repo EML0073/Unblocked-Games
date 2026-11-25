@@ -8,7 +8,11 @@
 <title>UNBLOCKEDgames</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color:#121212; color:#eeeeee; font-family:Arial,Helvetica,sans-serif; animation:page-enter .28s ease both; }\n    @keyframes page-enter { from { opacity:.88; } to { opacity:1; } }\n    a,button,input,select { -webkit-tap-highlight-color:transparent; }\n    button,.btn-play,.nav-tab,.view-all { transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease; }\n    button:hover,.btn-play:hover { transform:translateY(-1px); box-shadow:0 4px 12px rgba(0,0,0,.2); }
+    body { background-color:#121212; color:#eeeeee; font-family:Arial,Helvetica,sans-serif; animation:page-enter .28s ease both; }
+    @keyframes page-enter { from { opacity:.88; } to { opacity:1; } }
+    a,button,input,select { -webkit-tap-highlight-color:transparent; }
+    button,.btn-play,.nav-tab,.view-all { transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease; }
+    button:hover,.btn-play:hover { transform:translateY(-1px); box-shadow:0 4px 12px rgba(0,0,0,.2); }
     .top-bar { background-color: #1a1a1a; padding: 10px 4%; border-bottom: 1px solid #2a2a2a; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
     .brand-logo { display: block; width: 280px; height: 56px; object-fit: contain; object-position: left center; filter: brightness(0) invert(1); }
     .main-nav { display: flex; align-items: center; gap: 6px; }
@@ -96,7 +100,8 @@
   </div>
   <main id="gamesPage">
   <div class="banner" id="topBanner">
-    <div class="banner-list" id="bannerList"></div>\n    <div class="banner-indicators" id="bannerIndicators" aria-label="Seleccionar banner"></div>
+    <div class="banner-list" id="bannerList"></div>
+    <div class="banner-indicators" id="bannerIndicators" aria-label="Seleccionar banner"></div>
   </div>
   <div class="container" id="catalog"></div>
   <div class="container" id="searchResults" style="display: none;">
@@ -265,6 +270,7 @@
     function scrollBack(button) { button.parentElement.querySelector('.row-cards').scrollLeft -= 500; }
     loadPopularity();
   </script>
-  <script src="itzuli.js"></script>\n  <script src="ezarpenak.js"></script>
+  <script src="itzuli.js"></script>
+  <script src="ezarpenak.js"></script>
 </body>
 </html>
