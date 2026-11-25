@@ -131,7 +131,7 @@
       const translated = dict[trimmed] ?? trimmed;
       const nextValue = original.replace(trimmed, translated);\n      if (node.nodeValue !== nextValue) node.nodeValue = nextValue;
     }
-    document.querySelectorAll('input[placeholder],textarea[placeholder]').forEach(el => {
+    document.querySelectorAll('option').forEach(el => {\n      if (!el.dataset.ugOriginalText) el.dataset.ugOriginalText = el.textContent;\n      const key = el.dataset.ugOriginalText;\n      el.textContent = dict[key] ?? key;\n    });\n    document.querySelectorAll('input[placeholder],textarea[placeholder]').forEach(el => {
       if (!el.dataset.ugOriginalPlaceholder) el.dataset.ugOriginalPlaceholder = el.getAttribute('placeholder');
       const key = el.dataset.ugOriginalPlaceholder;
       el.setAttribute('placeholder', dict[key] ?? key);
@@ -144,7 +144,7 @@
     if (!panel) return;
     panel.querySelector('h2').textContent = t('Settings');
     panel.querySelector('.ug-theme-label').textContent = t(theme === 'dark' ? 'Light mode' : 'Dark mode');
-    panel.querySelector('.ug-theme-state').textContent = t(theme === 'dark' ? 'Dark mode' : 'Light mode');
+    panel.querySelector('.ug-theme-state').textContent = t(theme === 'dark' ? 'Dark' : 'Light');
     panel.querySelector('.ug-setting-label').textContent = t('Language');
     const trigger = document.getElementById('ug-settings-trigger');
     trigger.setAttribute('aria-label', t(panel.hidden ? 'Open settings' : 'Close settings'));
