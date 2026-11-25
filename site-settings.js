@@ -26,7 +26,7 @@
       padding: 0; border: 1px solid #555; border-radius: 50%;
       background: #242424; color: #f2f2f2; cursor: pointer;
       box-shadow: 0 3px 14px rgba(0,0,0,.35);
-      font: 30px/1 Arial, sans-serif; 
+      font: 28px/1 'Segoe UI Symbol', 'Arial Unicode MS', sans-serif; 
     }
     #ug-settings-trigger:hover { background: #383838; }
     #ug-settings-trigger:focus-visible, #ug-theme-toggle:focus-visible, #ug-language-select:focus-visible {
@@ -117,33 +117,72 @@
   }
 
   const originalText = new WeakMap();
-  function translatePage() {
-    const dict = dictionaries[language] || dictionaries.en || {};
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-    let node;
-    while ((node = walker.nextNode())) {
-      const parent = node.parentElement;
-      if (!parent || parent.closest('script,style,noscript,textarea,option,#ug-settings-panel')) continue;
-      if (!originalText.has(node)) originalText.set(node, node.nodeValue);
-      const original = originalText.get(node);
-      const trimmed = original.trim();
-      if (!trimmed) continue;
-      const translated = dict[trimmed] ?? trimmed.replace(/\bviews\b/g, dict.views || 'views').replace(/\bview\b/g, dict.view || 'view');
-      const nextValue = original.replace(trimmed, translated);
-      if (node.nodeValue !== nextValue) node.nodeValue = nextValue;
+  const originalAttributes = new WeakMap();
+  function translateValue(value, dict) {
+    if (!value) return value;
+    if (Object.prototype.hasOwnProperty.call(dict, value.trim())) {
+      const translated = dict[value.trim()];
+      return value.replace(value.trim(), translated);
     }
-    document.querySelectorAll('option').forEach(el => {
-      if (!el.dataset.ugOriginalText) el.dataset.ugOriginalText = el.textContent;
-      const key = el.dataset.ugOriginalText;
-      const translatedOption = dict[key] ?? key;
-      if (el.textContent !== translatedOption) el.textContent = translatedOption;
+    let result = value;
+    const replacements = [
+      [/\\bviews\\b/gi, dict.views || 'views'],
+      [/\\bview\\b/gi, dict.view || 'view'],
+      [/\\bgames\\b/gi, dict.games || 'games'],
+      [/\\bgame\\b/gi, dict.game || 'game']
+    ];
+    replacements.forEach(([pattern, replacement]) => { result = result.replace(pattern, replacement); });
+    return result;
+  }
+
+  function translateTextNode(node, dict) {
+    if (!node || !node.parentElement || node.parentElement.closest('script,style,noscript,textarea,option,#ug-settings-panel')) return;
+    if (!originalText.has(node)) originalText.set(node, node.nodeValue);
+    const original = originalText.get(node);
+    if (!original.trim()) return;
+    const translated = translateValue(original, dict);
+    if (node.nodeValue !== translated) node.nodeValue = translated;
+  }
+
+  function translateElement(element, dict) {
+    if (!element || element.nodeType !== 1 || element.closest('#ug-settings-panel')) return;
+    const attrs = ['placeholder', 'title', 'aria-label', 'alt'];
+    let originals = originalAttributes.get(element);
+    if (!originals) { originals = {}; originalAttributes.set(element, originals); }
+    attrs.forEach(attr => {
+      if (!element.hasAttribute(attr)) return;
+      if (!(attr in originals)) originals[attr] = element.getAttribute(attr);
+      const translated = translateValue(originals[attr], dict);
+      if (element.getAttribute(attr) !== translated) element.setAttribute(attr, translated);
     });
-    document.querySelectorAll('input[placeholder],textarea[placeholder]').forEach(el => {
-      if (!el.dataset.ugOriginalPlaceholder) el.dataset.ugOriginalPlaceholder = el.getAttribute('placeholder');
-      const key = el.dataset.ugOriginalPlaceholder;
-      el.setAttribute('placeholder', dict[key] ?? key);
-    });
-    document.documentElement.lang = language === 'eu' ? 'eu' : language;
+    if (element.tagName === 'INPUT' && ['button','submit','reset'].includes(element.type)) {
+      if (!('value' in originals)) originals.value = element.value;
+      const translated = translateValue(originals.value, dict);
+      if (element.value !== translated) element.value = translated;
+    }
+    if (element.tagName === 'OPTION') {
+      if (!('text' in originals)) originals.text = element.textContent;
+      const translated = translateValue(originals.text, dict);
+      if (element.textContent !== translated) element.textContent = translated;
+    }
+  }
+
+  function translateSubtree(root) {
+    const dict = dictionaries[language] || dictionaries.en || {};
+    if (root.nodeType === Node.TEXT_NODE) { translateTextNode(root, dict); return; }
+    if (root.nodeType !== Node.ELEMENT_NODE && root !== document) return;
+    const scope = root === document ? document.body : root;
+    if (!scope) return;
+    if (scope.nodeType === Node.ELEMENT_NODE) translateElement(scope, dict);
+    const walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = walker.nextNode())) translateTextNode(node, dict);
+    if (scope.querySelectorAll) scope.querySelectorAll('input,textarea,select,button,a,img,option').forEach(el => translateElement(el, dict));
+  }
+
+  function translatePage() {
+    translateSubtree(document.body);
+    document.documentElement.lang = language;
   }
 
   function renderPanelText() {
@@ -181,7 +220,7 @@
     trigger.setAttribute('aria-label', t('Open settings'));
     trigger.setAttribute('aria-expanded', 'false');
     trigger.setAttribute('aria-controls', 'ug-settings-panel');
-    trigger.textContent = '⚙';
+    trigger.textContent = '\\u2699';
 
     const panel = document.createElement('section');
     panel.id = 'ug-settings-panel';
@@ -213,7 +252,13 @@
     });
     applyTheme(theme);
     applyLanguage(language);
-    const observer = new MutationObserver(() => translatePage());
+    const observer = new MutationObserver(records => {
+      const dict = dictionaries[language] || dictionaries.en || {};
+      records.forEach(record => {
+        if (record.type === 'characterData') translateTextNode(record.target, dict);
+        record.addedNodes && record.addedNodes.forEach(node => translateSubtree(node));
+      });
+    });
     observer.observe(document.body, { childList: true, subtree: true, characterData: true });
   }
 
