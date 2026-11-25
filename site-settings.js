@@ -28,7 +28,7 @@
     }
     #ug-settings-trigger svg { width: 21px; height: 21px; }
     #ug-settings-panel {
-      position: fixed; z-index: 2147482999; top: 16px; left: 16px;
+      position: fixed; z-index: 2147482999; top: 66px; right: 16px;
       width: 230px; padding: 15px; border: 1px solid #444;
       border-radius: 9px; background: #202020; color: #eee;
       box-shadow: 0 8px 28px rgba(0,0,0,.42);
@@ -101,7 +101,7 @@
     }
     @media (max-width: 520px) {
       #ug-settings-trigger { top: 10px; right: 10px; }
-      #ug-settings-panel { top: 10px; left: 10px; width: min(230px, calc(100vw - 20px)); }
+      #ug-settings-panel { top: 58px; right: 10px; width: min(230px, calc(100vw - 20px)); }
     }
     @media (prefers-reduced-motion: reduce) { body { transition: none; } }
   `;
@@ -113,11 +113,11 @@
     document.documentElement.style.colorScheme = theme;
     const state = document.getElementById('ug-theme-state');
     const toggle = document.getElementById('ug-theme-toggle');
-    if (state) state.textContent = theme === 'dark' ? 'Oscuro' : 'Claro';
+    if (state) state.textContent = theme === 'dark' ? 'Dark' : 'Light';
     if (toggle) {
-      toggle.setAttribute('aria-label', theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro');
+      toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
       const label = toggle.querySelector('.ug-theme-label');
-      if (label) label.textContent = theme === 'dark' ? 'Modo claro' : 'Modo oscuro';
+      if (label) label.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
     }
     try { localStorage.setItem(STORAGE_KEY, theme); } catch (_) {}
   }
@@ -127,16 +127,16 @@
     const trigger = document.createElement('button');
     trigger.id = 'ug-settings-trigger';
     trigger.type = 'button';
-    trigger.setAttribute('aria-label', 'Abrir configuración');
+    trigger.setAttribute('aria-label', 'Open settings');
     trigger.setAttribute('aria-expanded', 'false');
     trigger.setAttribute('aria-controls', 'ug-settings-panel');
-    trigger.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.7 2.94-.09-.02a1.7 1.7 0 0 0-1.75.5l-.06.07h-3.4l-.04-.09a1.7 1.7 0 0 0-1.5-1.02 1.7 1.7 0 0 0-1.25.55l-.07.08-2.94-1.7.02-.1a1.7 1.7 0 0 0-.5-1.74l-.07-.06v-3.4l.09-.04a1.7 1.7 0 0 0 1.02-1.5 1.7 1.7 0 0 0-.55-1.25l-.08-.07 1.7-2.94.1.02a1.7 1.7 0 0 0 1.74-.5l.06-.07h3.4l.04.09a1.7 1.7 0 0 0 1.5 1.02 1.7 1.7 0 0 0 1.25-.55l.07-.08 2.94 1.7-.02.1a1.7 1.7 0 0 0 .5 1.74l.07.06v3.4z"></path></svg>';
+    trigger.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"></path><path d="m19.4 15 .1.1a1.7 1.7 0 0 1-2.4 2.4l-.1-.1a1.7 1.7 0 0 0-2.9 1.2v.2a1.7 1.7 0 0 1-3.4 0v-.2a1.7 1.7 0 0 0-2.9-1.2l-.1.1a1.7 1.7 0 1 1-2.4-2.4l.1-.1a1.7 1.7 0 0 0-1.2-2.9H4a1.7 1.7 0 0 1 0-3.4h.2a1.7 1.7 0 0 0 1.2-2.9l-.1-.1a1.7 1.7 0 1 1 2.4-2.4l.1.1a1.7 1.7 0 0 0 2.9-1.2V2a1.7 1.7 0 0 1 3.4 0v.2a1.7 1.7 0 0 0 2.9 1.2l.1-.1a1.7 1.7 0 1 1 2.4 2.4l-.1.1a1.7 1.7 0 0 0 1.2 2.9h.2a1.7 1.7 0 0 1 0 3.4h-.2a1.7 1.7 0 0 0-1.2 2.9Z"></path></svg>';
 
     const panel = document.createElement('section');
     panel.id = 'ug-settings-panel';
     panel.hidden = true;
-    panel.setAttribute('aria-label', 'Configuración');
-    panel.innerHTML = '<h2>Configuración</h2><button id="ug-theme-toggle" type="button"><span class="ug-theme-label">Modo claro</span><span class="ug-theme-state" id="ug-theme-state">Oscuro</span></button>';
+    panel.setAttribute('aria-label', 'Settings');
+    panel.innerHTML = '<h2>Settings</h2><button id="ug-theme-toggle" type="button"><span class="ug-theme-label">Light mode</span><span class="ug-theme-state" id="ug-theme-state">Dark</span></button>';
 
     document.body.appendChild(trigger);
     document.body.appendChild(panel);
@@ -144,7 +144,7 @@
       const open = panel.hidden;
       panel.hidden = !open;
       trigger.setAttribute('aria-expanded', String(open));
-      trigger.setAttribute('aria-label', open ? 'Cerrar configuración' : 'Abrir configuración');
+      trigger.setAttribute('aria-label', open ? 'Close settings' : 'Open settings');
     });
     panel.querySelector('#ug-theme-toggle').addEventListener('click', function () {
       applyTheme(theme === 'dark' ? 'light' : 'dark');
