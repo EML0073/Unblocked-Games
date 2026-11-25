@@ -296,7 +296,6 @@ const gamesList = [
       image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/paperio2.jpg",
       rawUrl: "https://cdn.jsdelivr.net/gh/CoolDude2349/Offline-HTML-Games-Pack@master/offline/paper-io-2.htm"
     },
-  ,
   {
       id: 37,
       row: "Strategy",
@@ -408,7 +407,6 @@ const gamesList = [
   },
   ,
   ,
-  ,
   {
     id: 45,
       row: "Horror",
@@ -517,7 +515,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/2048.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl2048.html"
   },
-  ,
   {
     id: 58,
       row: "Arcade",
@@ -574,7 +571,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/chess.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clchess.html"
   },
-  ,
   {
     id: 65,
       row: "Action",
@@ -591,7 +587,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/eggycar.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cleggycar.html"
   },
-  ,
   {
     id: 67,
       row: "Shooter",
@@ -689,7 +684,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clraftwars2.html"
   },
   ,
-  ,
   {
     id: 79,
       row: "Arcade",
@@ -706,7 +700,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/snowrider3d.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsnowrider.html"
   },
-  ,
   {
     id: 81,
       row: "Arcade",
@@ -740,7 +733,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbadicecream.html"
   },
   ,
-  ,
   {
     id: 85,
       row: "Sports",
@@ -769,7 +761,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/brunoiscool2/unblockedgames/main/icons/10m.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl10minutestildawn.html"
   },
-  ,
   {
     id: 88,
       row: "Arcade",
@@ -787,7 +778,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl2048cupcakes.html"
   },
   ,
-  ,
   {
     id: 90,
       row: "Shooter",
@@ -797,7 +787,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl2Dshooting.html"
   },
   ,
-  ,
   {
     id: 91,
       row: "Sports",
@@ -806,7 +795,6 @@ const gamesList = [
     image: "https://retrobowl25.com/cache/data/image/game/4th-and-goal-2013-cover-m300x300.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl4thandgoal.html"
   },
-  ,
   ,
   {
     id: 92,
@@ -824,7 +812,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/431.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cl99balls.html"
   },
-  ,
   {
     id: 94,
       row: "Rhythm",
@@ -841,7 +828,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/adarkroom.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clADarkRoom.html"
   },
-  ,
   {
     id: 96,
       row: "Arcade",
@@ -851,7 +837,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cladayintheoffice.html"
   },
   ,
-  ,
   {
     id: 97,
       row: "Arcade",
@@ -860,7 +845,6 @@ const gamesList = [
     image: "https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/bac81084-1097-4fbb-8c91-259592b70218/1892788498/lost-island-raft-survival-game-screenshot.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clahoysurvival.html"
   },
-  ,
   {
     id: 98,
       row: "Multiplayer",
@@ -921,7 +905,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 104,
       row: "Arcade",
@@ -930,7 +913,6 @@ const gamesList = [
     image: "https://cdn.mobygames.com/screenshots/16732658-the-ascent-xbox-series-lifts-take-you-to-other-arcology-levels.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clascent.html"
   },
-  ,
   ,
   {
     id: 105,
@@ -948,7 +930,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/asmallworldcup.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clasmallworldcup.html"
   },
-  ,
   {
     id: 107,
       row: "Arcade",
@@ -965,7 +946,6 @@ const gamesList = [
     image: "https://simple.game/assets/thumbs/23b4w2x2/baby-chicco-adventures.jpeg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbabychiccoadventure.html"
   },
-  ,
   {
     id: 109,
       row: "Horror",
@@ -983,7 +963,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbaconmaydie.html"
   },
   ,
-  ,
   {
     id: 111,
       row: "Arcade",
@@ -992,7 +971,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/badparenting.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbadparenting.html"
   },
-  ,
   {
     id: 112,
       row: "Simulation",
@@ -1001,7 +979,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/badtimesimulator.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbadtimesimulator.html"
   },
-  ,
   ,
   {
     id: 113,
@@ -1019,7 +996,6 @@ const gamesList = [
     image: "https://cdn.content.juegos123.net/game-images/balls-and-bricks_xl.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clballsandbricks.html"
   },
-  ,
   ,
   {
     id: 115,
@@ -1045,7 +1021,6 @@ const gamesList = [
     image: "https://www.ubg4all.com/thumbs/barry-has-a-secret-512x512bb.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbarryhasasecret.html"
   },
-  ,
   {
     id: 118,
       row: "Arcade",
@@ -1095,7 +1070,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbasketballfrvr.html"
   },
   ,
-  ,
   {
     id: 124,
       row: "Arcade",
@@ -1104,7 +1078,6 @@ const gamesList = [
     image: "https://imgs.crazygames.com/games/janissary-battles/cover_16x9-1707829368896.png?height=2885&metadata=none&quality=60",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbattles.html"
   },
-  ,
   {
     id: 125,
       row: "Strategy",
@@ -1113,7 +1086,6 @@ const gamesList = [
     image: "https://img.gamepix.com/games/battle-simulator-sandbox/cover/battle-simulator-sandbox.png?w=1200&ar=16:10",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbattlesim.html"
   },
-  ,
   ,
   ,
   ,
@@ -1134,7 +1106,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/68.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbigneontowertinysquare.html"
   },
-  ,
   {
     id: 128,
       row: "Arcade",
@@ -1151,7 +1122,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/170.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbigtowertinysquare2.html"
   },
-  ,
   ,
   {
     id: 130,
@@ -1170,7 +1140,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clblackjack.html"
   },
   ,
-  ,
   {
     id: 132,
       row: "Arcade",
@@ -1188,7 +1157,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clblockblast.html"
   },
   ,
-  ,
   {
     id: 134,
       row: "Arcade",
@@ -1197,7 +1165,6 @@ const gamesList = [
     image: "https://www.speedrun.com/static/game/369w8r2d/cover.jpg?v=33ea3b1",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clblockthepig.html"
   },
-  ,
   {
     id: 135,
       row: "Horror",
@@ -1206,7 +1173,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/bloodtournament.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbloodtournament.html"
   },
-  ,
   ,
   ,
   {
@@ -1220,7 +1186,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 137,
       row: "Arcade",
@@ -1229,7 +1194,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/bounce%20back/tiles.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbounceback.html"
   },
-  ,
   {
     id: 138,
       row: "Racing",
@@ -1263,7 +1227,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clboxingrandom.html"
   },
   ,
-  ,
   {
     id: 142,
       row: "Racing",
@@ -1272,7 +1235,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/14.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbridgerace.html"
   },
-  ,
   ,
   ,
   {
@@ -1301,7 +1263,6 @@ const gamesList = [
   },
   ,
   ,
-  ,
   {
     id: 146,
       row: "Idle",
@@ -1310,7 +1271,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/capybara%20clicker/logo-capybara-licker.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcapybaraclicker.html"
   },
-  ,
   ,
   {
     id: 147,
@@ -1329,7 +1289,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcarkingarena.html"
   },
   ,
-  ,
   {
     id: 149,
       row: "Arcade",
@@ -1346,7 +1305,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/smdgames/mathgames66/main/mgthumbnails/Cat_Mario.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcatmario.html"
   },
-  ,
   ,
   {
     id: 151,
@@ -1365,7 +1323,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clceleste2.html"
   },
   ,
-  ,
   {
     id: 153,
       row: "Arcade",
@@ -1376,7 +1333,6 @@ const gamesList = [
   },
   ,
   ,
-  ,
   {
     id: 154,
       row: "Arcade",
@@ -1385,7 +1341,6 @@ const gamesList = [
     image: "https://archive.org/download/Cheshire_Cats_1983_Pan_Books/screenshot_00.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcheshireinachatroom.html"
   },
-  ,
   ,
   {
     id: 155,
@@ -1403,7 +1358,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/464.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clchoppyorc.html"
   },
-  ,
   {
     id: 157,
       row: "Puzzle",
@@ -1421,7 +1375,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clciviballs2.html"
   },
   ,
-  ,
   {
     id: 159,
       row: "Multiplayer",
@@ -1438,7 +1391,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/clusterrush.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clclusterrush.html"
   },
-  ,
   ,
   {
     id: 161,
@@ -1458,7 +1410,6 @@ const gamesList = [
   },
   ,
   ,
-  ,
   {
     id: 163,
       row: "Arcade",
@@ -1467,7 +1418,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/coreball.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcoreball.html"
   },
-  ,
   ,
   ,
   {
@@ -1488,7 +1438,6 @@ const gamesList = [
   },
   ,
   ,
-  ,
   {
     id: 166,
       row: "Idle",
@@ -1497,7 +1446,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/csgoclicker.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcsgoclicker.html"
   },
-  ,
   {
     id: 167,
       row: "Arcade",
@@ -1506,7 +1454,6 @@ const gamesList = [
     image: "https://rare-gallery.com/uploads/posts/1117342-video-games-World-of-Warcraft-ice-mythology-World-of-Warcraft-Wrath-of-the-Lich-King-ghost-ship-screenshot-computer-wallpaper-glacial-landform-ice-cave.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcotlk.html"
   },
-  ,
   {
     id: 168,
       row: "Racing",
@@ -1516,7 +1463,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcyberbungracing.html"
   },
   ,
-  ,
   {
     id: 169,
       row: "Arcade",
@@ -1525,7 +1471,6 @@ const gamesList = [
     image: "https://files.gamezhero.com/game/0f4/3fe/0f43fe817221587b/images/240/danktomb.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldanktomb.html"
   },
-  ,
   ,
   ,
   ,
@@ -1544,7 +1489,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 171,
       row: "Arcade",
@@ -1553,7 +1497,6 @@ const gamesList = [
     image: "https://gaming-cdn.com/images/products/18772/orig/die-in-the-dungeon-pc-mac-game-steam-cover.jpg?v=1741866154",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldieinthedungeon.html"
   },
-  ,
   ,
   ,
   ,
@@ -1573,7 +1516,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/dogeminer2.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldogeminer2.html"
   },
-  ,
   {
     id: 174,
       row: "Arcade",
@@ -1582,7 +1524,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/dokidokiliteratureclub.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldokidokiliteratureclub.html"
   },
-  ,
   ,
   {
     id: 175,
@@ -1594,7 +1535,6 @@ const gamesList = [
   },
   ,
   ,
-  ,
   {
     id: 176,
       row: "Arcade",
@@ -1604,7 +1544,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldrawclimber.html"
   },
   ,
-  ,
   {
     id: 177,
       row: "Horror",
@@ -1613,7 +1552,6 @@ const gamesList = [
     image: "https://files.gamezhero.com/game/142/5bf/1425bfc332f71362/images/240/dreader.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldreader.html"
   },
-  ,
   ,
   ,
   ,
@@ -1636,7 +1574,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 179,
       row: "Arcade",
@@ -1645,7 +1582,6 @@ const gamesList = [
     image: "https://plays.org/screenshots/dunk-shot.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cldunkshot.html"
   },
-  ,
   {
     id: 180,
       row: "Arcade",
@@ -1670,7 +1606,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/eagle%20ride/screenshots/1-small.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cleagleride.html"
   },
-  ,
   {
     id: 183,
       row: "Racing",
@@ -1687,7 +1622,6 @@ const gamesList = [
     image: "https://browsercraft.com/images/games/covers/effing-hail.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cleffinghail.html"
   },
-  ,
   {
     id: 185,
       row: "Arcade",
@@ -1696,7 +1630,6 @@ const gamesList = [
     image: "https://a.silvergames.com/screenshots/elastic-man/funny-faces.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clelasticface.html"
   },
-  ,
   ,
   ,
   ,
@@ -1718,7 +1651,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 187,
       row: "Arcade",
@@ -1727,7 +1659,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/512.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfinalearth2.html"
   },
-  ,
   {
     id: 188,
       row: "Arcade",
@@ -1736,9 +1667,6 @@ const gamesList = [
     image: "https://img.gamepix.com/games/fireblob/cover/fireblob.png?w=1200&ar=16:10",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfireblob.html"
   },
-
-
-  ,
   {
     id: 189,
       row: "Arcade",
@@ -1747,7 +1675,6 @@ const gamesList = [
     image: "https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/00ce5522-ee9d-4eb4-848c-9d647f5c8bf0/2936277978/fish-aquarium-screenshot.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfisquarium.html"
   },
-  ,
   ,
   {
     id: 190,
@@ -1758,7 +1685,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfivenightsatbaldisredone.html"
   },
   ,
-  ,
   {
     id: 191,
       row: "Arcade",
@@ -1767,7 +1693,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/764.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfivenightsatshrekshotel.html"
   },
-  ,
   {
     id: 192,
       row: "Arcade",
@@ -1776,7 +1701,6 @@ const gamesList = [
     image: "https://image.winudf.com/v2/image1/MjA1OTExNTVfMTY4MTg5ODI0N18wOTk/screen-0.png?fakeurl=1&type=png&w=144",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfluidism.html"
   },
-  ,
   ,
   ,
   ,
@@ -1791,7 +1715,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfootballlegends.html"
   },
   ,
-  ,
   {
     id: 194,
       row: "Arcade",
@@ -1800,7 +1723,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/fortzonebattleroyale.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clfortzone.html"
   },
-  ,
   ,
   ,
   ,
@@ -1819,7 +1741,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 196,
       row: "Arcade",
@@ -1828,7 +1749,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/getawayshootout.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgetawayshootout.html"
   },
-  ,
   {
     id: 197,
       row: "Arcade",
@@ -1837,7 +1757,6 @@ const gamesList = [
     image: "https://img.gamepix.com/games/get-on-top/cover/get-on-top.png?width=600&height=340&fit=cover&quality=90",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgetontop.html"
   },
-  ,
   {
     id: 198,
       row: "Arcade",
@@ -1846,7 +1765,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/gladihoppers.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgladdihoppers.html"
   },
-  ,
   ,
   {
     id: 199,
@@ -1872,7 +1790,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/golddiggerfrvr.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgolddiggerfrvr.html"
   },
-  ,
   {
     id: 202,
       row: "Sports",
@@ -1905,7 +1822,6 @@ const gamesList = [
     image: "https://browsercraft.com/images/games/covers/gorescript-classic.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgorescriptclassic.html"
   },
-  ,
   ,
   ,
   ,
@@ -1953,7 +1869,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 210,
       row: "Shooter",
@@ -1970,7 +1885,6 @@ const gamesList = [
     image: "https://img.gamepix.com/games/gun-night-io/cover/gun-night-io.png?w=1200&ar=16:10",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgunnight.html"
   },
-  ,
   {
     id: 212,
       row: "Arcade",
@@ -1987,7 +1901,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/halflife.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clhalflife.html"
   },
-  ,
   {
     id: 214,
       row: "Arcade",
@@ -2004,7 +1917,6 @@ const gamesList = [
     image: "https://img.gamepix.com/games/happy-room/cover/happy-room.png?w=400",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clhappyroom.html"
   },
-  ,
   {
     id: 216,
       row: "Arcade",
@@ -2019,7 +1931,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 217,
       row: "Arcade",
@@ -2028,7 +1939,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/hextris.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clhextris.html"
   },
-  ,
   {
     id: 218,
       row: "Arcade",
@@ -2047,7 +1957,6 @@ const gamesList = [
   },
   ,
   ,
-  ,
   {
     id: 220,
       row: "Multiplayer",
@@ -2059,7 +1968,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 221,
       row: "Arcade",
@@ -2068,7 +1976,6 @@ const gamesList = [
     image: "https://freezoneplay.com/wp-content/uploads/thumbs/custom/H/Hover-Racer-Drive.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clhoverracerdrive.html"
   },
-  ,
   {
     id: 222,
       row: "Arcade",
@@ -2086,7 +1993,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clhungrylamu.html"
   },
   ,
-  ,
   {
     id: 224,
       row: "Arcade",
@@ -2095,7 +2001,6 @@ const gamesList = [
     image: "https://cdn.jsdelivr.net/gh/genizy/ice-dodo/assets/skins/beginner_cup.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clicedodo.html"
   },
-  ,
   {
     id: 225,
       row: "Arcade",
@@ -2120,7 +2025,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/idledice.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clidledice.html"
   },
-  ,
   {
     id: 228,
       row: "Idle",
@@ -2147,7 +2051,6 @@ const gamesList = [
   },
   ,
   ,
-  ,
   {
     id: 231,
       row: "Arcade",
@@ -2156,7 +2059,6 @@ const gamesList = [
     image: "https://images.pushsquare.com/fbb8b36e30557/into-the-restless-ruins-cover.cover_large.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clintoruins.html"
   },
-  ,
   ,
   {
     id: 232,
@@ -2173,7 +2075,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 233,
       row: "Racing",
@@ -2182,7 +2083,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/smdgames/mathgames66/main/mgthumbnails/jelly-truck.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cljellytruck.html"
   },
-  ,
   {
     id: 234,
       row: "Arcade",
@@ -2216,7 +2116,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cljourneydownhill.html"
   },
   ,
-  ,
   {
     id: 238,
       row: "Platformer",
@@ -2225,7 +2124,6 @@ const gamesList = [
     image: "https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/6da09cf7-9c4a-4fd0-ab6b-0c8082632de5/4177717682/jumping-shell-game-screenshot.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cljumpingshell.html"
   },
-  ,
   {
     id: 239,
       row: "Arcade",
@@ -2234,7 +2132,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/justfalllol.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cljustfalllol.html"
   },
-  ,
   ,
   ,
   ,
@@ -2254,7 +2151,6 @@ const gamesList = [
     image: "https://browsercraft.com/images/games/covers/kalikan.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clkalikan.html"
   },
-  ,
   ,
   ,
   ,
@@ -2289,7 +2185,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 244,
       row: "Arcade",
@@ -2307,7 +2202,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cllowknight.html"
   },
   ,
-  ,
   {
     id: 246,
       row: "Racing",
@@ -2316,7 +2210,6 @@ const gamesList = [
     image: "https://images.crazygames.com/games/madalin-cars-multiplayer/cover-1655194419773.png?auto=format%2Ccompress&q=45&cs=strip&ch=DPR&w=1200&h=630&fit=crop",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmadalinstuntcarsmultiplayerfixed.html"
   },
-  ,
   {
     id: 247,
       row: "Racing",
@@ -2325,7 +2218,6 @@ const gamesList = [
     image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@669e737b43782d68d3096554921900ab151355ff/motocross%20mad%20skills/body.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmadskillsmotocross2.html"
   },
-  ,
   ,
   ,
   {
@@ -2337,7 +2229,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmanagod.html"
   },
   ,
-  ,
   {
     id: 249,
       row: "Arcade",
@@ -2346,7 +2237,6 @@ const gamesList = [
     image: "https://img.gamepix.com/games/masked-forces-unlimited/cover/masked-forces-unlimited.png?w=320&ar=16:10",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmaskedforcesunlimited.html"
   },
-  ,
   {
     id: 250,
       row: "Arcade",
@@ -2355,7 +2245,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/172.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmelonplayground.html"
   },
-  ,
   {
     id: 251,
       row: "Arcade",
@@ -2373,7 +2262,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmimic.html"
   },
   ,
-  ,
   {
     id: 253,
       row: "Runner",
@@ -2382,7 +2270,6 @@ const gamesList = [
     image: "https://static.planetminecraft.com/files/resource_media/screenshot/1232/minecraft-parkour_3203406.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clblockcraftparkour.html"
   },
-  ,
   ,
   ,
   {
@@ -2394,7 +2281,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clminicrossword.html"
   },
   ,
-  ,
   {
     id: 255,
       row: "Arcade",
@@ -2403,7 +2289,6 @@ const gamesList = [
     image: "https://files.gamezhero.com/game/2c5/b3b/2c5b3ba45d802e18/images/240/minitooth.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clminitooth.html"
   },
-  ,
   ,
   {
     id: 256,
@@ -2429,7 +2314,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/monkeymart.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmonkeymart.html"
   },
-  ,
   ,
 
 
@@ -2477,7 +2361,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 264,
       row: "Arcade",
@@ -2488,7 +2371,6 @@ const gamesList = [
   },
   ,
   ,
-  ,
   {
     id: 265,
       row: "Arcade",
@@ -2497,7 +2379,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/ngon.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clngon.html"
   },
-  ,
   ,
   ,
   ,
@@ -2517,7 +2398,6 @@ const gamesList = [
     image: "https://cdn.mobygames.com/covers/4003443-the-pawn-atari-st-front-cover.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clnotyourpawn.html"
   },
-  ,
   {
     id: 268,
       row: "Puzzle",
@@ -2527,7 +2407,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clNutsandBoltsScrewingPuzzle.html"
   },
   ,
-  ,
   {
     id: 269,
       row: "Arcade",
@@ -2536,7 +2415,6 @@ const gamesList = [
     image: "https://images.airdroid.com/2024/09/game-booster-screenshot-shortcut.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clobby-99-will-lose.html"
   },
-  ,
   ,
   ,
   {
@@ -2551,7 +2429,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 271,
       row: "Arcade",
@@ -2560,7 +2437,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/offlineparadise.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clofflineparadise.html"
   },
-  ,
   ,
   {
     id: 272,
@@ -2579,7 +2455,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clonebitadventure.html"
   },
   ,
-  ,
   {
     id: 274,
       row: "Arcade",
@@ -2588,7 +2463,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/onlyup.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clonlyup.html"
   },
-  ,
   ,
   {
     id: 275,
@@ -2647,7 +2521,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/paperio3d.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpaperio3d.html"
   },
-  ,
   {
     id: 282,
       row: "Arcade",
@@ -2656,7 +2529,6 @@ const gamesList = [
     image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@983ac580e56eef2c58c19568d68445148f5defe3/penguin%20diner/assets/cover.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpenguindiner.html"
   },
-  ,
   {
     id: 283,
       row: "Arcade",
@@ -2665,7 +2537,6 @@ const gamesList = [
     image: "https://brainide.com/wp-content/uploads/2026/01/my-perfect-hotel-cover-1024x535.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clperfecthotel.html"
   },
-  ,
   {
     id: 284,
       row: "Arcade",
@@ -2683,7 +2554,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpicodriller.html"
   },
   ,
-  ,
   {
     id: 286,
       row: "Arcade",
@@ -2692,7 +2562,6 @@ const gamesList = [
     image: "https://carsonk.net/content/works/games/pico-night-punkin/Screenshot2.gif",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpiconightpunkin.html"
   },
-  ,
   {
     id: 287,
       row: "Arcade",
@@ -2709,7 +2578,6 @@ const gamesList = [
     image: "https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/63c51378-4d45-4ff4-86c2-62fb11be624f/1807288830/ping-pong-chaos-game-screenshot.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpingpongchaos.html"
   },
-  ,
   {
     id: 289,
       row: "Multiplayer",
@@ -2726,7 +2594,6 @@ const gamesList = [
     image: "https://hfmanor.com/image/pixel-combat-2",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpixelcombat2.html"
   },
-  ,
   {
     id: 291,
       row: "Shooter",
@@ -2735,7 +2602,6 @@ const gamesList = [
     image: "https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/4d06b95a-565b-493c-9cce-e7f4e4b27265/875180732/firefighter-pixel-shooter-screenshot.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpixelshooter.html"
   },
-  ,
   {
     id: 292,
       row: "Arcade",
@@ -2744,7 +2610,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/pizzatower.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpizzatower.html"
   },
-  ,
   ,
   ,
   ,
@@ -2763,7 +2628,6 @@ const gamesList = [
   ,
 
   ,
-  ,
   {
     id: 294,
       row: "Arcade",
@@ -2780,7 +2644,6 @@ const gamesList = [
     image: "https://cdn.mobygames.com/screenshots/16695646-valerie-porter-and-the-scarlet-scandal-windows-titlemenu-screen.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clporter.html"
   },
-  ,
   ,
   ,
   ,
@@ -2809,7 +2672,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/puppet%20hockey/icon-256.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpuppethockey.html"
   },
-  ,
   {
     id: 299,
       row: "Arcade",
@@ -2819,7 +2681,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpushyourluck.html"
   },
   ,
-  ,
   {
     id: 300,
       row: "Arcade",
@@ -2828,7 +2689,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/186.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clragdollarchers.html"
   },
-  ,
   {
     id: 301,
       row: "Arcade",
@@ -2837,7 +2697,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/44.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clragdollhit.html"
   },
-  ,
   {
     id: 302,
       row: "Sports",
@@ -2846,7 +2705,6 @@ const gamesList = [
     image: "https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/085f11c7-0230-47f0-9183-7b7d98dcd1d7/989397071/ballmasters-ragdoll-soccer-screenshot.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clragdollsoccer.html"
   },
-  ,
   ,
   ,
   ,
@@ -2866,7 +2724,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/redball4.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clRedBall4.html"
   },
-  ,
   {
     id: 305,
       row: "Runner",
@@ -2883,7 +2740,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/redvsblue/logo.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clredvsblue2.html"
   },
-  ,
   {
     id: 307,
       row: "Arcade",
@@ -2901,7 +2757,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clretrobowlcollege.html"
   },
   ,
-  ,
   {
     id: 309,
       row: "Puzzle",
@@ -2918,7 +2773,6 @@ const gamesList = [
     image: "https://cdn.mobygames.com/covers/19414151-revolution-idle-2-browser-front-cover.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clrevolutionidle.html"
   },
-  ,
   ,
   ,
   ,
@@ -2962,7 +2816,6 @@ const gamesList = [
     image: "https://cdn.mobygames.com/covers/9346736-rollerballer-windows-front-cover.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clrollerballer.html"
   },
-  ,
   {
     id: 316,
       row: "Arcade",
@@ -2971,7 +2824,6 @@ const gamesList = [
     image: "https://hfmanor.com/image/rolly-vortex",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clrollyvortex.html"
   },
-  ,
   {
     id: 317,
       row: "Idle",
@@ -2983,7 +2835,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 318,
       row: "Racing",
@@ -2992,7 +2843,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/russiancardriver.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clrussiancardriver.html"
   },
-  ,
   ,
   {
     id: 319,
@@ -3010,7 +2860,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/311.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsandtris.html"
   },
-  ,
   ,
   ,
   ,
@@ -3052,7 +2901,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 324,
       row: "Simulation",
@@ -3061,7 +2909,6 @@ const gamesList = [
     image: "https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/4edbfc39-6755-4566-8732-4ddbedbb46cf/1358787186/short-life-game-screenshot.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clshortlife.html"
   },
-  ,
   ,
   ,
   ,
@@ -3080,7 +2927,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 326,
       row: "Arcade",
@@ -3089,7 +2935,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/128.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsliceitall.html"
   },
-  ,
   {
     id: 327,
       row: "Arcade",
@@ -3199,7 +3044,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 340,
       row: "Platformer",
@@ -3209,7 +3053,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsoniccd.html"
   },
   ,
-  ,
   {
     id: 341,
       row: "Platformer",
@@ -3218,7 +3061,6 @@ const gamesList = [
     image: "https://kbhgames.com/wp-content/uploads/2014/11/Sonic-The-Hedgehog-3-cover.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsonicrevert.html"
   },
-  ,
   {
     id: 342,
       row: "Platformer",
@@ -3243,7 +3085,6 @@ const gamesList = [
     image: "https://hfmanor.com/image/space-company",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clspacecompany.html"
   },
-  ,
   {
     id: 345,
       row: "Arcade",
@@ -3252,7 +3093,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/spacewaves.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clspacewaves.html"
   },
-  ,
   {
     id: 346,
       row: "Racing",
@@ -3261,7 +3101,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/speedstars.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clspeedstars.html"
   },
-  ,
   {
     id: 347,
       row: "Arcade",
@@ -3270,7 +3109,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/349.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clspiralroll.html"
   },
-  ,
   {
     id: 348,
       row: "Arcade",
@@ -3295,7 +3133,6 @@ const gamesList = [
     image: "https://img.gamepix.com/games/sprunki-clicker-game/cover/sprunki-clicker-game.png?w=320&ar=16:10",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsprunkiclicker.html"
   },
-  ,
   {
     id: 351,
       row: "Arcade",
@@ -3320,7 +3157,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/stacktris/webapp/cover.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clstacktris.html"
   },
-  ,
   {
     id: 354,
       row: "Arcade",
@@ -3337,7 +3173,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 355,
       row: "Arcade",
@@ -3346,7 +3181,6 @@ const gamesList = [
     image: "https://img.gamepix.com/games/stick-archers-battle/cover/stick-archers-battle.png?width=320&height=180&fit=cover&quality=90",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clstickarchersbattle.html"
   },
-  ,
   ,
   ,
   ,
@@ -3376,7 +3210,6 @@ const gamesList = [
     image: "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@646b8183aa1d6c61b073dc5ade2f550bace125b9/Stickman%20Clash/index.icon.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clStickmanKingdomclash.html"
   },
-  ,
   {
     id: 359,
       row: "Arcade",
@@ -3393,7 +3226,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/freebuisness/covers/main/767.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clstickslasher.html"
   },
-  ,
   {
     id: 361,
       row: "Shooter",
@@ -3442,7 +3274,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 365,
       row: "Arcade",
@@ -3467,7 +3298,6 @@ const gamesList = [
     image: "https://images.sftcdn.net/images/t_app-cover-s,f_auto/p/412eec6d-5f56-4539-82cc-651347ec1eb1/275827979/car-rush-game-screenshot.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsupercarrush.html"
   },
-  ,
   {
     id: 368,
       row: "Arcade",
@@ -3476,7 +3306,6 @@ const gamesList = [
     image: "https://gocdkeys.fr/assets/thumbnails/super-dark-deception-nintendo-switch-1.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsuperdarkdeception.html"
   },
-  ,
   {
     id: 369,
       row: "Arcade",
@@ -3502,7 +3331,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsuperliquidsoccer.html"
   },
   ,
-  ,
   {
     id: 372,
       row: "Platformer",
@@ -3511,7 +3339,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/supermariobros.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsupermariobros.html"
   },
-  ,
   ,
   ,
   ,
@@ -3527,7 +3354,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 374,
       row: "Racing",
@@ -3536,7 +3362,6 @@ const gamesList = [
     image: "https://plays.org/screenshots/survival-race.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsurvivalracev2.html"
   },
-  ,
   {
     id: 375,
       row: "Arcade",
@@ -3545,7 +3370,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/sushiunroll.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsushiunroll.html"
   },
-  ,
   {
     id: 376,
       row: "Arcade",
@@ -3554,7 +3378,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/bubbls/UGS-Assets/main/switchblade/index.apple-touch-icon.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clswitchblade.html"
   },
-  ,
   ,
   {
     id: 377,
@@ -3577,7 +3400,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 379,
       row: "Arcade",
@@ -3594,7 +3416,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/tanukisunset.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltanukisunset.html"
   },
-  ,
   {
     id: 381,
       row: "Arcade",
@@ -3603,7 +3424,6 @@ const gamesList = [
     image: "https://www.browsercraft.com/images/games/covers/telephone-trouble.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltelephonetrouble.html"
   },
-  ,
   {
     id: 382,
       row: "Arcade",
@@ -3616,7 +3436,6 @@ const gamesList = [
   ,
   ,
   ,
-  ,
   {
     id: 383,
       row: "Arcade",
@@ -3625,7 +3444,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/thereisnogame.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clthereisnofile.html"
   },
-  ,
   ,
   ,
   {
@@ -3652,7 +3470,6 @@ const gamesList = [
     image: "https://gamesdizi.com/wp-content/uploads/2023/11/throw-a-potato-again-240x150.png",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clthrowapotatoagain.html"
   },
-  ,
   {
     id: 387,
       row: "Shooter",
@@ -3685,7 +3502,6 @@ const gamesList = [
     image: "https://browsercraft.com/images/games/covers/to-a-starling.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltoastarling.html"
   },
-  ,
   {
     id: 391,
       row: "Racing",
@@ -4328,7 +4144,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/achievementunlocked.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clachievementunlocked.html"
   },
-  ,
   {
     id: 471,
       row: "Arcade",
@@ -4617,7 +4432,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/badtimesimulator.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbadtimesim.html"
   },
-  ,
   {
     id: 507,
       row: "Shooter",
@@ -4658,7 +4472,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/basketballstars.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbasketballlegends.html"
   },
-  ,
   ,
   {
     id: 512,
@@ -4748,7 +4561,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/thebindingofisaac.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clbindingofisaccsheeptime.html"
   },
-  ,
   {
     id: 523,
       row: "Arcade",
@@ -5229,7 +5041,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/Cat-haha/unblocked-games/main/images/thumbnails/contra.jpg",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clcontra.html"
   },
-  ,
   ,
   {
     id: 583,
@@ -6271,7 +6082,6 @@ const gamesList = [
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgolforbit.html"
   },
-  ,
   {
     id: 713,
       row: "Arcade",
@@ -6280,7 +6090,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pizzatower.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clgoodbigtowertinysquare2.html"
   },
-  ,
   {
     id: 714,
       row: "Arcade",
@@ -6569,7 +6378,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/pokemonemerald.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clinclementemerald.html"
   },
-  ,
   {
     id: 750,
       row: "Simulation",
@@ -6650,7 +6458,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/jacksmith.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cljacksmith.html"
   },
-  ,
   ,
   {
     id: 760,
@@ -6948,7 +6755,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/link.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cllozspirittracks.html"
   },
-  ,
   {
     id: 797,
       row: "Arcade",
@@ -7013,7 +6819,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/footballbros.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmaddenfootball64.html"
   },
-  ,
   {
     id: 805,
       row: "Arcade",
@@ -7494,7 +7299,6 @@ const gamesList = [
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clmobiusrevolution.html"
   },
-  ,
   {
     id: 865,
       row: "Arcade",
@@ -7831,7 +7635,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/papaspizzeria.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpapapizzagood.html"
   },
-  ,
   ,
   {
     id: 907,
@@ -8458,7 +8261,6 @@ const gamesList = [
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clpokeyellow.html"
   },
   ,
-  ,
   {
     id: 985,
       row: "Arcade",
@@ -8483,7 +8285,6 @@ const gamesList = [
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clprebronzeage.html"
   },
-  ,
   {
     id: 988,
       row: "Arcade",
@@ -8604,7 +8405,6 @@ const gamesList = [
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clrainbowsix.html"
   },
-  ,
   {
     id: 1003,
       row: "Platformer",
@@ -8701,7 +8501,6 @@ const gamesList = [
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clresortempire.html"
   },
-  ,
   {
     id: 1015,
       row: "Arcade",
@@ -8950,7 +8749,6 @@ const gamesList = [
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsilenthill.html"
   },
-  ,
   {
     id: 1046,
       row: "Sports",
@@ -9023,7 +8821,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/snake.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clsnakeis.html"
   },
-  ,
   ,
   {
     id: 1055,
@@ -9801,7 +9598,6 @@ const gamesList = [
     image: "",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltankmayhem.html"
   },
-  ,
   {
     id: 1152,
       row: "Arcade",
@@ -10154,7 +9950,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/tubejumpers.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/cltubejumpers.html"
   },
-  ,
   {
     id: 1196,
       row: "Arcade",
@@ -10707,7 +10502,6 @@ const gamesList = [
     image: "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/link.webp",
     rawUrl: "https://cdn.jsdelivr.net/gh/bubbls/ugs-files@main/clzelda2thelegendoflink.html"
   },
-  ,
   {
     id: 1265,
       row: "Puzzle",
