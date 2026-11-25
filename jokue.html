@@ -127,8 +127,7 @@
           const base='<base href="'+new URL('.',candidate).href.replace(/"/g,'&quot;')+'">';
           const documentHtml=/<head(?:\s[^>]*)?>/i.test(html)
             ? html.replace(/<head(?:\s[^>]*)?>/i,match=>match+base)
-            : '<!doctype html><html><head>'+base+'</head><body>'+html+'  <script src="site-settings.js"></script>
-</body></html>';
+            : '<!doctype html><html><head>'+base+'</head><body>'+html+'</body></html>';
           const blob=new Blob([documentHtml],{type:'text/html;charset=utf-8'});
           const blobUrl=URL.createObjectURL(blob);
           // Mantener el sandbox sin same-origin para aislar el contenido externo.
@@ -294,5 +293,6 @@
     document.addEventListener('fullscreenchange', restoreGameFocus);
     document.addEventListener('webkitfullscreenchange', restoreGameFocus);
   </script>
+  <script src="site-settings.js"></script>
 </body>
 </html>
