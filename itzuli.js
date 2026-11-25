@@ -69,7 +69,6 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Music": "Music",
     "Fighting": "Fighting",
     "view": "view",
-    "Lucide": "Lucide",
     "Lucide static-site CMS project information.": "Lucide static-site CMS project information.",
     "Open proxy": "Open proxy",
     "Explore the full collection of browser games, from arcade classics to action, racing and multiplayer games.": "Explore the full collection of browser games, from arcade classics to action, racing and multiplayer games.",
@@ -77,7 +76,13 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Launch the site from the launcher in a tab with a custom title and favicon.": "Launch the site from the launcher in a tab with a custom title and favicon.",
     "Open game": "Open game",
     "Play the most recent Minecraft version online.": "Play the most recent Minecraft version online.",
-    "See all": "See all"
+    "See all": "See all",
+    "Open Lucide on GitHub": "Open Lucide on GitHub",
+    "CMS Lucide": "Lucide CMS",
+    "Lucide is an independent PHP-based static-site CMS. It requires a PHP server and is not hosted by this website. Source code:": "Lucide is a PHP-based CMS for static sites. It requires a PHP server and is not hosted by this website. Source code:",
+    "Lucide is an independent open-source project. See the source repository for its license and requirements.": "Lucide is an independent project. See the source repository for its license and requirements.",
+    "Lucide CMS project (requires a PHP server).": "Lucide CMS project (requires a PHP server).",
+    "UNBLOCKEDgames - Lucide": "UNBLOCKEDgames - Lucide"
   },
   "es": {
     "Settings": "Configuración",
@@ -124,7 +129,7 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Cookies and external content": "Cookies y contenido externo",
     "Your questions and requests": "Preguntas y solicitudes",
     "Return to Game Portal": "Volver al portal de juegos",
-    "Lucide": "CMS Lucide",
+    "Lucide": "Lucide",
     "Open Lucide project on GitHub": "Ver el proyecto Lucide en GitHub",
     "Lucide is a separate PHP-based static-site CMS. It requires a PHP server and is not hosted by this website. Source code:": "Lucide es un CMS independiente para sitios estáticos basado en PHP. Necesita un servidor PHP y esta web no lo aloja. Código fuente:",
     "Lucide is an independent open-source project.": "Lucide es un proyecto independiente de código abierto.",
@@ -156,7 +161,6 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Music": "Música",
     "Fighting": "Lucha",
     "view": "visita",
-    "Lucide": "CMS Lucide",
     "Lucide static-site CMS project information.": "Información sobre el CMS Lucide para sitios estáticos.",
     "Open proxy": "Abrir proxy",
     "Explore the full collection of browser games, from arcade classics to action, racing and multiplayer games.": "Explora la colección completa de juegos de navegador, desde clásicos arcade hasta juegos de acción, carreras y multijugador.",
@@ -164,7 +168,13 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Launch the site from the launcher in a tab with a custom title and favicon.": "Abre la web desde el lanzador en una pestaña con un título y un favicon personalizados.",
     "Open game": "Abrir juego",
     "Play the most recent Minecraft version online.": "Juega en línea a la versión más reciente de Minecraft.",
-    "See all": "Ver todos"
+    "See all": "Ver todos",
+    "Open Lucide on GitHub": "Ver Lucide en GitHub",
+    "CMS Lucide": "CMS Lucide",
+    "Lucide is an independent PHP-based static-site CMS. It requires a PHP server and is not hosted by this website. Source code:": "Lucide es un CMS independiente para sitios estáticos basado en PHP. Necesita un servidor PHP y esta web no lo aloja. Código fuente:",
+    "Lucide is an independent open-source project. See the source repository for its license and requirements.": "Lucide es un proyecto independiente de código abierto. Consulta su repositorio para conocer la licencia y los requisitos.",
+    "Lucide CMS project (requires a PHP server).": "Proyecto CMS Lucide (requiere un servidor PHP).",
+    "UNBLOCKEDgames - Lucide": "UNBLOCKEDgames - Lucide"
   },
   "eu": {
     "Settings": "Ezarpenak",
@@ -211,7 +221,7 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Cookies and external content": "Cookieak eta kanpoko edukia",
     "Your questions and requests": "Zure galderak eta eskaerak",
     "Return to Game Portal": "Jokoen atarira itzuli",
-    "Lucide": "Lucide CMSa",
+    "Lucide": "Lucide",
     "Open Lucide project on GitHub": "Ikusi Lucide proiektua GitHuben",
     "Lucide is a separate PHP-based static-site CMS. It requires a PHP server and is not hosted by this website. Source code:": "Lucide PHPn oinarritutako CMS independentea da. PHP zerbitzaria behar du eta webgune honek ez du ostatatzen. Iturburu-kodea:",
     "Lucide is an independent open-source project.": "Lucide kode irekiko proiektu independentea da.",
@@ -243,7 +253,6 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Music": "Musika",
     "Fighting": "Borroka",
     "view": "bisita",
-    "Lucide": "Lucide CMSa",
     "Lucide static-site CMS project information.": "Lucide CMSari buruzko informazioa.",
     "Open proxy": "Ireki proxya",
     "Explore the full collection of browser games, from arcade classics to action, racing and multiplayer games.": "Arakatu nabigatzaileko jokoen bilduma osoa: arcade klasikoak, akzioa, lasterketak eta jokalari anitzeko jokoak.",
@@ -251,6 +260,12 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Launch the site from the launcher in a tab with a custom title and favicon.": "Ireki webgunea abiarazletik izenburu eta favicon pertsonalizatuak dituen fitxa batean.",
     "Open game": "Ireki jokoa",
     "Play the most recent Minecraft version online.": "Jokatu Minecraft-en azken bertsioan linean.",
-    "See all": "Ikusi guztiak"
+    "See all": "Ikusi guztiak",
+    "Open Lucide on GitHub": "Ikusi Lucide GitHuben",
+    "CMS Lucide": "Lucide CMSa",
+    "Lucide is an independent PHP-based static-site CMS. It requires a PHP server and is not hosted by this website. Source code:": "Lucide PHPn oinarritutako webgune estatikoetarako CMS independentea da. PHP zerbitzaria behar du eta webgune honek ez du ostatatzen. Iturburu-kodea:",
+    "Lucide is an independent open-source project. See the source repository for its license and requirements.": "Lucide kode irekiko proiektu independentea da. Kontsultatu haren biltegia lizentzia eta eskakizunak ezagutzeko.",
+    "Lucide CMS project (requires a PHP server).": "Lucide CMS proiektua (PHP zerbitzaria behar du).",
+    "UNBLOCKEDgames - Lucide": "UNBLOCKEDgames - Lucide"
   }
 };
