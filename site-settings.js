@@ -118,6 +118,7 @@
 
   const originalText = new WeakMap();
   const originalAttributes = new WeakMap();
+  const originalDocumentTitle = document.title;
   function translateValue(value, dict) {
     if (!value) return value;
     if (Object.prototype.hasOwnProperty.call(dict, value.trim())) {
@@ -181,7 +182,9 @@
   }
 
   function translatePage() {
+    const dict = dictionaries[language] || dictionaries.en || {};
     translateSubtree(document.body);
+    document.title = translateValue(originalDocumentTitle, dict);
     document.documentElement.lang = language;
   }
 
