@@ -48,7 +48,7 @@
     .grandv-info p { color: #aaa; font-size: 14px; line-height: 1.5; margin-bottom: 14px; }
     @media (max-width: 520px) { .grandv-shortcut { align-items: flex-start; flex-direction: column; } .grandv-art { width: 100%; } }
 
-    .row { margin-bottom: 40px; }
+    .row { margin-bottom: 40px; content-visibility: auto; contain-intrinsic-size: auto 360px; }
     .catalog-separator { height: 3px; background: #3a3a3a; margin: 0 0 36px; border-radius: 2px; }
     .row-header { position: relative; z-index: 4; display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px; }
     .row-title { font-size: 20px; }
@@ -182,9 +182,12 @@
       const genres = Array.from(new Set(regularItems.map(function(item) { return item.game.row || 'Other'; }))).sort(function(a,b) { return a.localeCompare(b); });
       const popular = regularItems.slice().sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
       const recent = regularItems.filter(function(item) { return item.game.addedAt && (Date.now() - new Date(item.game.addedAt + 'T00:00:00').getTime()) < 10 * 24 * 60 * 60 * 1000; }).sort(function(a,b) { return new Date(b.game.addedAt) - new Date(a.game.addedAt) || b.index - a.index; });
-      catalog.innerHTML = makeRow('Most Popular', popular);
-      catalog.innerHTML += makeRow('Recently Added', recent);
-      genres.forEach(function(genre) { catalog.innerHTML += makeRow(genre, allItems.filter(function(item) { return (item.game.row || 'Other') === genre; })); });
+      catalog.innerHTML = [
+        makeRow('Most Popular', popular),
+        makeRow('Recently Added', recent)
+      ].concat(genres.map(function(genre) {
+        return makeRow(genre, allItems.filter(function(item) { return (item.game.row || 'Other') === genre; }));
+      })).join('');
       const selected = genreFilter.value;
       genreFilter.innerHTML = '<option value="">Choose genre</option><option value="all-games">All games</option>';
       genres.forEach(function(genre) { const option = document.createElement('option'); option.value = genre; option.textContent = genre; genreFilter.appendChild(option); });
