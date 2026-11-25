@@ -23,7 +23,14 @@
   style.id = 'unblocked-settings-styles';
   style.textContent = `
     :root { color-scheme: dark; }
-    body { transition: background-color .18s ease, color .18s ease; }\n    a, button, input, select, textarea { -webkit-tap-highlight-color: transparent; }\n    a, button { transition: color .18s ease, background-color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease; }\n    a:hover { text-decoration-thickness: 2px; }\n    button:hover { box-shadow: 0 4px 13px rgba(0,0,0,.2); }\n    img { transition: filter .2s ease; }\n    .nav-tab:hover { transform: translateY(-1px); }\n    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+    body { transition: background-color .18s ease, color .18s ease; }
+    a, button, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+    a, button { transition: color .18s ease, background-color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
+    a:hover { text-decoration-thickness: 2px; }
+    button:hover { box-shadow: 0 4px 13px rgba(0,0,0,.2); }
+    img { transition: filter .2s ease; }
+    .nav-tab:hover { transform: translateY(-1px); }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
     #ug-settings-trigger {
       position: fixed; z-index: 2147483000; top: 16px; right: 16px;
       width: 48px; height: 48px; display: grid; place-items: center;
@@ -32,7 +39,13 @@
       box-shadow: 0 3px 14px rgba(0,0,0,.35);
       font: 0 Arial, sans-serif; 
     }
-    #ug-settings-trigger:hover { background: #383838; transform: rotate(8deg) scale(1.04); }\n    #ug-settings-trigger img { width:20px;height:20px;object-fit:contain;display:block;filter:brightness(0) invert(1); }\n    #ug-settings-trigger { transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }\n    #ug-settings-panel { animation: ug-panel-in .18s ease both; }\n    @keyframes ug-panel-in { from { opacity:0; transform:translateY(-6px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }\n    #ug-theme-toggle, #ug-language-select, #ug-accent-picker { transition: background .18s ease, border-color .18s ease, transform .18s ease; }\n    #ug-theme-toggle:hover, #ug-language-select:hover, #ug-accent-picker:hover { border-color:#777; transform:translateY(-1px); }
+    #ug-settings-trigger:hover { background: #383838; transform: rotate(8deg) scale(1.04); }
+    #ug-settings-trigger img { width:20px;height:20px;object-fit:contain;display:block;filter:brightness(0) invert(1); }
+    #ug-settings-trigger { transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+    #ug-settings-panel { animation: ug-panel-in .18s ease both; }
+    @keyframes ug-panel-in { from { opacity:0; transform:translateY(-6px) scale(.98); } to { opacity:1; transform:translateY(0) scale(1); } }
+    #ug-theme-toggle, #ug-language-select, #ug-accent-picker { transition: background .18s ease, border-color .18s ease, transform .18s ease; }
+    #ug-theme-toggle:hover, #ug-language-select:hover, #ug-accent-picker:hover { border-color:#777; transform:translateY(-1px); }
     #ug-settings-trigger:focus-visible, #ug-theme-toggle:focus-visible, #ug-language-select:focus-visible, #ug-accent-picker:focus-visible {
       outline: 2px solid #e50914; outline-offset: 3px;
     }
@@ -266,6 +279,8 @@
     trigger.setAttribute('aria-expanded', 'false');
     trigger.setAttribute('aria-controls', 'ug-settings-panel');
     trigger.innerHTML = '<img src="argazkik/ezarpenak.png" alt="" width="20" height="20">';
+    trigger.style.cssText = 'position:fixed;z-index:2147483000;top:16px;right:16px;width:48px;height:48px;display:grid;place-items:center;padding:0;border:1px solid #555;border-radius:50%;background:#242424;color:#f2f2f2;cursor:pointer;box-shadow:0 3px 14px rgba(0,0,0,.35);';
+    trigger.querySelector('img').addEventListener('error', function () { trigger.textContent = '⚙'; trigger.style.font = '24px Arial,sans-serif'; });
 
     const panel = document.createElement('section');
     panel.id = 'ug-settings-panel';
