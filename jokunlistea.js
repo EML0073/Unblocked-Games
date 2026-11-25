@@ -338,7 +338,6 @@ const gamesList = [
     },
 
   // Added 2026-11-24
-  ,
   {
     id: 42,
       row: "Action",
