@@ -371,11 +371,22 @@
       });
       loadGameRating();
       const gameFrame = document.getElementById('gameFrame');
-      if (game.webUrl) {
-        // Scramjet needs an unsandboxed, same-origin-capable browsing context for its service worker.
-        // Only webUrl entries get this; rawUrl game frames keep their sandbox.
+      // rawUrl always wins, even if an entry also has webUrl. Raw HTML games and
+      // the Nautilus OS shortcut must use the normal direct loader, never Scramjet.
+      if (game.rawUrl) {
+        // El cargador usa un mirror que sirve HTML con el tipo MIME correcto.
+        loadRawHtmlIntoFrame(gameFrame, game.rawUrl).catch(function(error) {
+          console.error('Could not load game HTML:', error);
+          document.getElementById('gameTitle').textContent = 'Could not load game';
+          showGameLoading('Could not load this game. The source or its CDN may be unavailable. Try again later or report the problem.', true);
+          gameFrame.srcdoc = '<!doctype html><html><body style="margin:0;background:#111;color:#eee;font:16px Arial;padding:24px">Could not load this game file. Check your connection and try again.</body></html>';
+        });
+      } else if (game.webUrl) {
+        // Only webUrl-only shortcuts use the embedded Scramjet proxy.
+        // Match the permissions/referrer policy of the working proxy.html iframe.
         gameFrame.removeAttribute('sandbox');
-        gameFrame.allow = 'cross-origin-isolated; autoplay; fullscreen; gamepad; clipboard-read; clipboard-write; accelerometer; gyroscope; web-share';
+        gameFrame.allow = 'cross-origin-isolated; clipboard-read; clipboard-write; fullscreen; autoplay';
+        gameFrame.referrerPolicy = 'strict-origin-when-cross-origin';
         document.body.classList.add('web-shortcut-mode');
         const proxyUrl = new URL('https://unblocked-games-proxy.onrender.com/');
         proxyUrl.searchParams.set('embed', '1');
@@ -384,16 +395,7 @@
         proxyUrl.searchParams.set('accent', localStorage.getItem('unblockedgames-accent') || '#e50914');
         proxyUrl.searchParams.set('theme', localStorage.getItem('unblockedgames-theme') || 'dark');
         gameFrame.title = game.title;
-        gameFrame.allow = 'cross-origin-isolated; fullscreen; autoplay; clipboard-read; clipboard-write';
         gameFrame.src = proxyUrl.toString();
-      } else if (game.rawUrl) {
-        // El cargador usa un mirror que sirve HTML con el tipo MIME correcto.
-        loadRawHtmlIntoFrame(gameFrame, game.rawUrl).catch(function(error) {
-          console.error('Could not load game HTML:', error);
-          document.getElementById('gameTitle').textContent = 'Could not load game';
-          showGameLoading('Could not load this game. The source or its CDN may be unavailable. Try again later or report the problem.', true);
-          gameFrame.srcdoc = '<!doctype html><html><body style="margin:0;background:#111;color:#eee;font:16px Arial;padding:24px">Could not load this game file. Check your connection and try again.</body></html>';
-        });
       } else {
         document.getElementById('gameTitle').textContent = 'Game URL missing';
       }
