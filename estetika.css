@@ -1,0 +1,80 @@
+/* UNBLOCKEDgames shared visual theme */
+:root {
+  --ug-surface: #1d2027;
+  --ug-surface-raised: #252a34;
+  --ug-surface-hover: #303744;
+  --ug-border: #3b4350;
+  --ug-border-hover: #687386;
+  --ug-text: #eef1f6;
+  --ug-muted: #aab3c1;
+  --ug-accent: #e50914;
+}
+button, input, select, textarea { font: inherit; }
+button, .btn, .nav-tab, .btn-play, .btn-back, .view-all, .back,
+.maximize-btn, .btn-maximize, .btn-new-tab, .btn-report,
+.btn-report-send, .btn-report-cancel {
+  border-radius: 12px;
+  transition: background .18s ease, color .18s ease, border-color .18s ease,
+    box-shadow .18s ease, transform .18s ease, filter .18s ease;
+}
+button:hover, .btn:hover, .nav-tab:hover, .btn-play:hover, .view-all:hover,
+.maximize-btn:hover, .btn-maximize:hover, .btn-new-tab:hover, .btn-report:hover,
+.btn-report-send:hover, .btn-report-cancel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 17px #0005;
+}
+button:active, .btn:active, .nav-tab:active, .btn-play:active,
+.view-all:active, .maximize-btn:active, .btn-maximize:active,
+.btn-new-tab:active, .btn-report:active, .btn-report-send:active,
+.btn-report-cancel:active { transform: scale(.97); }
+button:focus-visible, a:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--ug-accent);
+  outline-offset: 3px;
+}
+input:not([type="checkbox"]):not([type="radio"]):not([type="color"]),
+select, textarea {
+  border-radius: 12px;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--ug-border-hover);
+  box-shadow: 0 0 0 3px #ffffff0d;
+}
+.nav-tab { border-radius: 12px; padding: 9px 14px; }
+.nav-tab:hover { background: var(--ug-surface-hover); border-color: var(--ug-border-hover); }
+.nav-tab.active, .nav-tab[aria-current="page"] {
+  background: var(--ug-surface-raised);
+  border-color: #555f70;
+  color: var(--ug-text);
+}
+.top-bar, header.top-bar {
+  background: linear-gradient(110deg, #191c22, #20242c);
+  border-bottom-color: #303641;
+}
+.site-footer, footer {
+  border-top-color: #303641;
+}
+.iframe-wrapper, .proxy-frame-wrap {
+  border-radius: 16px;
+  border-color: #3a414d;
+  box-shadow: 0 10px 30px #0003;
+}
+.game-genre { border-radius: 10px; background: var(--ug-surface-raised); border-color: var(--ug-border); }
+.report-dialog, .filter-menu, #ug-settings-panel {
+  border-radius: 18px;
+  border-color: #424b59;
+  box-shadow: 0 16px 38px #0008;
+}
+.report-dialog textarea { border-radius: 12px; }
+.table-wrap { border-radius: 16px; border-color: #3b4350; overflow: auto; }
+table th:first-child { border-top-left-radius: 12px; }
+table th:last-child { border-top-right-radius: 12px; }
+table th { background: #252a34; }
+table td { border-bottom-color: #303641; }
+#ug-settings-trigger { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+#ug-settings-trigger:hover { transform: rotate(12deg) scale(1.06); box-shadow: 0 6px 18px #0007; border-color: #788396; }
+#ug-settings-panel .ug-control { border-radius: 12px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
