@@ -353,6 +353,7 @@ const gameImages = {
   "Yohoho IO": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/835.png",
   "Zombie Rush": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXfHinBIdT2_ztfxwW6SvG0KIW1KLhdxGxcaB_m7FRg&s=10",
   "Zrist": "https://www.coolmathgames.com/sites/default/files/zrist-game-icon.png"
+  "Nautilus": "https://avatars.githubusercontent.com/u/240241840?s=280&v=4"
 };
 
 window.gameImages = gameImages;
