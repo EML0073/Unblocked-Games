@@ -2,3 +2,4 @@
  - Feedback...
  - Tradukziok
  - Irudik
+ - About:blanken iriki
