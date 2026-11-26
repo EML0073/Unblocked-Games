@@ -26,41 +26,41 @@ const gamesList = [
   {
     "id": 3,
     "row": "Arcade",
-    "title": "1.12",
+    "title": "Minecraft 1.12",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["1.12"] || "",
+    "image": window.gameImages?.["Minecraft 1.12"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1.12.html"
   },
   {
     "id": 4,
     "row": "Arcade",
-    "title": "1.12 WASM",
+    "title": "Minecraft 1.12 WASM",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["1.12 WASM"] || "",
+    "image": window.gameImages?.["Minecraft 1.12 WASM"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1.12_WASM.html"
   },
   {
     "id": 5,
     "row": "Arcade",
-    "title": "1.5",
+    "title": "Minecraft 1.5",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["1.5"] || "",
+    "image": window.gameImages?.["Minecraft 1.5"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1.5.html"
   },
   {
     "id": 6,
     "row": "Arcade",
-    "title": "1.8",
+    "title": "Minecraft 1.8",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["1.8"] || "",
+    "image": window.gameImages?.["Minecraft 1.8"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1.8.html"
   },
   {
     "id": 7,
     "row": "Arcade",
-    "title": "1.8 WASM",
+    "title": "Minecraft 1.8 WASM",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["1.8 WASM"] || "",
+    "image": window.gameImages?.["Minecraft 1.8 WASM"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1.8_WASM.html"
   },
   {
@@ -138,25 +138,25 @@ const gamesList = [
   {
     "id": 17,
     "row": "Arcade",
-    "title": "Alpha 1.2.6",
+    "title": "Minecraft Alpha 1.2.6",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Alpha 1.2.6"] || "",
+    "image": window.gameImages?.["Minecraft Alpha 1.2.6"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/Alpha_1.2.6.html"
   },
   {
     "id": 18,
     "row": "Arcade",
-    "title": "Beta 1.3",
+    "title": "Minecraft Beta 1.3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Beta 1.3"] || "",
+    "image": window.gameImages?.["Minecraft Beta 1.3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/Beta_1.3.html"
   },
   {
     "id": 19,
     "row": "Arcade",
-    "title": "Indev",
+    "title": "Minecraft Indev",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Indev"] || "",
+    "image": window.gameImages?.["Minecraft Indev"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/Indev.html"
   },
   {
