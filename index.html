@@ -199,10 +199,8 @@
     }
     function makeRow(title, items) {
       if (!items.length) return '';
-      const filterValue = title === 'Most Popular' ? 'all-games' : title;
-      const viewAll = title !== 'Recently Added'
-        ? '<a class="view-all" href="#" data-genre-filter="' + encodeURIComponent(filterValue) + '">View all</a>'
-        : '';
+      const filterValue = title === 'Most Popular' ? 'all-games' : (title === 'Recently Added' ? 'recently-added' : title);
+      const viewAll = '<a class="view-all" href="#" data-genre-filter="' + encodeURIComponent(filterValue) + '">View all</a>';
       return '<section class="row"><div class="row-header"><h2 class="row-title">' + title +
         '</h2>' + viewAll + '</div>' +
         '<div class="row-body"><button class="arrow-btn arrow-left" aria-label="Scroll left" onclick="scrollBack(this)">&#x2039;</button>' +
@@ -272,11 +270,22 @@
     }
     function selectGenre(genreName) {
       const filter = document.getElementById('genreFilter');
+      const recentTrigger = document.getElementById('recentFilterTrigger');
+      if (genreName === 'recently-added') {
+        Array.from(filter.options).forEach(function(option){option.selected=false;});
+        recentTrigger.setAttribute('aria-pressed','true');
+        recentTrigger.classList.add('is-active');
+        renderFilterOptions();
+        document.getElementById('searchInput').value = '';
+        filterGames();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
       const targetValue = genreName === 'Most Popular' ? 'all-games' : genreName;
       Array.from(filter.options).forEach(function(option){option.selected=option.value===targetValue;});
       renderFilterOptions();
-      document.getElementById('recentFilterTrigger').setAttribute('aria-pressed','false');
-      document.getElementById('recentFilterTrigger').classList.remove('is-active');
+      recentTrigger.setAttribute('aria-pressed','false');
+      recentTrigger.classList.remove('is-active');
       document.getElementById('searchInput').value = '';
       filterGames();
       window.scrollTo({ top: 0, behavior: 'smooth' });
