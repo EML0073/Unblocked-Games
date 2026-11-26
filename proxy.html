@@ -11,9 +11,9 @@
 html,body{min-height:100%;background:#121212;color:#eef1f6;font-family:Arial,Helvetica,sans-serif}
 body{min-height:100vh;display:flex;flex-direction:column;animation:enter .28s ease both}
 @keyframes enter{from{opacity:.88}to{opacity:1}}
-.top-bar{background:linear-gradient(110deg,#191c22,#20242c);padding:10px 4%;border-bottom:1px solid #303641;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;min-height:76px}
-.brand-logo{display:block;width:280px;height:56px;object-fit:contain;object-position:left center;filter:brightness(0) invert(1)}
-.main-nav{display:flex;align-items:center;gap:6px}
+.top-bar{background:linear-gradient(110deg,#191c22,#20242c);padding:10px 4%;border-bottom:1px solid #303641;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;min-height:76px}
+.top-bar>a{justify-self:start}.brand-logo{display:block;width:280px;height:56px;object-fit:contain;object-position:left center;filter:brightness(0) invert(1)}
+.main-nav{grid-column:2;grid-row:1;display:flex;align-items:center;justify-content:center;gap:6px}
 .nav-tab{color:#b5bac5;text-decoration:none;border:1px solid transparent;padding:9px 14px;border-radius:12px;font-size:14px}
 .nav-tab:hover{background:#2b2f38;border-color:#414754;color:#fff}
 .nav-tab.active{color:#fff;background:#292d35;border-color:#555d6b}
@@ -42,7 +42,7 @@ body[data-ug-theme="light"] .intro-copy,body[data-ug-theme="light"] .eyebrow,bod
 body[data-ug-theme="light"] .proxy-actions a{background:#fff;color:#252a34;border-color:#d5d9e0}
 body[data-ug-theme="light"] .site-footer{background:#eceff3;color:#555d6b;border-top-color:#d9dee7}
 body[data-ug-theme="light"] .site-footer a{color:#303744}
-@media(max-width:900px){.top-bar{justify-content:center}.top-bar>a{margin:0 auto}.brand-logo{width:255px;height:50px}.main-nav{order:3;width:100%;justify-content:center}main{padding:24px 3% 30px}.proxy-frame-wrap{height:72vh;min-height:460px}}
+@media(max-width:900px){.top-bar{grid-template-columns:1fr;justify-items:center}.top-bar>a{justify-self:center;margin:0 auto}.brand-logo{width:255px;height:50px}.main-nav{grid-column:1;grid-row:2;width:100%;justify-content:center}main{padding:24px 3% 30px}.proxy-frame-wrap{height:72vh;min-height:460px}}
 @media(max-width:600px){main{padding:20px 3% 24px}.proxy-intro{align-items:flex-start}.proxy-actions{width:100%}.proxy-actions a,.proxy-actions button{flex:1}.proxy-frame-wrap{height:70vh;min-height:420px;border-radius:14px}.site-footer{padding:20px 4%}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style></head>
