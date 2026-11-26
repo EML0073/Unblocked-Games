@@ -75,7 +75,7 @@
     .row-header { position:relative; z-index:4; display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid #303641; padding-bottom:9px; }
     .row-title { font-size: 20px; }
     .view-all { color:#b4bdcb; text-decoration:none; font-size:14px; cursor:pointer; padding:6px 10px; border:1px solid transparent; border-radius:10px; }
-    .view-all:hover { color:#fff; background:#292e38; border-color:#414957; transform:translateY(-1px); }
+    .view-all:hover { color:#b4bdcb; background:#343b47; border-color:#687386; transform:translateY(-1px); }
     .row-body { position: relative; }
     .row-cards { position: relative; z-index: 1; display: flex; gap: 15px; padding: 12px 8px 16px; margin: -12px -8px -4px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; }
     .row-cards::-webkit-scrollbar { display: none; }
@@ -116,6 +116,7 @@
       <select id="genreFilter" class="genre-select" multiple aria-hidden="true" tabindex="-1"><option value="all-games">All games</option></select>
       <div class="filter-wrap">
         <button id="filterTrigger" class="filter-trigger" type="button" aria-expanded="false" aria-controls="filterMenu"><img src="argazkik/filtroa.png" alt=""><span>Filter</span><span id="filterCount" class="filter-count"></span></button>
+        <button id="recentFilterTrigger" class="filter-trigger recent-filter-trigger" type="button" aria-pressed="false">Recently Added</button>
         <div id="filterMenu" class="filter-menu" hidden>
           <div class="filter-menu-head"><span>Choose genres</span><button type="button" id="clearGenreSelection">Clear</button></div>
           <div id="filterOptions"></div>
@@ -258,12 +259,16 @@
       const resultsGrid = document.getElementById('resultsGrid');
       const resultsTitle = document.getElementById('resultsTitle');
       const clearBtn = document.getElementById('clearBtn');
-      if (searchText === '' && selectedGenres.length === 0) { topBanner.style.display = 'block'; document.getElementById('catalog').style.display = 'block'; searchResults.style.display = 'none'; clearBtn.style.display = 'none'; return; }
+      const recentOnly = document.getElementById('recentFilterTrigger').getAttribute('aria-pressed') === 'true';
+      if (searchText === '' && selectedGenres.length === 0 && !recentOnly) { topBanner.style.display = 'block'; document.getElementById('catalog').style.display = 'block'; searchResults.style.display = 'none'; clearBtn.style.display = 'none'; return; }
       topBanner.style.display = 'none'; document.getElementById('catalog').style.display = 'none'; searchResults.style.display = 'block'; clearBtn.style.display = 'inline-block';
+      const recentOnly = document.getElementById('recentFilterTrigger').getAttribute('aria-pressed') === 'true';
+      const recentCutoff = Date.now() - 10 * 24 * 60 * 60 * 1000;
       const matches = gamesList.map(function(game,index) { return {game:game,index:index}; }).filter(function(item) {
-        return item.game.row !== 'Other Apps & Services' && item.game.title.toLowerCase().includes(searchText) && (selectedGenres.length === 0 || allSelected || selectedGenres.indexOf(item.game.row || 'Other') >= 0);
-      }).sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
-      resultsTitle.textContent = allSelected ? 'All games (' + matches.length + ')' : (selectedGenres.length ? selectedGenres.join(' + ') + ' (' + matches.length + ')' : 'Search results (' + matches.length + ')');
+        const addedTime = item.game.addedAt ? new Date(item.game.addedAt + 'T00:00:00').getTime() : 0;
+        return item.game.row !== 'Other Apps & Services' && item.game.title.toLowerCase().includes(searchText) && (selectedGenres.length === 0 || allSelected || selectedGenres.indexOf(item.game.row || 'Other') >= 0) && (!recentOnly || (addedTime > 0 && addedTime >= recentCutoff));
+      }).sort(function(a,b) { return recentOnly ? (new Date(b.game.addedAt) - new Date(a.game.addedAt) || b.index - a.index) : (gameViews(b.game,b.index) - gameViews(a.game,a.index)); });
+      resultsTitle.textContent = (recentOnly ? 'Recently Added · ' : '') + (allSelected ? 'All games (' + matches.length + ')' : (selectedGenres.length ? selectedGenres.join(' + ') + ' (' + matches.length + ')' : 'Search results (' + matches.length + ')'));
       resultsGrid.innerHTML = matches.length ? matches.map(makeCard).join('') : '<p class="no-results">No games found matching your search.</p>';
     }
     function selectGenre(genreName) {
@@ -312,7 +317,13 @@
     document.getElementById('clearGenreSelection').addEventListener('click',function(){Array.from(genreFilter.options).forEach(function(option){option.selected=false;});renderFilterOptions();filterGames();});
     document.addEventListener('click',function(event){if(!event.target.closest('.filter-wrap')){filterMenu.hidden=true;filterTrigger.setAttribute('aria-expanded','false');}});
     document.addEventListener('keydown',function(event){if(event.key==='Escape'){filterMenu.hidden=true;filterTrigger.setAttribute('aria-expanded','false');}});
-    function resetFilters() { document.getElementById('searchInput').value = ''; Array.from(genreFilter.options).forEach(function(option){option.selected=false;}); renderFilterOptions(); filterGames(); }
+    document.getElementById('recentFilterTrigger').addEventListener('click',function(){
+      const active=this.getAttribute('aria-pressed')!=='true';
+      this.setAttribute('aria-pressed',String(active));
+      this.classList.toggle('is-active',active);
+      filterGames();
+    });
+    function resetFilters() { document.getElementById('searchInput').value = ''; Array.from(genreFilter.options).forEach(function(option){option.selected=false;}); document.getElementById('recentFilterTrigger').setAttribute('aria-pressed','false'); document.getElementById('recentFilterTrigger').classList.remove('is-active'); renderFilterOptions(); filterGames(); }
     function applyInitialFilter() { if (new URLSearchParams(window.location.search).get('genre') === 'all-games') { Array.from(genreFilter.options).forEach(function(option){option.selected=option.value==='all-games';}); renderFilterOptions(); filterGames(); } }
     function scrollForward(button) { const body = button.parentElement; body.querySelector('.row-cards').scrollLeft += 500; body.querySelector('.arrow-left').style.display = 'block'; }
     function scrollBack(button) { button.parentElement.querySelector('.row-cards').scrollLeft -= 500; }
