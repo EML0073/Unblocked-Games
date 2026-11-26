@@ -10,14 +10,18 @@
     body { background-color:#121212; color:#eeeeee; font-family:Arial,Helvetica,sans-serif; animation:page-enter .28s ease both; }
     @keyframes page-enter { from { opacity:.88; } to { opacity:1; } }
     a,button,input,select { -webkit-tap-highlight-color:transparent; }
+    :root { --surface:#1b1d22; --surface-raised:#242730; --line:#343944; --muted:#a6adbb; --accent:#e50914; }
+    button:focus-visible,a:focus-visible,input:focus-visible { outline:2px solid var(--ug-accent,#e50914); outline-offset:3px; }
+    button:active,.btn-play:active,.nav-tab:active,.filter-trigger:active { transform:scale(.97); }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition-duration:.01ms!important; animation-duration:.01ms!important; } }
     button,.btn-play,.nav-tab,.view-all { transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease; }
     button:hover,.btn-play:hover { transform:translateY(-1px); box-shadow:0 4px 12px rgba(0,0,0,.2); }
-    .top-bar { background-color: #1a1a1a; padding: 10px 4%; border-bottom: 1px solid #2a2a2a; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .top-bar { background:linear-gradient(110deg,#191b20,#20232a); padding:10px 4%; border-bottom:1px solid #30343d; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
     .brand-logo { display: block; width: 280px; height: 56px; object-fit: contain; object-position: left center; filter: brightness(0) invert(1); }
     .main-nav { display: flex; align-items: center; gap: 6px; }
-    .nav-tab { background: transparent; color: #aaaaaa; text-decoration: none; border: 1px solid transparent; padding: 9px 13px; border-radius: 4px; font-size: 14px; cursor: pointer; }
-    .nav-tab:hover { color: #ffffff; background: #262626; }
-    .nav-tab.active { color: #ffffff; background: #303030; border-color: #484848; }
+    .nav-tab { background:transparent; color:#b5bac5; text-decoration:none; border:1px solid transparent; padding:9px 14px; border-radius:12px; font-size:14px; cursor:pointer; }
+    .nav-tab:hover { color:#fff; background:#2b2f38; border-color:#414754; transform:translateY(-2px); }
+    .nav-tab.active { color:#fff; background:#292d35; border-color:#555d6b; box-shadow:inset 0 0 0 1px #ffffff08; }
     @media (max-width: 900px) {
       .top-bar { justify-content: center; }
       .brand-logo { width: 255px; height: 50px; }
@@ -26,12 +30,27 @@
       .search-controls { order: 4; width: 100%; justify-content: center; }
       .search-input { width: min(240px, 55vw); }
     }
-    .search-controls { display: flex; gap: 10px; flex-wrap: wrap; }
-    .search-input, .genre-select { background-color: #262626; color: #eeeeee; border: 1px solid #3a3a3a; padding: 8px 12px; font-size: 14px; border-radius: 3px; outline: none; }
-    .search-input { width: 240px; }
-    .search-input:focus, .genre-select:focus { border-color: #666666; }
-    .btn-clear { background-color: #333333; color: #cccccc; border: 1px solid #444444; padding: 8px 12px; font-size: 14px; border-radius: 3px; cursor: pointer; display: none; }
-    .btn-clear:hover { background-color: #444444; color: #ffffff; }
+    .search-controls { display:flex; gap:9px; flex-wrap:wrap; align-items:center; margin-right:22px; }
+    .search-input { width:240px; background:#252932; color:#f2f4f8; border:1px solid #3b414d; padding:10px 14px; font-size:14px; border-radius:14px; outline:none; transition:border-color .2s,box-shadow .2s,background .2s; }
+    .search-input::placeholder { color:#8992a1; }
+    .search-input:focus { background:#292e38; border-color:#687386; box-shadow:0 0 0 3px #ffffff0b; }
+    .genre-select { display:none!important; }
+    .filter-wrap { position:relative; }
+    .filter-trigger { display:flex; align-items:center; gap:9px; min-height:40px; padding:8px 13px; border:1px solid #3b414d; border-radius:14px; background:#252932; color:#e8ebf1; font-size:14px; cursor:pointer; transition:transform .18s,border-color .18s,background .18s,box-shadow .18s; }
+    .filter-trigger:hover,.filter-trigger[aria-expanded="true"] { background:#303642; border-color:#687386; box-shadow:0 5px 16px #0004; transform:translateY(-1px); }
+    .filter-trigger img { width:17px; height:17px; object-fit:contain; filter:brightness(0) invert(1); }
+    .filter-count { display:none; min-width:19px; height:19px; padding:0 5px; place-items:center; border-radius:10px; background:#454c59; color:#fff; font-size:11px; }
+    .filter-count.visible { display:grid; }
+    .filter-menu { position:absolute; top:calc(100% + 9px); right:0; z-index:30; width:230px; max-height:min(390px,65vh); overflow:auto; padding:9px; border:1px solid #424956; border-radius:16px; background:#20242c; box-shadow:0 16px 38px #0009; }
+    .filter-menu[hidden] { display:none; }
+    .filter-menu-head { display:flex; align-items:center; justify-content:space-between; padding:5px 7px 9px; color:#f2f4f8; font-size:13px; font-weight:700; }
+    .filter-menu-head button { border:0; background:transparent; color:#aeb6c4; cursor:pointer; padding:4px 6px; border-radius:7px; }
+    .filter-menu-head button:hover { color:#fff; background:#343a46; }
+    .filter-option { display:flex; align-items:center; gap:10px; padding:9px 8px; border-radius:10px; color:#d5dae3; font-size:13px; cursor:pointer; transition:background .16s,color .16s; }
+    .filter-option:hover { background:#303642; color:#fff; }
+    .filter-option input { width:15px; height:15px; accent-color:#aab3c2; }
+    .btn-clear { background:#292e37; color:#d6dbe4; border:1px solid #414957; padding:9px 13px; font-size:14px; border-radius:13px; cursor:pointer; display:none; }
+    .btn-clear:hover { background:#383f4b; color:#fff; border-color:#687386; }
     .banner { width: 100%; height: 420px; overflow: hidden; position: relative; background-color: #000; }
     .banner-list { display: flex; height: 100%; transition: transform 0.5s ease; }
     .banner-indicators { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; gap: 9px; z-index: 5; padding: 7px 11px; border-radius: 20px; background: rgba(0,0,0,.38); }
@@ -40,40 +59,40 @@
     .banner-dot:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
     @media (prefers-reduced-motion: reduce) { .banner-list { transition: none; } .banner-dot { transition: none; } }
     .banner-item { min-width: 100%; height: 100%; background-size: cover; background-position: center; display: flex; align-items: flex-end; padding: 30px 5%; }
-    .banner-info { background: rgba(0, 0, 0, 0.75); padding: 20px; max-width: 500px; border-radius: 4px; }
+    .banner-info { background:rgba(0,0,0,.76); padding:22px; max-width:500px; border:1px solid #ffffff20; border-radius:20px; backdrop-filter:blur(8px); }
     .banner-info h1 { font-size: 28px; margin-bottom: 10px; }
     .banner-info p { font-size: 15px; color: #cccccc; margin-bottom: 15px; line-height: 1.4; }
-    .btn-play { display: inline-block; background-color: #e50914; color: #fff; text-decoration: none; padding: 10px 20px; font-weight: bold; border-radius: 3px; font-size: 14px; }
+    .btn-play { display:inline-block; background:linear-gradient(135deg,#ed2630,#bd0712); color:#fff; text-decoration:none; padding:11px 21px; font-weight:bold; border-radius:13px; font-size:14px; box-shadow:0 5px 16px #e5091435; }
     .container { padding: 30px 5%; }
-    .grandv-shortcut { display: flex; align-items: center; gap: 22px; padding: 18px; background: #1b1b1b; border: 1px solid #333; border-radius: 5px; }
-    .grandv-art { width: 150px; min-width: 150px; aspect-ratio: 4 / 3; display: grid; place-items: center; background: linear-gradient(135deg, #202820, #111); color: #e7e7e7; font-size: 76px; font-weight: 900; font-style: italic; border-radius: 3px; text-shadow: 3px 3px #555; }
+    .grandv-shortcut { display:flex; align-items:center; gap:22px; padding:18px; background:#1e222a; border:1px solid #363d49; border-radius:20px; }
+    .grandv-art { width:150px; min-width:150px; aspect-ratio:4/3; display:grid; place-items:center; background:linear-gradient(135deg,#26362c,#111); color:#e7e7e7; font-size:76px; font-weight:900; font-style:italic; border-radius:15px; text-shadow:3px 3px #555; }
     .grandv-info h2 { font-size: 20px; margin-bottom: 8px; }
     .grandv-info p { color: #aaa; font-size: 14px; line-height: 1.5; margin-bottom: 14px; }
     @media (max-width: 520px) { .grandv-shortcut { align-items: flex-start; flex-direction: column; } .grandv-art { width: 100%; } }
 
     .row { margin-bottom: 40px; content-visibility: auto; contain-intrinsic-size: auto 360px; }
     .catalog-separator { height: 3px; background: #3a3a3a; margin: 0 0 36px; border-radius: 2px; }
-    .row-header { position: relative; z-index: 4; display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #2a2a2a; padding-bottom: 8px; }
+    .row-header { position:relative; z-index:4; display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; border-bottom:1px solid #303641; padding-bottom:9px; }
     .row-title { font-size: 20px; }
-    .view-all { color: #aaaaaa; text-decoration: none; font-size: 14px; cursor: pointer; }
-    .view-all:hover { color: #ffffff; }
+    .view-all { color:#b4bdcb; text-decoration:none; font-size:14px; cursor:pointer; padding:6px 10px; border:1px solid transparent; border-radius:10px; }
+    .view-all:hover { color:#fff; background:#292e38; border-color:#414957; transform:translateY(-1px); }
     .row-body { position: relative; }
     .row-cards { position: relative; z-index: 1; display: flex; gap: 15px; padding: 12px 8px 16px; margin: -12px -8px -4px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; }
     .row-cards::-webkit-scrollbar { display: none; }
-    .arrow-btn { position:absolute; top:90px; transform:translateY(-50%); display:grid; place-items:center; background:rgba(24,24,24,.82); color:#fff; border:1px solid rgba(255,255,255,.2); width:42px; height:42px; border-radius:50%; cursor:pointer; font-size:20px; z-index:6; box-shadow:0 4px 14px rgba(0,0,0,.28); backdrop-filter:blur(8px); transition:background .2s ease,transform .2s ease,border-color .2s ease; }
-    .arrow-btn:hover { background:#e50914; border-color:#e50914; transform:translateY(-50%) scale(1.07); }
+    .arrow-btn { position:absolute; top:90px; transform:translateY(-50%); display:grid; place-items:center; background:rgba(29,33,41,.9); color:#fff; border:1px solid rgba(255,255,255,.22); width:42px; height:42px; border-radius:15px; cursor:pointer; font-size:20px; z-index:6; box-shadow:0 4px 14px rgba(0,0,0,.28); backdrop-filter:blur(8px); transition:background .2s ease,transform .2s ease,border-color .2s ease,box-shadow .2s ease; }
+    .arrow-btn:hover { background:#414957; border-color:#7b8799; transform:translateY(-50%) scale(1.07); box-shadow:0 7px 18px #0006; }
     .arrow-left { left: 0; display: none; }
     .arrow-right { right: 0; }
     .results-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
     .results-grid .card { width: 100%; }
     .no-results { color: #999999; font-size: 16px; padding: 20px 0; }
-    .card { width: 240px; flex-shrink: 0; position: relative; border: 1px solid transparent; border-radius: 9px; padding: 7px; background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.008)); transform: translateY(0) scale(1); transition: transform .22s ease, border-color .22s ease, background .22s ease, box-shadow .22s ease; }
+    .card { width:240px; flex-shrink:0; position:relative; border:1px solid #ffffff0b; border-radius:17px; padding:8px; background:linear-gradient(145deg,#222630,#1a1d24); transform:translateY(0) scale(1); transition:transform .22s ease,border-color .22s ease,background .22s ease,box-shadow .22s ease; }
     .card a { display: block; text-decoration: none; color: inherit; }
-    .card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background-color: #222; border-radius: 5px; transition: filter .22s ease; }
+    .card img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; background:#222; border-radius:12px; transition:filter .22s ease,transform .25s ease; }
     .card p { margin-top: 8px; font-size: 15px; color: #dddddd; transition: color .22s ease; }
     .card span { display: block; font-size: 12px; color: #888888; margin-top: 3px; }
-    .card:hover, .card:focus-within { z-index: 3; transform: translateY(-3px); border-color: #555; background: #202020; box-shadow: 0 7px 18px rgba(0,0,0,.22); }
-    .card:hover img, .card:focus-within img { filter: brightness(1.035); }
+    .card:hover, .card:focus-within { z-index:3; transform:translateY(-5px); border-color:#687386; background:#262b35; box-shadow:0 12px 26px rgba(0,0,0,.34); }
+    .card:hover img, .card:focus-within img { filter:brightness(1.07); transform:scale(1.012); }
     .card:hover p, .card:focus-within p { color: #fff; }
     @media (prefers-reduced-motion: reduce) { .card, .card img, .card p { transition: none; } .card:hover, .card:focus-within { transform: none; } }
     .site-footer { background: #1a1a1a; border-top: 1px solid #2a2a2a; padding: 24px 5%; margin-top: 35px; color: #aaaaaa; text-align: center; font-size: 13px; line-height: 1.8; }
@@ -93,7 +112,14 @@
     </nav>
     <div class="search-controls" id="gameSearchControls">
       <input type="text" id="searchInput" class="search-input" placeholder="Search games..." oninput="filterGames()">
-      <select id="genreFilter" class="genre-select" onchange="filterGames()"><option value="">Choose genre</option><option value="all-games">All games</option></select>
+      <select id="genreFilter" class="genre-select" multiple aria-hidden="true" tabindex="-1"><option value="all-games">All games</option></select>
+      <div class="filter-wrap">
+        <button id="filterTrigger" class="filter-trigger" type="button" aria-expanded="false" aria-controls="filterMenu"><img src="argazkik/filtroa.png" alt=""><span>Filter</span><span id="filterCount" class="filter-count"></span></button>
+        <div id="filterMenu" class="filter-menu" hidden>
+          <div class="filter-menu-head"><span>Choose genres</span><button type="button" id="clearGenreSelection">Clear</button></div>
+          <div id="filterOptions"></div>
+        </div>
+      </div>
       <button id="clearBtn" class="btn-clear" onclick="resetFilters()">Clear</button>
     </div>
   </div>
@@ -193,10 +219,11 @@
       ].concat(genres.map(function(genre) {
         return makeRow(genre, allItems.filter(function(item) { return (item.game.row || 'Other') === genre; }));
       })).join('');
-      const selected = genreFilter.value;
-      genreFilter.innerHTML = '<option value="">Choose genre</option><option value="all-games">All games</option>';
+      const selected = Array.from(genreFilter.selectedOptions).map(function(option){return option.value;});
+      genreFilter.innerHTML = '<option value="all-games">All games</option>';
       genres.forEach(function(genre) { const option = document.createElement('option'); option.value = genre; option.textContent = genre; genreFilter.appendChild(option); });
-      genreFilter.value = selected === 'all-games' || genres.indexOf(selected) >= 0 ? selected : '';
+      selected.forEach(function(value){const option=Array.from(genreFilter.options).find(function(item){return item.value===value;});if(option)option.selected=true;});
+      renderFilterOptions();
     }
     function loadPopularity() {
       // Render the full catalog immediately; remote statistics must never block first paint.
@@ -223,37 +250,26 @@
     }
     function filterGames() {
       const searchText = document.getElementById('searchInput').value.toLowerCase().trim();
-      const selectedGenre = document.getElementById('genreFilter').value;
+      const selectedGenres = Array.from(document.getElementById('genreFilter').selectedOptions).map(function(option){return option.value;});
+      const allSelected = selectedGenres.indexOf('all-games') >= 0;
       const topBanner = document.getElementById('topBanner');
       const searchResults = document.getElementById('searchResults');
       const resultsGrid = document.getElementById('resultsGrid');
       const resultsTitle = document.getElementById('resultsTitle');
       const clearBtn = document.getElementById('clearBtn');
-      if (searchText === '' && selectedGenre === '') { topBanner.style.display = 'block'; document.getElementById('catalog').style.display = 'block'; searchResults.style.display = 'none'; clearBtn.style.display = 'none'; return; }
+      if (searchText === '' && selectedGenres.length === 0) { topBanner.style.display = 'block'; document.getElementById('catalog').style.display = 'block'; searchResults.style.display = 'none'; clearBtn.style.display = 'none'; return; }
       topBanner.style.display = 'none'; document.getElementById('catalog').style.display = 'none'; searchResults.style.display = 'block'; clearBtn.style.display = 'inline-block';
       const matches = gamesList.map(function(game,index) { return {game:game,index:index}; }).filter(function(item) {
-        return item.game.row !== 'Other Apps & Services' && item.game.title.toLowerCase().includes(searchText) && (selectedGenre === '' || selectedGenre === 'all-games' || (item.game.row || 'Other') === selectedGenre);
+        return item.game.row !== 'Other Apps & Services' && item.game.title.toLowerCase().includes(searchText) && (selectedGenres.length === 0 || allSelected || selectedGenres.indexOf(item.game.row || 'Other') >= 0);
       }).sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
-      resultsTitle.textContent = selectedGenre === 'all-games' ? 'All games (' + matches.length + ')' : (selectedGenre ? selectedGenre + ' games (' + matches.length + ')' : 'Search results (' + matches.length + ')');
+      resultsTitle.textContent = allSelected ? 'All games (' + matches.length + ')' : (selectedGenres.length ? selectedGenres.join(' + ') + ' (' + matches.length + ')' : 'Search results (' + matches.length + ')');
       resultsGrid.innerHTML = matches.length ? matches.map(makeCard).join('') : '<p class="no-results">No games found matching your search.</p>';
     }
     function selectGenre(genreName) {
       const filter = document.getElementById('genreFilter');
       const targetValue = genreName === 'Most Popular' ? 'all-games' : genreName;
-      const matchingOption = Array.from(filter.options).find(function(option) {
-        return option.value === targetValue || option.textContent.trim() === targetValue;
-      });
-      if (matchingOption) {
-        filter.value = matchingOption.value;
-      } else if (targetValue !== 'all-games') {
-        const option = document.createElement('option');
-        option.value = targetValue;
-        option.textContent = targetValue;
-        filter.appendChild(option);
-        filter.value = targetValue;
-      } else {
-        filter.value = 'all-games';
-      }
+      Array.from(filter.options).forEach(function(option){option.selected=option.value===targetValue;});
+      renderFilterOptions();
       document.getElementById('searchInput').value = '';
       filterGames();
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -264,8 +280,39 @@
       event.preventDefault();
       selectGenre(decodeURIComponent(link.getAttribute('data-genre-filter')));
     });
-    function resetFilters() { document.getElementById('searchInput').value = ''; genreFilter.value = ''; filterGames(); }
-    function applyInitialFilter() { if (new URLSearchParams(window.location.search).get('genre') === 'all-games') { genreFilter.value = 'all-games'; filterGames(); } }
+    function renderFilterOptions() {
+      const holder=document.getElementById('filterOptions');
+      if(!holder)return;
+      const selected=new Set(Array.from(genreFilter.selectedOptions).map(function(option){return option.value;}));
+      holder.innerHTML='';
+      Array.from(genreFilter.options).forEach(function(option){
+        const label=document.createElement('label');label.className='filter-option';
+        const checkbox=document.createElement('input');checkbox.type='checkbox';checkbox.value=option.value;checkbox.checked=selected.has(option.value);
+        checkbox.addEventListener('change',function(){
+          if(option.value==='all-games'&&checkbox.checked){Array.from(genreFilter.options).forEach(function(item){item.selected=item.value==='all-games';});}
+          else {
+            const allOption=Array.from(genreFilter.options).find(function(item){return item.value==='all-games';});
+            if(allOption)allOption.selected=false;
+            option.selected=checkbox.checked;
+          }
+          renderFilterOptions();filterGames();
+        });
+        label.appendChild(checkbox);label.appendChild(document.createTextNode(option.textContent));holder.appendChild(label);
+      });
+      updateFilterButton();
+    }
+    function updateFilterButton(){
+      const count=genreFilter.selectedOptions.length,badge=document.getElementById('filterCount'),trigger=document.getElementById('filterTrigger');
+      badge.textContent=count;badge.classList.toggle('visible',count>0);
+      trigger.setAttribute('aria-label',count?'Filter, '+count+' selected':'Filter');
+    }
+    const filterTrigger=document.getElementById('filterTrigger'),filterMenu=document.getElementById('filterMenu');
+    filterTrigger.addEventListener('click',function(){const open=filterMenu.hidden;filterMenu.hidden=!open;filterTrigger.setAttribute('aria-expanded',String(open));});
+    document.getElementById('clearGenreSelection').addEventListener('click',function(){Array.from(genreFilter.options).forEach(function(option){option.selected=false;});renderFilterOptions();filterGames();});
+    document.addEventListener('click',function(event){if(!event.target.closest('.filter-wrap')){filterMenu.hidden=true;filterTrigger.setAttribute('aria-expanded','false');}});
+    document.addEventListener('keydown',function(event){if(event.key==='Escape'){filterMenu.hidden=true;filterTrigger.setAttribute('aria-expanded','false');}});
+    function resetFilters() { document.getElementById('searchInput').value = ''; Array.from(genreFilter.options).forEach(function(option){option.selected=false;}); renderFilterOptions(); filterGames(); }
+    function applyInitialFilter() { if (new URLSearchParams(window.location.search).get('genre') === 'all-games') { Array.from(genreFilter.options).forEach(function(option){option.selected=option.value==='all-games';}); renderFilterOptions(); filterGames(); } }
     function scrollForward(button) { const body = button.parentElement; body.querySelector('.row-cards').scrollLeft += 500; body.querySelector('.arrow-left').style.display = 'block'; }
     function scrollBack(button) { button.parentElement.querySelector('.row-cards').scrollLeft -= 500; }
     loadPopularity();
