@@ -2831,6 +2831,38 @@ const gamesList = [
     "image": window.gameImages?.["Minecraft 26.3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/MilkdromedaStudios/all-of-eaglercraft/refs/heads/main/ArchMC%20Eaglercraft%2026.3.html"
   },
+  {
+    "id": 354,
+    "row": "Other Apps & Services",
+    "title": "YouTube",
+    "addedAt": "2026-11-26",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png",
+    "webUrl": "https://www.youtube.com/"
+  },
+  {
+    "id": 355,
+    "row": "Other Apps & Services",
+    "title": "Instagram",
+    "addedAt": "2026-11-26",
+    "image": "https://www.google.com/s2/favicons?domain=www.instagram.com&sz=128",
+    "webUrl": "https://www.instagram.com/"
+  },
+  {
+    "id": 356,
+    "row": "Other Apps & Services",
+    "title": "GeForce NOW",
+    "addedAt": "2026-11-26",
+    "image": "https://www.google.com/s2/favicons?domain=play.geforcenow.com&sz=128",
+    "webUrl": "https://play.geforcenow.com/"
+  },
+  {
+    "id": 357,
+    "row": "Other Apps & Services",
+    "title": "Nautilus OS",
+    "addedAt": "2026-11-26",
+    "image": "https://www.google.com/s2/favicons?domain=nautilus-os.vercel.app&sz=128",
+    "webUrl": "https://nautilus-os.vercel.app/"
+  },
 ];
 
 window.gamesList = gamesList;
