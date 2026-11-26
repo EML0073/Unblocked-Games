@@ -17,6 +17,11 @@
     .btn-back { color: #cccccc; text-decoration: none; font-size: 13px; white-space: nowrap; }
     .btn-back:hover { color: #ffffff; }
     .game-container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+    body.web-shortcut-mode { width:100%; height:100vh; overflow:hidden; }
+    body.web-shortcut-mode .top-bar, body.web-shortcut-mode .game-header, body.web-shortcut-mode .site-footer, body.web-shortcut-mode .report-overlay { display:none !important; }
+    body.web-shortcut-mode .game-container { width:100%; max-width:none; height:100vh; margin:0; padding:0; }
+    body.web-shortcut-mode .iframe-wrapper { width:100%; height:100%; min-height:100vh; aspect-ratio:auto; border:0; border-radius:0; }
+    body.web-shortcut-mode #gameFrame { width:100%; height:100%; }
     .game-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 15px; flex-wrap: wrap; gap: 15px; }
     .game-info h1 { font-size: 28px; margin-bottom: 6px; }
     .game-views { display: inline-block; margin-left: 8px; color: #aaaaaa; font-size: 13px; }
@@ -359,7 +364,18 @@
       });
       loadGameRating();
       const gameFrame = document.getElementById('gameFrame');
-      if (game.rawUrl) {
+      if (game.webUrl) {
+        document.body.classList.add('web-shortcut-mode');
+        const proxyUrl = new URL('https://unblocked-games-proxy.onrender.com/');
+        proxyUrl.searchParams.set('embed', '1');
+        proxyUrl.searchParams.set('url', game.webUrl);
+        proxyUrl.searchParams.set('lang', localStorage.getItem('unblockedgames-language') || 'en');
+        proxyUrl.searchParams.set('accent', localStorage.getItem('unblockedgames-accent') || '#e50914');
+        proxyUrl.searchParams.set('theme', localStorage.getItem('unblockedgames-theme') || 'dark');
+        gameFrame.title = game.title;
+        gameFrame.allow = 'cross-origin-isolated; fullscreen; autoplay; clipboard-read; clipboard-write';
+        gameFrame.src = proxyUrl.toString();
+      } else if (game.rawUrl) {
         // El cargador usa un mirror que sirve HTML con el tipo MIME correcto.
         loadRawHtmlIntoFrame(gameFrame, game.rawUrl).catch(function(error) {
           console.error('Could not load game HTML:', error);
