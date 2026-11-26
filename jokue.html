@@ -24,15 +24,13 @@
     .rating-stars { display: inline-flex; align-items: center; }
     .rating-star { position: relative; display: inline-block; color: #555555; font-size: 20px; line-height: 1; letter-spacing: 0; }
     .rating-star-fill { position: absolute; inset: 0 auto 0 0; overflow: hidden; color: #ffc83d; white-space: nowrap; }
-    .rating-picker { display: inline-flex; align-items: center; }
-    .rating-half { -webkit-appearance: none; appearance: none; position: relative; display: block; flex: 0 0 15px; width: 15px; height: 32px; min-width: 0; margin: 0; padding: 0; overflow: hidden; border: 0; border-radius: 0; outline: 0; background: transparent !important; box-shadow: none !important; color: transparent; -webkit-text-fill-color: currentColor; -webkit-text-stroke: 1.5px #ffca28; cursor: pointer; font: inherit; font-size: 30px; line-height: 32px; transition: color .12s ease; }
-    .rating-half span { position: absolute; top: 0; left: 0; display: block; width: 30px; height: 32px; pointer-events: none; white-space: nowrap; }
-    .rating-half.left span { left: 0; }
-    .rating-half.right span { left: -15px; }
-    .rating-half.selected { color: #ffca28; -webkit-text-fill-color: #ffca28; -webkit-text-stroke: 1.5px #ffca28; }
-    .rating-half:hover, .rating-half:active { background: transparent !important; box-shadow: none !important; transform: none !important; }
-    .rating-half:focus-visible { outline: 2px solid #ffca28; outline-offset: -2px; border-radius: 2px; }
-    .rating-picker { gap: 0; }
+    .rating-picker { display: inline-flex; align-items: center; gap: 1px; }
+    .rating-star-button { -webkit-appearance: none; appearance: none; position: relative; display: block; width: 30px; height: 32px; flex: 0 0 30px; margin: 0; padding: 0; overflow: hidden; border: 0 !important; border-radius: 0 !important; outline: 0; background: transparent !important; box-shadow: none !important; color: transparent; cursor: pointer; font: inherit; font-size: 30px; line-height: 32px; text-align: left; }
+    .rating-star-button .star-outline, .rating-star-button .star-fill { position: absolute; inset: 0; display: block; width: 30px; height: 32px; white-space: nowrap; pointer-events: none; }
+    .rating-star-button .star-outline { color: #555555; -webkit-text-stroke: 1.5px #ffca28; }
+    .rating-star-button .star-fill { overflow: hidden; width: 0; color: #ffca28; -webkit-text-fill-color: #ffca28; -webkit-text-stroke: 1.5px #ffca28; }
+    .rating-star-button:hover, .rating-star-button:active { background: transparent !important; box-shadow: none !important; transform: none !important; }
+    .rating-star-button:focus-visible { outline: 2px solid #ffca28; outline-offset: -2px; border-radius: 2px !important; }
     .rating-submit { background: #303030; color: #eeeeee; border: 1px solid #555555; padding: 7px 11px; border-radius: 3px; cursor: pointer; }
     .rating-submit:disabled { opacity: .55; cursor: wait; }
     .rating-status { color: #aaaaaa; min-width: 90px; }
@@ -94,11 +92,11 @@
           <span id="ratingCount">(0)</span>
           <span>Rate this game:</span>
           <span class="rating-picker" id="ratingPicker" role="group" aria-label="Choose a rating from half a star to five stars">
-            <button class="rating-half left" type="button" data-rating="0.5" aria-label="0.5 stars"><span>★</span></button><button class="rating-half right" type="button" data-rating="1" aria-label="1 star"><span>★</span></button>
-            <button class="rating-half left" type="button" data-rating="1.5" aria-label="1.5 stars"><span>★</span></button><button class="rating-half right" type="button" data-rating="2" aria-label="2 stars"><span>★</span></button>
-            <button class="rating-half left" type="button" data-rating="2.5" aria-label="2.5 stars"><span>★</span></button><button class="rating-half right" type="button" data-rating="3" aria-label="3 stars"><span>★</span></button>
-            <button class="rating-half left" type="button" data-rating="3.5" aria-label="3.5 stars"><span>★</span></button><button class="rating-half right" type="button" data-rating="4" aria-label="4 stars"><span>★</span></button>
-            <button class="rating-half left" type="button" data-rating="4.5" aria-label="4.5 stars"><span>★</span></button><button class="rating-half right" type="button" data-rating="5" aria-label="5 stars"><span>★</span></button>
+            <button class="rating-star-button" type="button" data-star="1" aria-label="1 star"><span class="star-outline">★</span><span class="star-fill">★</span></button>
+            <button class="rating-star-button" type="button" data-star="2" aria-label="2 stars"><span class="star-outline">★</span><span class="star-fill">★</span></button>
+            <button class="rating-star-button" type="button" data-star="3" aria-label="3 stars"><span class="star-outline">★</span><span class="star-fill">★</span></button>
+            <button class="rating-star-button" type="button" data-star="4" aria-label="4 stars"><span class="star-outline">★</span><span class="star-fill">★</span></button>
+            <button class="rating-star-button" type="button" data-star="5" aria-label="5 stars"><span class="star-outline">★</span><span class="star-fill">★</span></button>
           </span>
           <button class="rating-submit" id="ratingSubmit" type="button">Submit</button>
           <span class="rating-status" id="ratingStatus" aria-live="polite"></span>
@@ -247,16 +245,22 @@
         return voterId;
       }
       function paintRatingPicker(value) {
-        ratingPicker.querySelectorAll('.rating-half').forEach(function(button) {
-          const points = Number(button.dataset.rating);
-          button.classList.toggle('selected', points <= value);
-          button.setAttribute('aria-pressed', points === selectedRating ? 'true' : 'false');
+        ratingPicker.querySelectorAll('.rating-star-button').forEach(function(button) {
+          const star = Number(button.dataset.star);
+          const fill = button.querySelector('.star-fill');
+          fill.style.width = Math.max(0, Math.min(1, value - (star - 1))) * 100 + '%';
+          button.setAttribute('aria-pressed', value === star ? 'true' : 'false');
         });
       }
-      // Preview all stars up to the hovered half-star, without button-like hover styling.
-      ratingPicker.addEventListener('pointerover', function(event) {
-        const button = event.target.closest('button[data-rating]');
-        if (button) paintRatingPicker(Number(button.dataset.rating));
+      function ratingFromPointer(event, button) {
+        const rect = button.getBoundingClientRect();
+        const fraction = (event.clientX - rect.left) / rect.width;
+        return Number(button.dataset.star) - 1 + (fraction < 0.5 ? 0.5 : 1);
+      }
+      // A single continuous star glyph per star avoids the seam created by two clipped half-stars.
+      ratingPicker.addEventListener('pointermove', function(event) {
+        const button = event.target.closest('.rating-star-button');
+        if (button) paintRatingPicker(ratingFromPointer(event, button));
       });
       ratingPicker.addEventListener('pointerleave', function() {
         paintRatingPicker(selectedRating);
@@ -299,9 +303,9 @@
         document.head.appendChild(script);
       }
       ratingPicker.addEventListener('click', function(event) {
-        const button = event.target.closest('button[data-rating]');
+        const button = event.target.closest('.rating-star-button');
         if (!button) return;
-        selectedRating = Number(button.dataset.rating);
+        selectedRating = ratingFromPointer(event, button);
         paintRatingPicker(selectedRating);
         ratingStatusElement.textContent = '';
       });
