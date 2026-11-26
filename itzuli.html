@@ -31,8 +31,7 @@ th{position:sticky;top:0;background:#242424;z-index:1}td:first-child{width:25%;c
  languages.forEach(([lang])=>{const td=document.createElement('td'),input=document.createElement('input');input.type='text';input.value=data[lang]?.[key]??key;input.setAttribute('aria-label',lang+' translation for '+key);input.addEventListener('input',()=>{data[lang][key]=input.value;try{localStorage.setItem('unblockedgames-translation-draft',JSON.stringify(data));}catch(_){}});td.appendChild(input);tr.appendChild(td);});rows.appendChild(tr);shown++;});
  count.textContent=shown+' / '+keys.length+' translations';}
  filter.addEventListener('input',render);document.getElementById('reset').addEventListener('click',()=>{data=JSON.parse(JSON.stringify(original));try{localStorage.removeItem('unblockedgames-translation-draft');}catch(_){}render();});
- document.getElementById('download').addEventListener('click',()=>{const source='window.UNBLOCKED_TRANSLATIONS = '+JSON.stringify(data,null,2)+';
-';const blob=new Blob([source],{type:'text/javascript;charset=utf-8'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='itzuli.js';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);});
+ document.getElementById('download').addEventListener('click',()=>{const source='window.UNBLOCKED_TRANSLATIONS = '+JSON.stringify(data,null,2)+';\\n';const blob=new Blob([source],{type:'text/javascript;charset=utf-8'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='itzuli.js';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);});
  render();
 })();
 </script>
