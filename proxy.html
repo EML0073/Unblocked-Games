@@ -1,89 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="argazkik/UNBLOCKEDgames_favicon.svg?v=2">
-  <meta name="theme-color" content="#121212">
-  <title>UNBLOCKEDgames - Proxy</title>
-  <script src="coi-serviceworker.js"></script>
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{min-height:100%;background:#121212;color:#eee;font-family:Arial,Helvetica,sans-serif}
-    body{min-height:100vh;display:flex;flex-direction:column}
-    .top-bar{position:relative;background:#1a1a1a;padding:10px 4%;border-bottom:1px solid #2a2a2a;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;min-height:55px}
-    .brand-logo{display:block;width:280px;height:56px;object-fit:contain;object-position:left center;filter:brightness(0) invert(1)}
-    .main-nav{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:6px}
-    .nav-tab{color:#aaa;text-decoration:none;padding:9px 13px;border:1px solid transparent;border-radius:12px;font-size:14px;transition:background .18s ease,color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
-    .nav-tab:hover,.nav-tab.active{color:#aaa;background:#303744;border-radius:12px}
-    .nav-tab.active{border-color:#687386}
-    main{flex:1;padding:20px 5% 30px;display:flex;flex-direction:column}
-    .proxy-heading{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px}
-    h1{font-size:22px}
-    .proxy-actions{display:flex;align-items:center;gap:10px}
-    .proxy-actions a,.proxy-note a{color:#ddd;font-size:13px}
-    .proxy-actions a:hover,.proxy-note a:hover{color:#fff}
-    .maximize-btn{color:#eee;background:#303030;border:1px solid #484848;border-radius:5px;padding:8px 12px;font-size:13px;cursor:pointer}
-    .maximize-btn:hover{background:#414141}
-    .proxy-frame-wrap{position:relative;width:100%;height:calc(100vh - 220px);min-height:480px;background:#080808;border:1px solid #333;border-radius:6px;overflow:hidden}
-    .proxy-frame-wrap:fullscreen{width:100vw;height:100vh;min-height:0;border:0;border-radius:0;background:#080808}
-    .proxy-frame-wrap iframe{width:100%;height:100%;border:0;background:#080808;display:block}
-    .proxy-note{color:#999;font-size:12px;margin-top:10px;line-height:1.6}
-    footer{background:#1a1a1a;border-top:1px solid #2a2a2a;padding:18px 5%;color:#aaa;text-align:center;font-size:13px;line-height:1.8}
-    footer a{color:#ddd}
-    @media(max-width:900px){.top-bar{justify-content:center}.top-bar>a{margin:0 auto}.brand-logo{width:255px;height:50px}.main-nav{position:static;transform:none;order:3;width:100%;justify-content:center}}
-    @media(max-width:600px){main{padding:16px 3% 24px}.proxy-frame-wrap{height:72vh;min-height:420px}.proxy-heading{align-items:flex-start}}
-  </style>
-  <link rel="stylesheet" href="estetika.css?v=1">
-</head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#121212">
+<link rel="icon" type="image/svg+xml" href="argazkik/UNBLOCKEDgames_favicon.svg?v=2">
+<title>UNBLOCKEDgames - Proxy</title>
+<script src="coi-serviceworker.js"></script><link rel="stylesheet" href="estetika.css?v=1">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;background:#121212;color:#eef1f6;font-family:Arial,Helvetica,sans-serif}
+body{min-height:100vh;display:flex;flex-direction:column;animation:enter .28s ease both}
+@keyframes enter{from{opacity:.88}to{opacity:1}}
+.top-bar{background:linear-gradient(110deg,#191c22,#20242c);padding:10px 4%;border-bottom:1px solid #303641;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;min-height:76px}
+.brand-logo{display:block;width:280px;height:56px;object-fit:contain;object-position:left center;filter:brightness(0) invert(1)}
+.main-nav{display:flex;align-items:center;gap:6px}
+.nav-tab{color:#b5bac5;text-decoration:none;border:1px solid transparent;padding:9px 14px;border-radius:12px;font-size:14px}
+.nav-tab:hover{background:#2b2f38;border-color:#414754;color:#fff}
+.nav-tab.active{color:#fff;background:#292d35;border-color:#555d6b}
+main{width:100%;max-width:1600px;margin:0 auto;padding:30px 5% 38px;flex:1;display:flex;flex-direction:column;gap:18px}
+.proxy-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.eyebrow{display:flex;align-items:center;gap:8px;color:#aab3c1;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:9px}
+.eyebrow:before{content:"";width:20px;height:2px;background:var(--ug-accent,#e50914);border-radius:2px}
+h1{font-size:clamp(25px,3vw,34px);line-height:1.15;letter-spacing:-.7px;margin-bottom:8px}
+.intro-copy{max-width:650px;color:#aab3c1;font-size:14px;line-height:1.65}
+.proxy-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.proxy-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 14px;border:1px solid #414957;border-radius:12px;background:#252a34;color:#e5e9f0;text-decoration:none;font-size:13px}
+.proxy-actions a:hover{background:#343b47;border-color:#687386}
+.btn-maximize{min-height:42px;padding:9px 16px;border:1px solid var(--ug-accent,#e50914);border-radius:12px;background:var(--ug-accent,#e50914);color:#fff;font-size:13px;font-weight:700;cursor:pointer}
+.proxy-frame-wrap{position:relative;width:100%;height:calc(100vh - 270px);min-height:520px;max-height:1050px;background:#080808;border:1px solid #3a414d;border-radius:18px;overflow:hidden;box-shadow:0 12px 34px #0005}
+.proxy-frame-wrap:fullscreen{width:100vw;height:100vh;max-height:none;min-height:0;border:0;border-radius:0}
+.proxy-frame-wrap iframe{display:block;width:100%;height:100%;border:0;background:#080808}
+.proxy-status{display:flex;align-items:center;gap:9px;color:#9da6b5;font-size:12px;line-height:1.6}
+.status-dot{width:8px;height:8px;flex:0 0 8px;border-radius:50%;background:#56bd83;box-shadow:0 0 0 4px #56bd8318}
+.site-footer{background:#1a1c21;border-top:1px solid #303641;padding:24px 5%;margin-top:20px;color:#aaa;text-align:center;font-size:13px;line-height:1.8}
+.site-footer a{color:#ddd;text-decoration:underline}.site-footer p+p{margin-top:5px}
+body[data-ug-theme="light"]{background:#f4f5f7;color:#202124}
+body[data-ug-theme="light"] .top-bar{background:linear-gradient(110deg,#fff,#edf0f5);border-bottom-color:#d9dee7}
+body[data-ug-theme="light"] .nav-tab{color:#555d6b}
+body[data-ug-theme="light"] .nav-tab.active{color:#202124;background:#e4e8ef;border-color:#c3cad5}
+body[data-ug-theme="light"] .intro-copy,body[data-ug-theme="light"] .eyebrow,body[data-ug-theme="light"] .proxy-status{color:#626875}
+body[data-ug-theme="light"] .proxy-actions a{background:#fff;color:#252a34;border-color:#d5d9e0}
+body[data-ug-theme="light"] .site-footer{background:#eceff3;color:#555d6b;border-top-color:#d9dee7}
+body[data-ug-theme="light"] .site-footer a{color:#303744}
+@media(max-width:900px){.top-bar{justify-content:center}.top-bar>a{margin:0 auto}.brand-logo{width:255px;height:50px}.main-nav{order:3;width:100%;justify-content:center}main{padding:24px 3% 30px}.proxy-frame-wrap{height:72vh;min-height:460px}}
+@media(max-width:600px){main{padding:20px 3% 24px}.proxy-intro{align-items:flex-start}.proxy-actions{width:100%}.proxy-actions a,.proxy-actions button{flex:1}.proxy-frame-wrap{height:70vh;min-height:420px;border-radius:14px}.site-footer{padding:20px 4%}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style></head>
 <body>
-  <header class="top-bar">
-    <a href="index.html" aria-label="UNBLOCKEDgames"><img class="brand-logo" src="argazkik/UNBLOCKEDgames_logo.svg?v=3" alt="UNBLOCKEDgames"></a>
-    <nav class="main-nav" aria-label="Main menu">
-      <a class="nav-tab" href="index.html">Games</a>
-      <a class="nav-tab active" href="proxy.html" aria-current="page">Proxy</a>
-      <a class="nav-tab" href="https://sites.google.com/view/search-internet/google" target="_blank" rel="noopener noreferrer">Launcher</a>
-    </nav>
-  </header>
-  <main>
-    <div class="proxy-heading">
-      <h1>Scramjet Proxy</h1>
-      <div class="proxy-actions">
-        <a href="https://unblocked-games-proxy.onrender.com/" target="_blank" rel="noopener noreferrer">Open in new tab</a>
-        <button class="maximize-btn" id="maximizeProxy" type="button">Fullscreen</button>
-      </div>
-    </div>
-    <div class="proxy-frame-wrap" id="proxyFrameWrap">
-      <iframe
-        id="scramjetFrame"
-        src="https://unblocked-games-proxy.onrender.com/"
-        title="Scramjet Proxy"
-        allow="cross-origin-isolated; clipboard-read; clipboard-write; fullscreen; autoplay"
-        referrerpolicy="strict-origin-when-cross-origin">
-      </iframe>
-    </div>
-    <p class="proxy-note">Some websites may not work correctly through the embedded proxy. The browser is designed to stay inside this page.</p>
-  </main>
-  <footer>
-    <a href="https://github.com/EML0073/Unblocked-Games">UNBLOCKEDgames</a> © 2026 by <a href="https://github.com/EML0073">EML_0073</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
-    <p>Games and their respective assets belong to their original creators and are not covered by this website's license.</p>
-    <p>Contact/Feedback: <a href="mailto:eml_0073@ni.eus">eml_0073@ni.eus</a> · <a href="pribatutasuna.html">Privacy Policy</a></p>
-  </footer>
-  <script>
-    const proxyFrameWrap = document.getElementById('proxyFrameWrap');
-    document.getElementById('maximizeProxy').addEventListener('click', async function () {
-      try {
-        if (!document.fullscreenElement) await proxyFrameWrap.requestFullscreen();
-        else await document.exitFullscreen();
-      } catch (error) {
-        console.error('Could not toggle proxy fullscreen:', error);
-      }
-    });
-    document.addEventListener('fullscreenchange', function () {
-      document.getElementById('maximizeProxy').textContent = document.fullscreenElement ? 'Exit fullscreen' : 'Fullscreen';
-    });
-  </script>
-  <script src="itzuli.js"></script>
-  <script src="ezarpenak.js"></script>
-</body>
-</html>
+<header class="top-bar">
+<a href="index.html" aria-label="UNBLOCKEDgames"><img class="brand-logo" src="argazkik/UNBLOCKEDgames_logo.svg?v=3" alt="UNBLOCKEDgames"></a>
+<nav class="main-nav" aria-label="Main menu"><a class="nav-tab" href="index.html">Games</a><a class="nav-tab active" href="proxy.html" aria-current="page">Proxy</a><a class="nav-tab" href="https://sites.google.com/view/search-internet/google" target="_blank" rel="noopener noreferrer">Launcher</a></nav>
+</header>
+<main>
+<section class="proxy-intro"><div><div class="eyebrow">UNBLOCKEDgames · Browser</div><h1>Scramjet Proxy</h1><p class="intro-copy">Browse the web directly from UNBLOCKEDgames, without leaving this page.</p></div>
+<div class="proxy-actions"><a href="https://unblocked-games-proxy.onrender.com/" target="_blank" rel="noopener noreferrer">Open in new tab ↗</a><button class="btn-maximize" id="maximizeProxy" type="button">Fullscreen</button></div></section>
+<div class="proxy-frame-wrap" id="proxyFrameWrap"><iframe id="scramjetFrame" src="https://unblocked-games-proxy.onrender.com/" title="Scramjet Proxy" allow="cross-origin-isolated; clipboard-read; clipboard-write; fullscreen; autoplay" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+<p class="proxy-status"><span class="status-dot" aria-hidden="true"></span>Proxy embedded · Some websites may not work correctly through the embedded browser.</p>
+</main>
+<footer class="site-footer"><a href="https://github.com/EML0073/Unblocked-Games">UNBLOCKEDgames</a> © 2026 by <a href="https://github.com/EML0073">EML_0073</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><p>Games and their respective assets belong to their original creators and are not covered by this website's license.</p><p>Contact/Feedback: <a href="mailto:eml_0073@ni.eus">eml_0073@ni.eus</a> · <a href="pribatutasuna.html">Privacy Policy</a></p></footer>
+<script>
+const proxyFrameWrap=document.getElementById('proxyFrameWrap');
+const maximizeProxy=document.getElementById('maximizeProxy');
+maximizeProxy.addEventListener('click',async function(){try{if(!document.fullscreenElement)await proxyFrameWrap.requestFullscreen();else await document.exitFullscreen()}catch(error){console.error('Could not toggle proxy fullscreen:',error)}});
+document.addEventListener('fullscreenchange',function(){maximizeProxy.textContent=document.fullscreenElement?'Exit fullscreen':'Fullscreen'});
+</script>
+<script src="itzuli.js"></script><script src="ezarpenak.js"></script>
+</body></html>
