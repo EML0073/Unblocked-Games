@@ -72,6 +72,7 @@
 
     .row { margin-bottom: 40px; overflow: visible; }
     .catalog-separator { height: 3px; background: #3a3a3a; margin: 0 0 36px; border-radius: 2px; }
+    .catalog-separator-strong { height: 6px; background: linear-gradient(90deg,#555d6b,#343944); margin: 4px 0 38px; border-radius: 4px; box-shadow: 0 2px 10px #0005; }
     .row-header { position:relative; z-index:12; display:flex; justify-content:space-between; align-items:center; gap:14px; min-width:0; margin-bottom:12px; border-bottom:1px solid #303641; padding:0 6px 9px; overflow:visible; }
     .row-title { font-size: 20px; }
     .view-all { position:relative; z-index:13; flex:0 0 auto; white-space:nowrap; margin-left:8px; color:#b4bdcb; text-decoration:none; font-size:14px; cursor:pointer; padding:7px 12px; border:1px solid transparent; border-radius:12px; box-sizing:border-box; }
@@ -207,16 +208,20 @@
         '<div class="row-cards">' + items.map(makeCard).join('') + '</div></div></section>';
     }
     function renderCatalog() {
-      const allItems = gamesList.map(function(game,index) { return {game:game,index:index}; }).filter(function(item) { return item.game.row !== 'Other Apps & Services'; });
-      const regularItems = allItems;
-      const genres = Array.from(new Set(regularItems.map(function(item) { return item.game.row || 'Other'; }))).sort(function(a,b) { return a.localeCompare(b); });
+      const allItems = gamesList.map(function(game,index) { return {game:game,index:index}; });
+      const otherAppsItems = allItems.filter(function(item) { return item.game.row === 'Other Apps & Services'; });
+      const regularItems = allItems.filter(function(item) { return item.game.row !== 'Other Apps & Services'; });
+      const genres = Array.from(new Set(allItems.map(function(item) { return item.game.row || 'Other'; }))).sort(function(a,b) { return a.localeCompare(b); });
+      const gameGenres = genres.filter(function(genre) { return genre !== 'Other Apps & Services'; });
       const popular = regularItems.slice().sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
       const recent = regularItems.filter(function(item) { return item.game.addedAt && (Date.now() - new Date(item.game.addedAt + 'T00:00:00').getTime()) < 10 * 24 * 60 * 60 * 1000; }).sort(function(a,b) { return new Date(b.game.addedAt) - new Date(a.game.addedAt) || b.index - a.index; });
       catalog.innerHTML = [
+        makeRow('Other Apps & Services', otherAppsItems),
+        otherAppsItems.length ? '<div class="catalog-separator catalog-separator-strong" role="separator"></div>' : '',
         makeRow('Most Popular', popular),
         makeRow('Recently Added', recent)
-      ].concat(genres.map(function(genre) {
-        return makeRow(genre, allItems.filter(function(item) { return (item.game.row || 'Other') === genre; }));
+      ].concat(gameGenres.map(function(genre) {
+        return makeRow(genre, regularItems.filter(function(item) { return (item.game.row || 'Other') === genre; }));
       })).join('');
       const selected = Array.from(genreFilter.selectedOptions).map(function(option){return option.value;});
       genreFilter.innerHTML = '<option value="all-games">All games</option>';
@@ -264,7 +269,8 @@
       const recentCutoff = Date.now() - 10 * 24 * 60 * 60 * 1000;
       const matches = gamesList.map(function(game,index) { return {game:game,index:index}; }).filter(function(item) {
         const addedTime = item.game.addedAt ? new Date(item.game.addedAt + 'T00:00:00').getTime() : 0;
-        return item.game.row !== 'Other Apps & Services' && item.game.title.toLowerCase().includes(searchText) && (selectedGenreNames.length === 0 || allSelected || selectedGenreNames.indexOf(item.game.row || 'Other') >= 0) && (!recentOnly || (addedTime > 0 && addedTime >= recentCutoff));
+        const isOtherApp = item.game.row === 'Other Apps & Services';
+        return item.game.title.toLowerCase().includes(searchText) && (allSelected ? !isOtherApp : (selectedGenreNames.length === 0 || selectedGenreNames.indexOf(item.game.row || 'Other') >= 0)) && (!recentOnly || (!isOtherApp && addedTime > 0 && addedTime >= recentCutoff));
       }).sort(function(a,b) { return recentOnly ? (new Date(b.game.addedAt) - new Date(a.game.addedAt) || b.index - a.index) : (gameViews(b.game,b.index) - gameViews(a.game,a.index)); });
       resultsTitle.textContent = recentOnly ? 'Recently Added' : (allSelected ? 'All games (' + matches.length + ')' : (selectedGenres.length ? selectedGenres.join(' + ') + ' (' + matches.length + ')' : 'Search results (' + matches.length + ')'));
       resultsGrid.innerHTML = matches.length ? matches.map(makeCard).join('') : '<p class="no-results">No games found matching your search.</p>';
