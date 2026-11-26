@@ -20,6 +20,20 @@
     .game-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 15px; flex-wrap: wrap; gap: 15px; }
     .game-info h1 { font-size: 28px; margin-bottom: 6px; }
     .game-views { display: inline-block; margin-left: 8px; color: #aaaaaa; font-size: 13px; }
+    .game-rating { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; margin-top: 9px; color: #bbbbbb; font-size: 13px; }
+    .rating-stars { display: inline-flex; align-items: center; }
+    .rating-star { position: relative; display: inline-block; color: #555555; font-size: 20px; line-height: 1; letter-spacing: 0; }
+    .rating-star-fill { position: absolute; inset: 0 auto 0 0; overflow: hidden; color: #ffc83d; white-space: nowrap; }
+    .rating-picker { display: inline-flex; align-items: center; }
+    .rating-half { position: relative; width: 18px; height: 32px; padding: 0; overflow: hidden; border: 0; background: transparent; color: #555555; cursor: pointer; font-size: 30px; line-height: 32px; }
+    .rating-half span { position: absolute; top: 0; width: 36px; height: 32px; pointer-events: none; }
+    .rating-half.left span { left: 0; }
+    .rating-half.right span { left: -18px; }
+    .rating-half.selected { color: #ffc83d; }
+    .rating-half:focus-visible { outline: 2px solid #e50914; outline-offset: -2px; border-radius: 3px; }
+    .rating-submit { background: #303030; color: #eeeeee; border: 1px solid #555555; padding: 7px 11px; border-radius: 3px; cursor: pointer; }
+    .rating-submit:disabled { opacity: .55; cursor: wait; }
+    .rating-status { color: #aaaaaa; min-width: 90px; }
     .game-genre { display: inline-block; background-color: #262626; color: #bbbbbb; border: 1px solid #3a3a3a; padding: 4px 10px; font-size: 13px; border-radius: 3px; }
     .btn-maximize { background-color: #e50914; color: #ffffff; border: none; padding: 10px 18px; font-size: 14px; font-weight: bold; border-radius: 3px; cursor: pointer; }
     .btn-maximize:hover { background-color: #c40812; }
@@ -72,6 +86,21 @@
         <h1 id="gameTitle">Loading...</h1>
         <span class="game-genre" id="gameGenre">Genre</span>
         <span class="game-views" id="gameViews">Views: loading...</span>
+        <div class="game-rating" id="gameRating" aria-label="Game rating">
+          <span id="ratingAverage">No ratings yet</span>
+          <span class="rating-stars" id="ratingAverageStars" aria-hidden="true"></span>
+          <span id="ratingCount">(0)</span>
+          <span>Rate this game:</span>
+          <span class="rating-picker" id="ratingPicker" role="group" aria-label="Choose a rating from half a star to five stars">
+            <button class="rating-half left" type="button" data-rating="0.5" aria-label="0.5 stars"><span>★</span></button><button class="rating-half right" type="button" data-rating="1" aria-label="1 star"><span>★</span></button>
+            <button class="rating-half left" type="button" data-rating="1.5" aria-label="1.5 stars"><span>★</span></button><button class="rating-half right" type="button" data-rating="2" aria-label="2 stars"><span>★</span></button>
+            <button class="rating-half left" type="button" data-rating="2.5" aria-label="2.5 stars"><span>★</span></button><button class="rating-half right" type="button" data-rating="3" aria-label="3 stars"><span>★</span></button>
+            <button class="rating-half left" type="button" data-rating="3.5" aria-label="3.5 stars"><span>★</span></button><button class="rating-half right" type="button" data-rating="4" aria-label="4 stars"><span>★</span></button>
+            <button class="rating-half left" type="button" data-rating="4.5" aria-label="4.5 stars"><span>★</span></button><button class="rating-half right" type="button" data-rating="5" aria-label="5 stars"><span>★</span></button>
+          </span>
+          <button class="rating-submit" id="ratingSubmit" type="button">Submit</button>
+          <span class="rating-status" id="ratingStatus" aria-live="polite"></span>
+        </div>
       </div>
       <div class="game-actions">
         <button class="btn-report" type="button" onclick="openReport()">Report a problem</button>
@@ -195,6 +224,101 @@
           document.head.appendChild(script);
         }
       } else { viewsElement.textContent = 'Views unavailable'; }
+      // Game ratings share the same Apps Script deployment as the visit counter.
+      const ratingAverageElement = document.getElementById('ratingAverage');
+      const ratingStarsElement = document.getElementById('ratingAverageStars');
+      const ratingCountElement = document.getElementById('ratingCount');
+      const ratingStatusElement = document.getElementById('ratingStatus');
+      const ratingSubmitButton = document.getElementById('ratingSubmit');
+      const ratingPicker = document.getElementById('ratingPicker');
+      let selectedRating = 0;
+      let savedRating = 0;
+      function getRatingVoterId() {
+        const key = 'jokuk-rating-voter-id';
+        let voterId = localStorage.getItem(key);
+        if (!voterId) {
+          voterId = (window.crypto && crypto.randomUUID)
+            ? crypto.randomUUID()
+            : 'voter-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
+          localStorage.setItem(key, voterId);
+        }
+        return voterId;
+      }
+      function paintRatingPicker(value) {
+        ratingPicker.querySelectorAll('.rating-half').forEach(function(button) {
+          const points = Number(button.dataset.rating);
+          button.classList.toggle('selected', points <= value);
+          button.setAttribute('aria-pressed', points === value ? 'true' : 'false');
+        });
+      }
+      function paintAverage(average, count) {
+        const safeAverage = Math.max(0, Math.min(5, Number(average) || 0));
+        ratingAverageElement.textContent = count ? safeAverage.toFixed(1) + ' / 5' : 'No ratings yet';
+        ratingCountElement.textContent = '(' + (Number(count) || 0) + ')';
+        ratingStarsElement.innerHTML = '';
+        for (let i = 1; i <= 5; i++) {
+          const star = document.createElement('span');
+          star.className = 'rating-star';
+          star.textContent = '★';
+          const fill = document.createElement('span');
+          fill.className = 'rating-star-fill';
+          fill.textContent = '★';
+          fill.style.width = Math.max(0, Math.min(100, (safeAverage - (i - 1)) * 100)) + '%';
+          star.appendChild(fill);
+          ratingStarsElement.appendChild(star);
+        }
+      }
+      function loadGameRating() {
+        const callbackName = 'jokukRatingCallback';
+        window[callbackName] = function(data) {
+          const result = data && data.ratings && data.ratings[stableId];
+          paintAverage(result ? result.average : 0, result ? result.count : 0);
+          savedRating = result && Number(result.yourRating) ? Number(result.yourRating) : 0;
+          if (!selectedRating && savedRating) selectedRating = savedRating;
+          paintRatingPicker(selectedRating);
+          delete window[callbackName];
+          script.remove();
+        };
+        const script = document.createElement('script');
+        script.src = APPS_SCRIPT_URL + '?callback=' + callbackName + '&voterId=' + encodeURIComponent(getRatingVoterId()) + '&t=' + Date.now();
+        script.onerror = function() {
+          ratingStatusElement.textContent = 'Ratings unavailable';
+          delete window[callbackName];
+          script.remove();
+        };
+        document.head.appendChild(script);
+      }
+      ratingPicker.addEventListener('click', function(event) {
+        const button = event.target.closest('button[data-rating]');
+        if (!button) return;
+        selectedRating = Number(button.dataset.rating);
+        paintRatingPicker(selectedRating);
+        ratingStatusElement.textContent = '';
+      });
+      ratingSubmitButton.addEventListener('click', function() {
+        if (!selectedRating) {
+          ratingStatusElement.textContent = 'Choose a rating first';
+          return;
+        }
+        ratingSubmitButton.disabled = true;
+        ratingStatusElement.textContent = 'Submitting...';
+        fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ action: 'rate', id: stableId, voterId: getRatingVoterId(), rating: selectedRating })
+        }).then(function() {
+          savedRating = selectedRating;
+          ratingStatusElement.textContent = 'Rating submitted!';
+          setTimeout(loadGameRating, 700);
+        }).catch(function(error) {
+          console.error('Could not submit game rating:', error);
+          ratingStatusElement.textContent = 'Could not submit rating';
+        }).finally(function() {
+          ratingSubmitButton.disabled = false;
+        });
+      });
+      loadGameRating();
       const gameFrame = document.getElementById('gameFrame');
       if (game.rawUrl) {
         // El cargador usa un mirror que sirve HTML con el tipo MIME correcto.
