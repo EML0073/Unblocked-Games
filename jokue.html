@@ -194,7 +194,7 @@
           // Serve repository HTML from its real CDN URL instead of a blob URL.
           // This preserves the document origin, relative asset paths and game APIs.
           if (!/^https:\/\/api\.github\.com\/gists\//i.test(candidate) &&
-              !/^https:\/\/gist\\.githubusercontent\\.com\//i.test(String(url))) {
+              !/^https:\/\/gist\.githubusercontent\.com\//i.test(String(url))) {
             frame.dataset.loadingFailed = 'false';
             frame.src = candidate;
             frame.dataset.sourceUrl = candidate;
