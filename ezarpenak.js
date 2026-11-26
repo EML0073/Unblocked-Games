@@ -80,7 +80,7 @@
         const original=record.original;
         const trimmed=original.trim();
         if (!trimmed) return;
-        const translated=language==='en' ? original : (dictionary[trimmed] || trimmed);
+        const translated=dictionary[trimmed] || trimmed;
         record.translated=translated;
         if (node.nodeValue!==translated) node.nodeValue=translated;
       }
@@ -91,12 +91,12 @@
           const key='data-ug-original-'+attr;
           if (!el.hasAttribute(key)) el.setAttribute(key,el.getAttribute(attr));
           const original=el.getAttribute(key);
-          el.setAttribute(attr,language==='en'?original:(dictionary[original]||original));
+          el.setAttribute(attr,dictionary[original]||original);
         });
         if (el.matches('input[type="button"],input[type="submit"]')) {
           if (!el.hasAttribute('data-ug-original-value')) el.setAttribute('data-ug-original-value',el.value);
           const original=el.getAttribute('data-ug-original-value');
-          el.value=language==='en'?original:(dictionary[original]||original);
+          el.value=dictionary[original]||original;
         }
       }
       function translateTree(root) {
@@ -113,7 +113,7 @@
       if (document.title) {
         if (!document.documentElement.dataset.ugOriginalTitle) document.documentElement.dataset.ugOriginalTitle=document.title;
         const originalTitle=document.documentElement.dataset.ugOriginalTitle;
-        document.title=language==='en'?originalTitle:(dictionary[originalTitle]||originalTitle);
+        document.title=dictionary[originalTitle]||originalTitle;
       }
       panel.querySelectorAll('[data-lang]').forEach(el=>{
         el.style.outline=el.dataset.lang===language?'2px solid '+accent:'none';
