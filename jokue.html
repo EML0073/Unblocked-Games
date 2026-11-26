@@ -148,7 +148,7 @@
         const cdn = source.match(/^https:\/\/(?:cdn|fastly|gcore)\.jsdelivr\.net\/gh\/([^/]+)\/([^@/]+)@([^/]+)\/(.+)$/);
         const raw = source.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
         const gist = source.match(/^https:\/\/gist\.githubusercontent\.com\/[^/]+\/([a-f0-9]+)\/raw\/[^/]+\/([^/?#]+)$/i);
-        if (gist) return [source, 'https://api.github.com/gists/' + gist[1]];
+        if (gist) return ['https://api.github.com/gists/' + gist[1], source];
         if (cdn) {
           const owner=cdn[1], repo=cdn[2], branch=cdn[3], file=cdn[4];
           const rawUrl='https://raw.githubusercontent.com/'+owner+'/'+repo+'/'+branch+'/'+file;
@@ -190,6 +190,15 @@
           }
           if(!/<\\s*!doctype\\s+html|<\\s*html[\\s>]|<\\s*(script|canvas|body|head)[\\s>]/i.test(html)) {
             throw new Error('El servidor no ha devuelto contenido HTML');
+          }
+          // Serve repository HTML from its real CDN URL instead of a blob URL.
+          // This preserves the document origin, relative asset paths and game APIs.
+          if (!/^https:\/\/api\\.github\\.com\/gists\//i.test(candidate) &&
+              !/^https:\/\/gist\\.githubusercontent\\.com\//i.test(String(url))) {
+            frame.dataset.loadingFailed = 'false';
+            frame.src = candidate;
+            frame.dataset.sourceUrl = candidate;
+            return;
           }
           const base='<base href="'+new URL('.',baseUrl).href.replace(/"/g,'&quot;')+'">';
           const documentHtml=/<head(?:\s[^>]*)?>/i.test(html)
