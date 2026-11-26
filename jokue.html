@@ -25,12 +25,14 @@
     .rating-star { position: relative; display: inline-block; color: #555555; font-size: 20px; line-height: 1; letter-spacing: 0; }
     .rating-star-fill { position: absolute; inset: 0 auto 0 0; overflow: hidden; color: #ffc83d; white-space: nowrap; }
     .rating-picker { display: inline-flex; align-items: center; }
-    .rating-half { position: relative; width: 18px; height: 32px; padding: 0; overflow: hidden; border: 0; background: transparent; color: #555555; cursor: pointer; font-size: 30px; line-height: 32px; }
+    .rating-half { -webkit-appearance: none; appearance: none; position: relative; display: block; flex: 0 0 18px; width: 18px; height: 32px; min-width: 0; margin: 0; padding: 0; overflow: hidden; border: 0; border-radius: 0; outline: 0; background: transparent !important; box-shadow: none !important; color: #555555; cursor: pointer; font: inherit; font-size: 30px; line-height: 32px; transition: color .12s ease; }
     .rating-half span { position: absolute; top: 0; width: 36px; height: 32px; pointer-events: none; }
     .rating-half.left span { left: 0; }
     .rating-half.right span { left: -18px; }
-    .rating-half.selected { color: #ffc83d; }
-    .rating-half:focus-visible { outline: 2px solid #e50914; outline-offset: -2px; border-radius: 3px; }
+    .rating-half.selected { color: #ffca28; }
+    .rating-half:hover, .rating-half:active { background: transparent !important; box-shadow: none !important; transform: none !important; }
+    .rating-half:focus-visible { outline: 2px solid #ffca28; outline-offset: -2px; border-radius: 2px; }
+    .rating-picker { gap: 0; }
     .rating-submit { background: #303030; color: #eeeeee; border: 1px solid #555555; padding: 7px 11px; border-radius: 3px; cursor: pointer; }
     .rating-submit:disabled { opacity: .55; cursor: wait; }
     .rating-status { color: #aaaaaa; min-width: 90px; }
@@ -248,9 +250,17 @@
         ratingPicker.querySelectorAll('.rating-half').forEach(function(button) {
           const points = Number(button.dataset.rating);
           button.classList.toggle('selected', points <= value);
-          button.setAttribute('aria-pressed', points === value ? 'true' : 'false');
+          button.setAttribute('aria-pressed', points === selectedRating ? 'true' : 'false');
         });
       }
+      // Preview all stars up to the hovered half-star, without button-like hover styling.
+      ratingPicker.addEventListener('pointerover', function(event) {
+        const button = event.target.closest('button[data-rating]');
+        if (button) paintRatingPicker(Number(button.dataset.rating));
+      });
+      ratingPicker.addEventListener('pointerleave', function() {
+        paintRatingPicker(selectedRating);
+      });
       function paintAverage(average, count) {
         const safeAverage = Math.max(0, Math.min(5, Number(average) || 0));
         ratingAverageElement.textContent = count ? safeAverage.toFixed(1) + ' / 5' : 'No ratings yet';
