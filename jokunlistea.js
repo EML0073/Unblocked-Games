@@ -2860,7 +2860,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "Nautilus OS",
     "addedAt": "2026-11-26",
-    "image": "https://avatars.githubusercontent.com/u/240241840?s=280&v=4",
+    "image": window.gameImages?.["Nautilus"] || "",
     "rawUrl": "https://raw.githubusercontent.com/nautilus-os/NautilusOS/refs/heads/main/index.html"
   },
 ];
