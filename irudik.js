@@ -1,10 +1,10 @@
 // Añade aquí la URL directa de la imagen correspondiente a cada juego.
 // Formato: "Título del juego": "https://..."
 const gameImages = {
-  "2048": "",
+  "2048": "https://upload.wikimedia.org/wikipedia/commons/1/18/2048_logo.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original",
   "Minecraft 26.2": "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/minecraft.webp",
-  "1 On 1 Soccer": "",
-  "1 On 1 Tennis": "",
+  "1 On 1 Soccer": "https://tcf.admeen.org/game/4000/3689/400x246/1-on-1-soccer.jpg",
+  "1 On 1 Tennis": "https://agar.cc/games/wp-content/uploads/2025/05/1-on-1-tennis.jpg",
   "Minecraft 1.12": "",
   "Minecraft 1.12 WASM": "",
   "Minecraft 1.5": "",
