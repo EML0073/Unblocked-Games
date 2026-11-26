@@ -35,40 +35,46 @@ if (typeof window === "undefined") {
       console.error("Proxy isolation requires HTTPS and Service Worker support.");
       return;
     }
+    if (sessionStorage.getItem(key)) {
+      console.error("Proxy isolation is still unavailable after the Service Worker reload.");
+      return;
+    }
 
-    const reloadOnce = () => {
-      if (sessionStorage.getItem(key)) {
-        console.error("Proxy isolation is still unavailable after the Service Worker reload.");
-        return;
-      }
-      sessionStorage.setItem(key, "1");
-      window.location.reload();
-    };
-
-    // Listen before registering/updating so a fast activation is not missed.
-    navigator.serviceWorker.addEventListener("controllerchange", reloadOnce, { once: true });
+    let resolveControllerChange;
+    const controllerChanged = new Promise(resolve => {
+      resolveControllerChange = resolve;
+      navigator.serviceWorker.addEventListener("controllerchange", resolve, { once: true });
+    });
 
     try {
       const scriptURL = new URL(document.currentScript.src, location.href);
-      let registration = await navigator.serviceWorker.register(scriptURL.href, {
+      const registration = await navigator.serviceWorker.register(scriptURL.href, {
         scope: "/Unblocked-Games/",
         updateViaCache: "none"
       });
+
+      // Ask the browser to check GitHub Pages for a newer worker script.
       await registration.update();
 
-      // A stale registration may already control this page. Force a fresh
-      // installation so the navigation response receives the COOP/COEP headers.
-      if (navigator.serviceWorker.controller && !window.crossOriginIsolated) {
-        await registration.unregister();
-        registration = await navigator.serviceWorker.register(scriptURL.href, {
-          scope: "/Unblocked-Games/",
-          updateViaCache: "none"
+      // Do not reload while an older worker still controls the page. Wait
+      // until the new worker has activated and claimed its clients first.
+      const installingWorker = registration.installing || registration.waiting;
+      if (installingWorker) {
+        await new Promise(resolve => {
+          if (installingWorker.state === "activated") return resolve();
+          installingWorker.addEventListener("statechange", () => {
+            if (installingWorker.state === "activated") resolve();
+          });
         });
-        await registration.update();
+      }
+
+      if (!navigator.serviceWorker.controller) {
+        await controllerChanged;
       }
 
       if (navigator.serviceWorker.controller && !window.crossOriginIsolated) {
-        reloadOnce();
+        sessionStorage.setItem(key, "1");
+        window.location.reload();
       }
     } catch (error) {
       console.error("Could not install/update the proxy isolation Service Worker:", error);
