@@ -55,6 +55,16 @@
         /* USER ACCENT RULES */
         :root{--ug-accent:${accent};--ug-accent-soft:${accent}22;--ug-accent-shadow:${accent}44;--accent-color:${accent}}
         a:not(.brand-logo):hover{border-color:var(--ug-accent)!important}
+        /* Accent-coloured glow for interactive surfaces and focus states. */
+        button:hover:not(.rating-star-button):not(.rating-half),.btn:hover,.nav-tab:hover,.nav-link:hover,.filter-trigger:hover,.view-all:hover,.arrow-btn:hover,.btn-back:hover{box-shadow:0 6px 18px var(--ug-accent-shadow)!important}
+        button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline-color:var(--ug-accent)!important;box-shadow:0 0 0 3px var(--ug-accent-soft)!important}
+        input:focus,select:focus,textarea:focus{box-shadow:0 0 0 3px var(--ug-accent-shadow)!important}
+        .btn-play{box-shadow:0 5px 16px var(--ug-accent-shadow)!important}
+        .btn-play:hover,.btn-maximize:hover{box-shadow:0 7px 22px var(--ug-accent-shadow)!important}
+        #ug-settings-trigger{box-shadow:0 3px 14px var(--ug-accent-shadow)!important}
+        #ug-settings-trigger:hover{box-shadow:0 6px 18px var(--ug-accent-shadow)!important}
+        .iframe-wrapper,.proxy-frame-wrap{box-shadow:0 10px 30px var(--ug-accent-shadow)!important}
+        .report-dialog,.filter-menu,#ug-settings-panel{box-shadow:0 16px 38px var(--ug-accent-shadow)!important}
         .btn-play,.btn-maximize{background:var(--ug-accent)!important;color:#fff!important;border-color:var(--ug-accent)!important}
         .btn-play:hover,.btn-maximize:hover{background:var(--ug-accent)!important;color:#fff!important;filter:brightness(.88)}
         .view-all:hover{color:#b4bdcb!important}
