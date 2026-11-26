@@ -59,6 +59,8 @@
         .view-all:hover{color:#b4bdcb!important}
         .nav-tab:hover{color:#b5bac5!important}
         .filter-trigger:hover{color:#e8ebf1!important}
+        .arrow-btn:hover{transform:translateY(-50%) scale(1.015)!important}
+        .btn-maximize:hover,.btn-report-send:hover,.pagination button.active:hover,.filter-button.active:hover{background:#343b47!important;color:inherit!important}
         .card:hover,.game-card:hover,.game:hover,.game-item:hover,.game-tile:hover,.game-box:hover{background:var(--ug-accent-soft)!important;border-color:var(--ug-accent)!important;box-shadow:0 7px 24px var(--ug-accent-shadow)!important;transform:translateY(-2px)}
         .card:hover img,.game-card:hover img,.game:hover img{filter:drop-shadow(0 3px 7px var(--ug-accent-shadow))}
         button:hover,.btn:hover,.nav-tab:hover,.nav-link:hover{border-color:var(--ug-accent)!important}
