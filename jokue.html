@@ -208,15 +208,10 @@
           if(!/<\s*!doctype\s+html|<\s*html[\s>]|<\s*(script|canvas|body|head)[\s>]/i.test(html)) {
             throw new Error('El servidor no ha devuelto contenido HTML');
           }
-          // Serve repository HTML from its real CDN URL instead of a blob URL.
-          // This preserves the document origin, relative asset paths and game APIs.
-          if (!/^https:\/\/api\.github\.com\/gists\//i.test(candidate) &&
-              !/^https:\/\/gist\.githubusercontent\.com\//i.test(String(url))) {
-            frame.dataset.loadingFailed = 'false';
-            frame.src = candidate;
-            frame.dataset.sourceUrl = candidate;
-            return;
-          }
+          // Algunos servidores GitHub/CDN entregan archivos .html como text/plain.
+          // Cargar esa URL directamente en el iframe muestra el código fuente.
+          // Tras validar que la respuesta es HTML, crear un Blob text/html y
+          // conservar la URL base original para resolver rutas relativas.
           const base='<base href="'+new URL('.',baseUrl).href.replace(/"/g,'&quot;')+'">';
           const documentHtml=/<head(?:\s[^>]*)?>/i.test(html)
             ? html.replace(/<head(?:\s[^>]*)?>/i,match=>match+base)
