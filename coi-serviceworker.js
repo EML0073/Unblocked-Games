@@ -43,25 +43,14 @@ if (typeof window === "undefined") {
       console.warn("Proxy page is controlled but is not cross-origin isolated. Check COEP/CORP iframe responses.");
       return;
     }
+    const reloadOnce = () => {
+      if (sessionStorage.getItem(key)) return;
+      sessionStorage.setItem(key, "1");
+      window.location.reload();
+    };
+    navigator.serviceWorker.addEventListener("controllerchange", reloadOnce, { once: true });
     navigator.serviceWorker.register(document.currentScript.src, {
       scope: "/Unblocked-Games/"
-    }).then(registration => {
-      const reloadOnce = () => {
-        if (sessionStorage.getItem(key)) return;
-        sessionStorage.setItem(key, "1");
-        window.location.reload();
-      };
-      if (registration.active) {
-        reloadOnce();
-        return;
-      }
-      registration.addEventListener("updatefound", () => {
-        const worker = registration.installing;
-        if (!worker) return;
-        worker.addEventListener("statechange", () => {
-          if (worker.state === "activated") reloadOnce();
-        });
-      });
     }).catch(error => {
       console.error("Could not register the proxy isolation Service Worker:", error);
     });
