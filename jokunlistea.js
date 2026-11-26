@@ -1093,7 +1093,7 @@ const gamesList = [
     "title": "FNAF 2",
     "addedAt": "2026-11-26",
     "image": window.gameImages?.["FNAF 2"] || "",
-    "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fnaf-2.html"
+    "rawUrl": "https://gist.githubusercontent.com/EML0073/d3f9b92a5cc5a4e62f875c759f8cef44/raw/4e46390d5e7c068ea49367c0f6643520433ebfe2/fnaf2.html"
   },
   {
     "id": 137,
@@ -1101,7 +1101,7 @@ const gamesList = [
     "title": "FNAF 3",
     "addedAt": "2026-11-26",
     "image": window.gameImages?.["FNAF 3"] || "",
-    "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fnaf-3.html"
+    "rawUrl": "https://gist.githubusercontent.com/EML0073/87f6a64639b0fe7d09881b89d980288c/raw/2365f074983d4ea1b8b9128651725b8c7a6485ef/fnaf3.html"
   },
   {
     "id": 138,
@@ -1109,7 +1109,7 @@ const gamesList = [
     "title": "FNAF 4",
     "addedAt": "2026-11-26",
     "image": window.gameImages?.["FNAF 4"] || "",
-    "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fnaf-4.html"
+    "rawUrl": "https://gist.githubusercontent.com/EML0073/896c70493f3a2a432671c242cc1ea46b/raw/53bd98bd7af007e5a099f2ae9abfc82b42f6b8e4/fnaf4.html"
   },
   {
     "id": 139,
@@ -1125,7 +1125,7 @@ const gamesList = [
     "title": "FNAF",
     "addedAt": "2026-11-26",
     "image": window.gameImages?.["FNAF"] || "",
-    "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fnaf.html"
+    "rawUrl": "https://gist.githubusercontent.com/EML0073/9f1f31386ebb63ff7030922788531c74/raw/5ff7cc2bfc81a7b636c471d50e4457e1fa1536c7/FNAF.html"
   },
   {
     "id": 141,
