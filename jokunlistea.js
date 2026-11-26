@@ -1,4 +1,3 @@
-// Add games here using the same object format. Keep each numeric id permanent; never renumber existing games. Assign new games the next unused id. Use rawUrl for HTML game files.
 const gamesList = [
   {
     "id": 0,
@@ -10,5 +9,4 @@ const gamesList = [
   }
 ];
 
-// Exponer el catálogo para páginas auxiliares como el diagnóstico.
 window.gamesList = gamesList;
