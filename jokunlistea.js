@@ -2860,8 +2860,8 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "Nautilus OS",
     "addedAt": "2026-11-26",
-    "image": "https://www.google.com/s2/favicons?domain=nautilus-os.vercel.app&sz=128",
-    "webUrl": "https://nautilus-os.vercel.app/"
+    "image": "https://avatars.githubusercontent.com/u/240241840?s=280&v=4",
+    "webUrl": "https://raw.githubusercontent.com/nautilus-os/NautilusOS/refs/heads/main/index.html"
   },
 ];
 
