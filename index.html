@@ -267,7 +267,7 @@
         const addedTime = item.game.addedAt ? new Date(item.game.addedAt + 'T00:00:00').getTime() : 0;
         return item.game.row !== 'Other Apps & Services' && item.game.title.toLowerCase().includes(searchText) && (selectedGenres.length === 0 || allSelected || selectedGenres.indexOf(item.game.row || 'Other') >= 0) && (!recentOnly || (addedTime > 0 && addedTime >= recentCutoff));
       }).sort(function(a,b) { return recentOnly ? (new Date(b.game.addedAt) - new Date(a.game.addedAt) || b.index - a.index) : (gameViews(b.game,b.index) - gameViews(a.game,a.index)); });
-      resultsTitle.textContent = (recentOnly ? 'Recently Added · ' : '') + (allSelected ? 'All games (' + matches.length + ')' : (selectedGenres.length ? selectedGenres.join(' + ') + ' (' + matches.length + ')' : 'Search results (' + matches.length + ')'));
+      resultsTitle.textContent = recentOnly ? 'Recently Added' : (allSelected ? 'All games (' + matches.length + ')' : (selectedGenres.length ? selectedGenres.join(' + ') + ' (' + matches.length + ')' : 'Search results (' + matches.length + ')'));
       resultsGrid.innerHTML = matches.length ? matches.map(makeCard).join('') : '<p class="no-results">No games found matching your search.</p>';
     }
     function selectGenre(genreName) {
@@ -275,6 +275,8 @@
       const targetValue = genreName === 'Most Popular' ? 'all-games' : genreName;
       Array.from(filter.options).forEach(function(option){option.selected=option.value===targetValue;});
       renderFilterOptions();
+      document.getElementById('recentFilterTrigger').setAttribute('aria-pressed','false');
+      document.getElementById('recentFilterTrigger').classList.remove('is-active');
       document.getElementById('searchInput').value = '';
       filterGames();
       window.scrollTo({ top: 0, behavior: 'smooth' });
