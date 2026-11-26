@@ -114,7 +114,7 @@
         <button class="btn-maximize" onclick="maximizeGame()">&#x26F6; Maximize</button>
       </div>
     </div>
-    <div class="iframe-wrapper"><div id="gameLoading" class="game-loading">Loading game...</div><iframe id="gameFrame" allow="autoplay; fullscreen; gamepad; clipboard-read; clipboard-write; accelerometer; gyroscope; web-share" allowfullscreen sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox allow-downloads allow-modals allow-presentation allow-storage-access-by-user-activation"></iframe></div>
+    <div class="iframe-wrapper"><div id="gameLoading" class="game-loading">Loading game...</div><iframe id="gameFrame" allow="cross-origin-isolated; autoplay; fullscreen; gamepad; clipboard-read; clipboard-write; accelerometer; gyroscope; web-share" allowfullscreen sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox allow-downloads allow-modals allow-presentation allow-storage-access-by-user-activation"></iframe></div>
   </div>
   <div class="report-overlay" id="reportOverlay" role="dialog" aria-modal="true" aria-labelledby="reportTitle" onclick="if (event.target === this) closeReport()">
     <form class="report-dialog" onsubmit="sendReport(event)">
@@ -372,6 +372,10 @@
       loadGameRating();
       const gameFrame = document.getElementById('gameFrame');
       if (game.webUrl) {
+        // Scramjet needs an unsandboxed, same-origin-capable browsing context for its service worker.
+        // Only webUrl entries get this; rawUrl game frames keep their sandbox.
+        gameFrame.removeAttribute('sandbox');
+        gameFrame.allow = 'cross-origin-isolated; autoplay; fullscreen; gamepad; clipboard-read; clipboard-write; accelerometer; gyroscope; web-share';
         document.body.classList.add('web-shortcut-mode');
         const proxyUrl = new URL('https://unblocked-games-proxy.onrender.com/');
         proxyUrl.searchParams.set('embed', '1');
