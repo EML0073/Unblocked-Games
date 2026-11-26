@@ -2824,15 +2824,5 @@ const gamesList = [
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/zrist.html"
   }
 ];
-  {
-{
-    "id": 353,
-    "row": "Adventure",
-    "title": "Minecraft 26.2",
-    "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Minecraft 26.3"] || "",
-    "rawUrl": "https://raw.githubusercontent.com/MilkdromedaStudios/all-of-eaglercraft/refs/heads/main/ArchMC%20Eaglercraft%2026.3.html"
-  },"
-  ]
 
 window.gamesList = gamesList;
