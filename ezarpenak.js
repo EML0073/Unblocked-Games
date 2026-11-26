@@ -22,7 +22,10 @@
       #ug-settings-panel{position:fixed!important;top:70px!important;right:16px!important;z-index:2147483646!important;width:min(270px,calc(100vw - 32px))!important;padding:16px!important;border:1px solid #555!important;border-radius:12px!important;background:#202020!important;color:#fff!important;box-shadow:0 8px 28px #0007!important;font:14px/1.5 Arial,sans-serif!important}
       #ug-settings-panel[hidden]{display:none!important}
       #ug-settings-panel button,#ug-settings-panel input{box-sizing:border-box}
-      .ug-control{width:100%;min-height:40px;margin-top:6px;padding:9px 11px;border:1px solid #555;border-radius:7px;background:#303030;color:#fff;text-align:left;cursor:pointer}
+      button:not(#ug-settings-trigger){border-radius:11px;transition:background .18s ease,color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+      button:not(#ug-settings-trigger):hover{transform:translateY(-1px);box-shadow:0 5px 14px #0003}
+      button:not(#ug-settings-trigger):active{transform:scale(.97)}
+      .ug-control{width:100%;min-height:40px;margin-top:6px;padding:9px 11px;border:1px solid #555;border-radius:11px;background:#303030;color:#fff;text-align:left;cursor:pointer}
       .ug-flag{width:23px;height:15px;object-fit:cover;vertical-align:middle;margin-right:8px}
       #ug-accent-picker{width:100%;height:40px;margin-top:6px;border:1px solid #555;border-radius:7px;background:#303030}
       @media(max-width:520px){#ug-settings-trigger{top:10px!important;right:10px!important}#ug-settings-panel{top:62px!important;right:10px!important}}
@@ -55,12 +58,12 @@
         .card:hover,.game-card:hover,.game:hover,.game-item:hover,.game-tile:hover,.game-box:hover{background:var(--ug-accent-soft)!important;border-color:var(--ug-accent)!important;box-shadow:0 7px 24px var(--ug-accent-shadow)!important;transform:translateY(-2px)}
         .card:hover img,.game-card:hover img,.game:hover img{filter:drop-shadow(0 3px 7px var(--ug-accent-shadow))}
         button:hover,.btn:hover,.nav-tab:hover,.nav-link:hover{border-color:var(--ug-accent)!important}
-        .active,.nav-tab.active,.nav-link.active,.selected,[aria-current="page"]{color:var(--ug-accent)!important;border-color:var(--ug-accent)!important}
+        .active,.nav-tab.active,.nav-link.active,.selected,[aria-current="page"]{color:inherit!important;border-color:var(--ug-accent)!important}
         input:focus,select:focus,textarea:focus{outline:2px solid var(--ug-accent)!important;outline-offset:1px;border-color:var(--ug-accent)!important}
         input[type="checkbox"],input[type="radio"]{accent-color:var(--ug-accent)}
         input[type="range"]{accent-color:var(--ug-accent)}
         ::selection{background:var(--ug-accent);color:#fff}
-        .btn-maximize,.btn-report-send,.pagination button.active,.filter-button.active{background:var(--ug-accent)!important;border-color:var(--ug-accent)!important}
+        .btn-maximize,.btn-report-send,.pagination button.active,.filter-button.active{background:transparent!important;color:inherit!important;border-color:var(--ug-accent)!important}
         .site-footer a:hover{color:var(--ug-accent)!important}
         .ug-control:focus-visible,#ug-settings-trigger:focus-visible{outline:2px solid var(--ug-accent)!important;outline-offset:3px}
       `;
