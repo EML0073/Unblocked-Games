@@ -26,25 +26,19 @@ if (typeof window === "undefined") {
   });
 } else {
   (async () => {
-    const key = "unblockedgames-proxy-coi-reload";
+    const attemptsKey = "unblockedgames-proxy-coi-attempts-v2";
+    // Clear the retry flag left by the older, broken registration script.
+    sessionStorage.removeItem("unblockedgames-proxy-coi-reload");
+
     if (window.crossOriginIsolated) {
-      sessionStorage.removeItem(key);
+      sessionStorage.removeItem(attemptsKey);
+      console.info("Proxy isolation is active (COOP/COEP).");
       return;
     }
     if (!window.isSecureContext || !("serviceWorker" in navigator)) {
       console.error("Proxy isolation requires HTTPS and Service Worker support.");
       return;
     }
-    if (sessionStorage.getItem(key)) {
-      console.error("Proxy isolation is still unavailable after the Service Worker reload.");
-      return;
-    }
-
-    let resolveControllerChange;
-    const controllerChanged = new Promise(resolve => {
-      resolveControllerChange = resolve;
-      navigator.serviceWorker.addEventListener("controllerchange", resolve, { once: true });
-    });
 
     try {
       const scriptURL = new URL(document.currentScript.src, location.href);
@@ -52,30 +46,32 @@ if (typeof window === "undefined") {
         scope: "/Unblocked-Games/",
         updateViaCache: "none"
       });
-
-      // Ask the browser to check GitHub Pages for a newer worker script.
       await registration.update();
 
-      // Do not reload while an older worker still controls the page. Wait
-      // until the new worker has activated and claimed its clients first.
-      const installingWorker = registration.installing || registration.waiting;
-      if (installingWorker) {
-        await new Promise(resolve => {
-          if (installingWorker.state === "activated") return resolve();
-          installingWorker.addEventListener("statechange", () => {
-            if (installingWorker.state === "activated") resolve();
-          });
-        });
+      // ready resolves only when this origin has an active registration.
+      await navigator.serviceWorker.ready;
+
+      if (window.crossOriginIsolated) return;
+
+      // A Service Worker cannot add COOP/COEP to the document that first
+      // registered it. Reload a limited number of times until it controls
+      // the navigation and the response headers can be applied.
+      const attempts = Number(sessionStorage.getItem(attemptsKey) || "0");
+      if (attempts >= 2) {
+        console.error(
+          "Proxy isolation failed after two reload attempts.",
+          {
+            controller: navigator.serviceWorker.controller?.scriptURL || null,
+            active: registration.active?.scriptURL || null,
+            activeState: registration.active?.state || null,
+            scope: registration.scope
+          }
+        );
+        return;
       }
 
-      if (!navigator.serviceWorker.controller) {
-        await controllerChanged;
-      }
-
-      if (navigator.serviceWorker.controller && !window.crossOriginIsolated) {
-        sessionStorage.setItem(key, "1");
-        window.location.reload();
-      }
+      sessionStorage.setItem(attemptsKey, String(attempts + 1));
+      location.reload();
     } catch (error) {
       console.error("Could not install/update the proxy isolation Service Worker:", error);
     }
