@@ -2833,6 +2833,6 @@ const gamesList = [
     "image": window.gameImages?.["Minecraft 26.3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/MilkdromedaStudios/all-of-eaglercraft/refs/heads/main/ArchMC%20Eaglercraft%2026.3.html"
   },"
-  },
+  ]
 
 window.gamesList = gamesList;
