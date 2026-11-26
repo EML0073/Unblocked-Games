@@ -103,7 +103,9 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Aventura": "Adventure",
     "Simulación": "Simulation",
     "Idle y Clicker": "Idle & Clicker",
-    "Plataformas": "Platformer"
+    "Plataformas": "Platformer",
+    "Filter": "Filter",
+    "Choose genres": "Choose genres"
   },
   "es": {
     "Settings": "Configuración",
@@ -209,7 +211,9 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Aventura": "Aventura",
     "Simulación": "Simulación",
     "Idle y Clicker": "Idle y Clicker",
-    "Plataformas": "Plataformas"
+    "Plataformas": "Plataformas",
+    "Filter": "Filtro",
+    "Choose genres": "Elegir géneros"
   },
   "eu": {
     "Settings": "Ezarpenak",
@@ -315,6 +319,8 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Aventura": "Abentura",
     "Simulación": "Simulazioa",
     "Idle y Clicker": "Idle eta Clicker",
-    "Plataformas": "Plataformak"
+    "Plataformas": "Plataformak",
+    "Filter": "Iragazkia",
+    "Choose genres": "Aukeratu generoak"
   }
 };
