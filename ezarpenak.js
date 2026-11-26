@@ -55,7 +55,10 @@
         /* USER ACCENT RULES */
         :root{--ug-accent:${accent};--ug-accent-soft:${accent}22;--ug-accent-shadow:${accent}44;--accent-color:${accent}}
         a:not(.brand-logo):hover{border-color:var(--ug-accent)!important}
-        .btn-play:hover,.view-all:hover,.nav-tab:hover,.btn-back:hover{color:inherit!important}
+        .btn-play:hover{color:#fff!important}
+        .view-all:hover{color:#b4bdcb!important}
+        .nav-tab:hover{color:#b5bac5!important}
+        .filter-trigger:hover{color:#e8ebf1!important}
         .card:hover,.game-card:hover,.game:hover,.game-item:hover,.game-tile:hover,.game-box:hover{background:var(--ug-accent-soft)!important;border-color:var(--ug-accent)!important;box-shadow:0 7px 24px var(--ug-accent-shadow)!important;transform:translateY(-2px)}
         .card:hover img,.game-card:hover img,.game:hover img{filter:drop-shadow(0 3px 7px var(--ug-accent-shadow))}
         button:hover,.btn:hover,.nav-tab:hover,.nav-link:hover{border-color:var(--ug-accent)!important}
