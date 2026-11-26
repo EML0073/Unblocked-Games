@@ -262,7 +262,6 @@
       const recentOnly = document.getElementById('recentFilterTrigger').getAttribute('aria-pressed') === 'true';
       if (searchText === '' && selectedGenres.length === 0 && !recentOnly) { topBanner.style.display = 'block'; document.getElementById('catalog').style.display = 'block'; searchResults.style.display = 'none'; clearBtn.style.display = 'none'; return; }
       topBanner.style.display = 'none'; document.getElementById('catalog').style.display = 'none'; searchResults.style.display = 'block'; clearBtn.style.display = 'inline-block';
-      const recentOnly = document.getElementById('recentFilterTrigger').getAttribute('aria-pressed') === 'true';
       const recentCutoff = Date.now() - 10 * 24 * 60 * 60 * 1000;
       const matches = gamesList.map(function(game,index) { return {game:game,index:index}; }).filter(function(item) {
         const addedTime = item.game.addedAt ? new Date(item.game.addedAt + 'T00:00:00').getTime() : 0;
