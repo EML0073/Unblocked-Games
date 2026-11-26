@@ -111,3 +111,39 @@ table td { border-bottom-color: #303641; }
   .game-header, .proxy-heading { padding: 14px; border-radius: 15px; }
   .privacy-main { padding: 20px 17px; border-radius: 16px; }
 }
+
+/* Consistent hover feedback: animate the button surface, never recolour its label. */
+button:hover, .btn:hover, .nav-tab:hover, .nav-link:hover, .view-all:hover,
+.btn-play:hover, .btn-back:hover, .btn-maximize:hover, .btn-new-tab:hover,
+.btn-report:hover, .btn-report-send:hover, .btn-report-cancel:hover {
+  color: inherit;
+}
+button:not(.btn-play):hover, .btn:not(.btn-play):hover, .nav-tab:hover,
+.nav-link:hover, .view-all:hover, .btn-back:hover, .btn-maximize:hover,
+.btn-new-tab:hover, .btn-report:hover, .btn-report-send:hover,
+.btn-report-cancel:hover {
+  background-color: #343b47;
+}
+.btn-play:hover { filter: brightness(1.12); }
+.view-all:hover { color: #b4bdcb !important; }
+.nav-tab:hover { color: #b5bac5 !important; }
+.btn-play:hover { color: #fff !important; }
+.filter-trigger:hover { color: #e8ebf1 !important; background-color: #343b47 !important; }
+.arrow-btn:hover {
+  transform: translateY(-50%) scale(1.015) !important;
+  box-shadow: 0 5px 15px #0005;
+}
+.row { position: relative; z-index: 2; overflow: visible; }
+.row-header {
+  position: relative;
+  z-index: 12;
+  overflow: visible;
+  margin-bottom: 15px;
+}
+.row-title, .row-header .view-all { position: relative; z-index: 13; }
+.recent-filter-trigger[aria-pressed="true"] {
+  background: #39414e !important;
+  border-color: #8793a5 !important;
+  box-shadow: inset 0 0 0 1px #ffffff12;
+}
+.recent-filter-trigger[aria-pressed="true"]:hover { background: #414b5b !important; }
