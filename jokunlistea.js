@@ -4,7 +4,7 @@ const gamesList = [
     "row": "Adventure",
     "title": "Minecraft 26.2",
     "addedAt": "2026-11-23",
-    "image": window.gameImages?.["Minecraft 26.2"] || "https://raw.githubusercontent.com/yellowdevelopment/night/main/icons/minecraft.webp",
+    "image": window.gameImages?.["Minecraft 26.2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/MilkdromedaStudios/all-of-eaglercraft/refs/heads/main/Eaglercraft%2026.2%20u2.html"
   },
   {
