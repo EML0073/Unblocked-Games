@@ -105,7 +105,8 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Idle y Clicker": "Idle & Clicker",
     "Plataformas": "Platformer",
     "Filter": "Filter",
-    "Choose genres": "Choose genres"
+    "Choose genres": "Choose genres",
+    "Other Apps & Services": "Other Apps & Services"
   },
   "es": {
     "Settings": "Configuración",
@@ -213,7 +214,8 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Idle y Clicker": "Idle y Clicker",
     "Plataformas": "Plataformas",
     "Filter": "Filtro",
-    "Choose genres": "Elegir géneros"
+    "Choose genres": "Elegir géneros",
+    "Other Apps & Services": "Otras aplicaciones y servicios"
   },
   "eu": {
     "Settings": "Ezarpenak",
@@ -321,6 +323,7 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Idle y Clicker": "Idle eta Clicker",
     "Plataformas": "Plataformak",
     "Filter": "Iragazkia",
-    "Choose genres": "Aukeratu generoak"
+    "Choose genres": "Aukeratu generoak",
+    "Other Apps & Services": "Beste aplikazio eta zerbitzu batzuk"
   }
 };
