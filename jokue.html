@@ -167,6 +167,17 @@
         return [source];
       }
 
+      // Gist games must keep their own origin: converting their HTML to
+      // blob: makes relative fetch() requests cross-origin and can stall loaders.
+      const gistSource = String(url).match(/^https:\/\/gist\.githubusercontent\.com\/([^/]+)\/([a-f0-9]+)\/raw\/([^/]+)\/([^/?#]+)$/i);
+      if (gistSource) {
+        const directGistUrl = 'https://gistcdn.githack.com/' + gistSource[1] + '/' + gistSource[2] + '/raw/' + gistSource[3] + '/' + gistSource[4];
+        frame.dataset.loadingFailed = 'false';
+        frame.dataset.sourceUrl = directGistUrl;
+        frame.src = directGistUrl;
+        return;
+      }
+
       let lastError=null;
       for (const candidate of [...new Set(sourceCandidates(String(url)))]) {
         try {
