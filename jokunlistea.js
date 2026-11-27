@@ -2864,9 +2864,9 @@ const gamesList = [
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/nautilusOS.html"
   },
     {
-    "id": 357,
+    "id": 358,
     "row": "Other Apps & Services",
-    "title": "Nautilus OS",
+    "title": "AI",
     "addedAt": "2026-11-26",
     "image": window.gameImages?.["Nautilus"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clai.html"
