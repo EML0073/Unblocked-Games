@@ -29,19 +29,30 @@
       .ug-flag{width:23px;height:15px;object-fit:cover;vertical-align:middle;margin-right:8px}
       #ug-accent-picker{width:100%;height:40px;margin-top:6px;border:1px solid #555;border-radius:7px;background:#303030}
       .ug-beta{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:6px;background:#5b3b91;color:#fff;font-size:10px;font-weight:700;vertical-align:middle}
-      .ug-wallpaper-box{margin-top:14px;padding-top:12px;border-top:1px solid #484848}
+      .ug-wallpaper-launch{display:flex;align-items:center;justify-content:space-between;gap:10px}
+      #ug-wallpaper-overlay{position:fixed;inset:0;z-index:2147483645;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.62);backdrop-filter:blur(3px)}
+      #ug-wallpaper-overlay[hidden]{display:none!important}
+      #ug-wallpaper-modal{width:min(520px,100%);max-height:min(86vh,760px);overflow-y:auto;padding:20px;border:1px solid #555;border-radius:18px;background:#202020;color:#fff;box-shadow:0 20px 70px #0009;font:14px/1.5 Arial,sans-serif}
+      .ug-wallpaper-modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+      .ug-wallpaper-modal-head strong{font-size:18px}
+      #ug-wallpaper-close{width:34px;height:34px;border:1px solid #555;border-radius:50%;background:#303030;color:#fff;font-size:20px;cursor:pointer}
       .ug-wallpaper-box label{display:block;margin:9px 0 4px}
       .ug-wallpaper-box input[type="url"]{width:100%;padding:9px;border:1px solid #555;background:#303030;color:#fff;border-radius:9px}
       .ug-wallpaper-box input[type="file"]{width:100%;font-size:12px;margin-top:5px;color:#ddd}
       .ug-wallpaper-box input[type="range"]{width:100%;accent-color:var(--ug-accent)}
       .ug-wallpaper-row{display:flex;gap:7px;margin-top:7px}
       .ug-wallpaper-row button{flex:1}
-      .ug-wallpaper-preview{position:relative;width:100%;max-height:230px;margin-top:10px;overflow:hidden;border:1px solid #777;border-radius:9px;background:#111;touch-action:none}
+      .ug-wallpaper-preview{position:relative;width:100%;max-height:260px;margin-top:10px;overflow:hidden;border:1px solid #777;border-radius:9px;background:#111;touch-action:none}
       .ug-wallpaper-preview[data-mode="scroll"]{aspect-ratio:3/4}
       .ug-wallpaper-preview[data-mode="fixed"]{aspect-ratio:16/9}
       .ug-wallpaper-preview img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;transform:scale(1);user-select:none;-webkit-user-drag:none;pointer-events:none}
       .ug-wallpaper-help{font-size:11px;color:#bbb;margin-top:5px;line-height:1.4}
       .ug-wallpaper-error{font-size:11px;color:#ff9b9b;margin-top:6px}
+      body[data-ug-theme="light"] #ug-wallpaper-modal{background:#fff;color:#202124;border-color:#d5d9e0}
+      body[data-ug-theme="light"] #ug-wallpaper-close{background:#f1f3f6;color:#202124;border-color:#d5d9e0}
+      body[data-ug-theme="light"] .ug-wallpaper-box input[type="url"]{background:#f7f8fa;color:#202124;border-color:#cbd1da}
+      body[data-ug-theme="light"] .ug-wallpaper-box input[type="file"]{color:#444}
+      body[data-ug-theme="light"] .ug-wallpaper-help{color:#626875}
       @media(max-width:520px){#ug-settings-trigger{top:10px!important;right:10px!important}#ug-settings-panel{top:62px!important;right:10px!important}}
     `;
     document.head.appendChild(style);
@@ -52,9 +63,13 @@
     const panel = document.createElement('section');
     panel.id = 'ug-settings-panel'; panel.hidden = true;
     panel.innerHTML = '<strong style="display:block;font-size:16px;margin-bottom:12px">Settings</strong><label for="ug-theme-toggle">Appearance</label><button class="ug-control" id="ug-theme-toggle" type="button">Switch to light mode</button><label for="ug-accent-picker" style="display:block;margin-top:12px">Accent color</label><input id="ug-accent-picker" type="color"><label style="display:block;margin-top:12px">Language</label><div id="ug-language-options"><button class="ug-control" data-lang="eu"><img class="ug-flag" src="argazkik/ikurriña.svg" alt="">Euskara</button><button class="ug-control" data-lang="en"><img class="ug-flag" src="argazkik/flag-en.svg" alt="">English</button><button class="ug-control" data-lang="es"><img class="ug-flag" src="argazkik/1312.webp" alt="">Español</button></div>';
-    panel.innerHTML += `
-      <div class="ug-wallpaper-box">
-        <label><span>Wallpaper</span><span class="ug-beta">BETA</span></label>
+    panel.innerHTML += '<button class="ug-control ug-wallpaper-launch" id="ug-wallpaper-open" type="button"><span>Wallpaper</span><span class="ug-beta">BETA</span></button>';
+    const wallpaperOverlay=document.createElement('div');
+    wallpaperOverlay.id='ug-wallpaper-overlay'; wallpaperOverlay.hidden=true;
+    wallpaperOverlay.innerHTML=`
+      <section id="ug-wallpaper-modal" role="dialog" aria-modal="true" aria-labelledby="ug-wallpaper-title">
+        <div class="ug-wallpaper-modal-head"><strong id="ug-wallpaper-title">Wallpaper</strong><button id="ug-wallpaper-close" type="button" aria-label="Close">×</button></div>
+        <div class="ug-wallpaper-box">
         <label for="ug-wallpaper-file">Upload an image</label>
         <input id="ug-wallpaper-file" type="file" accept="image/*">
         <label for="ug-wallpaper-url">Or paste an image URL</label>
@@ -75,17 +90,24 @@
         </div>
         <button class="ug-control" id="ug-wallpaper-remove" type="button">Remove wallpaper</button>
         <div class="ug-wallpaper-error" id="ug-wallpaper-error" role="status" aria-live="polite"></div>
-      </div>`;
-    document.body.appendChild(button); document.body.appendChild(panel);
+        </div>
+      </section>`;
+    document.body.appendChild(button); document.body.appendChild(panel); document.body.appendChild(wallpaperOverlay);
+    const wallpaperModal=wallpaperOverlay.querySelector('#ug-wallpaper-modal');
+    function closeWallpaperModal(){wallpaperOverlay.hidden=true;}
+    panel.querySelector('#ug-wallpaper-open').addEventListener('click',()=>{wallpaperOverlay.hidden=false;wallpaperModal.querySelector('#ug-wallpaper-file').focus();});
+    wallpaperOverlay.addEventListener('click',e=>{if(e.target===wallpaperOverlay)closeWallpaperModal();});
+    wallpaperOverlay.querySelector('#ug-wallpaper-close').addEventListener('click',closeWallpaperModal);
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!wallpaperOverlay.hidden)closeWallpaperModal();});
     let wallpaperImage = null;
-    const wallpaperEditor = panel.querySelector('#ug-wallpaper-editor');
-    const wallpaperPreview = panel.querySelector('#ug-wallpaper-preview');
-    const wallpaperPreviewImage = panel.querySelector('#ug-wallpaper-image');
-    const wallpaperMode = panel.querySelector('#ug-wallpaper-mode');
-    const wallpaperX = panel.querySelector('#ug-wallpaper-x');
-    const wallpaperY = panel.querySelector('#ug-wallpaper-y');
-    const wallpaperZoom = panel.querySelector('#ug-wallpaper-zoom');
-    const wallpaperError = panel.querySelector('#ug-wallpaper-error');
+    const wallpaperEditor = wallpaperModal.querySelector('#ug-wallpaper-editor');
+    const wallpaperPreview = wallpaperModal.querySelector('#ug-wallpaper-preview');
+    const wallpaperPreviewImage = wallpaperModal.querySelector('#ug-wallpaper-image');
+    const wallpaperMode = wallpaperModal.querySelector('#ug-wallpaper-mode');
+    const wallpaperX = wallpaperModal.querySelector('#ug-wallpaper-x');
+    const wallpaperY = wallpaperModal.querySelector('#ug-wallpaper-y');
+    const wallpaperZoom = wallpaperModal.querySelector('#ug-wallpaper-zoom');
+    const wallpaperError = wallpaperModal.querySelector('#ug-wallpaper-error');
     let dragPoint = null;
     function setWallpaperError(message) { wallpaperError.textContent = message || ''; }
     function refreshWallpaperPreview() {
@@ -110,7 +132,7 @@
       };
       image.src = source;
     }
-    panel.querySelector('#ug-wallpaper-file').addEventListener('change', function(event) {
+    wallpaperModal.querySelector('#ug-wallpaper-file').addEventListener('change', function(event) {
       const file = event.target.files && event.target.files[0];
       if (!file) return;
       if (!file.type.startsWith('image/')) { setWallpaperError('Please choose an image file.'); return; }
@@ -119,8 +141,8 @@
       reader.onerror = () => setWallpaperError('Could not read this image file.');
       reader.readAsDataURL(file);
     });
-    panel.querySelector('#ug-wallpaper-url-load').addEventListener('click', function() {
-      const url = panel.querySelector('#ug-wallpaper-url').value.trim();
+    wallpaperModal.querySelector('#ug-wallpaper-url-load').addEventListener('click', function() {
+      const url = wallpaperModal.querySelector('#ug-wallpaper-url').value.trim();
       if (!/^https?:\/\//i.test(url)) { setWallpaperError('Enter a valid image URL starting with http:// or https://.'); return; }
       loadWallpaperSource(url, true);
     });
@@ -138,7 +160,7 @@
       refreshWallpaperPreview();
     });
     ['pointerup','pointercancel','lostpointercapture'].forEach(name=>wallpaperPreview.addEventListener(name,()=>{dragPoint=null;}));
-    panel.querySelector('#ug-wallpaper-apply').addEventListener('click', function() {
+    wallpaperModal.querySelector('#ug-wallpaper-apply').addEventListener('click', function() {
       if (!wallpaperImage) return;
       const ratio = wallpaperMode.value === 'scroll' ? 3/4 : 16/9;
       const zoom = Number(wallpaperZoom.value)/100;
@@ -155,13 +177,13 @@
       context.drawImage(wallpaperImage,sx,sy,cropWidth,cropHeight,0,0,outputWidth,outputHeight);
       const data=canvas.toDataURL('image/jpeg',0.86);
       const settings={image:data,mode:wallpaperMode.value};
-      try { localStorage.setItem('unblockedgames-wallpaper',JSON.stringify(settings)); applyWallpaper(); wallpaperEditor.hidden=true; setWallpaperError('Wallpaper applied.'); }
+      try { localStorage.setItem('unblockedgames-wallpaper',JSON.stringify(settings)); applyWallpaper(); wallpaperEditor.hidden=true; closeWallpaperModal(); setWallpaperError('Wallpaper applied.'); }
       catch(error) { setWallpaperError('Could not save this image. Try a smaller image.'); }
     });
-    panel.querySelector('#ug-wallpaper-cancel').addEventListener('click',()=>{wallpaperEditor.hidden=true;setWallpaperError('');});
-    panel.querySelector('#ug-wallpaper-remove').addEventListener('click',function() {
+    wallpaperModal.querySelector('#ug-wallpaper-cancel').addEventListener('click',()=>{wallpaperEditor.hidden=true;setWallpaperError('');});
+    wallpaperModal.querySelector('#ug-wallpaper-remove').addEventListener('click',function() {
       try { localStorage.removeItem('unblockedgames-wallpaper'); } catch (_) {}
-      applyWallpaper(); wallpaperEditor.hidden=true; setWallpaperError('Wallpaper removed.');
+      applyWallpaper(); wallpaperEditor.hidden=true; closeWallpaperModal(); setWallpaperError('Wallpaper removed.');
     });
     function applyWallpaper() {
       let settings=null;
