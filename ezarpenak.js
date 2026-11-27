@@ -95,7 +95,7 @@
     document.body.appendChild(button); document.body.appendChild(panel); document.body.appendChild(wallpaperOverlay);
     const wallpaperModal=wallpaperOverlay.querySelector('#ug-wallpaper-modal');
     function closeWallpaperModal(){wallpaperOverlay.hidden=true;}
-    panel.querySelector('#ug-wallpaper-open').addEventListener('click',()=>{wallpaperOverlay.hidden=false;wallpaperModal.querySelector('#ug-wallpaper-file').focus();});
+    panel.querySelector('#ug-wallpaper-open').addEventListener('click',()=>{panel.hidden=true;button.setAttribute('aria-expanded','false');wallpaperOverlay.hidden=false;wallpaperModal.querySelector('#ug-wallpaper-file').focus();});
     wallpaperOverlay.addEventListener('click',e=>{if(e.target===wallpaperOverlay)closeWallpaperModal();});
     wallpaperOverlay.querySelector('#ug-wallpaper-close').addEventListener('click',closeWallpaperModal);
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!wallpaperOverlay.hidden)closeWallpaperModal();});
@@ -241,6 +241,10 @@
         body[data-ug-theme="light"] .banner-info{background:rgba(255,255,255,.92)!important;color:#202124!important;border-color:#d5d9e0!important}
         body[data-ug-theme="light"] .banner-info p{color:#4b5360!important}
         body[data-ug-theme="light"] .top-bar .search-input::placeholder{color:#7a8290!important}
+        body[data-ug-theme="light"] :is(.card img,.game-card img,.game img,.game-item img,.game-tile img){background:#e8ebf0!important}
+        body[data-ug-theme="light"] :is(.banner-indicators){background:rgba(255,255,255,.55)!important}
+        body[data-ug-theme="light"] .banner-dot{border-color:#303744!important}
+        body[data-ug-theme="light"] .banner-dot.active{background:#303744!important}
       ` : "";
       document.documentElement.style.colorScheme = theme;
       if (theme === 'light') { document.body.style.backgroundColor = '#f4f5f7'; document.body.style.color = '#202124'; }
