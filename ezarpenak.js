@@ -29,7 +29,7 @@
       .ug-flag{width:23px;height:15px;object-fit:cover;vertical-align:middle;margin-right:8px}
       #ug-accent-picker{width:100%;height:40px;margin-top:6px;border:1px solid #555;border-radius:7px;background:#303030}
       .ug-beta{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:6px;background:#5b3b91;color:#fff;font-size:10px;font-weight:700;vertical-align:middle}
-      .ug-wallpaper-launch{display:flex;align-items:center;justify-content:space-between;gap:10px}
+      #ug-wallpaper-open{position:relative!important;margin-top:22px!important}\n      #ug-wallpaper-open::before{content:"";position:absolute;left:0;right:0;top:-12px;height:1px;background:#555}\n      body[data-ug-theme="light"] #ug-wallpaper-open::before{background:#d5d9e0}\n      .ug-wallpaper-launch{display:flex;align-items:center;justify-content:space-between;gap:10px}
       #ug-wallpaper-overlay{position:fixed;inset:0;z-index:2147483645;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.62);backdrop-filter:blur(3px)}
       #ug-wallpaper-overlay[hidden]{display:none!important}
       #ug-wallpaper-modal{width:min(520px,100%);max-height:min(86vh,760px);overflow-y:auto;padding:20px;border:1px solid #555;border-radius:18px;background:#202020;color:#fff;box-shadow:0 20px 70px #0009;font:14px/1.5 Arial,sans-serif}
