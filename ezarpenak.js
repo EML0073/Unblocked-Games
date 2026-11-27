@@ -202,8 +202,46 @@
       document.body.style.backgroundRepeat='no-repeat';
       document.body.style.backgroundAttachment=settings.mode==='fixed'?'fixed':'scroll';
     }
+    const globalThemeStyle=document.createElement("style");
+    globalThemeStyle.id="ug-global-theme-style";
+    document.head.appendChild(globalThemeStyle);
     function applyTheme() {
       document.body.dataset.ugTheme = theme;
+      globalThemeStyle.textContent = theme === "light" ? `
+        body[data-ug-theme="light"]{background-color:#f4f5f7!important;color:#202124!important}
+        body[data-ug-theme="light"] :is(header.top-bar,.top-bar){background:linear-gradient(110deg,#fff,#edf0f5)!important;border-color:#d9dee7!important;color:#202124!important}
+        body[data-ug-theme="light"] .brand-logo{filter:brightness(0)!important}
+        body[data-ug-theme="light"] :is(.nav-tab,.btn-back,.view-all,.back){color:#4b5360!important}
+        body[data-ug-theme="light"] .nav-tab.active,body[data-ug-theme="light"] .nav-tab[aria-current="page"]{background:#e4e8ef!important;color:#202124!important;border-color:#c3cad5!important}
+        body[data-ug-theme="light"] :is(.nav-tab:hover,.btn-back:hover){background:#e7ebf1!important;color:#202124!important}
+        body[data-ug-theme="light"] :is(.site-footer,footer){background:#eceff3!important;color:#555d6b!important;border-color:#d9dee7!important}
+        body[data-ug-theme="light"] .site-footer a{color:#303744!important}
+        body[data-ug-theme="light"] :is(h1,h2,h3,h4,.row-title,.game-info,.game-info h1,label){color:#202124!important}
+        body[data-ug-theme="light"] :is(p,.game-views,.game-rating,.rating-status,.game-genre,.game-info p,.no-results){color:#555d6b!important}
+        body[data-ug-theme="light"] :is(.card,.game-card,.game,.game-item,.game-tile,.game-box,.grandv-shortcut,.game-header,.report-dialog,.filter-menu,.privacy-main){background:#fff!important;color:#202124!important;border-color:#d9dee7!important;box-shadow:0 5px 18px #17203312!important}
+        body[data-ug-theme="light"] :is(.card p,.card a,.game-card p,.game-card a,.game-title){color:#202124!important}
+        body[data-ug-theme="light"] :is(.card span,.game-card span,.grandv-info p){color:#626875!important}
+        body[data-ug-theme="light"] :is(.search-input,.filter-trigger,.btn-clear,.filter-menu,.filter-option,.filter-menu-head,.btn-new-tab,.btn-report,.rating-submit,.report-dialog textarea,.btn-report-cancel){background:#fff!important;color:#303744!important;border-color:#cbd1da!important}
+        body[data-ug-theme="light"] :is(.filter-option:hover,.filter-menu-head button:hover){background:#edf0f5!important;color:#202124!important}
+        body[data-ug-theme="light"] .game-genre{background:#edf0f5!important;color:#4b5360!important;border-color:#d5d9e0!important}
+        body[data-ug-theme="light"] :is(.btn-back,.back){background:#fff!important;border-color:#d5d9e0!important}
+        body[data-ug-theme="light"] .arrow-btn{background:rgba(255,255,255,.94)!important;color:#202124!important;border-color:#cbd1da!important}
+        body[data-ug-theme="light"] .grandv-art{background:linear-gradient(135deg,#dce7df,#aab8ad)!important;color:#202124!important;text-shadow:none!important}
+        body[data-ug-theme="light"] .report-dialog p{color:#555d6b!important}
+        body[data-ug-theme="light"] .report-dialog textarea{background:#f7f8fa!important;color:#202124!important}
+        body[data-ug-theme="light"] .game-loading{background:#f4f5f7!important;color:#303744!important}
+        body[data-ug-theme="light"] .catalog-separator{background:#d7dce4!important}
+        body[data-ug-theme="light"] .catalog-separator-strong{background:linear-gradient(90deg,#c5ccd7,#e2e6ec)!important;box-shadow:none!important}
+        body[data-ug-theme="light"] .row-header{border-bottom-color:#d9dee7!important}
+        body[data-ug-theme="light"] .privacy-main p{color:#4b5360!important}
+        body[data-ug-theme="light"] #ug-settings-trigger{background:#fff!important;border-color:#cbd1da!important}
+        body[data-ug-theme="light"] #ug-settings-trigger img{filter:brightness(0)!important}
+        body[data-ug-theme="light"] #ug-settings-panel{background:#fff!important;color:#202124!important;border-color:#d5d9e0!important}
+        body[data-ug-theme="light"] #ug-settings-panel .ug-control{background:#f1f3f6!important;color:#202124!important;border-color:#cbd1da!important}
+        body[data-ug-theme="light"] .banner-info{background:rgba(255,255,255,.92)!important;color:#202124!important;border-color:#d5d9e0!important}
+        body[data-ug-theme="light"] .banner-info p{color:#4b5360!important}
+        body[data-ug-theme="light"] .top-bar .search-input::placeholder{color:#7a8290!important}
+      ` : "";
       document.documentElement.style.colorScheme = theme;
       if (theme === 'light') { document.body.style.backgroundColor = '#f4f5f7'; document.body.style.color = '#202124'; }
       else { document.body.style.removeProperty('background-color'); document.body.style.removeProperty('color'); }
