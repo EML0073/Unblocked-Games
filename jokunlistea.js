@@ -2861,7 +2861,7 @@ const gamesList = [
     "title": "Nautilus OS",
     "addedAt": "2026-11-26",
     "image": window.gameImages?.["Nautilus"] || "",
-    "rawUrl": "https://raw.githubusercontent.com/nautilus-os/NautilusOS/refs/heads/main/index.html"
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/nautilusOS.html"
   },
 ];
 
