@@ -352,7 +352,7 @@ const gameImages = {
   "Wrestle Bros": "https://cdn.blipzi.com/wr/es/wrestle-bros-d.jpg?aspect_ratio=1%3A1&height=50&width=50",
   "Yohoho IO": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/835.png",
   "Zombie Rush": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXfHinBIdT2_ztfxwW6SvG0KIW1KLhdxGxcaB_m7FRg&s=10",
-  "Zrist": "https://www.coolmathgames.com/sites/default/files/zrist-game-icon.png"
+  "Zrist": "https://www.coolmathgames.com/sites/default/files/zrist-game-icon.png",
   "Nautilus": "https://avatars.githubusercontent.com/u/240241840?s=280&v=4"
 };
 
