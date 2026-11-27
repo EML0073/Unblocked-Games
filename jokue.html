@@ -438,11 +438,28 @@
       }
     }
     function openGameInNewTab() {
-      // Read the live tab metadata at click time (including launcher changes).
-      const liveTitle = document.title;
-      const liveIcon = document.querySelector('link[rel~="icon"]');
-      const liveIconUrl = liveIcon ? liveIcon.href : '';
       const sourceFrame = document.getElementById('gameFrame');
+      const params = new URLSearchParams(window.location.search);
+
+      // Prefer metadata from the top-level launcher tab when same-origin access
+      // is available. Cross-origin Google Sites wrappers cannot be inspected
+      // because of the browser's same-origin policy, so allow explicit metadata
+      // parameters as a fallback and otherwise use this game's live metadata.
+      let metadataDocument = document;
+      try {
+        if (window.top && window.top.document && window.top.document.title.trim()) {
+          metadataDocument = window.top.document;
+        }
+      } catch (_) {
+        // Expected when this page is embedded by Google Sites or another origin.
+      }
+      const pageTitle = document.title || document.getElementById('gameTitle')?.textContent || 'UNBLOCKEDgames';
+      const requestedTitle = params.get('tabTitle') || params.get('title');
+      const liveTitle = (requestedTitle || metadataDocument.title || pageTitle).trim();
+      const liveIcon = metadataDocument.querySelector('link[rel~="icon"]') ||
+        document.querySelector('link[rel~="icon"]');
+      const liveIconUrl = params.get('tabIcon') || params.get('icon') ||
+        (liveIcon ? liveIcon.href : '');
 
       // Open synchronously from the click so the browser does not block the popup.
       const newTab = window.open('about:blank', '_blank');
