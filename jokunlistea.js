@@ -2863,6 +2863,14 @@ const gamesList = [
     "image": window.gameImages?.["Nautilus"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/nautilusOS.html"
   },
+    {
+    "id": 357,
+    "row": "Other Apps & Services",
+    "title": "Nautilus OS",
+    "addedAt": "2026-11-26",
+    "image": window.gameImages?.["Nautilus"] || "",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clai.html"
+  },
 ];
 
 window.gamesList = gamesList;
