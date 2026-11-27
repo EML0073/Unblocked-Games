@@ -231,6 +231,7 @@
         body[data-ug-theme="light"]{background-color:#f4f5f7!important;color:#202124!important}
         body[data-ug-theme="light"] :is(header.top-bar,.top-bar){background:linear-gradient(110deg,#fff,#edf0f5)!important;border-color:#d9dee7!important;color:#202124!important}
         body[data-ug-theme="light"] .brand-logo{filter:brightness(0)!important}
+        body[data-ug-theme="light"] #filterTrigger img,body[data-ug-theme="light"] .filter-trigger img{filter:brightness(0)!important}
         body[data-ug-theme="light"] :is(.nav-tab,.btn-back,.view-all,.back){color:#4b5360!important}
         body[data-ug-theme="light"] .nav-tab.active,body[data-ug-theme="light"] .nav-tab[aria-current="page"]{background:#e4e8ef!important;color:#202124!important;border-color:#c3cad5!important}
         body[data-ug-theme="light"] :is(.nav-tab:hover,.btn-back:hover){background:#e7ebf1!important;color:#202124!important}
