@@ -5,7 +5,7 @@
 <meta name="theme-color" content="#121212">
 <link rel="icon" type="image/svg+xml" href="argazkik/UNBLOCKEDgames_favicon.svg?v=2">
 <title>UNBLOCKEDgames - Proxy</title>
-<script>if(window.top===window.self){const s=document.createElement("script");s.src="coi-serviceworker.js";document.head.appendChild(s);}</script><link rel="stylesheet" href="estetika.css?v=1">
+<link rel="stylesheet" href="estetika.css?v=1">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{min-height:100%;background:#121212;color:#eef1f6;font-family:Arial,Helvetica,sans-serif}
@@ -73,6 +73,7 @@ const selectedCopy=proxyCopy[proxyLanguage]||proxyCopy.en;
 document.getElementById('proxyDescription').textContent=selectedCopy.description;
 document.getElementById('proxyWarning').textContent=selectedCopy.warning;
 const proxyUrl=new URL('https://unblocked-games-proxy.onrender.com/');
+proxyUrl.searchParams.set('embed','1');
 proxyUrl.searchParams.set('lang',proxyLanguage);
 proxyUrl.searchParams.set('accent',proxyAccent);
 proxyUrl.searchParams.set('theme',proxyTheme);
