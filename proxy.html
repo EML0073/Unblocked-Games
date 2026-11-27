@@ -73,7 +73,6 @@ const selectedCopy=proxyCopy[proxyLanguage]||proxyCopy.en;
 document.getElementById('proxyDescription').textContent=selectedCopy.description;
 document.getElementById('proxyWarning').textContent=selectedCopy.warning;
 const proxyUrl=new URL('https://unblocked-games-proxy.onrender.com/');
-proxyUrl.searchParams.set('embed','1');
 proxyUrl.searchParams.set('lang',proxyLanguage);
 proxyUrl.searchParams.set('accent',proxyAccent);
 proxyUrl.searchParams.set('theme',proxyTheme);
