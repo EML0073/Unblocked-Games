@@ -17,17 +17,17 @@ body{min-height:100vh;display:flex;flex-direction:column;animation:enter .28s ea
 .nav-tab{color:#b5bac5;text-decoration:none;border:1px solid transparent;padding:9px 14px;border-radius:12px;font-size:14px}
 .nav-tab:hover{background:#2b2f38;border-color:#414754;color:#fff}
 .nav-tab.active{color:#fff;background:#292d35;border-color:#555d6b}
-main{width:100%;max-width:1600px;margin:0 auto;padding:30px 5% 38px;flex:1;display:flex;flex-direction:column;gap:18px}
+main{width:100%;max-width:1800px;margin:0 auto;padding:22px 4% 28px;flex:1;display:flex;flex-direction:column;gap:12px}
 .proxy-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap}
 .eyebrow{display:flex;align-items:center;gap:8px;color:#aab3c1;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:9px}
 .eyebrow:before{content:"";width:20px;height:2px;background:var(--ug-accent,#e50914);border-radius:2px}
 h1{font-size:clamp(25px,3vw,34px);line-height:1.15;letter-spacing:-.7px;margin-bottom:8px}
-.intro-copy{max-width:650px;color:#aab3c1;font-size:14px;line-height:1.65}
+.intro-copy{max-width:1100px;color:#aab3c1;font-size:14px;line-height:1.7}.intro-warning{color:#8f99a9;margin-left:7px}
 .proxy-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .proxy-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 14px;border:1px solid #414957;border-radius:12px;background:#252a34;color:#e5e9f0;text-decoration:none;font-size:13px}
 .proxy-actions a:hover{background:#343b47;border-color:#687386}
 .btn-maximize{min-height:42px;padding:9px 16px;border:1px solid var(--ug-accent,#e50914);border-radius:12px;background:var(--ug-accent,#e50914);color:#fff;font-size:13px;font-weight:700;cursor:pointer}
-.proxy-frame-wrap{position:relative;width:100%;height:calc(100vh - 270px);min-height:520px;max-height:1050px;background:#080808;border:1px solid #3a414d;border-radius:18px;overflow:hidden;box-shadow:0 12px 34px #0005}
+.proxy-frame-wrap{position:relative;width:100%;height:calc(100vh - 215px);min-height:620px;max-height:none;background:#080808;border:1px solid #3a414d;border-radius:18px;overflow:hidden;box-shadow:0 12px 34px #0005}
 .proxy-frame-wrap:fullscreen{width:100vw;height:100vh;max-height:none;min-height:0;border:0;border-radius:0}
 .proxy-frame-wrap iframe{display:block;width:100%;height:100%;border:0;background:#080808}
 .proxy-status{display:flex;align-items:center;gap:9px;color:#9da6b5;font-size:12px;line-height:1.6}
@@ -38,7 +38,7 @@ body[data-ug-theme="light"]{background:#f4f5f7;color:#202124}
 body[data-ug-theme="light"] .top-bar{background:linear-gradient(110deg,#fff,#edf0f5);border-bottom-color:#d9dee7}
 body[data-ug-theme="light"] .nav-tab{color:#555d6b}
 body[data-ug-theme="light"] .nav-tab.active{color:#202124;background:#e4e8ef;border-color:#c3cad5}
-body[data-ug-theme="light"] .intro-copy,body[data-ug-theme="light"] .eyebrow,body[data-ug-theme="light"] .proxy-status{color:#626875}
+body[data-ug-theme="light"] .intro-copy,body[data-ug-theme="light"] .intro-warning{color:#626875}
 body[data-ug-theme="light"] .proxy-actions a{background:#fff;color:#252a34;border-color:#d5d9e0}
 body[data-ug-theme="light"] .site-footer{background:#eceff3;color:#555d6b;border-top-color:#d9dee7}
 body[data-ug-theme="light"] .site-footer a{color:#303744}
@@ -52,10 +52,10 @@ body[data-ug-theme="light"] .site-footer a{color:#303744}
 <nav class="main-nav" aria-label="Main menu"><a class="nav-tab" href="index.html">Games</a><a class="nav-tab active" href="proxy.html" aria-current="page">Proxy</a><a class="nav-tab" href="https://sites.google.com/view/search-internet/google" target="_blank" rel="noopener noreferrer">Launcher</a></nav>
 </header>
 <main>
-<section class="proxy-intro"><div><div class="eyebrow">UNBLOCKEDgames · Browser</div><h1>Scramjet Proxy</h1><p class="intro-copy">Browse the web directly from UNBLOCKEDgames, without leaving this page.</p></div>
+<section class="proxy-intro"><div><h1>Scramjet Proxy</h1><p class="intro-copy"><span id="proxyDescription">Browse the web directly from UNBLOCKEDgames, without leaving this page.</span><span class="intro-warning" id="proxyWarning">Some pages may not work correctly. Please be patient while they load, and reload the page if necessary.</span></p></div>
 <div class="proxy-actions"><a href="https://unblocked-games-proxy.onrender.com/" target="_blank" rel="noopener noreferrer">Open in new tab ↗</a><button class="btn-maximize" id="maximizeProxy" type="button">Fullscreen</button></div></section>
 <div class="proxy-frame-wrap" id="proxyFrameWrap"><iframe id="scramjetFrame" title="Scramjet Proxy" allow="cross-origin-isolated; clipboard-read; clipboard-write; fullscreen; autoplay" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-<p class="proxy-status"><span class="status-dot" aria-hidden="true"></span>Proxy embedded · Some websites may not work correctly through the embedded browser.</p>
+
 </main>
 <footer class="site-footer"><a href="https://github.com/EML0073/Unblocked-Games">UNBLOCKEDgames</a> © 2026 by <a href="https://github.com/EML0073">EML_0073</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><p>Games and their respective assets belong to their original creators and are not covered by this website's license.</p><p>Contact/Feedback: <a href="mailto:eml_0073@ni.eus">eml_0073@ni.eus</a> · <a href="pribatutasuna.html">Privacy Policy</a></p></footer>
 <script>
@@ -64,6 +64,14 @@ const maximizeProxy=document.getElementById('maximizeProxy');
 const proxyLanguage=localStorage.getItem('unblockedgames-language')||'en';
 const proxyAccent=localStorage.getItem('unblockedgames-accent')||'#e50914';
 const proxyTheme=localStorage.getItem('unblockedgames-theme')||'dark';
+const proxyCopy={
+  en:{description:'Browse the web directly from UNBLOCKEDgames, without leaving this page.',warning:'Some pages may not work correctly. Please be patient while they load, and reload the page if necessary.'},
+  es:{description:'Navega por Internet directamente desde UNBLOCKEDgames, sin salir de esta página.',warning:'Es posible que algunas páginas no funcionen correctamente. Ten paciencia mientras cargan y, si es necesario, vuelve a cargar la página.'},
+  eu:{description:'Arakatu Internet zuzenean UNBLOCKEDgames-etik, orri honetatik irten gabe.',warning:'Baliteke orrialde batzuk behar bezala ez ibiltzea. Izan pazientzia kargatzen diren bitartean, eta beharrezkoa bada, kargatu orria berriro.'}
+};
+const selectedCopy=proxyCopy[proxyLanguage]||proxyCopy.en;
+document.getElementById('proxyDescription').textContent=selectedCopy.description;
+document.getElementById('proxyWarning').textContent=selectedCopy.warning;
 const proxyUrl=new URL('https://unblocked-games-proxy.onrender.com/');
 proxyUrl.searchParams.set('lang',proxyLanguage);
 proxyUrl.searchParams.set('accent',proxyAccent);
