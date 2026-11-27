@@ -155,7 +155,7 @@
       context.drawImage(wallpaperImage,sx,sy,cropWidth,cropHeight,0,0,outputWidth,outputHeight);
       const data=canvas.toDataURL('image/jpeg',0.86);
       const settings={image:data,mode:wallpaperMode.value};
-      try { save('unblockedgames-wallpaper',JSON.stringify(settings)); applyWallpaper(); wallpaperEditor.hidden=true; setWallpaperError('Wallpaper applied.'); }
+      try { localStorage.setItem('unblockedgames-wallpaper',JSON.stringify(settings)); applyWallpaper(); wallpaperEditor.hidden=true; setWallpaperError('Wallpaper applied.'); }
       catch(error) { setWallpaperError('Could not save this image. Try a smaller image.'); }
     });
     panel.querySelector('#ug-wallpaper-cancel').addEventListener('click',()=>{wallpaperEditor.hidden=true;setWallpaperError('');});
