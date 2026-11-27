@@ -42,10 +42,15 @@
       .ug-wallpaper-box input[type="range"]{width:100%;accent-color:var(--ug-accent)}
       .ug-wallpaper-row{display:flex;gap:7px;margin-top:7px}
       .ug-wallpaper-row button{flex:1}
-      .ug-wallpaper-preview{position:relative;width:100%;max-height:260px;margin-top:10px;overflow:hidden;border:1px solid #777;border-radius:9px;background:#111;touch-action:none}
-      .ug-wallpaper-preview[data-mode="scroll"]{aspect-ratio:3/4}
-      .ug-wallpaper-preview[data-mode="fixed"]{aspect-ratio:16/9}
-      .ug-wallpaper-preview img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;transform:scale(1);user-select:none;-webkit-user-drag:none;pointer-events:none}
+      .ug-wallpaper-crop-stage{position:relative;margin:14px auto 8px;width:100%;display:flex;justify-content:center;padding:0 8px}
+      .ug-wallpaper-preview{position:relative;width:min(100%,360px);max-height:320px;margin:0 auto;overflow:hidden;border:2px solid var(--ug-accent,#7c5cff);border-radius:12px;background:#111;touch-action:none;box-shadow:0 0 0 5px color-mix(in srgb,var(--ug-accent,#7c5cff) 17%,transparent),0 10px 28px #0005}
+      .ug-wallpaper-preview[data-mode="scroll"]{aspect-ratio:3/4;width:min(100%,240px);height:auto}
+      .ug-wallpaper-preview[data-mode="fixed"]{aspect-ratio:16/9;width:min(100%,420px);height:auto}
+      .ug-wallpaper-preview img{position:absolute;max-width:none;max-height:none;width:auto;height:auto;object-fit:fill;user-select:none;-webkit-user-drag:none;pointer-events:none}
+      .ug-crop-grid{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,transparent 33.15%,#fff8 33.33%,transparent 33.55%,transparent 66.45%,#fff8 66.66%,transparent 66.85%),linear-gradient(to bottom,transparent 33.15%,#fff8 33.33%,transparent 33.55%,transparent 66.45%,#fff8 66.66%,transparent 66.85%);box-shadow:inset 0 0 0 1px #fff9}
+      .ug-crop-ratio{position:absolute;top:9px;left:9px;padding:4px 8px;border-radius:6px;background:#101318d9;color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em;text-shadow:0 1px 2px #000}
+      .ug-crop-corner{position:absolute;width:18px;height:18px;border-color:#fff;border-style:solid;filter:drop-shadow(0 1px 2px #000)}
+      .ug-crop-tl{top:0;left:0;border-width:3px 0 0 3px}.ug-crop-tr{top:0;right:0;border-width:3px 3px 0 0}.ug-crop-bl{bottom:0;left:0;border-width:0 0 3px 3px}.ug-crop-br{bottom:0;right:0;border-width:0 3px 3px 0}
       .ug-wallpaper-help{font-size:11px;color:#bbb;margin-top:5px;line-height:1.4}
       .ug-wallpaper-error{font-size:11px;color:#ff9b9b;margin-top:6px}
       body[data-ug-theme="light"] #ug-wallpaper-modal{background:#fff;color:#202124;border-color:#d5d9e0}
@@ -81,8 +86,8 @@
             <option value="scroll">Moves with the page (vertical crop)</option>
             <option value="fixed">Stays fixed (horizontal crop)</option>
           </select>
-          <div class="ug-wallpaper-preview" id="ug-wallpaper-preview" data-mode="scroll"><img id="ug-wallpaper-image" alt="Wallpaper crop preview"></div>
-          <div class="ug-wallpaper-help">Drag the image to choose the crop, or adjust the controls.</div>
+          <div class="ug-wallpaper-crop-stage"><div class="ug-wallpaper-preview" id="ug-wallpaper-preview" data-mode="scroll"><img id="ug-wallpaper-image" alt="Wallpaper crop preview"><div class="ug-crop-grid" aria-hidden="true"><i></i><i></i></div><span class="ug-crop-ratio" id="ug-crop-ratio">VERTICAL · 3:4</span><span class="ug-crop-corner ug-crop-tl"></span><span class="ug-crop-corner ug-crop-tr"></span><span class="ug-crop-corner ug-crop-bl"></span><span class="ug-crop-corner ug-crop-br"></span></div></div>
+          <div class="ug-wallpaper-help">Drag the image inside the frame. The outlined area is exactly what will be used as your wallpaper.</div>
           <label for="ug-wallpaper-x">Horizontal position</label><input id="ug-wallpaper-x" type="range" min="0" max="100" value="50">
           <label for="ug-wallpaper-y">Vertical position</label><input id="ug-wallpaper-y" type="range" min="0" max="100" value="50">
           <label for="ug-wallpaper-zoom">Zoom</label><input id="ug-wallpaper-zoom" type="range" min="100" max="300" value="100">
@@ -112,9 +117,22 @@
     function setWallpaperError(message) { wallpaperError.textContent = message || ''; }
     function refreshWallpaperPreview() {
       if (!wallpaperImage) return;
+      const ratio = wallpaperMode.value === 'scroll' ? 3/4 : 16/9;
       wallpaperPreview.dataset.mode = wallpaperMode.value;
-      wallpaperPreviewImage.style.objectPosition = wallpaperX.value + '% ' + wallpaperY.value + '%';
-      wallpaperPreviewImage.style.transform = 'scale(' + (Number(wallpaperZoom.value) / 100) + ')';
+      const ratioLabel = wallpaperModal.querySelector('#ug-crop-ratio');
+      ratioLabel.textContent = wallpaperMode.value === 'scroll' ? 'VERTICAL · 3:4' : 'HORIZONTAL · 16:9';
+      const boxWidth = wallpaperPreview.clientWidth;
+      const boxHeight = wallpaperPreview.clientHeight;
+      if (!boxWidth || !boxHeight) return;
+      const scale = Math.max(boxWidth / wallpaperImage.naturalWidth, boxHeight / wallpaperImage.naturalHeight) * Number(wallpaperZoom.value) / 100;
+      const renderedWidth = wallpaperImage.naturalWidth * scale;
+      const renderedHeight = wallpaperImage.naturalHeight * scale;
+      const left = (boxWidth - renderedWidth) * Number(wallpaperX.value) / 100;
+      const top = (boxHeight - renderedHeight) * Number(wallpaperY.value) / 100;
+      wallpaperPreviewImage.style.width = renderedWidth + 'px';
+      wallpaperPreviewImage.style.height = renderedHeight + 'px';
+      wallpaperPreviewImage.style.left = left + 'px';
+      wallpaperPreviewImage.style.top = top + 'px';
     }
     function loadWallpaperSource(source, crossOrigin) {
       setWallpaperError('');
@@ -126,6 +144,7 @@
         wallpaperEditor.hidden = false;
         wallpaperX.value = 50; wallpaperY.value = 50; wallpaperZoom.value = 100;
         refreshWallpaperPreview();
+        requestAnimationFrame(refreshWallpaperPreview);
       };
       image.onerror = function() {
         setWallpaperError('Could not load this image. Check the URL or choose another image.');
@@ -147,6 +166,7 @@
       loadWallpaperSource(url, true);
     });
     [wallpaperMode, wallpaperX, wallpaperY, wallpaperZoom].forEach(control => control.addEventListener('input', refreshWallpaperPreview));
+    if (typeof ResizeObserver !== 'undefined') new ResizeObserver(refreshWallpaperPreview).observe(wallpaperPreview);
     wallpaperPreview.addEventListener('pointerdown', function(event) {
       if (!wallpaperImage) return;
       dragPoint = {x:event.clientX,y:event.clientY,xValue:Number(wallpaperX.value),yValue:Number(wallpaperY.value)};
