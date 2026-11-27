@@ -8,6 +8,7 @@ if (typeof window === "undefined") {
     const url = new URL(request.url);
     if (
       request.mode !== "navigate" ||
+      request.destination !== "document" ||
       url.origin !== self.location.origin ||
       url.pathname !== "/Unblocked-Games/proxy.html"
     ) return;
