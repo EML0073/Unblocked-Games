@@ -282,9 +282,14 @@
       const matches = gamesList.map(function(game,index) { return {game:game,index:index}; }).filter(function(item) {
         const addedTime = item.game.addedAt ? new Date(item.game.addedAt + 'T00:00:00').getTime() : 0;
         return item.game.title.toLowerCase().includes(searchText) && (allSelected || selectedGenreNames.length === 0 || selectedGenreNames.indexOf(item.game.row || 'Other') >= 0) && (!recentOnly || (addedTime > 0 && addedTime >= recentCutoff)) && (!bestRatedOnly || hasGameRating(item.game));
-      }).sort(function(a,b) { return bestRatedOnly ? (gameRating(b.game) - gameRating(a.game) || a.index - b.index) : (gameViews(b.game,b.index) - gameViews(a.game,a.index) || a.index - b.index); });
-      resultsTitle.textContent = bestRatedOnly ? 'Best Rated' : (recentOnly ? 'Recently Added' : (allSelected ? 'All games (' + matches.length + ')' : (selectedGenres.length ? selectedGenres.join(' + ') + ' (' + matches.length + ')' : 'Search results (' + matches.length + ')')));
-      resultsGrid.innerHTML = matches.length ? matches.map(makeCard).join('') : '<p class="no-results">No games found matching your search.</p>';
+      });
+      // "All games" is always ordered by total visits, highest first.
+      // Keep the original catalog order only when two games have equal visits.
+      const orderedMatches = bestRatedOnly
+        ? matches.slice().sort(function(a,b) { return gameRating(b.game) - gameRating(a.game) || a.index - b.index; })
+        : sortByViews(matches);
+      resultsTitle.textContent = bestRatedOnly ? 'Best Rated' : (recentOnly ? 'Recently Added' : (allSelected ? 'All games (' + orderedMatches.length + ')' : (selectedGenres.length ? selectedGenres.join(' + ') + ' (' + orderedMatches.length + ')' : 'Search results (' + orderedMatches.length + ')')));
+      resultsGrid.innerHTML = orderedMatches.length ? orderedMatches.map(makeCard).join('') : '<p class="no-results">No games found matching your search.</p>';
     }
     function selectGenre(genreName) {
       const filter = document.getElementById('genreFilter');
