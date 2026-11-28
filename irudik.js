@@ -364,6 +364,7 @@ const gameImages = {
   "scratch": "https://digikids.es/wp-content/uploads/2025/07/scratch-cat-logo-png_seeklogo-431721.png",
   "silk": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrHN4bMDC2fcLateRhCq1CW-IHLNg2ZMGhAphDSTge2A&s=10",
   "soundboard": "https://nerdordie.com/wp-content/uploads/2022/04/streamdeck-soundboard-twitch.jpg"
+  "gust": "https://repository-images.githubusercontent.com/1214064612/e4b46c21-8880-4fa2-8938-9b8ee7235d3e"
 };
 
 window.gameImages = gameImages;
