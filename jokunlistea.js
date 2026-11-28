@@ -2685,7 +2685,7 @@ const gamesList = [
     "title": "We Become What We Behold",
     "addedAt": "2026-11-26",
     "image": window.gameImages?.["We Become What We Behold"] || "",
-    "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/we-become-what-we-behold.html"
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clwebecomewhatwebehold.html"
   },
   {
     "id": 336,
