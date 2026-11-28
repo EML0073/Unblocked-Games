@@ -183,13 +183,13 @@
       let title='',message='';
       if(form.dataset.feedbackForm==='suggestion'){
         const data=new FormData(form);title='Game suggestion: '+String(data.get('title')||'').trim();
-        message=['Game title: '+String(data.get('title')||'').trim(),'Raw URL: '+String(data.get('rawUrl')||'').trim(),'Image URL: '+String(data.get('image')||'').trim(),'Genre: '+String(data.get('genre')||'').trim(),'Additional details: '+String(data.get('details')||'').trim()].join('\\n');
+        message=['Game title: '+String(data.get('title')||'').trim(),'Raw URL: '+String(data.get('rawUrl')||'').trim(),'Image URL: '+String(data.get('image')||'').trim(),'Genre: '+String(data.get('genre')||'').trim(),'Additional details: '+String(data.get('details')||'').trim()].join('\n');
       }else if(form.dataset.feedbackForm==='feedback'){
         title='Website feedback';message=String(new FormData(form).get('message')||'').trim();
       }else{
         const data=new FormData(form),type=String(data.get('type')||''),custom=String(data.get('otherType')||'').trim();
         title='Website bug report: '+(type==='Other'?custom:type);
-        message='Error type: '+(type==='Other'?custom:type)+'\\nDescription: '+String(data.get('message')||'').trim();
+        message='Error type: '+(type==='Other'?custom:type)+'\nDescription: '+String(data.get('message')||'').trim();
       }
       submit.disabled=true;submit.textContent='Sending...';feedbackStatus.textContent='';
       try{
