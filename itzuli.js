@@ -200,14 +200,14 @@ window.UNBLOCKED_TRANSLATIONS = {
   
     "Could not load this game. The source or its CDN may be unavailable. Try again later or report the problem.": "Could not load this game. The source or its CDN may be unavailable. Try again later or report the problem.",
     "Views:": "Views:",
-  },
-    "Open in new tab ↗": "Open in new tab ↗",
+      "Open in new tab ↗": "Open in new tab ↗",
     "Open Proxy": "Open Proxy",
     "Banner content": "Banner content",
     "+40 games": "+40 games",
     "← Back to catalog": "← Back to catalog",
     "⛶ Maximize": "⛶ Maximize",
     "UNBLOCKEDgames - Proxy": "UNBLOCKEDgames - Proxy",
+  },
   "es": {
     "Settings": "Configuración",
     "Light mode": "Modo claro",
@@ -409,14 +409,14 @@ window.UNBLOCKED_TRANSLATIONS = {
   
     "Could not load this game. The source or its CDN may be unavailable. Try again later or report the problem.": "No se ha podido cargar este juego. Puede que la fuente o su CDN no estén disponibles. Inténtalo más tarde o informa del problema.",
     "Views:": "Visitas:",
-  },
-    "Open in new tab ↗": "Abrir en una pestaña nueva ↗",
+      "Open in new tab ↗": "Abrir en una pestaña nueva ↗",
     "Open Proxy": "Abrir proxy",
     "Banner content": "Contenido del banner",
     "+40 games": "+40 juegos",
     "← Back to catalog": "← Volver al catálogo",
     "⛶ Maximize": "⛶ Maximizar",
     "UNBLOCKEDgames - Proxy": "UNBLOCKEDgames - Proxy",
+  },
   "eu": {
     "Settings": "Ezarpenak",
     "Light mode": "Modu argia",
@@ -617,13 +617,13 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Description:": "Deskribapena:",
   
     "Could not load this game. The source or its CDN may be unavailable. Try again later or report the problem.": "Ezin izan da joko hau kargatu. Baliteke iturburua edo haren CDN-a erabilgarri ez egotea. Saiatu geroago edo jakinarazi arazoa.",
-    "Views:": "Bisitaldiak:",    "Open in new tab ↗": "Ireki fitxa berrian ↗",
+    "Views:": "Bisitaldiak:",
+      "Open in new tab ↗": "Ireki fitxa berrian ↗",
     "Open Proxy": "Ireki proxya",
     "Banner content": "Bannerreko edukia",
     "+40 games": "+40 joko",
     "← Back to catalog": "← Katalogora itzuli",
     "⛶ Maximize": "⛶ Pantaila osoa",
     "UNBLOCKEDgames - Proxy": "UNBLOCKEDgames - Proxya",
-
   }
 };
