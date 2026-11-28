@@ -233,7 +233,7 @@
       const regularItems = allItems.filter(function(item) { return item.game.row !== 'Other Apps & Services'; });
       const appItems = allItems.filter(function(item) { return item.game.row === 'Other Apps & Services'; });
       const genres = Array.from(new Set(regularItems.map(function(item) { return item.game.row || 'Other'; }))).sort(function(a,b) { return a.localeCompare(b); });
-      const popular = regularItems.slice().sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
+      const popular = allItems.slice().sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index); });
       const recent = regularItems.filter(function(item) { return item.game.addedAt && (Date.now() - new Date(item.game.addedAt + 'T00:00:00').getTime()) < 10 * 24 * 60 * 60 * 1000; }).sort(function(a,b) { return new Date(b.game.addedAt) - new Date(a.game.addedAt) || b.index - a.index; });
       catalog.innerHTML = (appItems.length ? makeRow('Other Apps & Services', appItems) + '<div class="catalog-separator catalog-separator-strong"></div>' : '') + [
         makeRow('Most Popular', popular),
