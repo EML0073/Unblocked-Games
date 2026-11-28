@@ -2959,6 +2959,14 @@ const gamesList = [
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEj6y35wS4jRu_rxVvK292woTjiGhfW2CU1QXYgdXPG5zWYPw-UhgFSvSn&s=10",
     "webUrl": "https://www.snapchat.com/web"
   },
+        {
+    "id": 370,
+    "row": "Other Apps & Services",
+    "title": "GUST proxy",
+    "addedAt": "2026-11-28",
+    "image": window.gameImages?.["gust"] || "",
+    "rawUrl": "https://githubusercontent.com/EML0073/jokuk/blob/main/GUST.html"
+  },
 ];
 
 window.gamesList = gamesList;
