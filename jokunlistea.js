@@ -3008,6 +3008,14 @@ const gamesList = [
     "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1671340/capsule_616x353.jpg?t=1794511343",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clfearstofathomhomealone.html"
   },
+                  {
+    "id": 375,
+    "row": "Adventure",
+    "title": "GTA Vice City",
+    "addedAt": "2026-11-28",
+    "image": "https://assetsio.gnwcdn.com/co2lbb.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/gta-vice-city.html"
+  },
 ];
 
 window.gamesList = gamesList;
