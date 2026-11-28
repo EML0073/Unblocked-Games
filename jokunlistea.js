@@ -2992,13 +2992,13 @@ const gamesList = [
     "webUrl": "https://www.reddit.com/"
   },
   
-          {
+            {
     "id": 374,
-    "row": "Shooter",
-    "title": "Brawl Stars",
+    "row": "Other Apps & Services",
+    "title": "Youtube Music",
     "addedAt": "2026-11-28",
-    "image": "https://i.scdn.co/image/ab6761610000e5ebf7b952107c126c561c52171e",
-    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clbrawlsimulator3d.html"
+    "image": "https://yt3.googleusercontent.com/ytc/AIdro_l-6FQr2F5viYuELhfXHiUU46MqDNZkXPwUqbdZagQMt9A=s900-c-k-c0x00ffffff-no-rj",
+    "webUrl": "https://music.youtube.com/"
   },
 ];
 
