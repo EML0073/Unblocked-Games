@@ -363,7 +363,7 @@ const gameImages = {
   "sandstone": "https://camo.githubusercontent.com/e248797a3e0c01e4f409f16d12b1341d6873bda3c5a54cc1c0f9cbcaa88f5146/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f612f61662f555344415f4d696e6572616c5f53616e6473746f6e655f393363333935352e6a70673f3230303530353230313731363237",
   "scratch": "https://digikids.es/wp-content/uploads/2025/07/scratch-cat-logo-png_seeklogo-431721.png",
   "silk": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrHN4bMDC2fcLateRhCq1CW-IHLNg2ZMGhAphDSTge2A&s=10",
-  "soundboard": "https://nerdordie.com/wp-content/uploads/2022/04/streamdeck-soundboard-twitch.jpg"
+  "soundboard": "https://nerdordie.com/wp-content/uploads/2022/04/streamdeck-soundboard-twitch.jpg",
   "gust": "https://repository-images.githubusercontent.com/1214064612/e4b46c21-8880-4fa2-8938-9b8ee7235d3e"
 };
 
