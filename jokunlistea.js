@@ -3016,6 +3016,14 @@ const gamesList = [
     "image": "https://assetsio.gnwcdn.com/co2lbb.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/gta-vice-city.html"
   },
+       {
+    "id": 376,
+    "row": "Simulación",
+    "title": "Truck Simulator",
+    "addedAt": "2026-11-28",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ_aKN0heI8IGF0_E9b7MDPGLADL8mG3A35LNblOXpYw&s=10",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/truck-sim.html"
+  },
 ];
 
 window.gamesList = gamesList;
