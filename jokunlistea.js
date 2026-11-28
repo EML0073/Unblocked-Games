@@ -3366,7 +3366,7 @@ const gamesList = [
     "row": "Shooter",
     "title": "Brawl Stars",
     "addedAt": "2026-11-28",
-    "image": "https://i.scdn.co/image/ab6761610000e5ebf7b952107c126c561c52171e"
+    "image": "https://i.scdn.co/image/ab6761610000e5ebf7b952107c126c561c52171e",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clbrawlsimulator3d.html"
   },
 ];
