@@ -349,7 +349,7 @@ const gameImages = {
   "Worlds Hardest Game 2": "https://www.coolmathgames.com/sites/default/files/WorldsHardestGame2_OG-logo.jpg",
   "Worlds Hardest Game 3": "https://truffled.lol/png/games/3.png",
   "Worlds Hardest Game": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/worldshardestgame/icon.png",
-  "Wrestle Bros": "https://cdn.blipzi.com/wr/es/wrestle-bros-d.jpg?aspect_ratio=1%3A1&height=50&width=50",
+  "Wrestle Bros": "https://imgs.crazygames.com/wrestle-bros_16x9/20250320082313/wrestle-bros_16x9-cover?metadata=none&quality=100&width=1200&height=630&fit=crop",
   "Yohoho IO": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/835.png",
   "Zombie Rush": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXfHinBIdT2_ztfxwW6SvG0KIW1KLhdxGxcaB_m7FRg&s=10",
   "Zrist": "https://www.coolmathgames.com/sites/default/files/zrist-game-icon.png",
