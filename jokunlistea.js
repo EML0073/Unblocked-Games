@@ -3000,6 +3000,14 @@ const gamesList = [
     "image": "https://yt3.googleusercontent.com/ytc/AIdro_l-6FQr2F5viYuELhfXHiUU46MqDNZkXPwUqbdZagQMt9A=s900-c-k-c0x00ffffff-no-rj",
     "webUrl": "https://music.youtube.com/"
   },
+              {
+    "id": 374,
+    "row": "Horror",
+    "title": "Fears to Fathom",
+    "addedAt": "2026-11-28",
+    "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1671340/capsule_616x353.jpg?t=1794511343",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clfearstofathomhomealone.html"
+  },
 ];
 
 window.gamesList = gamesList;
