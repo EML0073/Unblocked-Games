@@ -1405,7 +1405,7 @@ const gamesList = [
     "title": "Jetpack Joyride",
     "addedAt": "2026-11-26",
     "image": window.gameImages?.["Jetpack Joyride"] || "",
-    "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/jetpack-joyride.html"
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/cljetpackjoyride.html"
   },
   {
     "id": 176,
@@ -2990,6 +2990,15 @@ const gamesList = [
     "addedAt": "2026-11-28",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3iatt8Fq2jfrUIUx0irQ2j9JX7Xq1Ro5DEas5U4ZMHAOXDm9zmvYiARxZ&s=10",
     "webUrl": "https://www.reddit.com/"
+  },
+  
+          {
+    "id": 374,
+    "row": "Shooter",
+    "title": "Brawl Stars",
+    "addedAt": "2026-11-28",
+    "image": "https://i.scdn.co/image/ab6761610000e5ebf7b952107c126c561c52171e"
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clbrawlsimulator3d.html"
   },
 ];
 
