@@ -1,10 +1,379 @@
+const gameImages = {
+"2048": "https://upload.wikimedia.org/wikipedia/commons/1/18/2048_logo.svg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original",
+  "Minecraft 26.2": "https://i.ytimg.com/vi/5VKjSq82d3Q/maxresdefault.jpg",
+  "Minecraft 26.3": "https://i.redd.it/d924vpk4vmhh1.jpeg",
+  "1 On 1 Soccer": "https://tcf.admeen.org/game/4000/3689/400x246/1-on-1-soccer.jpg",
+  "1 On 1 Tennis": "https://agar.cc/games/wp-content/uploads/2025/05/1-on-1-tennis.jpg",
+  "Minecraft 1.12": "https://i.ytimg.com/vi/z9Ae497x7oQ/maxresdefault.jpg",
+  "Minecraft 1.12 WASM": "https://i.ytimg.com/vi/z9Ae497x7oQ/maxresdefault.jpg",
+  "Minecraft 1.5": "https://i.ytimg.com/vi/vjHqEkTvhhk/maxresdefault.jpg",
+  "Minecraft 1.8": "https://i.ytimg.com/vi/EtyG9ooFAt0/maxresdefault.jpg",
+  "Minecraft 1.8 WASM": "https://i.ytimg.com/vi/EtyG9ooFAt0/maxresdefault.jpg",
+  "10 Minutes Till Dawn": "https://img.itch.zone/aW1nLzg3MTU5NzMucG5n/original/0LqGxb.png",
+  "12 Mini Battles": "https://play-lh.googleusercontent.com/FClOK2_m2CnumMcsiRKf5W02wK9vsbfVHj4SPOd-Bw36rgtr_2hkaqw0MEHv-jzqRe_4EhIyNzMvVkm8LYdroQ",
+  "1v1.Lol": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRubYInnAGe4y9zIN9OWITKCLIXZnxagTijhcj4jn9dPA&s",
+  "2048 Cupcakes": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXeQHaghE7Xho5W0fEb1C7tFOsMfGWxxbzVxCmWf5nK6r4Ob5tNYj5EZSW&s=10",
+  "3D Flight Simulator": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoOSHM0qF4Df5VIDiBvz1rTkrrj8UQyb4RMdcCXWGU3g&s=10",
+  "3D Free Kick": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY9LdhXt20AdSfQxC-zC6Pi2ncM2HZtkAm-o5R0YnZWQ&s=10",
+  "8 Ball Classic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv4-X9CBJ9VS51VnX-6h07TiTbAezlDs60xkD0ANpCyMEwMVLSnOMfqIU8&s=10",
+  "9007199254740992": "https://s1.dmcdn.net/v/BGx4s1gpfXKuKKkd7/x720",
+  "Minecraft Alpha 1.2.6": "https://minecraft.wiki/images/thumb/Alpha_v1.2.6_menu.png/280px-Alpha_v1.2.6_menu.png?af5fe",
+  "Minecraft Beta 1.3": "https://i.ytimg.com/vi/OhwsgnKXVbE/maxresdefault.jpg",
+  "Minecraft Indev": "https://static.wikia.nocookie.net/minecraft_gamepedia/images/d/d2/Indev_20100223.png/revision/latest?cb=20210728222353",
+  "Agar IO Lite": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwpCUA9j4sRs3g7kBzBwW9uZtjn5G81BncpEnSkXmPDQ&s=10",
+  "Age Of War 2": "https://play-lh.googleusercontent.com/ot6BPlHqqsvYO_XfUMjhUh-HEXm5q6ApnUiyLvc7rZDNmu8HF2zTJr1orU7_jGXkYVpEDdiIe2adlOOck69mXA",
+  "Age Of War": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJEebnxnnG0YrmdWRQLMH-M3M5xbTDIugh12kpWjq8kw&s=10",
+  "Ages Of Conflict": "https://i.ytimg.com/vi/eS0OAVOrunQ/mqdefault.jpg",
+  "Among Us": "https://static.wikia.nocookie.net/amongus/images/d/da/Among_Us_Logo.png/revision/latest?cb=20231211001930&path-prefix=es",
+  "Angry Birds Showdown": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIR8kd6Js6IQP_-A54BLoQrq8jfV890ZAQtG3Yooo-YA&s=10",
+  "Angry Birds Space": "https://static.wikia.nocookie.net/angrybirds/images/2/25/200x400_240.png/revision/latest/thumbnail/width/360/height/360?cb=20241201044010&path-prefix=es",
+  "Angry Birds": "https://upload.wikimedia.org/wikipedia/en/2/2d/Angry_Birds_promo_art.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+  "Awesome Tanks 2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJAYfWitfhDyuteWfYuqsm2d3LifZioqVQQ-6kQKZW5BmZzrHinntsxzhq&s=10",
+  "Awesome Tanks": "https://www.coolmathgames.com/sites/default/files/AwesomeTanks_OG-logo.jpg",
+  "Backrooms": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9zctJ9S10_BhWj9Y2egy6jgRhY-2-7uuUpAvOy_pes07VYFP2HtiMbNk&s=10",
+  "Bacon May Die": "https://play-lh.googleusercontent.com/70mRpAms5QRNqOGjxCtS-yt8PoMzB9BblzUp5koocjqD8wnHakF6Zr_1rOg5cEqnPCs07TYq8r_4GjPbQqY42w",
+  "Bad Ice Cream 2": "https://m.media-amazon.com/images/I/81GzRr9FV+L.png",
+  "Bad Ice Cream 3": "https://m.media-amazon.com/images/I/81KuJ4iO5UL.png",
+  "Bad Ice Cream": "https://m.media-amazon.com/images/I/81GzRr9FV+L.png",
+  "Bad Parenting": "https://play-lh.googleusercontent.com/XBF1VnU6eOPWTuS1drE-JWWQK_Atv52nJr9OZEpvonL2nXiemQ-tQCScII__2I_9jHnt01P8VQVxk8J1SNEr",
+  "Bad Piggies": "https://play-lh.googleusercontent.com/iXET8vmU1PZJ5BepnivZ7016tDgxhmNZUXc6xN8nbimnRl_-jWvmtONxS5Y069JshzKKZgZPIZ4S4u0URySLEQ",
+  "Bad Time Simulator": "https://play-lh.googleusercontent.com/sZ-yJhGPw8_Sg1_ITp8B-b-z4w971n1IZ5CMBrAAu7wXUfghYvs0SlzKvT-X-yxDuJJ_Pcca19OH40eZ4JDhVA",
+  "Baldis Basics": "https://tr.rbxcdn.com/180DAY-0adc3aae0f5317c8282d878a2ea2c156/500/280/Image/Jpeg/noFilter",
+  "Bank Robbery 2": "https://imgs.crazygames.com/bank-robbery-2/20221226200359/bank-robbery-2-cover?metadata=none&quality=100&width=1200&height=630&fit=crop",
+  "Bank Robbery 3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-XCLQaw5GqfDnINMPBG0SoOsZDH3WbCU9AqTWN81lmA&s",
+  "Baseball Bros": "https://batsmash.io/data/image/BaseballBros-1.jpg",
+  "Basket Bros": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQytyPqHhIBJJH_HTD-gz48jtzSogAjXrtn1j7_pKVGzakQagZf4bqvfwb&s=10",
+  "Basket Random": "https://play-lh.googleusercontent.com/sq0SQaq1utgwfeqovNMo61DhsHzVioadbBhAAr6OXJMBrrNG-8ybkyawexKk0viVCTYxTIdkarcRfoDKdcqi6uI",
+  "Basketball Legends": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTj_p_8T9L3OeuO1JxiL_zOW8cJcnKFTaDbADXwq_GgNk-Bztt1nlpu74&s=10",
+  "Basketball Stars": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/bc02c9cdfc5b424ddf343b01edf791ce/basketball-stars-logo.png",
+  "Big Ice Tower Tiny Square": "https://www.coolmathgames.com/sites/default/files/BigIceTowerTinySquare_OG-logo.jpg",
+  "Big Neon Tower Tiny Square": "https://www.coolmathgames.com/sites/default/files/BigNeonTowerTinySquare_OG-logo.jpg",
+  "Big Tower Tiny Square 2": "https://www.coolmathgames.com/sites/default/files/BigTowerTinySquare2_OG-logo.jpg",
+  "Big Tower Tiny Square": "https://www.coolmathgames.com/sites/default/files/BigTowerTinySquare_OG-logo.jpg",
+  "Bit Planes": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqjwp8ckW0EHOw5q2bK1uyPnPyWlxmCL65HUgsJAuJ6IfMMmHJX2QlnNHL&s=10",
+  "Bitlife": "https://m.media-amazon.com/images/I/61jpZBYLFWL.png",
+  "Blocky Snakes": "https://agario-free.com/assets/upload/agario/webp/blocky-snakes.webp",
+  "Bloons TD 2": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1276390/ecac662d1249f677cfd4c947015c276039f24e46/header.jpg?t=1774011972",
+  "Bloons TD 3": "https://img.itch.zone/aW1nLzEzMjE3NjYyLnBuZw==/original/81Jfly.png",
+  "Bloons TD 4": "https://i.ytimg.com/vi/1OjcbPQxbPE/mqdefault.jpg",
+  "Bloons TD 5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6PfTbP0w-KhHJSfWnrsZH8aaagIkX-BIzWN3L5u6iES_1cycdSyRnxpU&s=10",
+  "Bloons TD": "https://tcf.admeen.org/game/3000/2976/400x246/bloons-tower-defense-1.jpg",
+  "Bloxorz": "https://www.coolmathgames.com/sites/default/files/Bloxorz_OG-logo.jpg",
+  "Blumgi Racers": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/dbeb9170182271f87ecd5626b68a73aa/blumgi-racers-logo.png",
+  "Blumgi Rocket": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/672fb98802b00740e3c885cb2b31fc51/blumgi-rocket-logo.png",
+  "Bob The Robber 2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQknpmBvndtEbiMwJiLM4PHbHRjkAcGI8biQQ4FVp-58g&s",
+  "Bob The Robber 5": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiEH86SSp01XFlqtILoeypVwhfzvpGOEc7zEN_Q5JO6WjuLdI5K4BeogA&s=10",
+  "Bob The Robber": "https://www.coolmathgames.com/sites/default/files/BobTheRobber_OG-logo.jpg",
+  "Bouncy Motors": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR-FAJzNOgJu_zJzPtHPRnRHNRYDT7k3hmRe_ujsG4U_uf-pVWSMnrgYI&s=10",
+  "Bow Masters": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/0.png",
+  "Boxel Rebound": "https://trinculo54.github.io/Boxel-rebound-hope/Newer/img/icons/icon.png",
+  "Boxing Random": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/boxingrandom/512x512.jpg",
+  "Breaking The Bank": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/breakingthebank.jpg",
+  "Bubble Shooter": "https://play-lh.googleusercontent.com/7JFfLNIQcxhSR8TpQ3ALUCvx-cv8mH6zyoUCB4PFuR6LVjzwwIVvunIMaGeI4NECbnzjUq4p64mPARH16H0F",
+  "Burrito Bison Launcha Libre": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/78.png",
+  "Candy Crush": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/171.png",
+  "Capybara Clicker": "https://chromebookunlocked.github.io/games/Capybara%20Clicker/thumbnail.webp",
+  "Car Drawing": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdlvbOUZxSTKKNzmrZFWPS2kXpdMZf12MWqAXtOM8I2rB8o_zWRUfNptmL&s=10",
+  "Car King Arena": "https://i.ytimg.com/vi/cTHBNVHSLGs/hqdefault.jpg",
+  "Chaos Faction 2": "https://sealcentral.net/games/files/Chaos-Faction-2/icon.jpg",
+  "Chess": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/chess.jpg",
+  "Choppy Orc": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/464.png",
+  "Circloo 2": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/275.png",
+  "Circloo": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/274.png",
+  "Clash Of Vikings": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/545.png",
+  "Cleanup IO": "https://image.yaksgames.com/v2/game/8/7/9/VP8FFxLB6nwZpkZDoi9BkAWK6jROGsZX7B4UdHvS.jpeg",
+  "Cluster Rush": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/cluster-rush/icon.jpg",
+  "Cookie Clicker": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/cookie-clicker/cookie1.jpeg",
+  "Coreball": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/83.png",
+  "Crazy Cars": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/331.png",
+  "Crazy Cattle 3D": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/164.png",
+  "Crazy Crash Landing": "https://static.playgama.com/p-img/ph/crazy-crash-landing/big_preview/7edfbdb59ab947e5a5cd088674a715a5?width=1200",
+  "Crazy Motorcycle": "https://chromebookunlocked.github.io/games/Crazy%20Motorcycle/thumbnail.webp",
+  "Crossy Road": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/crossyroad.jpg",
+  "Cut The Rope 2": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/cuttherope.jpg",
+  "Cut The Rope Holiday Gift": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/214.png",
+  "Cut The Rope Time Travel": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/ctr-time-travel/thumb.png",
+  "Cut The Rope": "https://play-lh.googleusercontent.com/2bTmHHM7DBMVe7fLh16Em-J-tVBMFGL2HJCxPAMNF7gAYIfU6EZoYG1__lQ0cvFMEyp3GU9CGijZzEB1qJHF=s0-br30",
+  "Dadish 2": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/dadish2.jpg",
+  "Dadish 3": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/dadish3.jpg",
+  "Dadish": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/dadish.jpg",
+  "Deadly Descent": "https://chromebookunlocked.github.io/games/Deadly%20Descent/thumbnail.webp",
+  "Death Chase": "https://w8.snokido.com/img/death-chase.jpg",
+  "Death Run 3D": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/death-run-3d/img/death.png",
+  "Demolition Derby Crash Racing": "https://unblockgameplus.github.io/assets/img/external/ext-605.jpg",
+  "Doodle Jump": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/doodlejump/icon.png",
+  "Draw Climber": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/86.png",
+  "Dreadhead Parkour": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/310.png",
+  "Drift Boss": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/drift-boss/icon.png",
+  "Drift Hunters Pro": "https://www.drifted.com/wp-content/uploads/2026/01/featuredimage-tandem-battle-nissan-silvia-s15-mazda-rx7-fd-touge-drift-hunters-pro-500x281.jpg",
+  "Drive Mad": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/drivemad/icons/icon-512.png",
+  "Duck Life 2": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/flash/duck-life-2/ducklife2.png",
+  "Duck Life 3": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/flash/duck-life-3/ducklife3.png",
+  "Duck Life 4": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/ducklife4/icon.png",
+  "Duck Life 5": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/ducklife5/ducklife5.png",
+  "Duck Life": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/ducklife.jpg",
+  "Ducklings IO": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw9ecMSAeojScAdJoAlUA0BG_FT-qh2aqy7fHoHVzKe_z8ZW8ajcbKMhw&s=10",
+  "Eagle Ride": "https://cdn2.y8.com/cloudimage/224637/file/w380h285_webp-d6c18d4ef6bebdf574b352971b2c4c88.webp",
+  "Earn To Die 2": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/431590/header.jpg",
+  "Earn To Die": "https://a.silvergames.com/w/b/earn-to-die.webp",
+  "Eggy Car": "https://eggycargame.cc/uploads/games/main/img_692ed8b09225b.jpg",
+  "Elastic Face": "https://img.bubblebox.com/elastic-face-240.jpg",
+  "Escape Road 2": "https://truffled.lol/games/escape-road-2/icon.png",
+  "Escape Road 3": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/792.png",
+  "Escape Road": "https://imgs.crazygames.com/escape-road-asm_1x1/20250724105032/escape-road-asm_1x1-cover?format=auto&quality=100&metadata=none&width=1200",
+  "Escaping The Prison": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/escapingtheprison.jpg",
+  "Eugenes Life": "https://play-lh.googleusercontent.com/a6ZgmC6RtlB0bAMc23ZpNLN9DGbxFPMs0jFxzXRaC9_ytXBmX1QpkV4mgNORzHUYRT-2Rd7lWJDcGAhufzby",
+  "Evil Glitch": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/277.png",
+  "Fancy Pants Adventure 2": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/fancypantsadventure2.jpg",
+  "Fancy Pants Adventure": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/fancypantsadventure.jpg",
+  "Fireblob": "https://imgs.crazygames.com/auto-covers/fireblob_1x1?format=auto&metadata=none&quality=100&width=1200",
+  "Fireboy And Watergirl 2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSUnYMUi3neIgJJ-16_-MIJIWSqX1cP9SRk_1E9LmUbe2dnLIr4sCnkSc&s=10",
+  "Fireboy And Watergirl 3": "https://www2.minijuegosgratis.com/v3/games/thumbnails/20785_1.jpg",
+  "Fireboy And Watergirl 4": "https://www2.minijuegosgratis.com/v3/games/thumbnails/24295_1.jpg",
+  "Fireboy And Watergirl": "https://play-lh.googleusercontent.com/pmUNoC-Lu07skSH9LtfybfpIfN46fja-pfwj2TaxhbBYpmCDW1SYPM8-TSt_R4RAPAOw8Wfn4-zmA3AGpuv0lw",
+  "Flappy Bird": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/flappybird/icon.png",
+  "Fleeing The Complex": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/fleeingthecomplex.jpg",
+  "Flood Runner 2": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/floodrunner2.jpg",
+  "Flood Runner 3": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/floodrunner3.jpg",
+  "Flood Runner 4": "https://dinosaurgame-free.io/data/image/game/flood-runner-4/flood-runner-4.png",
+  "FNAF 2": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/fnaf-2/fnaf-2.jpg",
+  "FNAF 3": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/fnaf-3/fnaf-3.png",
+  "FNAF 4": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/fnaf-4/thumb.png",
+  "FNAF Sister Location": "https://sealcentral.net/games/files/FNAF-Sister/icon.jpg",
+  "FNAF": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/fnaf-1/favicon.png",
+  "Football Bros": "https://truffled.lol/png/games/footbros.webp",
+  "Football Legends": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/c6e0f5e01cd4cbd95ec12dd54c881a89/football-legends-logo.png",
+  "Free Rider 3": "https://www2.minijuegosgratis.com/v3/games/thumbnails/23743_7_sq.jpg",
+  "Friday Night Funkin": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/8.png",
+  "Fruit Ninja": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/fruit-ninja/thumb.png",
+  "Funny Battle 2": "https://sz-games.github.io/cover/FUNNYBATTLE2.webp",
+  "Funny Battle": "https://imgs.crazygames.com/funny-battle-simulator/20221031152054/funny-battle-simulator-cover?metadata=none&quality=60&height=3591",
+  "Funny Mad Racing": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/funnymadracing.jpg",
+  "Funny Shooter 2": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/funnyshooter2.jpg",
+  "Geometry Dash Lite": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/geometrydashlite.jpg",
+  "Geometry Dash": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/geometrydash/icon.png",
+  "Geometry Vibes": "https://cdn.blipzi.com/ge/om/geometry-vibes-d.jpg?aspect_ratio=1%3A1&height=50&width=50",
+  "Get On Top": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/3078616e30ecc5f326bd8e6cad728a03/get-on-top-logo.png",
+  "Getaway Shootout": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/getawayshooter/img/index.jpg",
+  "Gladi Hoppers": "https://truffled.lol/png/games/glad.webp",
+  "Google Baseball": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/257.png",
+  "Google Dino": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/chromedino.jpg",
+  "Granny 2": "https://play-lh.googleusercontent.com/X_9WQbosx62FK2V2BK1Tuh2f3FuwyhrznBBodZ6nxGphIC0PwU0YxTVDRpOhbVKquz4UzgZ4SbjwQhVYOvEGnA",
+  "Granny": "https://truffled.lol/png/games/granny.webp",
+  "Guess Their Answer": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/155.png",
+  "Hanger 2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVak0W0DJzX0RTpz-suo2he9ItTCYlxnYx12oQdhYxZoS46ENTzGyw-ME&s=10",
+  "Happy Wheels": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/happywheels/Untitled.jpeg",
+  "Helix Jump": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/helixjump.jpg",
+  "Highway Traffic": "https://m.media-amazon.com/images/I/91v2iv5ug7L.jpg",
+  "Hill Climb Racing Lite": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/157.png",
+  "Hole IO": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/holeio.jpg",
+  "House Of Hazards": "https://truffled.lol/games/houseofhazards/hoz.png",
+  "Hover Racer Drive": "https://ozogames.com/uploads/2025/09/Hover-Racer-Drive-image.webp",
+  "Ice Dodo": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/5.png",
+  "Idle Breakout": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAx03-vWN4OOfFXtiRqWgNlrEZ4-9gz8t8c_s6FVfAKW9UYK97NQB5pkI&s=10",
+  "Idle Dice": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/294.png",
+  "Infiltrating The Airship": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/infiltratingtheairship.jpg",
+  "Iron Snout": "https://icons-5.org/g4m3s/iron-snout/IronSnout.png",
+  "Jacksmith": "https://bagelcomics.com/thumbnails/jacksmith.jpg",
+  "Jetpack Joyride": "https://truffled.lol/games/jetpackjoyride/logo.jpeg",
+  "Johnny Trigger": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/93.png",
+  "Jumping Shell": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/8c089d8a9ee0c1715ce06261d27ab0a4/jumping-shell-logo.png",
+  "Karate Bros": "https://cdn.blipzi.com/ka/ra/karate-bros-d.jpg?aspect_ratio=1%3A1&height=50&width=50",
+  "Kart Bros": "https://freegames.io/thumbs/kart-bros_2.jpg",
+  "Kittytoy": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/441.png",
+  "Learn To Fly 2": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/learntofly2/logo.jpg",
+  "Learn To Fly 3": "https://truffled.lol/games/ltf3/logo.png",
+  "Learn To Fly Idle": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/learntoflyidle/icon.jpg",
+  "Learn To Fly": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/learntofly/icon.png",
+  "Level Devil": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/701e10b108ed7a0c68c738c46c9a705a/level-devil-logo.png",
+  "Little Alchemy 2": "https://i.ytimg.com/vi/lZ9yLQMVzoM/hqdefault.jpg",
+  "Madalin Stunt Cars 2": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/278.png",
+  "Madness Project Nexus": "https://gaming-cdn.com/images/products/9688/orig/madness-project-nexus-pc-juego-steam-cover.jpg?v=1702467158",
+  "Melon Playground": "https://truffled.lol/games/melon-playground/melon.png",
+  "Merge Round Racers": "https://raw.githubusercontent.com/ShadowDevLabs/files/main/merge-round-racers/splash.png",
+  "Minesweeper": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/minesweeper.jpg",
+  "Monkey Mart": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/monkeymart/unnamed.png",
+  "Monster Tracks": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/36.png",
+  "Motherload": "https://bagelcomics.com/thumbnails/motherload.jpg",
+  "Moto X3m 2": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/97.png",
+  "Moto X3m 3": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/98.png",
+  "Moto X3m Pool Party": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/124.png",
+  "Moto X3m Spooky Land": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/3f8a297822df891a1c158576b6461014/moto-x3m-spooky-land-logo.png",
+  "Moto X3m Winter": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/motox3mwinter.jpg",
+  "Moto X3m": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/motox3m/splash.jpg",
+  "Murder": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/baccf9660bfb476fe2c8ae9f5a2ec4d2/murder-logo.png",
+  "Noob Miner": "https://w8.snokido.com/img/large/noob-miner-jailbreak.jpg",
+  "Openttd": "https://upload.wikimedia.org/wikipedia/commons/b/ba/OpenTTD-15.3-en.png",
+  "Opposite Day": "https://gamingkool.com/wp-content/uploads/2025/06/opposite-day-1-300x243.png.webp",
+  "Ovo 2": "https://scout.wgimager.com/f_webp/w_420/q_90/https://melonplaygroundgame.org/data/image/game/ovo-2.png",
+  "Ovo 3 Dimensions": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/3.png",
+  "Ovo": "https://imgs.crazygames.com/games/ovo/cover-1605160387375.png?metadata=none&quality=60&height=5068",
+  "Pac Man": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/pacman/icon.png",
+  "Papas Bakeria": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/19ab3ab9c8c60afe5fe115269106fcd9/papas-bakeria-logo.png",
+  "Papas Burgeria": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/papasburgeria/images.jpeg",
+  "Papas Cheeseria": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/dba66f3ebbf814e758579987d62c1b35/papas-cheeseria-logo.jpeg",
+  "Papas Cupcakeria": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/papascupcakeria.jpg",
+  "Papas Donuteria": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/ac42fc62543c257861731ffbf401bf75/papas-donuteria-logo.png",
+  "Papas Freezeria": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/papasfreezeria/images.jpeg",
+  "Papas Hot Doggeria": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/papashotdoggeria.jpg",
+  "Papas Pancakeria": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/papaspancakeria.jpg",
+  "Papas Pastaria": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/papaspastaria.jpg",
+  "Papas Pizzeria": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/papaspizzeria.jpg",
+  "Papas Scooperia": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/papasscooperia.jpg",
+  "Papas Sushiria": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/papassushiria.jpg",
+  "Papas Taco Mia": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/papastacomia.jpg",
+  "Papas Wingeria": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/papaswingeria.jpg",
+  "Paper IO 2": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/paperio2/images/icon512.png",
+  "Parking Fury 2": "https://77pen.github.io/img/parking-fury-2.png",
+  "Parking Fury 3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB9kivzV9Wuv1Gq1-oMrqccVMoWDZto4TfWqEx_gIA6eiabvF2na26zyg&s=10",
+  "Parking Fury": "https://a.silvergames.com/w/b/parking-fury.webp",
+  "Picos School": "https://upload.wikimedia.org/wikipedia/en/5/52/Pico%27s_School_%281999%29_screenshot.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+  "Ping Pong Chaos": "https://nargames.com/storage/uploads/thumbs/ping-pong-chaos.webp",
+  "Pixel Speedrun": "https://schplay.com/games/pixel-speedrun/icon.png",
+  "Plants Vs Zombies": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/232.png",
+  "Plonky": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOd35OCr92BNX7qGGsKagY87kgxF35GHIhUgh1CpIWVf2ketTdtHCphW4&s=10",
+  "Polytrack": "https://i.ytimg.com/vi/wXsG1d9TzdI/maxresdefault.jpg",
+  "Poor Bunny": "https://i.ytimg.com/vi/b1sY8BucElA/maxresdefault.jpg",
+  "Pou": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/23.png",
+  "Ragdoll Archers": "https://truffled.lol/games/ragdoll/arch.png",
+  "Ragdoll Hit": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/3c892779be9dabb3589586c83ad3eeed/ragdoll-hit-logo.png",
+  "Ragdoll Soccer": "https://img.ragdollsoccer.org/s_5l3j696v2r2r53/cover.610f9ccee4.webp",
+  "Red Ball 4 Vol 1": "https://play-lh.googleusercontent.com/2YHKmwP7IBVt6mTE4mZ_tbDbRw7rGqtvvh1a4gKHQgLpYxBaBodFjtBerlgxD9GoKmX6SUnxDTzAK8NbqEcN=w526-h296-rw",
+  "Red Ball 4 Vol 2": "https://play-lh.googleusercontent.com/2YHKmwP7IBVt6mTE4mZ_tbDbRw7rGqtvvh1a4gKHQgLpYxBaBodFjtBerlgxD9GoKmX6SUnxDTzAK8NbqEcN=w526-h296-rw",
+  "Red Ball 4 Vol 3": "https://play-lh.googleusercontent.com/2YHKmwP7IBVt6mTE4mZ_tbDbRw7rGqtvvh1a4gKHQgLpYxBaBodFjtBerlgxD9GoKmX6SUnxDTzAK8NbqEcN=w526-h296-rw",
+  "Retro Bowl College": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/retrobowlcollege/unnamed.png",
+  "Retro Bowl": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/retrobowl/img/splash.png",
+  "Retro Highway": "https://gearheadgames.com/retrohighway/images/logo.png",
+  "Retro Ping Pong": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXIuYoMCyKytVcW8mhcw7NrNVnlOk2lTbYOJQ7pr53JVbUbV-JqZfj3G-F&s=10",
+  "Riddle School 2": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/riddleschool2/icon.png",
+  "Riddle School 3": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/riddleschool3/riddle-school-3.webp",
+  "Riddle School 4": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/riddleschool4/Untitled.jpeg",
+  "Riddle School 5": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/riddleschool5/Untitled.jpeg",
+  "Riddle School": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/riddleschool/RiddleSchool2.png",
+  "Riddle Transfer 2": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/riddletransfer2.jpg",
+  "Riddle Transfer": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/riddletransfer.jpg",
+  "Rocket Soccer Derby": "https://unblockgameplus.github.io/assets/img/external/ext-527.jpg",
+  "Rooftop Run": "https://tcf.admeen.org/game/19500/19180/400x246/rooftop-run.webp",
+  "Rooftop Snipers 2": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/rooftop-snipers/thumb.png",
+  "Rooftop Snipers": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/rooftopsnipers/logo.png",
+  "Run 2": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/run2/icon.jpg",
+  "Run 3": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/run3/icon.jpeg",
+  "Run": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/run/icon.jpeg",
+  "Sand Game": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsJgs-K8bsqPY9S4wIuOM5OEMYoXGzNF8BkwqSv2G0OGVtQ9_sUnszwM3M&s=10",
+  "Sandbox City": "https://play-lh.googleusercontent.com/tYT9GHR-jI_TRxvh12awl9MlJg11k3jXz_MuqtvvO6j3e18qJ-uvudow5jRchTYPGvoI7oj2jZOfsOHFerPR7g",
+  "Short Life": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH9mKxcKtD8psHPv-DSa8yEVmO4S3mD8EWaOEPXLrW-GcsMFc2LLCMU9o&s=10",
+  "Six Cats Under": "https://browsercraft.com/images/games/covers/six-cats-under.jpg",
+  "Slope 2 Player": "https://slope2game.io/cache/data/image/game/slope-2-player/slope-2-player-m200x200.webp",
+  "Slope 3": "https://slope3.me/icon-64.png",
+  "Slope": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/slope/slope4.jpeg",
+  "Slow Roads": "https://truffled.lol/png/games/slow.webp",
+  "Sm 63": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTREkVKKczwdspwpPprDHzGcYSJvocOb2c3AxcrvVh1HA&s",
+  "Sm 64": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/sm64.jpg",
+  "Snail Bob 2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdX0oSdBDpUzZdBXxEllOn6C3Hrs1mP7JQfoaq-KN_zQ&s=10",
+  "Snail Bob 3": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/snail-bob-3/snail-bob-3.png",
+  "Snail Bob 4": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/snail-bob-4/snail-bob-4.png",
+  "Snail Bob 5": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/snail-bob-5/snail-bob-5.jpg",
+  "Snail Bob 6": "https://raw.githubusercontent.com/BrowLu27/gamessite.github.io/main/projects/snail-bob-6/snail-bob-6.png",
+  "Snail Bob 7": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdx87jc3HUhEHFw-DxUd3jqeu0yPhsSLtTu5Zhw3hbYfZC8wRCJ5KT-aG7&s=10",
+  "Snail Bob 8": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMmfO-L6znh3hJ9d3cqnPDHcDy7t8nGvWH6RtdUhmXBQ&s=10",
+  "Snail Bob": "https://kizicdn.com/system/static/thumbs/big_tile_thumb/1783/thumb300_maxresdefault.jpg?1556203170",
+  "Snow Rider": "https://play-lh.googleusercontent.com/8eXDsrFKHBw57UiUC8ryMXQS-WPvPia7BYuBjzzUOy9VnGqrOCTV3kAaKci1TyFBgBAUKLg0aAjNiOdXL0USEA=w526-h296-rw",
+  "Snow Road": "https://www2.minijuegosgratis.com/v3/games/thumbnails/255614_7_sq.jpg",
+  "Snowball IO": "https://play-lh.googleusercontent.com/CFNkJuW4sYU-Qa_sQZ-MsDlcq_Kc1VoZKZg-3M4jbsD6dtnmnsXzZ37i6TR8GKHJAi54T1fe-3YDnRJYGahtSHM",
+  "Soccer Bros": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRleBq0pSLLT04gSUItxzWd8v36_Lk3GdclMtlGin5N1w&s=10",
+  "Soccer Random": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSea_nYzj62qLeAp93_bKfFnVdK-m5p-O4DQKbTosmgYyvS5Lh0-xQzZuT_&s=10",
+  "Space Is Key 2": "https://www.coolmathgames.com/sites/default/files/styles/app_icon/public/Space-is-key-2-game-icon.png?itok=kdwpNQ0d",
+  "Space Is Key": "https://www.coolmathgames.com/sites/default/files/styles/app_icon/public/space-is-key-game-icon.png?itok=3cXvx2ZD",
+  "Space Waves": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/space/cover.svg",
+  "Spacebar Clicker": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/473.png",
+  "Speed Stars": "https://play-lh.googleusercontent.com/401i77SId9iFJhSAbsf7N_VAzwlF54JScAhir-1eHVakBRXtQ7wDytltICSlgjtUqcG5apsnu84uy3A59JfSxw=w240-h480-rw",
+  "Sprunki": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/9.png",
+  "Stack": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/stack.jpg",
+  "Stacktris": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/ba04eca05c362b04deec44651e86e39a/stacktris-logo.png",
+  "State IO": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/stateio.jpg",
+  "Stealing The Diamond": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/stealingthediamond.jpg",
+  "Stick Archers Battle": "https://i.ytimg.com/vi/vWcDZr6SIp0/maxresdefault.jpg",
+  "Stick Fighter": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXXISXyT7qeLYzEknIjgcEph2ifVPRG9sQZephSOJSB7vSZMzwUZzkUHM&s=10",
+  "Stick Merge": "https://raw.githubusercontent.com/ShadowDevLabs/files/main/stick-merge/splash.png",
+  "Stickman Hook": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/stickman-hook/icon.jpg",
+  "Subway Surfers Beijing": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/subwaysurfers.jpeg",
+  "Subway Surfers Havana": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/subwaysurfers.jpeg",
+  "Subway Surfers San Francisco": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/subwaysurfers.jpeg",
+  "Super Bike The Champion": "https://img.poki-cdn.com/cdn-cgi/image/q%3D78%2Cscq%3D50%2Cwidth%3D94%2Cheight%3D94%2Cfit%3Dcover%2Cf%3Dauto/637e9d97391d771eb633c1091c05b66f/super-bike-the-champion-logo.png",
+  "Super Liquid Soccer": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1705130/header.jpg?t=1671169997",
+  "Super Star Car": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/579.png",
+  "Superhot": "https://truffled.lol/games/superhot/icon.png",
+  "Table Tennis World Tour": "https://firebasestorage.googleapis.com/v0/b/famobi-eos.appspot.com/o/websiteGames%2FRxEpTrw2hJLPSAx6AeEM%2Fimages%2Fteaser.webp?alt=media",
+  "Tag": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/627.png",
+  "Tanuki Sunset": "https://truffled.lol/png/games/tanukisunset.webp",
+  "Tap Road": "https://cpsgames.org/thumbs/tap-road_1.webp",
+  "Temple Of Boom": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/d710fe8830d731072485a582881605ea/temple-of-boom-logo.png",
+  "Temple Run 2": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/templerun2.jpg",
+  "Territorial IO": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/territorialio.jpg",
+  "Tetrominoes": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHofK9U0GqlPu5ULgVSfTGraHkEDzla18uWemjxYdQ0r3cvJjFPmRIfWI&s=10",
+  "The Impossible Quiz 2": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/theimpossiblequiz2.jpg",
+  "The Impossible Quiz": "https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/3cd96c99-46c1-4ff0-b04a-82381ea07349/the-impossible-quiz-logo.png",
+  "There Is No G": "https://www.coolmathgames.com/sites/default/files/there-is-no-game.png",
+  "They Are Coming": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/348.png",
+  "This Is The Only Level Too": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY9FQovfzayrKDMKWwUc6ql-niU3wCEnxGq9pW7D5M7disQ9l_BXgOeOU&s=10",
+  "This Is The Only Level": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/thisistheonlylevel.jpg",
+  "Time Shooter 2": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/timeshooter2/ts2.jpg",
+  "Time Shooter 3": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/timeshooter3/logo.png",
+  "Tiny Fishing": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/tinyfishing/thumb.png",
+  "Tomb Of The Mask": "https://truffled.lol/games/tombofthemask/cover.svg",
+  "Trap The Cat": "https://trap-thecat.github.io/bg1.png",
+  "Trivia Crack": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/163.png",
+  "Tube Jumpers": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/tube-jumpers/img/icon.jpg",
+  "Tunnel Rush": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/tunnelrush.jpg",
+  "Unicycle Hero": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDV0olkPG57VWPHhrZTqa7JIqXvYj57c2fq7V4rOz6Wji2ZlAZ4Fh9KCY&s=10",
+  "Vex 4": "https://truffled.lol/games/vex4/vex4.png",
+  "Vex 5": "https://truffled.lol/games/vex5/vex.jpeg",
+  "Vex 6": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/vex6/assets/icon.png",
+  "Vex 7": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFIqcFHcYTJMMvDZXzQ7hq_87MN9cZ5sbdVEIj60OcOxxmBxQqmAqg3zCQ&s=10",
+  "Vex 8": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQRBzo_agCWijb1mh9I0ySq-AU1Qb--8erxN1G5rqCPUzqiAPjEV9UIq0R&s=10",
+  "Vex X3m 2": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/56.png",
+  "Vex X3m": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/55.png",
+  "Volley Random": "https://truffled.lol/games/volley-random/splash.png",
+  "War The Knights": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/284.png",
+  "We Become What We Behold": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/671.png",
+  "Wheelie Bike": "https://play-lh.googleusercontent.com/a--Z5EuOewe3X6bq0XyhLVvIEWDBhyulH972p72HgyctBd1eS9snr3YVG11clRzc4r5c5WoNP648go5LUWUU",
+  "Wheely 2": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/246.png",
+  "Wheely 3": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/247.png",
+  "Wheely 4": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/248.png",
+  "Wheely 5": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/249.png",
+  "Wheely 6": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/250.png",
+  "Wheely 7": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/251.png",
+  "Wheely 8": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/252.png",
+  "Wheely": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/245.png",
+  "Wordle Unlimited": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoSY62s696QkCOAw-BbHT3QsJil7pYX0ednTIyoqMpowZQUcEDKmvmM3rh&s=10",
+  "Worlds Hardest Game 2": "https://www.coolmathgames.com/sites/default/files/WorldsHardestGame2_OG-logo.jpg",
+  "Worlds Hardest Game 3": "https://www.coolmathgames.com/sites/default/files/WorldsHardestGame3_OG-logo.jpg",
+  "Worlds Hardest Game": "https://raw.githubusercontent.com/gamesyte/gamesyte.github.io/main/worldshardestgame/icon.png",
+  "Wrestle Bros": "https://imgs.crazygames.com/wrestle-bros_16x9/20250320082313/wrestle-bros_16x9-cover?metadata=none&quality=100&width=1200&height=630&fit=crop",
+  "Yohoho IO": "https://cdn.jsdelivr.net/gh/freebuisness/covers@main/835.png",
+  "Zombie Rush": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXfHinBIdT2_ztfxwW6SvG0KIW1KLhdxGxcaB_m7FRg&s=10",
+  "Zrist": "https://www.coolmathgames.com/sites/default/files/zrist-game-icon.png",
+  "Nautilus": "https://avatars.githubusercontent.com/u/240241840?s=280&v=4",
+  "EmulatorJS": "https://emulatorjs.org/logo/EmulatorJS.png",
+  "githubsearch": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/Screenshot%202026-11-28%2013.20.54.png",
+  "NESemulator": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAcCHiag_XjJz2H11pkMWTWu9_OVhMSFQ6H8BrNCj2q9YhIARDLghEAyU&s=10",
+  "helios": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/Screenshot%202026-11-28%2013.23.21.png",
+  "pico8edu": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrLKiGeihQpFQGsp4NzjrD_xSJ8ZbVdXsj_lfBzpWgQQ&s=10",
+  "ruffleemu": "https://static0.xdaimages.com/wordpress/wp-content/uploads/2021/02/ruffle-flash-player-emulator.jpg",
+  "sandstone": "https://camo.githubusercontent.com/e248797a3e0c01e4f409f16d12b1341d6873bda3c5a54cc1c0f9cbcaa88f5146/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f612f61662f555344415f4d696e6572616c5f53616e6473746f6e655f393363333935352e6a70673f3230303530353230313731363237",
+  "scratch": "https://digikids.es/wp-content/uploads/2025/07/scratch-cat-logo-png_seeklogo-431721.png",
+  "silk": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrHN4bMDC2fcLateRhCq1CW-IHLNg2ZMGhAphDSTge2A&s=10",
+  "soundboard": "https://nerdordie.com/wp-content/uploads/2022/04/streamdeck-soundboard-twitch.jpg",
+  "gust": "https://repository-images.githubusercontent.com/1214064612/e4b46c21-8880-4fa2-8938-9b8ee7235d3e"
+};
+
 const gamesList = [
   {
     "id": 0,
     "row": "Adventure",
     "title": "Minecraft 26.2",
     "addedAt": "2026-11-23",
-    "image": window.gameImages?.["Minecraft 26.2"] || "",
+    "image": gameImages["Minecraft 26.2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/MilkdromedaStudios/all-of-eaglercraft/refs/heads/main/Eaglercraft%2026.2%20u2.html"
   },
   {
@@ -12,7 +381,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "1 On 1 Soccer",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["1 On 1 Soccer"] || "",
+    "image": gameImages["1 On 1 Soccer"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1-on-1-soccer.html"
   },
   {
@@ -20,7 +389,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "1 On 1 Tennis",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["1 On 1 Tennis"] || "",
+    "image": gameImages["1 On 1 Tennis"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1-on-1-tennis.html"
   },
   {
@@ -28,7 +397,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Minecraft 1.12",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Minecraft 1.12"] || "",
+    "image": gameImages["Minecraft 1.12"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1.12.html"
   },
   {
@@ -36,7 +405,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Minecraft 1.12 WASM",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Minecraft 1.12 WASM"] || "",
+    "image": gameImages["Minecraft 1.12 WASM"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1.12_WASM.html"
   },
   {
@@ -44,7 +413,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Minecraft 1.5",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Minecraft 1.5"] || "",
+    "image": gameImages["Minecraft 1.5"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1.5.html"
   },
   {
@@ -52,7 +421,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Minecraft 1.8",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Minecraft 1.8"] || "",
+    "image": gameImages["Minecraft 1.8"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1.8.html"
   },
   {
@@ -60,7 +429,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Minecraft 1.8 WASM",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Minecraft 1.8 WASM"] || "",
+    "image": gameImages["Minecraft 1.8 WASM"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1.8_WASM.html"
   },
   {
@@ -68,7 +437,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "10 Minutes Till Dawn",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["10 Minutes Till Dawn"] || "",
+    "image": gameImages["10 Minutes Till Dawn"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/10-minutes-till-dawn.html"
   },
   {
@@ -76,7 +445,7 @@ const gamesList = [
     "row": "Acción",
     "title": "12 Mini Battles",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["12 Mini Battles"] || "",
+    "image": gameImages["12 Mini Battles"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/12-mini-battles.html"
   },
   {
@@ -84,7 +453,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "1v1.Lol",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["1v1.Lol"] || "",
+    "image": gameImages["1v1.Lol"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/1v1.lol.html"
   },
   {
@@ -92,7 +461,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "2048 Cupcakes",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["2048 Cupcakes"] || "",
+    "image": gameImages["2048 Cupcakes"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/2048-cupcakes.html"
   },
   {
@@ -100,7 +469,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "2048",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["2048"] || "",
+    "image": gameImages["2048"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/2048.html"
   },
   {
@@ -108,7 +477,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "3D Flight Simulator",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["3D Flight Simulator"] || "",
+    "image": gameImages["3D Flight Simulator"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/3D-flight-simulator.html"
   },
   {
@@ -116,7 +485,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "3D Free Kick",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["3D Free Kick"] || "",
+    "image": gameImages["3D Free Kick"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/3d-free-kick.html"
   },
   {
@@ -124,7 +493,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "8 Ball Classic",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["8 Ball Classic"] || "",
+    "image": gameImages["8 Ball Classic"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/8-ball-classic.html"
   },
   {
@@ -132,7 +501,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "9007199254740992",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["9007199254740992"] || "",
+    "image": gameImages["9007199254740992"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/9007199254740992.html"
   },
   {
@@ -140,7 +509,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Minecraft Alpha 1.2.6",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Minecraft Alpha 1.2.6"] || "",
+    "image": gameImages["Minecraft Alpha 1.2.6"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/Alpha_1.2.6.html"
   },
   {
@@ -148,7 +517,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Minecraft Beta 1.3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Minecraft Beta 1.3"] || "",
+    "image": gameImages["Minecraft Beta 1.3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/Beta_1.3.html"
   },
   {
@@ -156,7 +525,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Minecraft Indev",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Minecraft Indev"] || "",
+    "image": gameImages["Minecraft Indev"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/Indev.html"
   },
   {
@@ -164,7 +533,7 @@ const gamesList = [
     "row": "Multijugador .IO",
     "title": "Agar IO Lite",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Agar IO Lite"] || "",
+    "image": gameImages["Agar IO Lite"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/agar-io-lite.html"
   },
   {
@@ -172,7 +541,7 @@ const gamesList = [
     "row": "Estrategia",
     "title": "Age Of War 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Age Of War 2"] || "",
+    "image": gameImages["Age Of War 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/age-of-war-2.html"
   },
   {
@@ -180,7 +549,7 @@ const gamesList = [
     "row": "Estrategia",
     "title": "Age Of War",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Age Of War"] || "",
+    "image": gameImages["Age Of War"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/age-of-war.html"
   },
   {
@@ -188,7 +557,7 @@ const gamesList = [
     "row": "Estrategia",
     "title": "Ages Of Conflict",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Ages Of Conflict"] || "",
+    "image": gameImages["Ages Of Conflict"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/ages-of-conflict.html"
   },
   {
@@ -196,7 +565,7 @@ const gamesList = [
     "row": "Multijugador .IO",
     "title": "Among Us",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Among Us"] || "",
+    "image": gameImages["Among Us"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/among-us.html"
   },
   {
@@ -204,7 +573,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Angry Birds Showdown",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Angry Birds Showdown"] || "",
+    "image": gameImages["Angry Birds Showdown"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/angry-birds-showdown.html"
   },
   {
@@ -212,7 +581,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Angry Birds Space",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Angry Birds Space"] || "",
+    "image": gameImages["Angry Birds Space"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/angry-birds-space.html"
   },
   {
@@ -220,7 +589,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Angry Birds",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Angry Birds"] || "",
+    "image": gameImages["Angry Birds"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/angry-birds.html"
   },
   {
@@ -228,7 +597,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Awesome Tanks 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Awesome Tanks 2"] || "",
+    "image": gameImages["Awesome Tanks 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/awesome-tanks-2.html"
   },
   {
@@ -236,7 +605,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Awesome Tanks",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Awesome Tanks"] || "",
+    "image": gameImages["Awesome Tanks"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/awesome-tanks.html"
   },
   {
@@ -244,7 +613,7 @@ const gamesList = [
     "row": "Terror",
     "title": "Backrooms",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Backrooms"] || "",
+    "image": gameImages["Backrooms"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/backrooms.html"
   },
   {
@@ -252,7 +621,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Bacon May Die",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bacon May Die"] || "",
+    "image": gameImages["Bacon May Die"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bacon-may-die.html"
   },
   {
@@ -260,7 +629,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Bad Ice Cream 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bad Ice Cream 2"] || "",
+    "image": gameImages["Bad Ice Cream 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bad-ice-cream-2.html"
   },
   {
@@ -268,7 +637,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Bad Ice Cream 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bad Ice Cream 3"] || "",
+    "image": gameImages["Bad Ice Cream 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bad-ice-cream-3.html"
   },
   {
@@ -276,7 +645,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Bad Ice Cream",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bad Ice Cream"] || "",
+    "image": gameImages["Bad Ice Cream"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bad-ice-cream.html"
   },
   {
@@ -284,7 +653,7 @@ const gamesList = [
     "row": "Terror",
     "title": "Bad Parenting",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bad Parenting"] || "",
+    "image": gameImages["Bad Parenting"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bad-parenting.html"
   },
   {
@@ -292,7 +661,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Bad Piggies",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bad Piggies"] || "",
+    "image": gameImages["Bad Piggies"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bad-piggies.html"
   },
   {
@@ -300,7 +669,7 @@ const gamesList = [
     "row": "Terror",
     "title": "Bad Time Simulator",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bad Time Simulator"] || "",
+    "image": gameImages["Bad Time Simulator"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bad-time-simulator.html"
   },
   {
@@ -308,7 +677,7 @@ const gamesList = [
     "row": "Terror",
     "title": "Baldis Basics",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Baldis Basics"] || "",
+    "image": gameImages["Baldis Basics"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/baldis-basics.html"
   },
   {
@@ -316,7 +685,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Bank Robbery 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bank Robbery 2"] || "",
+    "image": gameImages["Bank Robbery 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bank-robbery-2.html"
   },
   {
@@ -324,7 +693,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Bank Robbery 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bank Robbery 3"] || "",
+    "image": gameImages["Bank Robbery 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bank-robbery-3.html"
   },
   {
@@ -332,7 +701,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Baseball Bros",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Baseball Bros"] || "",
+    "image": gameImages["Baseball Bros"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/baseball-bros.html"
   },
   {
@@ -340,7 +709,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Basket Bros",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Basket Bros"] || "",
+    "image": gameImages["Basket Bros"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/basket-bros.html"
   },
   {
@@ -348,7 +717,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Basket Random",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Basket Random"] || "",
+    "image": gameImages["Basket Random"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/basket-random.html"
   },
   {
@@ -356,7 +725,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Basketball Legends",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Basketball Legends"] || "",
+    "image": gameImages["Basketball Legends"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/basketball-legends.html"
   },
   {
@@ -364,7 +733,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Basketball Stars",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Basketball Stars"] || "",
+    "image": gameImages["Basketball Stars"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/basketball-stars.html"
   },
   {
@@ -372,7 +741,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Big Ice Tower Tiny Square",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Big Ice Tower Tiny Square"] || "",
+    "image": gameImages["Big Ice Tower Tiny Square"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/big-ice-tower-tiny-square.html"
   },
   {
@@ -380,7 +749,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Big Neon Tower Tiny Square",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Big Neon Tower Tiny Square"] || "",
+    "image": gameImages["Big Neon Tower Tiny Square"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/big-neon-tower-tiny-square.html"
   },
   {
@@ -388,7 +757,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Big Tower Tiny Square 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Big Tower Tiny Square 2"] || "",
+    "image": gameImages["Big Tower Tiny Square 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/big-tower-tiny-square-2.html"
   },
   {
@@ -396,7 +765,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Big Tower Tiny Square",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Big Tower Tiny Square"] || "",
+    "image": gameImages["Big Tower Tiny Square"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/big-tower-tiny-square.html"
   },
   {
@@ -404,7 +773,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Bit Planes",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bit Planes"] || "",
+    "image": gameImages["Bit Planes"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bit-planes.htm"
   },
   {
@@ -412,7 +781,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Bitlife",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bitlife"] || "",
+    "image": gameImages["Bitlife"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bitlife.html"
   },
   {
@@ -420,7 +789,7 @@ const gamesList = [
     "row": "Multijugador .IO",
     "title": "Blocky Snakes",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Blocky Snakes"] || "",
+    "image": gameImages["Blocky Snakes"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/blocky-snakes.html"
   },
   {
@@ -428,7 +797,7 @@ const gamesList = [
     "row": "Estrategia",
     "title": "Bloons TD 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bloons TD 2"] || "",
+    "image": gameImages["Bloons TD 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bloons-TD-2.html"
   },
   {
@@ -436,7 +805,7 @@ const gamesList = [
     "row": "Estrategia",
     "title": "Bloons TD 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bloons TD 3"] || "",
+    "image": gameImages["Bloons TD 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bloons-TD-3.html"
   },
   {
@@ -444,7 +813,7 @@ const gamesList = [
     "row": "Estrategia",
     "title": "Bloons TD 4",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bloons TD 4"] || "",
+    "image": gameImages["Bloons TD 4"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bloons-TD-4.html"
   },
   {
@@ -452,7 +821,7 @@ const gamesList = [
     "row": "Estrategia",
     "title": "Bloons TD 5",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bloons TD 5"] || "",
+    "image": gameImages["Bloons TD 5"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bloons-TD-5.html"
   },
   {
@@ -460,7 +829,7 @@ const gamesList = [
     "row": "Estrategia",
     "title": "Bloons TD",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bloons TD"] || "",
+    "image": gameImages["Bloons TD"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bloons-TD.html"
   },
   {
@@ -468,7 +837,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Bloxorz",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bloxorz"] || "",
+    "image": gameImages["Bloxorz"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bloxorz.html"
   },
   {
@@ -476,7 +845,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Blumgi Racers",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Blumgi Racers"] || "",
+    "image": gameImages["Blumgi Racers"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/blumgi-racers.html"
   },
   {
@@ -484,7 +853,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Blumgi Rocket",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Blumgi Rocket"] || "",
+    "image": gameImages["Blumgi Rocket"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/blumgi-rocket.html"
   },
   {
@@ -492,7 +861,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Bob The Robber 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bob The Robber 2"] || "",
+    "image": gameImages["Bob The Robber 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bob-the-robber-2.html"
   },
   {
@@ -500,7 +869,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Bob The Robber 5",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bob The Robber 5"] || "",
+    "image": gameImages["Bob The Robber 5"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bob-the-robber-5.html"
   },
   {
@@ -508,7 +877,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Bob The Robber",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bob The Robber"] || "",
+    "image": gameImages["Bob The Robber"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bob-the-robber.html"
   },
   {
@@ -516,7 +885,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Bouncy Motors",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bouncy Motors"] || "",
+    "image": gameImages["Bouncy Motors"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bouncy-motors.html"
   },
   {
@@ -524,7 +893,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Bow Masters",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bow Masters"] || "",
+    "image": gameImages["Bow Masters"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bow-masters.html"
   },
   {
@@ -532,7 +901,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Boxel Rebound",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Boxel Rebound"] || "",
+    "image": gameImages["Boxel Rebound"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/boxel-rebound.html"
   },
   {
@@ -540,7 +909,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Boxing Random",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Boxing Random"] || "",
+    "image": gameImages["Boxing Random"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/boxing-random.htm"
   },
   {
@@ -548,7 +917,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Breaking The Bank",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Breaking The Bank"] || "",
+    "image": gameImages["Breaking The Bank"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/breaking-the-bank.html"
   },
   {
@@ -556,7 +925,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Bubble Shooter",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Bubble Shooter"] || "",
+    "image": gameImages["Bubble Shooter"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/bubble-shooter.html"
   },
   {
@@ -564,7 +933,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Burrito Bison Launcha Libre",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Burrito Bison Launcha Libre"] || "",
+    "image": gameImages["Burrito Bison Launcha Libre"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/burrito-bison-launcha-libre.html"
   },
   {
@@ -572,7 +941,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Candy Crush",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Candy Crush"] || "",
+    "image": gameImages["Candy Crush"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/candy-crush.html"
   },
   {
@@ -580,7 +949,7 @@ const gamesList = [
     "row": "Idle y Clicker",
     "title": "Capybara Clicker",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Capybara Clicker"] || "",
+    "image": gameImages["Capybara Clicker"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/capybara-clicker.html"
   },
   {
@@ -588,7 +957,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Car Drawing",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Car Drawing"] || "",
+    "image": gameImages["Car Drawing"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/car-drawing.html"
   },
   {
@@ -596,7 +965,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Car King Arena",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Car King Arena"] || "",
+    "image": gameImages["Car King Arena"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/car-king-arena.html"
   },
   {
@@ -604,7 +973,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Chaos Faction 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Chaos Faction 2"] || "",
+    "image": gameImages["Chaos Faction 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/chaos-faction-2.html"
   },
   {
@@ -612,7 +981,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Chess",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Chess"] || "",
+    "image": gameImages["Chess"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/chess.html"
   },
   {
@@ -620,7 +989,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Choppy Orc",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Choppy Orc"] || "",
+    "image": gameImages["Choppy Orc"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/choppy-orc.html"
   },
   {
@@ -628,7 +997,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Circloo 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Circloo 2"] || "",
+    "image": gameImages["Circloo 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/circloO-2.html"
   },
   {
@@ -636,7 +1005,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Circloo",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Circloo"] || "",
+    "image": gameImages["Circloo"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/circloO.html"
   },
   {
@@ -644,7 +1013,7 @@ const gamesList = [
     "row": "Estrategia",
     "title": "Clash Of Vikings",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Clash Of Vikings"] || "",
+    "image": gameImages["Clash Of Vikings"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/clash-of-vikings.html"
   },
   {
@@ -652,7 +1021,7 @@ const gamesList = [
     "row": "Multijugador .IO",
     "title": "Cleanup IO",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Cleanup IO"] || "",
+    "image": gameImages["Cleanup IO"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/cleanup-io.html"
   },
   {
@@ -660,7 +1029,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Cluster Rush",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Cluster Rush"] || "",
+    "image": gameImages["Cluster Rush"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/cluster-rush.html"
   },
   {
@@ -668,7 +1037,7 @@ const gamesList = [
     "row": "Idle y Clicker",
     "title": "Cookie Clicker",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Cookie Clicker"] || "",
+    "image": gameImages["Cookie Clicker"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/cookie-clicker.htm"
   },
   {
@@ -676,7 +1045,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Coreball",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Coreball"] || "",
+    "image": gameImages["Coreball"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/coreball.html"
   },
   {
@@ -684,7 +1053,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Crazy Cars",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Crazy Cars"] || "",
+    "image": gameImages["Crazy Cars"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/crazy-cars.html"
   },
   {
@@ -692,7 +1061,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Crazy Cattle 3D",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Crazy Cattle 3D"] || "",
+    "image": gameImages["Crazy Cattle 3D"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/crazy-cattle-3D.html"
   },
   {
@@ -700,7 +1069,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Crazy Crash Landing",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Crazy Crash Landing"] || "",
+    "image": gameImages["Crazy Crash Landing"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/crazy-crash-landing.html"
   },
   {
@@ -708,7 +1077,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Crazy Motorcycle",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Crazy Motorcycle"] || "",
+    "image": gameImages["Crazy Motorcycle"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/crazy-motorcycle.html"
   },
   {
@@ -716,7 +1085,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Crossy Road",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Crossy Road"] || "",
+    "image": gameImages["Crossy Road"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/crossy-road.htm"
   },
   {
@@ -724,7 +1093,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Cut The Rope 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Cut The Rope 2"] || "",
+    "image": gameImages["Cut The Rope 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/cut-the-rope-2.html"
   },
   {
@@ -732,7 +1101,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Cut The Rope Holiday Gift",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Cut The Rope Holiday Gift"] || "",
+    "image": gameImages["Cut The Rope Holiday Gift"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/cut-the-rope-holiday-gift.html"
   },
   {
@@ -740,7 +1109,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Cut The Rope Time Travel",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Cut The Rope Time Travel"] || "",
+    "image": gameImages["Cut The Rope Time Travel"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/cut-the-rope-time-travel.html"
   },
   {
@@ -748,7 +1117,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Cut The Rope",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Cut The Rope"] || "",
+    "image": gameImages["Cut The Rope"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/cut-the-rope.html"
   },
   {
@@ -756,7 +1125,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Dadish 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Dadish 2"] || "",
+    "image": gameImages["Dadish 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/dadish-2.html"
   },
   {
@@ -764,7 +1133,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Dadish 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Dadish 3"] || "",
+    "image": gameImages["Dadish 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/dadish-3.html"
   },
   {
@@ -772,7 +1141,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Dadish",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Dadish"] || "",
+    "image": gameImages["Dadish"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/dadish.html"
   },
   {
@@ -780,7 +1149,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Deadly Descent",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Deadly Descent"] || "",
+    "image": gameImages["Deadly Descent"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/deadly-descent.html"
   },
   {
@@ -788,7 +1157,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Death Chase",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Death Chase"] || "",
+    "image": gameImages["Death Chase"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/death-chase.html"
   },
   {
@@ -796,7 +1165,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Death Run 3D",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Death Run 3D"] || "",
+    "image": gameImages["Death Run 3D"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/death-run-3D.html"
   },
   {
@@ -804,7 +1173,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Demolition Derby Crash Racing",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Demolition Derby Crash Racing"] || "",
+    "image": gameImages["Demolition Derby Crash Racing"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/demolition-derby-crash-racing.html"
   },
   {
@@ -812,7 +1181,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Doodle Jump",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Doodle Jump"] || "",
+    "image": gameImages["Doodle Jump"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/doodle-jump.html"
   },
   {
@@ -820,7 +1189,7 @@ const gamesList = [
     "row": "Casual",
     "title": "Draw Climber",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Draw Climber"] || "",
+    "image": gameImages["Draw Climber"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/draw-climber.html"
   },
   {
@@ -828,7 +1197,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Dreadhead Parkour",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Dreadhead Parkour"] || "",
+    "image": gameImages["Dreadhead Parkour"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/dreadhead-parkour.htm"
   },
   {
@@ -836,7 +1205,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Drift Boss",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Drift Boss"] || "",
+    "image": gameImages["Drift Boss"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/drift-boss.htm"
   },
   {
@@ -844,7 +1213,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Drift Hunters Pro",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Drift Hunters Pro"] || "",
+    "image": gameImages["Drift Hunters Pro"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/drift-hunters-pro.html"
   },
   {
@@ -852,7 +1221,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Drive Mad",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Drive Mad"] || "",
+    "image": gameImages["Drive Mad"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/drive-mad.htm"
   },
   {
@@ -860,7 +1229,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Duck Life 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Duck Life 2"] || "",
+    "image": gameImages["Duck Life 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/duck-life-2.html"
   },
   {
@@ -868,7 +1237,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Duck Life 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Duck Life 3"] || "",
+    "image": gameImages["Duck Life 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/duck-life-3.html"
   },
   {
@@ -876,7 +1245,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Duck Life 4",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Duck Life 4"] || "",
+    "image": gameImages["Duck Life 4"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/duck-life-4.html"
   },
   {
@@ -884,7 +1253,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Duck Life 5",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Duck Life 5"] || "",
+    "image": gameImages["Duck Life 5"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/duck-life-5.html"
   },
   {
@@ -892,7 +1261,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Duck Life",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Duck Life"] || "",
+    "image": gameImages["Duck Life"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/duck-life.html"
   },
   {
@@ -900,7 +1269,7 @@ const gamesList = [
     "row": "Multijugador .IO",
     "title": "Ducklings IO",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Ducklings IO"] || "",
+    "image": gameImages["Ducklings IO"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/ducklings-io.html"
   },
   {
@@ -908,7 +1277,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Eagle Ride",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Eagle Ride"] || "",
+    "image": gameImages["Eagle Ride"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/eagle-ride.html"
   },
   {
@@ -916,7 +1285,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Earn To Die 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Earn To Die 2"] || "",
+    "image": gameImages["Earn To Die 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/earn-to-die-2.html"
   },
   {
@@ -924,7 +1293,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Earn To Die",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Earn To Die"] || "",
+    "image": gameImages["Earn To Die"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/earn-to-die.html"
   },
   {
@@ -932,7 +1301,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Eggy Car",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Eggy Car"] || "",
+    "image": gameImages["Eggy Car"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/eggy-car.html"
   },
   {
@@ -940,7 +1309,7 @@ const gamesList = [
     "row": "Casual",
     "title": "Elastic Face",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Elastic Face"] || "",
+    "image": gameImages["Elastic Face"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/elastic-face.htm"
   },
   {
@@ -948,7 +1317,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Escape Road 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Escape Road 2"] || "",
+    "image": gameImages["Escape Road 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/escape-road-2.html"
   },
   {
@@ -956,7 +1325,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Escape Road 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Escape Road 3"] || "",
+    "image": gameImages["Escape Road 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/escape-road-3.html"
   },
   {
@@ -964,7 +1333,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Escape Road",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Escape Road"] || "",
+    "image": gameImages["Escape Road"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/escape-road.html"
   },
   {
@@ -972,7 +1341,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Escaping The Prison",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Escaping The Prison"] || "",
+    "image": gameImages["Escaping The Prison"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/escaping-the-prison.html"
   },
   {
@@ -980,7 +1349,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Eugenes Life",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Eugenes Life"] || "",
+    "image": gameImages["Eugenes Life"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/eugenes-life.html"
   },
   {
@@ -988,7 +1357,7 @@ const gamesList = [
     "row": "Terror",
     "title": "Evil Glitch",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Evil Glitch"] || "",
+    "image": gameImages["Evil Glitch"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/evil-glitch.html"
   },
   {
@@ -996,7 +1365,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Fancy Pants Adventure 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Fancy Pants Adventure 2"] || "",
+    "image": gameImages["Fancy Pants Adventure 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fancy-pants-adventure-2.html"
   },
   {
@@ -1004,7 +1373,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Fancy Pants Adventure",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Fancy Pants Adventure"] || "",
+    "image": gameImages["Fancy Pants Adventure"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fancy-pants-adventure.html"
   },
   {
@@ -1012,7 +1381,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Fireblob",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Fireblob"] || "",
+    "image": gameImages["Fireblob"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fireblob.html"
   },
   {
@@ -1020,7 +1389,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Fireboy And Watergirl 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Fireboy And Watergirl 2"] || "",
+    "image": gameImages["Fireboy And Watergirl 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fireboy-and-watergirl-2.html"
   },
   {
@@ -1028,7 +1397,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Fireboy And Watergirl 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Fireboy And Watergirl 3"] || "",
+    "image": gameImages["Fireboy And Watergirl 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fireboy-and-watergirl-3.html"
   },
   {
@@ -1036,7 +1405,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Fireboy And Watergirl 4",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Fireboy And Watergirl 4"] || "",
+    "image": gameImages["Fireboy And Watergirl 4"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fireboy-and-watergirl-4.html"
   },
   {
@@ -1044,7 +1413,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Fireboy And Watergirl",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Fireboy And Watergirl"] || "",
+    "image": gameImages["Fireboy And Watergirl"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fireboy-and-watergirl.html"
   },
   {
@@ -1052,7 +1421,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Flappy Bird",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Flappy Bird"] || "",
+    "image": gameImages["Flappy Bird"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/flappy-bird.html"
   },
   {
@@ -1060,7 +1429,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Fleeing The Complex",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Fleeing The Complex"] || "",
+    "image": gameImages["Fleeing The Complex"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fleeing-the-complex.html"
   },
   {
@@ -1068,7 +1437,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Flood Runner 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Flood Runner 2"] || "",
+    "image": gameImages["Flood Runner 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/flood-runner-2.html"
   },
   {
@@ -1076,7 +1445,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Flood Runner 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Flood Runner 3"] || "",
+    "image": gameImages["Flood Runner 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/flood-runner-3.html"
   },
   {
@@ -1084,7 +1453,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Flood Runner 4",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Flood Runner 4"] || "",
+    "image": gameImages["Flood Runner 4"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/flood-runner-4.html"
   },
   {
@@ -1092,7 +1461,7 @@ const gamesList = [
     "row": "Terror",
     "title": "FNAF 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["FNAF 2"] || "",
+    "image": gameImages["FNAF 2"] || "",
     "rawUrl": "https://gist.githubusercontent.com/EML0073/d3f9b92a5cc5a4e62f875c759f8cef44/raw/4e46390d5e7c068ea49367c0f6643520433ebfe2/fnaf2.html"
   },
   {
@@ -1100,7 +1469,7 @@ const gamesList = [
     "row": "Terror",
     "title": "FNAF 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["FNAF 3"] || "",
+    "image": gameImages["FNAF 3"] || "",
     "rawUrl": "https://gist.githubusercontent.com/EML0073/87f6a64639b0fe7d09881b89d980288c/raw/2365f074983d4ea1b8b9128651725b8c7a6485ef/fnaf3.html"
   },
   {
@@ -1108,7 +1477,7 @@ const gamesList = [
     "row": "Terror",
     "title": "FNAF 4",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["FNAF 4"] || "",
+    "image": gameImages["FNAF 4"] || "",
     "rawUrl": "https://gist.githubusercontent.com/EML0073/896c70493f3a2a432671c242cc1ea46b/raw/53bd98bd7af007e5a099f2ae9abfc82b42f6b8e4/fnaf4.html"
   },
   {
@@ -1116,7 +1485,7 @@ const gamesList = [
     "row": "Terror",
     "title": "FNAF Sister Location",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["FNAF Sister Location"] || "",
+    "image": gameImages["FNAF Sister Location"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fnaf-sister-location.html"
   },
   {
@@ -1124,7 +1493,7 @@ const gamesList = [
     "row": "Terror",
     "title": "FNAF",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["FNAF"] || "",
+    "image": gameImages["FNAF"] || "",
     "rawUrl": "https://gist.githubusercontent.com/EML0073/9f1f31386ebb63ff7030922788531c74/raw/5ff7cc2bfc81a7b636c471d50e4457e1fa1536c7/FNAF.html"
   },
   {
@@ -1132,7 +1501,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Football Bros",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Football Bros"] || "",
+    "image": gameImages["Football Bros"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/football-bros.html"
   },
   {
@@ -1140,7 +1509,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Football Legends",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Football Legends"] || "",
+    "image": gameImages["Football Legends"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/football-legends.html"
   },
   {
@@ -1148,7 +1517,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Free Rider 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Free Rider 3"] || "",
+    "image": gameImages["Free Rider 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/free-rider-3.html"
   },
   {
@@ -1156,7 +1525,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Friday Night Funkin",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Friday Night Funkin"] || "",
+    "image": gameImages["Friday Night Funkin"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/friday-night-funkin.html"
   },
   {
@@ -1164,7 +1533,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Fruit Ninja",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Fruit Ninja"] || "",
+    "image": gameImages["Fruit Ninja"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/fruit-ninja.html"
   },
   {
@@ -1172,7 +1541,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Funny Battle 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Funny Battle 2"] || "",
+    "image": gameImages["Funny Battle 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/funny-battle-2.html"
   },
   {
@@ -1180,7 +1549,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Funny Battle",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Funny Battle"] || "",
+    "image": gameImages["Funny Battle"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/funny-battle.html"
   },
   {
@@ -1188,7 +1557,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Funny Mad Racing",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Funny Mad Racing"] || "",
+    "image": gameImages["Funny Mad Racing"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/funny-mad-racing.html"
   },
   {
@@ -1196,7 +1565,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Funny Shooter 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Funny Shooter 2"] || "",
+    "image": gameImages["Funny Shooter 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/funny-shooter-2.html"
   },
   {
@@ -1204,7 +1573,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Geometry Dash Lite",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Geometry Dash Lite"] || "",
+    "image": gameImages["Geometry Dash Lite"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/geometry-dash-lite.html"
   },
   {
@@ -1212,7 +1581,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Geometry Dash",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Geometry Dash"] || "",
+    "image": gameImages["Geometry Dash"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/geometry-dash.html"
   },
   {
@@ -1220,7 +1589,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Geometry Vibes",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Geometry Vibes"] || "",
+    "image": gameImages["Geometry Vibes"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/geometry-vibes.html"
   },
   {
@@ -1228,7 +1597,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Get On Top",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Get On Top"] || "",
+    "image": gameImages["Get On Top"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/get-on-top.html"
   },
   {
@@ -1236,7 +1605,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Getaway Shootout",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Getaway Shootout"] || "",
+    "image": gameImages["Getaway Shootout"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/getaway-shootout.html"
   },
   {
@@ -1244,7 +1613,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Gladi Hoppers",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Gladi Hoppers"] || "",
+    "image": gameImages["Gladi Hoppers"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/gladi-hoppers.html"
   },
   {
@@ -1252,7 +1621,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Google Baseball",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Google Baseball"] || "",
+    "image": gameImages["Google Baseball"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/google-baseball.html"
   },
   {
@@ -1260,7 +1629,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Google Dino",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Google Dino"] || "",
+    "image": gameImages["Google Dino"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/google-dino.html"
   },
   {
@@ -1268,7 +1637,7 @@ const gamesList = [
     "row": "Terror",
     "title": "Granny 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Granny 2"] || "",
+    "image": gameImages["Granny 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/granny-2.html"
   },
   {
@@ -1276,7 +1645,7 @@ const gamesList = [
     "row": "Terror",
     "title": "Granny",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Granny"] || "",
+    "image": gameImages["Granny"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/granny.html"
   },
   {
@@ -1284,7 +1653,7 @@ const gamesList = [
     "row": "Casual",
     "title": "Guess Their Answer",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Guess Their Answer"] || "",
+    "image": gameImages["Guess Their Answer"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/guess-their-answer.html"
   },
   {
@@ -1292,7 +1661,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Hanger 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Hanger 2"] || "",
+    "image": gameImages["Hanger 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/hanger-2.html"
   },
   {
@@ -1300,7 +1669,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Happy Wheels",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Happy Wheels"] || "",
+    "image": gameImages["Happy Wheels"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/happy-wheels.html"
   },
   {
@@ -1308,7 +1677,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Helix Jump",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Helix Jump"] || "",
+    "image": gameImages["Helix Jump"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/helix-jump.html"
   },
   {
@@ -1316,7 +1685,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Highway Traffic",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Highway Traffic"] || "",
+    "image": gameImages["Highway Traffic"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/highway-traffic.html"
   },
   {
@@ -1324,7 +1693,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Hill Climb Racing Lite",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Hill Climb Racing Lite"] || "",
+    "image": gameImages["Hill Climb Racing Lite"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/hill-climb-racing-lite.html"
   },
   {
@@ -1332,7 +1701,7 @@ const gamesList = [
     "row": "Multijugador .IO",
     "title": "Hole IO",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Hole IO"] || "",
+    "image": gameImages["Hole IO"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/hole-io.html"
   },
   {
@@ -1340,7 +1709,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "House Of Hazards",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["House Of Hazards"] || "",
+    "image": gameImages["House Of Hazards"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/house-of-hazards.html"
   },
   {
@@ -1348,7 +1717,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Hover Racer Drive",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Hover Racer Drive"] || "",
+    "image": gameImages["Hover Racer Drive"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/hover-racer-drive.html"
   },
   {
@@ -1356,7 +1725,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Ice Dodo",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Ice Dodo"] || "",
+    "image": gameImages["Ice Dodo"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/ice-dodo.html"
   },
   {
@@ -1364,7 +1733,7 @@ const gamesList = [
     "row": "Idle y Clicker",
     "title": "Idle Breakout",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Idle Breakout"] || "",
+    "image": gameImages["Idle Breakout"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/idle-breakout.html"
   },
   {
@@ -1372,7 +1741,7 @@ const gamesList = [
     "row": "Idle y Clicker",
     "title": "Idle Dice",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Idle Dice"] || "",
+    "image": gameImages["Idle Dice"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/idle-dice.html"
   },
   {
@@ -1380,7 +1749,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Infiltrating The Airship",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Infiltrating The Airship"] || "",
+    "image": gameImages["Infiltrating The Airship"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/infiltrating-the-airship.html"
   },
   {
@@ -1388,7 +1757,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Iron Snout",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Iron Snout"] || "",
+    "image": gameImages["Iron Snout"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/iron-snout.html"
   },
   {
@@ -1396,7 +1765,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Jacksmith",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Jacksmith"] || "",
+    "image": gameImages["Jacksmith"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/jacksmith.html"
   },
   {
@@ -1404,7 +1773,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Jetpack Joyride",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Jetpack Joyride"] || "",
+    "image": gameImages["Jetpack Joyride"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/cljetpackjoyride.html"
   },
   {
@@ -1412,7 +1781,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Johnny Trigger",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Johnny Trigger"] || "",
+    "image": gameImages["Johnny Trigger"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/johnny-trigger.html"
   },
   {
@@ -1420,7 +1789,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Jumping Shell",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Jumping Shell"] || "",
+    "image": gameImages["Jumping Shell"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/jumping-shell.html"
   },
   {
@@ -1428,7 +1797,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Karate Bros",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Karate Bros"] || "",
+    "image": gameImages["Karate Bros"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/karate-bros.html"
   },
   {
@@ -1436,7 +1805,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Kart Bros",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Kart Bros"] || "",
+    "image": gameImages["Kart Bros"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/kart-bros.html"
   },
   {
@@ -1444,7 +1813,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Kittytoy",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Kittytoy"] || "",
+    "image": gameImages["Kittytoy"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/kittytoy.html"
   },
   {
@@ -1452,7 +1821,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Learn To Fly 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Learn To Fly 2"] || "",
+    "image": gameImages["Learn To Fly 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/learn-to-fly-2.html"
   },
   {
@@ -1460,7 +1829,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Learn To Fly 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Learn To Fly 3"] || "",
+    "image": gameImages["Learn To Fly 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/learn-to-fly-3.html"
   },
   {
@@ -1468,7 +1837,7 @@ const gamesList = [
     "row": "Idle y Clicker",
     "title": "Learn To Fly Idle",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Learn To Fly Idle"] || "",
+    "image": gameImages["Learn To Fly Idle"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/learn-to-fly-idle.html"
   },
   {
@@ -1476,7 +1845,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Learn To Fly",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Learn To Fly"] || "",
+    "image": gameImages["Learn To Fly"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/learn-to-fly.html"
   },
   {
@@ -1484,7 +1853,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Level Devil",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Level Devil"] || "",
+    "image": gameImages["Level Devil"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/level-devil.html"
   },
   {
@@ -1492,7 +1861,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Little Alchemy 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Little Alchemy 2"] || "",
+    "image": gameImages["Little Alchemy 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/little-alchemy-2.html"
   },
   {
@@ -1500,7 +1869,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Madalin Stunt Cars 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Madalin Stunt Cars 2"] || "",
+    "image": gameImages["Madalin Stunt Cars 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/madalin-stunt-cars-2.html"
   },
   {
@@ -1508,7 +1877,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Madness Project Nexus",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Madness Project Nexus"] || "",
+    "image": gameImages["Madness Project Nexus"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/madness-project-nexus.html"
   },
   {
@@ -1516,7 +1885,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Melon Playground",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Melon Playground"] || "",
+    "image": gameImages["Melon Playground"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/melon-playground.html"
   },
   {
@@ -1524,7 +1893,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Merge Round Racers",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Merge Round Racers"] || "",
+    "image": gameImages["Merge Round Racers"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/merge-round-racers.html"
   },
   {
@@ -1532,7 +1901,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Minesweeper",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Minesweeper"] || "",
+    "image": gameImages["Minesweeper"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/minesweeper.html"
   },
   {
@@ -1540,7 +1909,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Monkey Mart",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Monkey Mart"] || "",
+    "image": gameImages["Monkey Mart"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/monkey-mart.htm"
   },
   {
@@ -1548,7 +1917,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Monster Tracks",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Monster Tracks"] || "",
+    "image": gameImages["Monster Tracks"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/monster-tracks.html"
   },
   {
@@ -1556,7 +1925,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Motherload",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Motherload"] || "",
+    "image": gameImages["Motherload"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/motherload.html"
   },
   {
@@ -1564,7 +1933,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Moto X3m 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Moto X3m 2"] || "",
+    "image": gameImages["Moto X3m 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/moto-x3m-2.html"
   },
   {
@@ -1572,7 +1941,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Moto X3m 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Moto X3m 3"] || "",
+    "image": gameImages["Moto X3m 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/moto-x3m-3.html"
   },
   {
@@ -1580,7 +1949,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Moto X3m Pool Party",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Moto X3m Pool Party"] || "",
+    "image": gameImages["Moto X3m Pool Party"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/moto-x3m-pool-party.html"
   },
   {
@@ -1588,7 +1957,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Moto X3m Spooky Land",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Moto X3m Spooky Land"] || "",
+    "image": gameImages["Moto X3m Spooky Land"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/moto-x3m-spooky-land.html"
   },
   {
@@ -1596,7 +1965,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Moto X3m Winter",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Moto X3m Winter"] || "",
+    "image": gameImages["Moto X3m Winter"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/moto-x3m-winter.html"
   },
   {
@@ -1604,7 +1973,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Moto X3m",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Moto X3m"] || "",
+    "image": gameImages["Moto X3m"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/moto-x3m.htm"
   },
   {
@@ -1612,7 +1981,7 @@ const gamesList = [
     "row": "Terror",
     "title": "Murder",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Murder"] || "",
+    "image": gameImages["Murder"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/murder.html"
   },
   {
@@ -1620,7 +1989,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Noob Miner",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Noob Miner"] || "",
+    "image": gameImages["Noob Miner"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/noob-miner.html"
   },
   {
@@ -1628,7 +1997,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Openttd",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Openttd"] || "",
+    "image": gameImages["Openttd"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/openTTD.html"
   },
   {
@@ -1636,7 +2005,7 @@ const gamesList = [
     "row": "Casual",
     "title": "Opposite Day",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Opposite Day"] || "",
+    "image": gameImages["Opposite Day"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/opposite-day.html"
   },
   {
@@ -1644,7 +2013,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Ovo 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Ovo 2"] || "",
+    "image": gameImages["Ovo 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/ovo-2.html"
   },
   {
@@ -1652,7 +2021,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Ovo 3 Dimensions",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Ovo 3 Dimensions"] || "",
+    "image": gameImages["Ovo 3 Dimensions"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/ovo-3-dimensions.html"
   },
   {
@@ -1660,7 +2029,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Ovo",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Ovo"] || "",
+    "image": gameImages["Ovo"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/ovo.html"
   },
   {
@@ -1668,7 +2037,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Pac Man",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Pac Man"] || "",
+    "image": gameImages["Pac Man"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/pac-man.html"
   },
   {
@@ -1676,7 +2045,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Bakeria",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Bakeria"] || "",
+    "image": gameImages["Papas Bakeria"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-bakeria.html"
   },
   {
@@ -1684,7 +2053,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Burgeria",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Burgeria"] || "",
+    "image": gameImages["Papas Burgeria"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-burgeria.html"
   },
   {
@@ -1692,7 +2061,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Cheeseria",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Cheeseria"] || "",
+    "image": gameImages["Papas Cheeseria"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-cheeseria.html"
   },
   {
@@ -1700,7 +2069,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Cupcakeria",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Cupcakeria"] || "",
+    "image": gameImages["Papas Cupcakeria"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-cupcakeria.html"
   },
   {
@@ -1708,7 +2077,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Donuteria",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Donuteria"] || "",
+    "image": gameImages["Papas Donuteria"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-donuteria.html"
   },
   {
@@ -1716,7 +2085,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Freezeria",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Freezeria"] || "",
+    "image": gameImages["Papas Freezeria"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-freezeria.html"
   },
   {
@@ -1724,7 +2093,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Hot Doggeria",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Hot Doggeria"] || "",
+    "image": gameImages["Papas Hot Doggeria"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-hot-doggeria.html"
   },
   {
@@ -1732,7 +2101,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Pancakeria",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Pancakeria"] || "",
+    "image": gameImages["Papas Pancakeria"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-pancakeria.html"
   },
   {
@@ -1740,7 +2109,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Pastaria",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Pastaria"] || "",
+    "image": gameImages["Papas Pastaria"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-pastaria.html"
   },
   {
@@ -1748,7 +2117,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Pizzeria",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Pizzeria"] || "",
+    "image": gameImages["Papas Pizzeria"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-pizzeria.html"
   },
   {
@@ -1756,7 +2125,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Scooperia",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Scooperia"] || "",
+    "image": gameImages["Papas Scooperia"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-scooperia.html"
   },
   {
@@ -1764,7 +2133,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Sushiria",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Sushiria"] || "",
+    "image": gameImages["Papas Sushiria"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-sushiria.html"
   },
   {
@@ -1772,7 +2141,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Taco Mia",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Taco Mia"] || "",
+    "image": gameImages["Papas Taco Mia"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-taco-mia.html"
   },
   {
@@ -1780,7 +2149,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Papas Wingeria",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Papas Wingeria"] || "",
+    "image": gameImages["Papas Wingeria"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/papas-wingeria.html"
   },
   {
@@ -1788,7 +2157,7 @@ const gamesList = [
     "row": "Multijugador .IO",
     "title": "Paper IO 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Paper IO 2"] || "",
+    "image": gameImages["Paper IO 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/paper-io-2.htm"
   },
   {
@@ -1796,7 +2165,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Parking Fury 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Parking Fury 2"] || "",
+    "image": gameImages["Parking Fury 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/parking-fury-2.html"
   },
   {
@@ -1804,7 +2173,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Parking Fury 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Parking Fury 3"] || "",
+    "image": gameImages["Parking Fury 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/parking-fury-3.html"
   },
   {
@@ -1812,7 +2181,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Parking Fury",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Parking Fury"] || "",
+    "image": gameImages["Parking Fury"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/parking-fury.html"
   },
   {
@@ -1820,7 +2189,7 @@ const gamesList = [
     "row": "Terror",
     "title": "Picos School",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Picos School"] || "",
+    "image": gameImages["Picos School"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/picos-school.html"
   },
   {
@@ -1828,7 +2197,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Ping Pong Chaos",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Ping Pong Chaos"] || "",
+    "image": gameImages["Ping Pong Chaos"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/ping-pong-chaos.html"
   },
   {
@@ -1836,7 +2205,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Pixel Speedrun",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Pixel Speedrun"] || "",
+    "image": gameImages["Pixel Speedrun"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/pixel-speedrun.html"
   },
   {
@@ -1844,7 +2213,7 @@ const gamesList = [
     "row": "Estrategia",
     "title": "Plants Vs Zombies",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Plants Vs Zombies"] || "",
+    "image": gameImages["Plants Vs Zombies"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/plants-vs-zombies.html"
   },
   {
@@ -1852,7 +2221,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Plonky",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Plonky"] || "",
+    "image": gameImages["Plonky"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/plonky.html"
   },
   {
@@ -1860,7 +2229,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Polytrack",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Polytrack"] || "",
+    "image": gameImages["Polytrack"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/polytrack.html"
   },
   {
@@ -1868,7 +2237,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Poor Bunny",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Poor Bunny"] || "",
+    "image": gameImages["Poor Bunny"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/poor-bunny.html"
   },
   {
@@ -1876,7 +2245,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Pou",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Pou"] || "",
+    "image": gameImages["Pou"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/pou.html"
   },
   {
@@ -1884,7 +2253,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Ragdoll Archers",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Ragdoll Archers"] || "",
+    "image": gameImages["Ragdoll Archers"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/ragdoll-archers.htm"
   },
   {
@@ -1892,7 +2261,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Ragdoll Hit",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Ragdoll Hit"] || "",
+    "image": gameImages["Ragdoll Hit"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/ragdoll-hit.html"
   },
   {
@@ -1900,7 +2269,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Ragdoll Soccer",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Ragdoll Soccer"] || "",
+    "image": gameImages["Ragdoll Soccer"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/ragdoll-soccer.html"
   },
   {
@@ -1908,7 +2277,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Red Ball 4 Vol 1",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Red Ball 4 Vol 1"] || "",
+    "image": gameImages["Red Ball 4 Vol 1"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/red-ball-4-vol-1.html"
   },
   {
@@ -1916,7 +2285,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Red Ball 4 Vol 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Red Ball 4 Vol 2"] || "",
+    "image": gameImages["Red Ball 4 Vol 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/red-ball-4-vol-2.html"
   },
   {
@@ -1924,7 +2293,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Red Ball 4 Vol 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Red Ball 4 Vol 3"] || "",
+    "image": gameImages["Red Ball 4 Vol 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/red-ball-4-vol-3.html"
   },
   {
@@ -1932,7 +2301,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Retro Bowl College",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Retro Bowl College"] || "",
+    "image": gameImages["Retro Bowl College"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/retro-bowl-college.html"
   },
   {
@@ -1940,7 +2309,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Retro Bowl",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Retro Bowl"] || "",
+    "image": gameImages["Retro Bowl"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/retro-bowl.html"
   },
   {
@@ -1948,7 +2317,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Retro Highway",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Retro Highway"] || "",
+    "image": gameImages["Retro Highway"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/retro-highway.html"
   },
   {
@@ -1956,7 +2325,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Retro Ping Pong",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Retro Ping Pong"] || "",
+    "image": gameImages["Retro Ping Pong"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/retro-ping-pong.html"
   },
   {
@@ -1964,7 +2333,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Riddle School 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Riddle School 2"] || "",
+    "image": gameImages["Riddle School 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/riddle-school-2.html"
   },
   {
@@ -1972,7 +2341,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Riddle School 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Riddle School 3"] || "",
+    "image": gameImages["Riddle School 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/riddle-school-3.html"
   },
   {
@@ -1980,7 +2349,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Riddle School 4",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Riddle School 4"] || "",
+    "image": gameImages["Riddle School 4"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/riddle-school-4.html"
   },
   {
@@ -1988,7 +2357,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Riddle School 5",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Riddle School 5"] || "",
+    "image": gameImages["Riddle School 5"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/riddle-school-5.html"
   },
   {
@@ -1996,7 +2365,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Riddle School",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Riddle School"] || "",
+    "image": gameImages["Riddle School"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/riddle-school.html"
   },
   {
@@ -2004,7 +2373,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Riddle Transfer 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Riddle Transfer 2"] || "",
+    "image": gameImages["Riddle Transfer 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/riddle-transfer-2.html"
   },
   {
@@ -2012,7 +2381,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Riddle Transfer",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Riddle Transfer"] || "",
+    "image": gameImages["Riddle Transfer"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/riddle-transfer.html"
   },
   {
@@ -2020,7 +2389,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Rocket Soccer Derby",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Rocket Soccer Derby"] || "",
+    "image": gameImages["Rocket Soccer Derby"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/rocket-soccer-derby.html"
   },
   {
@@ -2028,7 +2397,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Rooftop Run",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Rooftop Run"] || "",
+    "image": gameImages["Rooftop Run"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/rooftop-run.html"
   },
   {
@@ -2036,7 +2405,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Rooftop Snipers 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Rooftop Snipers 2"] || "",
+    "image": gameImages["Rooftop Snipers 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/rooftop-snipers-2.html"
   },
   {
@@ -2044,7 +2413,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Rooftop Snipers",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Rooftop Snipers"] || "",
+    "image": gameImages["Rooftop Snipers"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/rooftop-snipers.htm"
   },
   {
@@ -2052,7 +2421,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Run 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Run 2"] || "",
+    "image": gameImages["Run 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/run-2.html"
   },
   {
@@ -2060,7 +2429,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Run 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Run 3"] || "",
+    "image": gameImages["Run 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/run-3.html"
   },
   {
@@ -2068,7 +2437,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Run",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Run"] || "",
+    "image": gameImages["Run"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/run.html"
   },
   {
@@ -2076,7 +2445,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Sand Game",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Sand Game"] || "",
+    "image": gameImages["Sand Game"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/sand-game.html"
   },
   {
@@ -2084,7 +2453,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Sandbox City",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Sandbox City"] || "",
+    "image": gameImages["Sandbox City"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/sandbox-city.html"
   },
   {
@@ -2092,7 +2461,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Short Life",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Short Life"] || "",
+    "image": gameImages["Short Life"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/short-life.html"
   },
   {
@@ -2100,7 +2469,7 @@ const gamesList = [
     "row": "Casual",
     "title": "Six Cats Under",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Six Cats Under"] || "",
+    "image": gameImages["Six Cats Under"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/six-cats-under.html"
   },
   {
@@ -2108,7 +2477,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Slope 2 Player",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Slope 2 Player"] || "",
+    "image": gameImages["Slope 2 Player"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/slope-2-player.html"
   },
   {
@@ -2116,7 +2485,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Slope 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Slope 3"] || "",
+    "image": gameImages["Slope 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/slope-3.html"
   },
   {
@@ -2124,7 +2493,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Slope",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Slope"] || "",
+    "image": gameImages["Slope"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/slope.html"
   },
   {
@@ -2132,7 +2501,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Slow Roads",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Slow Roads"] || "",
+    "image": gameImages["Slow Roads"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/slow-roads.html"
   },
   {
@@ -2140,7 +2509,7 @@ const gamesList = [
     "row": "Casual",
     "title": "Sm 63",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Sm 63"] || "",
+    "image": gameImages["Sm 63"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/sm-63.html"
   },
   {
@@ -2148,7 +2517,7 @@ const gamesList = [
     "row": "Casual",
     "title": "Sm 64",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Sm 64"] || "",
+    "image": gameImages["Sm 64"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/sm-64.html"
   },
   {
@@ -2156,7 +2525,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Snail Bob 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Snail Bob 2"] || "",
+    "image": gameImages["Snail Bob 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/snail-bob-2.html"
   },
   {
@@ -2164,7 +2533,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Snail Bob 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Snail Bob 3"] || "",
+    "image": gameImages["Snail Bob 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/snail-bob-3.html"
   },
   {
@@ -2172,7 +2541,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Snail Bob 4",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Snail Bob 4"] || "",
+    "image": gameImages["Snail Bob 4"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/snail-bob-4.html"
   },
   {
@@ -2180,7 +2549,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Snail Bob 5",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Snail Bob 5"] || "",
+    "image": gameImages["Snail Bob 5"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/snail-bob-5.html"
   },
   {
@@ -2188,7 +2557,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Snail Bob 6",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Snail Bob 6"] || "",
+    "image": gameImages["Snail Bob 6"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/snail-bob-6.html"
   },
   {
@@ -2196,7 +2565,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Snail Bob 7",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Snail Bob 7"] || "",
+    "image": gameImages["Snail Bob 7"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/snail-bob-7.html"
   },
   {
@@ -2204,7 +2573,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Snail Bob 8",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Snail Bob 8"] || "",
+    "image": gameImages["Snail Bob 8"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/snail-bob-8.html"
   },
   {
@@ -2212,7 +2581,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Snail Bob",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Snail Bob"] || "",
+    "image": gameImages["Snail Bob"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/snail-bob.html"
   },
   {
@@ -2220,7 +2589,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Snow Rider",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Snow Rider"] || "",
+    "image": gameImages["Snow Rider"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/snow-rider.htm"
   },
   {
@@ -2228,7 +2597,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Snow Road",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Snow Road"] || "",
+    "image": gameImages["Snow Road"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/snow-road.htm"
   },
   {
@@ -2236,7 +2605,7 @@ const gamesList = [
     "row": "Multijugador .IO",
     "title": "Snowball IO",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Snowball IO"] || "",
+    "image": gameImages["Snowball IO"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/snowball-io.html"
   },
   {
@@ -2244,7 +2613,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Soccer Bros",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Soccer Bros"] || "",
+    "image": gameImages["Soccer Bros"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/soccer-bros.html"
   },
   {
@@ -2252,7 +2621,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Soccer Random",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Soccer Random"] || "",
+    "image": gameImages["Soccer Random"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/soccer-random.htm"
   },
   {
@@ -2260,7 +2629,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Space Is Key 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Space Is Key 2"] || "",
+    "image": gameImages["Space Is Key 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/space-is-key-2.html"
   },
   {
@@ -2268,7 +2637,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Space Is Key",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Space Is Key"] || "",
+    "image": gameImages["Space Is Key"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/space-is-key.html"
   },
   {
@@ -2276,7 +2645,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Space Waves",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Space Waves"] || "",
+    "image": gameImages["Space Waves"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/space-waves.html"
   },
   {
@@ -2284,7 +2653,7 @@ const gamesList = [
     "row": "Idle y Clicker",
     "title": "Spacebar Clicker",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Spacebar Clicker"] || "",
+    "image": gameImages["Spacebar Clicker"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/spacebar-clicker.html"
   },
   {
@@ -2292,7 +2661,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Speed Stars",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Speed Stars"] || "",
+    "image": gameImages["Speed Stars"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/speed-stars.html"
   },
   {
@@ -2300,7 +2669,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Sprunki",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Sprunki"] || "",
+    "image": gameImages["Sprunki"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/sprunki.html"
   },
   {
@@ -2308,7 +2677,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Stack",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Stack"] || "",
+    "image": gameImages["Stack"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/stack.html"
   },
   {
@@ -2316,7 +2685,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Stacktris",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Stacktris"] || "",
+    "image": gameImages["Stacktris"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/stacktris.html"
   },
   {
@@ -2324,7 +2693,7 @@ const gamesList = [
     "row": "Estrategia",
     "title": "State IO",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["State IO"] || "",
+    "image": gameImages["State IO"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/state-io.html"
   },
   {
@@ -2332,7 +2701,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Stealing The Diamond",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Stealing The Diamond"] || "",
+    "image": gameImages["Stealing The Diamond"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/stealing-the-diamond.html"
   },
   {
@@ -2340,7 +2709,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Stick Archers Battle",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Stick Archers Battle"] || "",
+    "image": gameImages["Stick Archers Battle"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/stick-archers-battle.html"
   },
   {
@@ -2348,7 +2717,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Stick Fighter",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Stick Fighter"] || "",
+    "image": gameImages["Stick Fighter"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/stick-fighter.html"
   },
   {
@@ -2356,7 +2725,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Stick Merge",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Stick Merge"] || "",
+    "image": gameImages["Stick Merge"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/stick-merge.html"
   },
   {
@@ -2364,7 +2733,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Stickman Hook",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Stickman Hook"] || "",
+    "image": gameImages["Stickman Hook"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/stickman-hook.html"
   },
   {
@@ -2372,7 +2741,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Subway Surfers Beijing",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Subway Surfers Beijing"] || "",
+    "image": gameImages["Subway Surfers Beijing"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/subway-surfers-beijing.html"
   },
   {
@@ -2380,7 +2749,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Subway Surfers Havana",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Subway Surfers Havana"] || "",
+    "image": gameImages["Subway Surfers Havana"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/subway-surfers-havana.html"
   },
   {
@@ -2388,7 +2757,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Subway Surfers San Francisco",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Subway Surfers San Francisco"] || "",
+    "image": gameImages["Subway Surfers San Francisco"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/subway-surfers-san-francisco.html"
   },
   {
@@ -2396,7 +2765,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Super Bike The Champion",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Super Bike The Champion"] || "",
+    "image": gameImages["Super Bike The Champion"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/super-bike-the-champion.html"
   },
   {
@@ -2404,7 +2773,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Super Liquid Soccer",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Super Liquid Soccer"] || "",
+    "image": gameImages["Super Liquid Soccer"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/super-liquid-soccer.html"
   },
   {
@@ -2412,7 +2781,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Super Star Car",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Super Star Car"] || "",
+    "image": gameImages["Super Star Car"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/super-star-car.html"
   },
   {
@@ -2420,7 +2789,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Superhot",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Superhot"] || "",
+    "image": gameImages["Superhot"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/superhot.html"
   },
   {
@@ -2428,7 +2797,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Table Tennis World Tour",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Table Tennis World Tour"] || "",
+    "image": gameImages["Table Tennis World Tour"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/table-tennis-world-tour.html"
   },
   {
@@ -2436,7 +2805,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Tag",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Tag"] || "",
+    "image": gameImages["Tag"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/tag.html"
   },
   {
@@ -2444,7 +2813,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Tanuki Sunset",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Tanuki Sunset"] || "",
+    "image": gameImages["Tanuki Sunset"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/tanuki-sunset.html"
   },
   {
@@ -2452,7 +2821,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Tap Road",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Tap Road"] || "",
+    "image": gameImages["Tap Road"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/tap-road.html"
   },
   {
@@ -2460,7 +2829,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Temple Of Boom",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Temple Of Boom"] || "",
+    "image": gameImages["Temple Of Boom"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/temple-of-boom.html"
   },
   {
@@ -2468,7 +2837,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Temple Run 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Temple Run 2"] || "",
+    "image": gameImages["Temple Run 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/temple-run-2.htm"
   },
   {
@@ -2476,7 +2845,7 @@ const gamesList = [
     "row": "Multijugador .IO",
     "title": "Territorial IO",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Territorial IO"] || "",
+    "image": gameImages["Territorial IO"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/territorial-io.html"
   },
   {
@@ -2484,7 +2853,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Tetrominoes",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Tetrominoes"] || "",
+    "image": gameImages["Tetrominoes"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/tetrominoes.html"
   },
   {
@@ -2492,7 +2861,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "The Impossible Quiz 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["The Impossible Quiz 2"] || "",
+    "image": gameImages["The Impossible Quiz 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/the-impossible-quiz-2.html"
   },
   {
@@ -2500,7 +2869,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "The Impossible Quiz",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["The Impossible Quiz"] || "",
+    "image": gameImages["The Impossible Quiz"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/the-impossible-quiz.html"
   },
   {
@@ -2508,7 +2877,7 @@ const gamesList = [
     "row": "Casual",
     "title": "There Is No G",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["There Is No G"] || "",
+    "image": gameImages["There Is No G"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/there-is-no-g.html"
   },
   {
@@ -2516,7 +2885,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "They Are Coming",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["They Are Coming"] || "",
+    "image": gameImages["They Are Coming"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/they-are-coming.html"
   },
   {
@@ -2524,7 +2893,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "This Is The Only Level Too",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["This Is The Only Level Too"] || "",
+    "image": gameImages["This Is The Only Level Too"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/this-is-the-only-level-too.html"
   },
   {
@@ -2532,7 +2901,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "This Is The Only Level",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["This Is The Only Level"] || "",
+    "image": gameImages["This Is The Only Level"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/this-is-the-only-level.html"
   },
   {
@@ -2540,7 +2909,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Time Shooter 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Time Shooter 2"] || "",
+    "image": gameImages["Time Shooter 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/time-shooter-2.html"
   },
   {
@@ -2548,7 +2917,7 @@ const gamesList = [
     "row": "Acción",
     "title": "Time Shooter 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Time Shooter 3"] || "",
+    "image": gameImages["Time Shooter 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/time-shooter-3.htm"
   },
   {
@@ -2556,7 +2925,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Tiny Fishing",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Tiny Fishing"] || "",
+    "image": gameImages["Tiny Fishing"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/tiny-fishing.html"
   },
   {
@@ -2564,7 +2933,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Tomb Of The Mask",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Tomb Of The Mask"] || "",
+    "image": gameImages["Tomb Of The Mask"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/tomb-of-the-mask.htm"
   },
   {
@@ -2572,7 +2941,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Trap The Cat",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Trap The Cat"] || "",
+    "image": gameImages["Trap The Cat"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/trap-the-cat.html"
   },
   {
@@ -2580,7 +2949,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Trivia Crack",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Trivia Crack"] || "",
+    "image": gameImages["Trivia Crack"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/trivia-crack.html"
   },
   {
@@ -2588,7 +2957,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Tube Jumpers",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Tube Jumpers"] || "",
+    "image": gameImages["Tube Jumpers"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/tube-jumpers.html"
   },
   {
@@ -2596,7 +2965,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Tunnel Rush",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Tunnel Rush"] || "",
+    "image": gameImages["Tunnel Rush"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/tunnel-rush.html"
   },
   {
@@ -2604,7 +2973,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Unicycle Hero",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Unicycle Hero"] || "",
+    "image": gameImages["Unicycle Hero"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/unicycle-hero.html"
   },
   {
@@ -2612,7 +2981,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Vex 4",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Vex 4"] || "",
+    "image": gameImages["Vex 4"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/vex-4.html"
   },
   {
@@ -2620,7 +2989,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Vex 5",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Vex 5"] || "",
+    "image": gameImages["Vex 5"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/vex-5.html"
   },
   {
@@ -2628,7 +2997,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Vex 6",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Vex 6"] || "",
+    "image": gameImages["Vex 6"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/vex-6.htm"
   },
   {
@@ -2636,7 +3005,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Vex 7",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Vex 7"] || "",
+    "image": gameImages["Vex 7"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/vex-7.htm"
   },
   {
@@ -2644,7 +3013,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Vex 8",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Vex 8"] || "",
+    "image": gameImages["Vex 8"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/vex-8.htm"
   },
   {
@@ -2652,7 +3021,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Vex X3m 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Vex X3m 2"] || "",
+    "image": gameImages["Vex X3m 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/vex-x3m-2.html"
   },
   {
@@ -2660,7 +3029,7 @@ const gamesList = [
     "row": "Plataformas",
     "title": "Vex X3m",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Vex X3m"] || "",
+    "image": gameImages["Vex X3m"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/vex-x3m.html"
   },
   {
@@ -2668,7 +3037,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Volley Random",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Volley Random"] || "",
+    "image": gameImages["Volley Random"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/volley-random.html"
   },
   {
@@ -2676,7 +3045,7 @@ const gamesList = [
     "row": "Acción",
     "title": "War The Knights",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["War The Knights"] || "",
+    "image": gameImages["War The Knights"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/war-the-knights.html"
   },
   {
@@ -2684,7 +3053,7 @@ const gamesList = [
     "row": "Casual",
     "title": "We Become What We Behold",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["We Become What We Behold"] || "",
+    "image": gameImages["We Become What We Behold"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clwebecomewhatwebehold.html"
   },
   {
@@ -2692,7 +3061,7 @@ const gamesList = [
     "row": "Carreras",
     "title": "Wheelie Bike",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Wheelie Bike"] || "",
+    "image": gameImages["Wheelie Bike"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/wheelie-bike.html"
   },
   {
@@ -2700,7 +3069,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Wheely 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Wheely 2"] || "",
+    "image": gameImages["Wheely 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/wheely-2.html"
   },
   {
@@ -2708,7 +3077,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Wheely 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Wheely 3"] || "",
+    "image": gameImages["Wheely 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/wheely-3.html"
   },
   {
@@ -2716,7 +3085,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Wheely 4",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Wheely 4"] || "",
+    "image": gameImages["Wheely 4"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/wheely-4.html"
   },
   {
@@ -2724,7 +3093,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Wheely 5",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Wheely 5"] || "",
+    "image": gameImages["Wheely 5"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/wheely-5.html"
   },
   {
@@ -2732,7 +3101,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Wheely 6",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Wheely 6"] || "",
+    "image": gameImages["Wheely 6"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/wheely-6.html"
   },
   {
@@ -2740,7 +3109,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Wheely 7",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Wheely 7"] || "",
+    "image": gameImages["Wheely 7"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/wheely-7.html"
   },
   {
@@ -2748,7 +3117,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Wheely 8",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Wheely 8"] || "",
+    "image": gameImages["Wheely 8"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/wheely-8.html"
   },
   {
@@ -2756,7 +3125,7 @@ const gamesList = [
     "row": "Aventura",
     "title": "Wheely",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Wheely"] || "",
+    "image": gameImages["Wheely"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/wheely.html"
   },
   {
@@ -2764,7 +3133,7 @@ const gamesList = [
     "row": "Puzles",
     "title": "Wordle Unlimited",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Wordle Unlimited"] || "",
+    "image": gameImages["Wordle Unlimited"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/wordle-unlimited.html"
   },
   {
@@ -2772,7 +3141,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Worlds Hardest Game 2",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Worlds Hardest Game 2"] || "",
+    "image": gameImages["Worlds Hardest Game 2"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/worlds-hardest-game-2.html"
   },
   {
@@ -2780,7 +3149,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Worlds Hardest Game 3",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Worlds Hardest Game 3"] || "",
+    "image": gameImages["Worlds Hardest Game 3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/worlds-hardest-game-3.html"
   },
   {
@@ -2788,7 +3157,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Worlds Hardest Game",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Worlds Hardest Game"] || "",
+    "image": gameImages["Worlds Hardest Game"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/worlds-hardest-game.html"
   },
   {
@@ -2796,7 +3165,7 @@ const gamesList = [
     "row": "Deportes",
     "title": "Wrestle Bros",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Wrestle Bros"] || "",
+    "image": gameImages["Wrestle Bros"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/wrestle-bros.html"
   },
   {
@@ -2804,7 +3173,7 @@ const gamesList = [
     "row": "Multijugador .IO",
     "title": "Yohoho IO",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Yohoho IO"] || "",
+    "image": gameImages["Yohoho IO"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/yohoho-io.html"
   },
   {
@@ -2812,7 +3181,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Zombie Rush",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Zombie Rush"] || "",
+    "image": gameImages["Zombie Rush"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/zombie-rush.html"
   },
   {
@@ -2820,7 +3189,7 @@ const gamesList = [
     "row": "Arcade",
     "title": "Zrist",
     "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Zrist"] || "",
+    "image": gameImages["Zrist"] || "",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/zrist.html"
   },
     {
@@ -2828,7 +3197,7 @@ const gamesList = [
     "row": "Adventure",
     "title": "Minecraft 26.3",
     "addedAt": "2026-11-27",
-    "image": window.gameImages?.["Minecraft 26.3"] || "",
+    "image": gameImages["Minecraft 26.3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/MilkdromedaStudios/all-of-eaglercraft/refs/heads/main/ArchMC%20Eaglercraft%2026.3.html"
   },
   {
@@ -2860,7 +3229,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "Nautilus OS",
     "addedAt": "2026-11-27",
-    "image": window.gameImages?.["Nautilus"] || "",
+    "image": gameImages["Nautilus"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/nautilusOS.html"
   },
     {
@@ -2868,7 +3237,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "EmulatorJS",
     "addedAt": "2026-11-28",
-    "image": window.gameImages?.["EmulatorJS"] || "",
+    "image": gameImages["EmulatorJS"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clemujs.html"
   },
       {
@@ -2876,7 +3245,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "Github Search",
     "addedAt": "2026-11-28",
-    "image": window.gameImages?.["githubsearch"] || "",
+    "image": gameImages["githubsearch"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clgithubsearch.html"
   },
         {
@@ -2884,7 +3253,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "Meowio NES Emulator",
     "addedAt": "2026-11-28",
-    "image": window.gameImages?.["NESemulator"] || "",
+    "image": gameImages["NESemulator"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clmeowio.html"
   },
           {
@@ -2892,7 +3261,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "Helios Proxy",
     "addedAt": "2026-11-28",
-    "image": window.gameImages?.["helios"] || "",
+    "image": gameImages["helios"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/Helios-Offline%20(1).html"
   },
           {
@@ -2900,7 +3269,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "Pico 8 edu",
     "addedAt": "2026-11-28",
-    "image": window.gameImages?.["pico8edu"] || "",
+    "image": gameImages["pico8edu"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clpico8edu.html"
   },
             {
@@ -2908,7 +3277,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "Ruffle emulator",
     "addedAt": "2026-11-28",
-    "image": window.gameImages?.["ruffleemu"] || "",
+    "image": gameImages["ruffleemu"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clruffle.html"
   },
             {
@@ -2916,7 +3285,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "Sandstone Proxy",
     "addedAt": "2026-11-28",
-    "image": window.gameImages?.["sandstone"] || "",
+    "image": gameImages["sandstone"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clsandstone.html"
   },
               {
@@ -2924,7 +3293,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "Scratch Editor",
     "addedAt": "2026-11-28",
-    "image": window.gameImages?.["scratch"] || "",
+    "image": gameImages["scratch"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clscratchoptions.html"
   },
               {
@@ -2932,7 +3301,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "Silk",
     "addedAt": "2026-11-28",
-    "image": window.gameImages?.["silk"] || "",
+    "image": gameImages["silk"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clsilk.html"
   },
                 {
@@ -2940,7 +3309,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "Soundboard",
     "addedAt": "2026-11-28",
-    "image": window.gameImages?.["soundboard"] || "",
+    "image": gameImages["soundboard"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clsoundboard.html"
   },
     {
@@ -2964,7 +3333,7 @@ const gamesList = [
     "row": "Other Apps & Services",
     "title": "GUST proxy",
     "addedAt": "2026-11-28",
-    "image": window.gameImages?.["gust"] || "",
+    "image": gameImages["gust"] || "",
     "rawUrl": "https://github.com/EML0073/jokuk/raw/refs/heads/main/gust.html"
   },
           {
