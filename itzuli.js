@@ -197,6 +197,9 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Website bug report:": "Website bug report:",
     "Error type:": "Error type:",
     "Description:": "Description:",
+  
+    "Could not load this game. The source or its CDN may be unavailable. Try again later or report the problem.": "Could not load this game. The source or its CDN may be unavailable. Try again later or report the problem.",
+    "Views:": "Views:",
   },
   "es": {
     "Settings": "Configuración",
@@ -396,6 +399,9 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Website bug report:": "Informe de error de la web:",
     "Error type:": "Tipo de error:",
     "Description:": "Descripción:",
+  
+    "Could not load this game. The source or its CDN may be unavailable. Try again later or report the problem.": "No se ha podido cargar este juego. Puede que la fuente o su CDN no estén disponibles. Inténtalo más tarde o informa del problema.",
+    "Views:": "Visitas:",
   },
   "eu": {
     "Settings": "Ezarpenak",
@@ -595,5 +601,8 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Website bug report:": "Webguneko akatsaren jakinarazpena:",
     "Error type:": "Akats mota:",
     "Description:": "Deskribapena:",
+  
+    "Could not load this game. The source or its CDN may be unavailable. Try again later or report the problem.": "Ezin izan da joko hau kargatu. Baliteke iturburua edo haren CDN-a erabilgarri ez egotea. Saiatu geroago edo jakinarazi arazoa.",
+    "Views:": "Bisitaldiak:",
   }
 };
