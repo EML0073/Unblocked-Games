@@ -103,7 +103,7 @@
         </div>
         <form class="ug-feedback-form" id="ug-suggestion-form" data-feedback-form="suggestion">
           <label for="ug-suggestion-title">Game title *</label><input id="ug-suggestion-title" name="title" type="text" maxlength="160" required>
-          <label for="ug-suggestion-raw">Raw URL</label><input id="ug-suggestion-raw" name="rawUrl" type="url" placeholder="https://...">
+          <label for="ug-suggestion-raw">Raw URL (html5)</label><input id="ug-suggestion-raw" name="rawUrl" type="url" placeholder="https://...">
           <label for="ug-suggestion-image">Image URL</label><input id="ug-suggestion-image" name="image" type="url" placeholder="https://...">
           <label for="ug-suggestion-genre">Genre</label><input id="ug-suggestion-genre" name="genre" type="text" placeholder="e.g. Action, Puzzle, Racing">
           <label for="ug-suggestion-notes">Additional details</label><textarea id="ug-suggestion-notes" name="details" maxlength="3000"></textarea>
