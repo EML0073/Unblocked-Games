@@ -58,6 +58,27 @@
       body[data-ug-theme="light"] .ug-wallpaper-box input[type="url"]{background:#f7f8fa;color:#202124;border-color:#cbd1da}
       body[data-ug-theme="light"] .ug-wallpaper-box input[type="file"]{color:#444}
       body[data-ug-theme="light"] .ug-wallpaper-help{color:#626875}
+      #ug-feedback-overlay{position:fixed;inset:0;z-index:2147483645;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.62);backdrop-filter:blur(3px)}
+      #ug-feedback-overlay[hidden]{display:none!important}
+      #ug-feedback-modal{width:min(560px,100%);max-height:min(88vh,780px);overflow-y:auto;padding:20px;border:1px solid #555;border-radius:18px;background:#202020;color:#fff;box-shadow:0 20px 70px #0009;font:14px/1.5 Arial,sans-serif}
+      .ug-feedback-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:12px 0 16px}
+      .ug-feedback-tabs button{min-width:0;padding:9px 5px;border:1px solid #555;border-radius:9px;background:#303030;color:inherit;cursor:pointer;font-size:12px}
+      .ug-feedback-tabs button[aria-selected="true"]{border-color:var(--ug-accent);background:var(--ug-accent);color:#fff}
+      .ug-feedback-form label{display:block;margin:10px 0 4px}
+      .ug-feedback-form input,.ug-feedback-form select,.ug-feedback-form textarea{box-sizing:border-box;width:100%;padding:10px;border:1px solid #555;border-radius:9px;background:#303030;color:inherit;font:inherit}
+      .ug-feedback-form textarea{min-height:120px;resize:vertical}
+      .ug-feedback-form .ug-feedback-help{margin-top:4px;color:#aaa;font-size:11px}
+      .ug-feedback-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
+      .ug-feedback-actions button{min-width:95px}
+      #ug-feedback-status{min-height:18px;margin-top:8px;font-size:12px;color:#ffaaaa}
+      body[data-ug-theme="light"] #ug-feedback-modal{background:#fff;color:#202124;border-color:#d5d9e0}
+      body[data-ug-theme="light"] .ug-feedback-tabs button,body[data-ug-theme="light"] .ug-feedback-form input,body[data-ug-theme="light"] .ug-feedback-form select,body[data-ug-theme="light"] .ug-feedback-form textarea{background:#f7f8fa;color:#202124;border-color:#cbd1da}
+      body[data-ug-theme="light"] .ug-feedback-tabs button[aria-selected="true"]{background:var(--ug-accent);color:#fff;border-color:var(--ug-accent)}
+      body[data-ug-theme="light"] .ug-feedback-form .ug-feedback-help{color:#626875}
+      body[data-ug-theme="light"] #ug-feedback-status{color:#b42318}
+      #ug-feedback-close{width:34px;height:34px;border:1px solid #555;border-radius:50%;background:#303030;color:inherit;font-size:20px;cursor:pointer}
+      #ug-feedback-open{position:relative!important;margin-top:8px!important}
+      @media(max-width:440px){.ug-feedback-tabs button{font-size:11px;padding:8px 3px}#ug-feedback-modal{padding:15px}}
       @media(max-width:520px){#ug-settings-trigger{top:10px!important;right:10px!important}#ug-settings-panel{top:62px!important;right:10px!important}}
     `;
     document.head.appendChild(style);
@@ -69,6 +90,44 @@
     panel.id = 'ug-settings-panel'; panel.hidden = true;
     panel.innerHTML = '<strong style="display:block;font-size:16px;margin-bottom:12px">Settings</strong><label for="ug-theme-toggle">Appearance</label><button class="ug-control" id="ug-theme-toggle" type="button">Switch to light mode</button><label for="ug-accent-picker" style="display:block;margin-top:12px">Accent color</label><input id="ug-accent-picker" type="color"><label style="display:block;margin-top:12px">Language</label><div id="ug-language-options"><button class="ug-control" data-lang="eu"><img class="ug-flag" src="argazkik/ikurriña.svg" alt="">Euskara</button><button class="ug-control" data-lang="en"><img class="ug-flag" src="argazkik/flag-en.svg" alt="">English</button><button class="ug-control" data-lang="es"><img class="ug-flag" src="argazkik/1312.webp" alt="">Español</button></div>';
     panel.innerHTML += '<button class="ug-control ug-wallpaper-launch" id="ug-wallpaper-open" type="button"><span>Wallpaper</span><span class="ug-beta">BETA</span></button>';
+    panel.innerHTML += '<button class="ug-control" id="ug-feedback-open" type="button">Suggest a game / Feedback / Bugs</button>';
+    const feedbackOverlay=document.createElement('div');
+    feedbackOverlay.id='ug-feedback-overlay'; feedbackOverlay.hidden=true;
+    feedbackOverlay.innerHTML=`
+      <section id="ug-feedback-modal" role="dialog" aria-modal="true" aria-labelledby="ug-feedback-title">
+        <div class="ug-wallpaper-modal-head"><strong id="ug-feedback-title">Suggest a game / Feedback / Bugs</strong><button id="ug-feedback-close" type="button" aria-label="Close">×</button></div>
+        <div class="ug-feedback-tabs" role="tablist" aria-label="Submission type">
+          <button type="button" data-feedback-tab="suggestion" role="tab" aria-selected="true">Suggest a game</button>
+          <button type="button" data-feedback-tab="feedback" role="tab" aria-selected="false">Feedback</button>
+          <button type="button" data-feedback-tab="bug" role="tab" aria-selected="false">Report a bug</button>
+        </div>
+        <form class="ug-feedback-form" id="ug-suggestion-form" data-feedback-form="suggestion">
+          <label for="ug-suggestion-title">Game title *</label><input id="ug-suggestion-title" name="title" type="text" maxlength="160" required>
+          <label for="ug-suggestion-raw">Raw URL</label><input id="ug-suggestion-raw" name="rawUrl" type="url" placeholder="https://...">
+          <label for="ug-suggestion-image">Image URL</label><input id="ug-suggestion-image" name="image" type="url" placeholder="https://...">
+          <label for="ug-suggestion-genre">Genre</label><input id="ug-suggestion-genre" name="genre" type="text" placeholder="e.g. Action, Puzzle, Racing">
+          <label for="ug-suggestion-notes">Additional details</label><textarea id="ug-suggestion-notes" name="details" maxlength="3000"></textarea>
+          <div class="ug-feedback-help">Only the game title is required.</div>
+          <div class="ug-feedback-actions"><button class="ug-control" type="button" data-feedback-cancel>Cancel</button><button class="ug-control" type="submit">Send</button></div>
+        </form>
+        <form class="ug-feedback-form" id="ug-feedback-form" data-feedback-form="feedback" hidden>
+          <label for="ug-feedback-message">Your feedback</label><textarea id="ug-feedback-message" name="message" maxlength="3000" required placeholder="Write your feedback..."></textarea>
+          <div class="ug-feedback-actions"><button class="ug-control" type="button" data-feedback-cancel>Cancel</button><button class="ug-control" type="submit">Send</button></div>
+        </form>
+        <form class="ug-feedback-form" id="ug-bug-form" data-feedback-form="bug" hidden>
+          <label for="ug-bug-type">Type of error</label>
+          <select id="ug-bug-type" name="type" class="ug-control">
+            <option value="Translation">Translation</option><option value="Game does not work">Game does not work</option>
+            <option value="Something does not work">Something does not work</option><option value="Game image is incorrect">A game image is incorrect</option>
+            <option value="Something does not look right">Something does not look right</option><option value="General error">General error</option>
+            <option value="Other">None of the above</option>
+          </select>
+          <div id="ug-bug-other-wrap" hidden><label for="ug-bug-other">Specify the error type</label><input id="ug-bug-other" name="otherType" type="text" maxlength="160"></div>
+          <label for="ug-bug-message">Describe the error</label><textarea id="ug-bug-message" name="message" maxlength="3000" required placeholder="Describe the error you found..."></textarea>
+          <div class="ug-feedback-actions"><button class="ug-control" type="button" data-feedback-cancel>Cancel</button><button class="ug-control" type="submit">Send</button></div>
+        </form>
+        <div id="ug-feedback-status" role="status" aria-live="polite"></div>
+      </section>`;
     const wallpaperOverlay=document.createElement('div');
     wallpaperOverlay.id='ug-wallpaper-overlay'; wallpaperOverlay.hidden=true;
     wallpaperOverlay.innerHTML=`
@@ -97,7 +156,51 @@
         <div class="ug-wallpaper-error" id="ug-wallpaper-error" role="status" aria-live="polite"></div>
         </div>
       </section>`;
-    document.body.appendChild(button); document.body.appendChild(panel); document.body.appendChild(wallpaperOverlay);
+    document.body.appendChild(button); document.body.appendChild(panel); document.body.appendChild(wallpaperOverlay); document.body.appendChild(feedbackOverlay);
+    const feedbackModal=feedbackOverlay.querySelector('#ug-feedback-modal');
+    const feedbackStatus=feedbackModal.querySelector('#ug-feedback-status');
+    const feedbackScriptUrl='https://script.google.com/macros/s/AKfycbyFGqYXjtI_Y5YWV0RFX0zmpvBdoUbldOMO9ULWb3wcKLpgfng8UdEuiBCc1jcqSelFtA/exec';
+    function closeFeedbackModal(){feedbackOverlay.hidden=true;feedbackStatus.textContent='';}
+    function selectFeedbackTab(name){
+      feedbackModal.querySelectorAll('[data-feedback-tab]').forEach(tab=>tab.setAttribute('aria-selected',String(tab.dataset.feedbackTab===name)));
+      feedbackModal.querySelectorAll('[data-feedback-form]').forEach(form=>form.hidden=form.dataset.feedbackForm!==name);
+      feedbackStatus.textContent='';
+    }
+    panel.querySelector('#ug-feedback-open').addEventListener('click',()=>{
+      panel.hidden=true;button.setAttribute('aria-expanded','false');feedbackOverlay.hidden=false;selectFeedbackTab('suggestion');feedbackModal.querySelector('#ug-suggestion-title').focus();
+    });
+    feedbackModal.querySelectorAll('[data-feedback-tab]').forEach(tab=>tab.addEventListener('click',()=>selectFeedbackTab(tab.dataset.feedbackTab)));
+    feedbackOverlay.addEventListener('click',e=>{if(e.target===feedbackOverlay)closeFeedbackModal();});
+    feedbackModal.querySelector('#ug-feedback-close').addEventListener('click',closeFeedbackModal);
+    feedbackModal.querySelectorAll('[data-feedback-cancel]').forEach(el=>el.addEventListener('click',closeFeedbackModal));
+    feedbackModal.querySelector('#ug-bug-type').addEventListener('change',e=>{
+      const other=feedbackModal.querySelector('#ug-bug-other-wrap');other.hidden=e.target.value!=='Other';
+      feedbackModal.querySelector('#ug-bug-other').required=e.target.value==='Other';
+    });
+    feedbackModal.querySelectorAll('[data-feedback-form]').forEach(form=>form.addEventListener('submit',async e=>{
+      e.preventDefault();if(!form.reportValidity())return;
+      const submit=form.querySelector('button[type="submit"]'),original=submit.textContent;
+      let title='',message='';
+      if(form.dataset.feedbackForm==='suggestion'){
+        const data=new FormData(form);title='Game suggestion: '+String(data.get('title')||'').trim();
+        message=['Game title: '+String(data.get('title')||'').trim(),'Raw URL: '+String(data.get('rawUrl')||'').trim(),'Image URL: '+String(data.get('image')||'').trim(),'Genre: '+String(data.get('genre')||'').trim(),'Additional details: '+String(data.get('details')||'').trim()].join('\\n');
+      }else if(form.dataset.feedbackForm==='feedback'){
+        title='Website feedback';message=String(new FormData(form).get('message')||'').trim();
+      }else{
+        const data=new FormData(form),type=String(data.get('type')||''),custom=String(data.get('otherType')||'').trim();
+        title='Website bug report: '+(type==='Other'?custom:type);
+        message='Error type: '+(type==='Other'?custom:type)+'\\nDescription: '+String(data.get('message')||'').trim();
+      }
+      submit.disabled=true;submit.textContent='Sending...';feedbackStatus.textContent='';
+      try{
+        await fetch(feedbackScriptUrl,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'report',id:'site-feedback',title,message})});
+        feedbackStatus.textContent='Submitted. Thank you!';form.reset();
+        if(form.dataset.feedbackForm==='bug'){feedbackModal.querySelector('#ug-bug-other-wrap').hidden=true;feedbackModal.querySelector('#ug-bug-other').required=false;}
+        setTimeout(closeFeedbackModal,1100);
+      }catch(error){console.error('Could not submit site feedback:',error);feedbackStatus.textContent='Could not submit. Please try again later.';}
+      finally{submit.disabled=false;submit.textContent=original;}
+    }));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!feedbackOverlay.hidden)closeFeedbackModal();});
     const wallpaperModal=wallpaperOverlay.querySelector('#ug-wallpaper-modal');
     function closeWallpaperModal(){wallpaperOverlay.hidden=true;}
     panel.querySelector('#ug-wallpaper-open').addEventListener('click',()=>{panel.hidden=true;button.setAttribute('aria-expanded','false');wallpaperOverlay.hidden=false;wallpaperModal.querySelector('#ug-wallpaper-file').focus();});
