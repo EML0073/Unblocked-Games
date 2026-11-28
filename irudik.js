@@ -354,15 +354,15 @@ const gameImages = {
   "Zombie Rush": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXfHinBIdT2_ztfxwW6SvG0KIW1KLhdxGxcaB_m7FRg&s=10",
   "Zrist": "https://www.coolmathgames.com/sites/default/files/zrist-game-icon.png",
   "Nautilus": "https://avatars.githubusercontent.com/u/240241840?s=280&v=4",
-  "EmulatorJS": "https://emulatorjs.org/logo/EmulatorJS.png"
+  "EmulatorJS": "https://emulatorjs.org/logo/EmulatorJS.png",
   "githubsearch": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/Screenshot%202026-11-28%2013.20.54.png",
-  "NESemulator": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAcCHiag_XjJz2H11pkMWTWu9_OVhMSFQ6H8BrNCj2q9YhIARDLghEAyU&s=10"
+  "NESemulator": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAcCHiag_XjJz2H11pkMWTWu9_OVhMSFQ6H8BrNCj2q9YhIARDLghEAyU&s=10",
   "helios": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/Screenshot%202026-11-28%2013.23.21.png",
-  "pico8edu": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrLKiGeihQpFQGsp4NzjrD_xSJ8ZbVdXsj_lfBzpWgQQ&s=10"
+  "pico8edu": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrLKiGeihQpFQGsp4NzjrD_xSJ8ZbVdXsj_lfBzpWgQQ&s=10",
   "ruffleemu": "https://static0.xdaimages.com/wordpress/wp-content/uploads/2021/02/ruffle-flash-player-emulator.jpg",
-  "sandstone": "https://camo.githubusercontent.com/e248797a3e0c01e4f409f16d12b1341d6873bda3c5a54cc1c0f9cbcaa88f5146/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f612f61662f555344415f4d696e6572616c5f53616e6473746f6e655f393363333935352e6a70673f3230303530353230313731363237"
+  "sandstone": "https://camo.githubusercontent.com/e248797a3e0c01e4f409f16d12b1341d6873bda3c5a54cc1c0f9cbcaa88f5146/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f612f61662f555344415f4d696e6572616c5f53616e6473746f6e655f393363333935352e6a70673f3230303530353230313731363237",
   "scratch": "https://digikids.es/wp-content/uploads/2025/07/scratch-cat-logo-png_seeklogo-431721.png",
-  "silk": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrHN4bMDC2fcLateRhCq1CW-IHLNg2ZMGhAphDSTge2A&s=10"
+  "silk": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrHN4bMDC2fcLateRhCq1CW-IHLNg2ZMGhAphDSTge2A&s=10",
   "soundboard": "https://nerdordie.com/wp-content/uploads/2022/04/streamdeck-soundboard-twitch.jpg"
 };
 
