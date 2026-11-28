@@ -198,15 +198,21 @@
         '<img src="' + game.image + '" alt="' + game.title + '" loading="lazy" decoding="async">' +
         '<p>' + game.title + '</p><span>' + game.row + ' · ' + gameViews(game, item.index) + ' views</span></a></div>';
     }
+    function sortByViews(items) {
+      return items.slice().sort(function(a,b) {
+        return gameViews(b.game,b.index) - gameViews(a.game,a.index) || a.index - b.index;
+      });
+    }
     function makeRow(title, items) {
       if (!items.length) return '';
+      const orderedItems = sortByViews(items);
       const filterValue = title === 'Most Popular' ? 'all-games' : (title === 'Recently Added' ? 'recently-added' : title);
       const viewAll = '<a class="view-all" href="#" data-genre-filter="' + encodeURIComponent(filterValue) + '">View all</a>';
       return '<section class="row"><div class="row-header"><h2 class="row-title">' + title +
         '</h2>' + viewAll + '</div>' +
         '<div class="row-body"><button class="arrow-btn arrow-left" aria-label="Scroll left" onclick="scrollBack(this)">&#x2039;</button>' +
         '<button class="arrow-btn arrow-right" aria-label="Scroll right" onclick="scrollForward(this)">&#x203A;</button>' +
-        '<div class="row-cards">' + items.map(makeCard).join('') + '</div></div></section>';
+        '<div class="row-cards">' + orderedItems.map(makeCard).join('') + '</div></div></section>';
     }
     function renderCatalog() {
       const allItems = gamesList.map(function(game,index) { return {game:game,index:index}; });
@@ -269,7 +275,7 @@
       const matches = gamesList.map(function(game,index) { return {game:game,index:index}; }).filter(function(item) {
         const addedTime = item.game.addedAt ? new Date(item.game.addedAt + 'T00:00:00').getTime() : 0;
         return item.game.title.toLowerCase().includes(searchText) && (allSelected || selectedGenreNames.length === 0 || selectedGenreNames.indexOf(item.game.row || 'Other') >= 0) && (!recentOnly || (addedTime > 0 && addedTime >= recentCutoff));
-      }).sort(function(a,b) { return recentOnly ? (new Date(b.game.addedAt) - new Date(a.game.addedAt) || b.index - a.index) : (gameViews(b.game,b.index) - gameViews(a.game,a.index)); });
+      }).sort(function(a,b) { return gameViews(b.game,b.index) - gameViews(a.game,a.index) || a.index - b.index; });
       resultsTitle.textContent = recentOnly ? 'Recently Added' : (allSelected ? 'All games (' + matches.length + ')' : (selectedGenres.length ? selectedGenres.join(' + ') + ' (' + matches.length + ')' : 'Search results (' + matches.length + ')'));
       resultsGrid.innerHTML = matches.length ? matches.map(makeCard).join('') : '<p class="no-results">No games found matching your search.</p>';
     }
