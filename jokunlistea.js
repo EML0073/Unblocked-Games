@@ -2965,7 +2965,7 @@ const gamesList = [
     "title": "GUST proxy",
     "addedAt": "2026-11-28",
     "image": window.gameImages?.["gust"] || "",
-    "rawUrl": "https://githubusercontent.com/EML0073/jokuk/blob/main/GUST.html"
+    "rawUrl": "https://github.com/EML0073/jokuk/raw/refs/heads/main/gust.html"
   },
 ];
 
