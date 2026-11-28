@@ -147,6 +147,7 @@
       // Convertir el HTML descargado en un documento real para el iframe.
       function sourceCandidates(source) {
         const cdn = source.match(/^https:\/\/(?:cdn|fastly|gcore)\.jsdelivr\.net\/gh\/([^/]+)\/([^@/]+)@([^/]+)\/(.+)$/);
+        const githubRaw = source.match(/^https:\/\/github\.com\/([^/]+)\/([^/]+)\/raw\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
         const raw = source.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
         const gist = source.match(/^https:\/\/gist\.githubusercontent\.com\/[^/]+\/([a-f0-9]+)\/raw\/[^/]+\/([^/?#]+)$/i);
         if (gist) return ['https://api.github.com/gists/' + gist[1], source];
@@ -155,9 +156,11 @@
           const rawUrl='https://raw.githubusercontent.com/'+owner+'/'+repo+'/'+branch+'/'+file;
           return [source,'https://fastly.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://gcore.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://raw.githack.com/'+owner+'/'+repo+'/'+branch+'/'+file,rawUrl];
         }
-        if (raw) {
-          const owner=raw[1], repo=raw[2], branch=raw[3], file=raw[4];
-          return ['https://fastly.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://gcore.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://raw.githack.com/'+owner+'/'+repo+'/'+branch+'/'+file,source];
+        if (githubRaw || raw) {
+          const match = githubRaw || raw;
+          const owner=match[1], repo=match[2], branch=match[3], file=match[4];
+          const canonicalRaw='https://raw.githubusercontent.com/'+owner+'/'+repo+'/'+branch+'/'+file;
+          return ['https://fastly.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://gcore.jsdelivr.net/gh/'+owner+'/'+repo+'@'+branch+'/'+file,'https://raw.githack.com/'+owner+'/'+repo+'/'+branch+'/'+file,canonicalRaw];
         }
         return [source];
       }
