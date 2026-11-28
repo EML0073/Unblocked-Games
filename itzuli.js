@@ -469,7 +469,7 @@ window.UNBLOCKED_TRANSLATIONS = {
     "This website does not intentionally set its own tracking or advertising cookies. Games and other external resources may load content from third-party websites; those providers may apply their own privacy practices.": "Webgune honek ez du nahita ezartzen jarraipen- edo publizitate-cookie propiorik. Jokoek eta kanpoko beste baliabide batzuek hirugarrenen webguneetatik karga dezakete edukia; hornitzaile horiek beren pribatutasun-praktikak aplika ditzakete.",
     "For questions about this notice or requests concerning information handled through this website, email": "Ohar honi buruzko galderarik edo webgune honen bidez kudeatutako informazioari buruzko eskaerarik baduzu, idatzi helbide honetara:",
     "Most Popular": "Ezagunenak",
-    "Recently Added": "Azken gehiketak",
+    "Recently Added": "Berriki gehitutakoak",
     "Best Rated": "Balorazio onenak",
     "Action": "Ekintza",
     "Adventure": "Abentura",
