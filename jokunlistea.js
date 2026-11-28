@@ -2967,6 +2967,30 @@ const gamesList = [
     "image": window.gameImages?.["gust"] || "",
     "rawUrl": "https://github.com/EML0073/jokuk/raw/refs/heads/main/gust.html"
   },
+          {
+    "id": 371,
+    "row": "Other Apps & Services",
+    "title": "Whatsapp",
+    "addedAt": "2026-11-28",
+    "image": "https://store-images.s-microsoft.com/image/apps.8453.13518859748920827.4d7dd838-9f34-4ad2-9cd7-b861c6398fc1.11cbb3d4-ffd9-42c1-82bd-e3f305d562b1?h=210"
+    "webUrl": "https://web.whatsapp.com/"
+  },
+              {
+    "id": 372,
+    "row": "Other Apps & Services",
+    "title": "Twitch",
+    "addedAt": "2026-11-28",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFceazTxztqQStlkamFYqiKzwUrZqhmN7JQd0REtfB9neHlLILmB68Mi_h&s=10"
+    "webUrl": "https://www.twitch.tv/"
+  },
+                      {
+    "id": 373,
+    "row": "Other Apps & Services",
+    "title": "Reddit",
+    "addedAt": "2026-11-28",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3iatt8Fq2jfrUIUx0irQ2j9JX7Xq1Ro5DEas5U4ZMHAOXDm9zmvYiARxZ&s=10"
+    "webUrl": "https://www.reddit.com/"
+  },
 ];
 
 window.gamesList = gamesList;
