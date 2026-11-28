@@ -2943,6 +2943,22 @@ const gamesList = [
     "image": window.gameImages?.["soundboard"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clsoundboard.html"
   },
+    {
+    "id": 368,
+    "row": "Other Apps & Services",
+    "title": "TikTok",
+    "addedAt": "2026-11-28",
+    "image": "https://sf-static.tiktokcdn.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png",
+    "webUrl": "https://www.tiktok.com/"
+  },
+      {
+    "id": 269,
+    "row": "Other Apps & Services",
+    "title": "Snapchat",
+    "addedAt": "2026-11-28",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEj6y35wS4jRu_rxVvK292woTjiGhfW2CU1QXYgdXPG5zWYPw-UhgFSvSn&s=10",
+    "webUrl": "https://www.snapchat.com/web"
+  },
 ];
 
 window.gamesList = gamesList;
