@@ -154,7 +154,7 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Submitted. Thank you!": "Submitted. Thank you!",
     "Could not submit. Please try again later.": "Could not submit. Please try again later.",
     "Sending...": "Sending...",
-    "e.g. Action, Puzzle, Racing": "e.g. Action, Puzzle, Racing"
+    "e.g. Action, Puzzle, Racing": "e.g. Action, Puzzle, Racing",
   
     "Main menu": "Main menu",
     "Choose filters": "Choose filters",
@@ -353,7 +353,7 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Submitted. Thank you!": "Enviado. ¡Gracias!",
     "Could not submit. Please try again later.": "No se ha podido enviar. Inténtalo de nuevo más tarde.",
     "Sending...": "Enviando...",
-    "e.g. Action, Puzzle, Racing": "p. ej., Acción, Puzles, Carreras"
+    "e.g. Action, Puzzle, Racing": "p. ej., Acción, Puzles, Carreras",
   
     "Main menu": "Menú principal",
     "Choose filters": "Elegir filtros",
@@ -552,7 +552,7 @@ window.UNBLOCKED_TRANSLATIONS = {
     "Submitted. Thank you!": "Bidalia. Eskerrik asko!",
     "Could not submit. Please try again later.": "Ezin izan da bidali. Saiatu berriro geroago.",
     "Sending...": "Bidaltzen...",
-    "e.g. Action, Puzzle, Racing": "adib. Ekintza, Puzzleak, Lasterketak"
+    "e.g. Action, Puzzle, Racing": "adib. Ekintza, Puzzleak, Lasterketak",
   
     "Main menu": "Menu nagusia",
     "Choose filters": "Aukeratu iragazkiak",
