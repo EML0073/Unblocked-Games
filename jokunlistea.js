@@ -892,7 +892,7 @@ const gamesList = [
     "row": "Simulación",
     "title": "Duck Life",
     "addedAt": "2026-11-26",
-    "image": "https://raw.githubusercontent.com/a456pur/seraph/main/images/thumbnails/ducklife.jpg",
+    "image": "https://www.coolmathgames.com/sites/default/files/DuckLife_OG-logo.jpg",
     "rawUrl": "https://raw.githubusercontent.com/CoolDude2349/Offline-HTML-Games-Pack/master/offline/duck-life.html"
   },
   {
