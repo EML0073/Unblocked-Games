@@ -209,9 +209,18 @@
         return gameViews(b.game,b.index) - gameViews(a.game,a.index) || a.index - b.index;
       });
     }
+    function sortByAddedDate(items) {
+      return items.slice().sort(function(a,b) {
+        const dateA = a.game.addedAt ? new Date(a.game.addedAt + 'T00:00:00').getTime() : 0;
+        const dateB = b.game.addedAt ? new Date(b.game.addedAt + 'T00:00:00').getTime() : 0;
+        return dateB - dateA || b.index - a.index;
+      });
+    }
     function makeRow(title, items) {
       if (!items.length) return '';
-      const orderedItems = title === 'Best Rated' ? items.slice().sort(function(a,b) { return gameRating(b.game) - gameRating(a.game) || a.index - b.index; }) : sortByViews(items);
+      const orderedItems = title === 'Best Rated'
+        ? items.slice().sort(function(a,b) { return gameRating(b.game) - gameRating(a.game) || a.index - b.index; })
+        : (title === 'Recently Added' ? sortByAddedDate(items) : sortByViews(items));
       const filterValue = title === 'Most Popular' ? 'all-games' : (title === 'Recently Added' ? 'recently-added' : (title === 'Best Rated' ? 'best-rated' : title));
       const viewAll = '<a class="view-all" href="#" data-genre-filter="' + encodeURIComponent(filterValue) + '">View all</a>';
       return '<section class="row"><div class="row-header"><h2 class="row-title">' + title +
@@ -290,7 +299,7 @@
       // Keep the original catalog order only when two games have equal visits.
       const orderedMatches = bestRatedOnly
         ? matches.slice().sort(function(a,b) { return gameRating(b.game) - gameRating(a.game) || a.index - b.index; })
-        : sortByViews(matches);
+        : (recentOnly ? sortByAddedDate(matches) : sortByViews(matches));
       // Keep each heading label in its own text node so the language translator
       // can translate genre names before the result count is appended.
       resultsTitle.textContent = '';
