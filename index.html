@@ -91,7 +91,10 @@
     .card a { display: block; text-decoration: none; color: inherit; }
     .card img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; background:#222; border-radius:12px; transition:filter .22s ease,transform .25s ease; }
     .card p { margin-top: 8px; font-size: 15px; color: #dddddd; transition: color .22s ease; }
-    .card span { display: block; font-size: 12px; color: #888888; margin-top: 3px; }
+    .card .card-meta { display:block; font-size:12px; color:#888888; margin-top:3px; }
+    .card .card-meta span { display:inline; }
+    .card .card-genre { color:inherit; }
+    .card .card-meta-separator { white-space:pre; }
     .card:hover, .card:focus-within { z-index:3; transform:translateY(-5px); border-color:#687386; background:#262b35; box-shadow:0 12px 26px rgba(0,0,0,.34); }
     .card:hover img, .card:focus-within img { filter:brightness(1.07); transform:scale(1.012); }
     .card:hover p, .card:focus-within p { color: #fff; }
@@ -199,7 +202,7 @@
       const game = item.game;
       return '<div class="card"><a href="jokue.html?id=' + item.game.id + '">' +
         '<img src="' + game.image + '" alt="' + game.title + '" loading="lazy" decoding="async">' +
-        '<p>' + game.title + '</p><span>' + game.row + ' · ' + gameViews(game, item.index) + ' views</span></a></div>';
+        '<p>' + game.title + '</p><span class="card-meta"><span class="card-genre">' + game.row + '</span><span class="card-meta-separator"> · </span><span>' + gameViews(game, item.index) + '</span><span> </span><span>views</span></span></a></div>';
     }
     function sortByViews(items) {
       return items.slice().sort(function(a,b) {
