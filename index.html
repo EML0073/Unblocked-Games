@@ -291,7 +291,31 @@
       const orderedMatches = bestRatedOnly
         ? matches.slice().sort(function(a,b) { return gameRating(b.game) - gameRating(a.game) || a.index - b.index; })
         : sortByViews(matches);
-      resultsTitle.textContent = bestRatedOnly ? 'Best Rated' : (recentOnly ? 'Recently Added' : (allSelected ? 'All games (' + orderedMatches.length + ')' : (selectedGenres.length ? selectedGenres.join(' + ') + ' (' + orderedMatches.length + ')' : 'Search results (' + orderedMatches.length + ')')));
+      // Keep each heading label in its own text node so the language translator
+      // can translate genre names before the result count is appended.
+      resultsTitle.textContent = '';
+      function appendTitlePart(value) {
+        const part = document.createElement('span');
+        part.textContent = value;
+        resultsTitle.appendChild(part);
+      }
+      if (bestRatedOnly) {
+        appendTitlePart('Best Rated');
+      } else if (recentOnly) {
+        appendTitlePart('Recently Added');
+      } else if (allSelected) {
+        appendTitlePart('All games');
+        appendTitlePart(' (' + orderedMatches.length + ')');
+      } else if (selectedGenres.length) {
+        selectedGenres.forEach(function(genre, index) {
+          if (index) appendTitlePart(' + ');
+          appendTitlePart(genre);
+        });
+        appendTitlePart(' (' + orderedMatches.length + ')');
+      } else {
+        appendTitlePart('Search results');
+        appendTitlePart(' (' + orderedMatches.length + ')');
+      }
       resultsGrid.innerHTML = orderedMatches.length ? orderedMatches.map(makeCard).join('') : '<p class="no-results">No games found matching your search.</p>';
     }
     function selectGenre(genreName) {
