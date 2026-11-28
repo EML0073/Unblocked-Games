@@ -2827,7 +2827,7 @@ const gamesList = [
     "id": 353,
     "row": "Adventure",
     "title": "Minecraft 26.3",
-    "addedAt": "2026-11-26",
+    "addedAt": "2026-11-27",
     "image": window.gameImages?.["Minecraft 26.3"] || "",
     "rawUrl": "https://raw.githubusercontent.com/MilkdromedaStudios/all-of-eaglercraft/refs/heads/main/ArchMC%20Eaglercraft%2026.3.html"
   },
@@ -2835,7 +2835,7 @@ const gamesList = [
     "id": 354,
     "row": "Other Apps & Services",
     "title": "YouTube",
-    "addedAt": "2026-11-26",
+    "addedAt": "2026-11-27",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png",
     "webUrl": "https://www.youtube.com/"
   },
@@ -2843,7 +2843,7 @@ const gamesList = [
     "id": 355,
     "row": "Other Apps & Services",
     "title": "Instagram",
-    "addedAt": "2026-11-26",
+    "addedAt": "2026-11-27",
     "image": "https://www.google.com/s2/favicons?domain=www.instagram.com&sz=128",
     "webUrl": "https://www.instagram.com/"
   },
@@ -2851,7 +2851,7 @@ const gamesList = [
     "id": 356,
     "row": "Other Apps & Services",
     "title": "GeForce NOW",
-    "addedAt": "2026-11-26",
+    "addedAt": "2026-11-27",
     "image": "https://www.google.com/s2/favicons?domain=play.geforcenow.com&sz=128",
     "webUrl": "https://play.geforcenow.com/"
   },
@@ -2859,17 +2859,89 @@ const gamesList = [
     "id": 357,
     "row": "Other Apps & Services",
     "title": "Nautilus OS",
-    "addedAt": "2026-11-26",
+    "addedAt": "2026-11-27",
     "image": window.gameImages?.["Nautilus"] || "",
     "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/nautilusOS.html"
   },
     {
     "id": 358,
     "row": "Other Apps & Services",
-    "title": "AI",
-    "addedAt": "2026-11-26",
-    "image": window.gameImages?.["Nautilus"] || "",
-    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clai.html"
+    "title": "EmulatorJS",
+    "addedAt": "2026-11-28",
+    "image": window.gameImages?.["EmulatorJS"] || "",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clemujs.html"
+  },
+      {
+    "id": 359,
+    "row": "Other Apps & Services",
+    "title": "Github Search",
+    "addedAt": "2026-11-28",
+    "image": window.gameImages?.["githubsearch"] || "",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clgithubsearch.html"
+  },
+        {
+    "id": 360,
+    "row": "Other Apps & Services",
+    "title": "Meowio NES Emulator",
+    "addedAt": "2026-11-28",
+    "image": window.gameImages?.["NESemulator"] || "",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clmeowio.html"
+  },
+          {
+    "id": 361,
+    "row": "Other Apps & Services",
+    "title": "Helios Proxy",
+    "addedAt": "2026-11-28",
+    "image": window.gameImages?.["helios"] || "",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/Helios-Offline%20(1).html"
+  },
+          {
+    "id": 362,
+    "row": "Other Apps & Services",
+    "title": "Pico 8 edu",
+    "addedAt": "2026-11-28",
+    "image": window.gameImages?.["pico8edu"] || "",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clpico8edu.html"
+  },
+            {
+    "id": 363,
+    "row": "Other Apps & Services",
+    "title": "Ruffle emulator",
+    "addedAt": "2026-11-28",
+    "image": window.gameImages?.["ruffleemu"] || "",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clruffle.html"
+  },
+            {
+    "id": 364,
+    "row": "Other Apps & Services",
+    "title": "Sandstone Proxy",
+    "addedAt": "2026-11-28",
+    "image": window.gameImages?.["sandstone"] || "",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clsandstone.html"
+  },
+              {
+    "id": 365,
+    "row": "Other Apps & Services",
+    "title": "Scratch Editor",
+    "addedAt": "2026-11-28",
+    "image": window.gameImages?.["scratch"] || "",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clscratchoptions.html"
+  },
+              {
+    "id": 366,
+    "row": "Other Apps & Services",
+    "title": "Silk",
+    "addedAt": "2026-11-28",
+    "image": window.gameImages?.["silk"] || "",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clsilk.html"
+  },
+                {
+    "id": 367,
+    "row": "Other Apps & Services",
+    "title": "Soundboard",
+    "addedAt": "2026-11-28",
+    "image": window.gameImages?.["soundboard"] || "",
+    "rawUrl": "https://raw.githubusercontent.com/EML0073/jokuk/refs/heads/main/clsoundboard.html"
   },
 ];
 
